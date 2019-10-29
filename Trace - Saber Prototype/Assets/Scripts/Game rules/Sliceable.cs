@@ -4,8 +4,20 @@ using UnityEngine;
 
 public class Sliceable : MonoBehaviour
 {
-    public Vector3 wantedDirection;
-
+    [SerializeField] private Vector3 wantedDirection;
+    public Vector3 WantedDirection
+    {
+        get
+        {
+            /*Vector3 getWanted = (transform.position - wantedDirection).normalized;
+            getWanted = new Vector3(getWanted.x, getWanted.y, 0);*/
+            return wantedDirection;
+        }
+        private set
+        {
+            wantedDirection = value;
+        }
+    }
     public void Sliced()
     {
 

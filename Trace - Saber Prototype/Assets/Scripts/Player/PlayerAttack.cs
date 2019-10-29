@@ -19,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
         if(objectInFront != null)
         {
             Debug.Log("DAISAN NO BAKUDAN");
-            float directionComparison = Mathf.Abs(Vector3.Dot(GetComponent<MouseDirection>().direction, objectInFront.wantedDirection));
+            float directionComparison = Mathf.Abs(Vector3.Dot(GetComponent<MouseDirection>().direction, objectInFront.WantedDirection));
             if (directionComparison > 0.9f)
             {
                 Debug.Log("BITE ZA DUSTO");
