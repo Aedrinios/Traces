@@ -20,9 +20,5 @@ public class MouseDirection : MonoBehaviour
     {
         Vector3 mousePos = Input.mousePosition;
         direction = (mousePos - screenCenter).normalized;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log(direction);
-        }
     }
 }

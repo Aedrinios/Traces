@@ -15,14 +15,11 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     public void Slicing()
     {
-        Debug.Log("KILLER QUEEN");
         if(objectInFront != null)
         {
-            Debug.Log("DAISAN NO BAKUDAN");
-            float directionComparison = Mathf.Abs(Vector3.Dot(GetComponent<MouseDirection>().direction, objectInFront.wantedDirection));
-            if (directionComparison > 0.9f)
+            float directionComparison = Mathf.Abs(Vector3.Dot(GetComponent<MouseDirection>().direction, objectInFront.WantedDirection));
+            if (directionComparison > 0.95f)
             {
-                Debug.Log("BITE ZA DUSTO");
                 objectInFront.OnDestroy();
             }
         }
