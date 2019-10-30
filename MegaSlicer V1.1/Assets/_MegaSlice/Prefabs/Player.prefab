@@ -27,11 +27,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079538756576604004}
   m_LocalRotation: {x: -0.34526566, y: -0.04304507, z: -0.14119342, w: 0.9268242}
-  m_LocalPosition: {x: 0.546, y: 0.799, z: 1.008}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalPosition: {x: 0.546, y: -0.44099998, z: 1.008}
+  m_LocalScale: {x: 1.6000003, y: 1.5999999, z: 1.5999997}
   m_Children: []
-  m_Father: {fileID: 7069374296845166346}
-  m_RootOrder: 1
+  m_Father: {fileID: 7069374297406932189}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -40.704002, y: 1.338, z: -17.820002}
 --- !u!33 &2079538756575420830
 MeshFilter:
@@ -125,7 +125,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7069374297406932189}
-  - {fileID: 2079538756576169504}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -183,7 +182,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 512
-  capMaterial: {fileID: 2100000, guid: bc944cc5634a4e641be01271473dc033, type: 2}
+  capMaterial: {fileID: 0}
   playerCamera: {fileID: 7069374297406932188}
   cut: {x: 0, y: 0, z: 0}
 --- !u!1 &7069374297406932162
@@ -215,7 +214,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2079538756576169504}
   m_Father: {fileID: 7069374296845166346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

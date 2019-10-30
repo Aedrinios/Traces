@@ -50,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
         Vector3 realCut = new Vector3(-cut.y, cut.x, 0); 
 
 
-        if (nearSliceable.Length != 0)
+        if (nearSliceable != null && nearSliceable.Length != 0)
         {
             for (int i = 0; i < nearSliceable.Length; i++)
             {
