@@ -16,7 +16,7 @@ public class RotateArrow : MonoBehaviour
 
     private void Update()
     {
-        rotationZ = Mathf.Lerp(rotationZ, PlayerAttack.angle, lerp);
+        rotationZ =  PlayerAttack.angle;
         rectTransform.localEulerAngles = new Vector3(0, 0, rotationZ);
     }
 }

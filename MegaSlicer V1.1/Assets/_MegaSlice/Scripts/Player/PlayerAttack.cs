@@ -10,7 +10,9 @@ public class PlayerAttack : MonoBehaviour
     public float forcePush = 300; 
     public LayerMask layer; 
     public Material capMaterial;
-    public Camera playerCamera; 
+    public Camera playerCamera;
+
+    public GameObject slicePlane;
 
     [HideInInspector] public Vector3 cut;
     public static float angle;
@@ -37,13 +39,15 @@ public class PlayerAttack : MonoBehaviour
 
     void Cut()
     {
-        RaycastHit hit;
-        Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range, layer);
-        if (hit.collider != null)
-        {
-            anchorCut = hit.point;
-            nearSliceable = Physics.OverlapSphere(anchorCut, radius, layer);
-        }
+         RaycastHit hit;
+         Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, range, layer);
+         if (hit.collider != null)
+         {
+             anchorCut = hit.point;
+             nearSliceable = Physics.OverlapSphere(anchorCut, radius, layer);
+         }
+
+        //anchorCut = slicePlane.transform.position;
 
         // découpe les objets
         //Vector3 realCut = new Vector3(cut.y, -cut.x, 0);        
