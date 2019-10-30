@@ -69,11 +69,17 @@ public class PlayerAttack : MonoBehaviour
 
     void CalculateAxeMouse()
     {
-        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-        Vector3 inputCut = mousePosition - screenCenter;
-        inputCut = inputCut.normalized;
 
+        // Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        // Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+        //Vector3 inputCut = mousePosition - screenCenter;
+
+        float mouseX = Input.GetAxis("Mouse X");
+        float mouseY = Input.GetAxis("Mouse Y");
+
+        Vector3 inputCut = new Vector3(mouseX, mouseY, 0);
+        inputCut = inputCut.normalized;
+        
         if (inputCut != Vector3.zero)
         {
             cut = inputCut;

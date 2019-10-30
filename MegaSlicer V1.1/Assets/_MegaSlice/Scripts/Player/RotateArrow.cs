@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class RotateArrow : MonoBehaviour
 {
     public float rotationZ = -90;
+    public float lerp;
     RectTransform rectTransform;
 
     private void Start()
@@ -15,7 +16,7 @@ public class RotateArrow : MonoBehaviour
 
     private void Update()
     {
-        rotationZ = PlayerAttack.angle;
+        rotationZ = Mathf.Lerp(rotationZ, PlayerAttack.angle, lerp);
         rectTransform.localEulerAngles = new Vector3(0, 0, rotationZ);
     }
 }
