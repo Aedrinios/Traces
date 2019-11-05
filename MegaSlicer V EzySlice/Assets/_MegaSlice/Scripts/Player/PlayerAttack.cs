@@ -5,9 +5,6 @@ using UnityEngine;
 using EzySlice;
 public class PlayerAttack : MonoBehaviour
 {
-  //  public float range = 2;
-  //  public float radius = 10;
-   // public float forcePush = 300;
     public LayerMask layerMask;
     public Camera playerCamera;
     public GameObject prefabSlice;
@@ -17,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     [HideInInspector] public Vector3 cut;
     public float angle;
     public float mouseSensitivity;
-    //public DetectObjectInFront detectObjectInFront;
 
     // c'est le point où l'objet va se couper
     Vector3 anchorCut;

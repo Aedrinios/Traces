@@ -12,6 +12,8 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
 
+    [HideInInspector] public bool canJump = true; 
+
     CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
     float velocityVertical = 0;
@@ -71,9 +73,15 @@ public class FPS_Controller : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && characterController.isGrounded)
+        if (characterController.isGrounded)
+        {
+            canJump = true; 
+        }
+
+        if (Input.GetButtonDown("Jump") && canJump)
         {
             velocityVertical = jumpForce;
+            canJump = false; 
         }
     }
 }

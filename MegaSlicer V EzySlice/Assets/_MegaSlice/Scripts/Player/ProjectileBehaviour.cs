@@ -7,7 +7,7 @@ public class ProjectileBehaviour : MonoBehaviour
 {
 
     [SerializeField] private float lifeTime;
-    [SerializeField] [Range(0, 100) ]private float speed;
+    [SerializeField] [Range(0, 100)] private float speed;
     public Transform cutPlane;
     public LayerMask layerMask;
     public Material crossMaterial;
@@ -40,7 +40,7 @@ public class ProjectileBehaviour : MonoBehaviour
             AddHullComponents(bottom);
             AddHullComponents(top);
             Destroy(hit.gameObject);
-            
+
         }
     }
 
@@ -75,3 +75,4 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
 }
+
