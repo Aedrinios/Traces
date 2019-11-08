@@ -16,8 +16,7 @@ public class SliceableObject : MonoBehaviour
         timeLeft = 0.1f;
         gameObject.layer = LayerMask.NameToLayer("Sliceable");        
         player = GameObject.FindWithTag("Player");
-        Debug.Log("Time : " + timeLeft);
-      //  Vector3 expulsion = transform.position - player.transform.position;
+          //  Vector3 expulsion = transform.position - player.transform.position;
       //  float push = player.GetComponent<PlayerAttack>().forcePush;
       //  GetComponent<Rigidbody>().AddForce(expulsion * push);
     }
@@ -33,6 +32,7 @@ public class SliceableObject : MonoBehaviour
 
     public void Slice(Transform slicePlane)
     {
+        transform.localScale *= 0.999f;
         if (isSliceable)
         {
             SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
@@ -57,7 +57,7 @@ public class SliceableObject : MonoBehaviour
         so.crossMaterial = crossMaterial;
         Vector3 positionToPlayer = transform.position - player.transform.position;
         Vector3 explosion = new Vector3(positionToPlayer.x + Random.Range(0, 10), positionToPlayer.y + Random.Range(0, 10), positionToPlayer.z);
-        rb.AddExplosionForce(1000, explosion, 20);
+        rb.AddExplosionForce(5000, explosion, 20);
     }
 
     public SlicedHull SliceObject(Transform slicePlane, GameObject obj, Material crossSectionMaterial = null)
