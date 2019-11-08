@@ -7,6 +7,7 @@ public class ProjectileBehaviour : MonoBehaviour
 {
 
     [SerializeField] private float lifeTime;
+    [SerializeField] private float lifeLose = 0.02F;
     [SerializeField] [Range(0, 100)] private float speed;
     public Transform cutPlane;
     public LayerMask layerMask;
@@ -31,8 +32,8 @@ public class ProjectileBehaviour : MonoBehaviour
         {
             return;
         }
-
-        SlicedHull hull = SliceObject(hit, crossMaterial);
+        hit.GetComponent<SliceableObject>().Slice(cutPlane);
+       /* SlicedHull hull = SliceObject(hit, crossMaterial);
         if (hull != null)
         {
             GameObject bottom = hull.CreateLowerHull(hit, crossMaterial);
@@ -41,10 +42,10 @@ public class ProjectileBehaviour : MonoBehaviour
             AddHullComponents(top);
             Destroy(hit.gameObject);
 
-        }
+        }*/
     }
 
-    public void AddHullComponents(GameObject go)
+  /*  public void AddHullComponents(GameObject go)
     {
         go.layer = 9;
         go.tag = "Sliceable";
@@ -65,13 +66,14 @@ public class ProjectileBehaviour : MonoBehaviour
         }
 
         return obj.Slice(cutPlane.position, cutPlane.up, crossSectionMaterial);
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sliceable"))
         {
             Slice(other.gameObject);
+            lifeTime -= lifeLose;
         }
     }
 }

@@ -5,38 +5,54 @@ using EzySlice;
 //[RequireComponent(typeof(Rigidbody), typeof(MeshCollider))]
 public class SliceableObject : MonoBehaviour
 {
+    private float timeLeft;
+    private bool isSliceable;
     public GameObject player;
     public Material crossMaterial;
 
     void Start()
     {
+        isSliceable = false;
+        timeLeft = 0.1f;
         gameObject.layer = LayerMask.NameToLayer("Sliceable");        
-        GetComponent<MeshCollider>().convex = true;
         player = GameObject.FindWithTag("Player");
+        Debug.Log("Time : " + timeLeft);
       //  Vector3 expulsion = transform.position - player.transform.position;
       //  float push = player.GetComponent<PlayerAttack>().forcePush;
       //  GetComponent<Rigidbody>().AddForce(expulsion * push);
     }
 
+    public void Update()
+    { 
+        timeLeft -= Time.deltaTime;
+        if (timeLeft <= 0)
+        {
+            isSliceable = true;
+}
+    }
+
     public void Slice(Transform slicePlane)
     {
-        SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
-        if (hull != null)
+        if (isSliceable)
         {
-            GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
-            GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
-            AddHullComponents(bottom);
-            AddHullComponents(top);
-            Destroy(this.gameObject);
+            SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
+            if (hull != null)
+            {
+                GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
+                GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
+                AddHullComponents(bottom);
+                AddHullComponents(top);
+                Destroy(this.gameObject);
+            }
         }
     }
 
     public void AddHullComponents(GameObject go)
     {
-        go.layer = 9;
+        go.tag = "Sliceable";
         Rigidbody rb = go.AddComponent<Rigidbody>();
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
         MeshCollider collider = go.AddComponent<MeshCollider>();
+        collider.convex = true;
         SliceableObject so = go.AddComponent<SliceableObject>();
         so.crossMaterial = crossMaterial;
         Vector3 positionToPlayer = transform.position - player.transform.position;

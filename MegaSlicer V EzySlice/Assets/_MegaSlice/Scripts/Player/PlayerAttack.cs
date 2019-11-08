@@ -81,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
     {
         //Vector3 instantiatePosition = new Vector3(Screen.width / 2, Screen.height / 2, 1);
         Vector3 positionInstance = transform.position;
-        positionInstance.y = transform.position.y + 1.2f;
+        positionInstance.y = transform.position.y + 0.8f;
         Instantiate(prefabSlice, positionInstance, cutPlane.rotation);
 
         /*
