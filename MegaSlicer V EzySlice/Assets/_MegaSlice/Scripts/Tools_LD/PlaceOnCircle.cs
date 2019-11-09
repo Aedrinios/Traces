@@ -7,7 +7,7 @@ public class PlaceOnCircle : MonoBehaviour
 {
 	public float radius = 10;
 	public float angle = 0;
-    public Vector3 axe = Vector3.up; 
+    public Vector3 axe = Vector3.zero; 
 
 	Transform[] platforms;
 	[TextArea] public string Notes = "en cochant, place tous les enfants autour d'un cercle.";
@@ -36,7 +36,7 @@ public class PlaceOnCircle : MonoBehaviour
 			platforms[i].localPosition = Vector3.zero;
 			platforms[i].localPosition = dir * radius;
 			platforms[i].rotation = Quaternion.Euler(new Vector3(0, 0, tourne));
-			platforms[i].localScale = new Vector3(platforms[i].localScale.x, scale, platforms[i].localScale.z);  
+
 		}
 	}
 }
