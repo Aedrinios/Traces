@@ -26,47 +26,12 @@ public class ProjectileBehaviour : MonoBehaviour
 
     public void Slice(GameObject hit)
     {
-        //Collider[] hits = Physics.OverlapBox(cutPlane.position, new Vector3(5, 0.1f, 5), cutPlane.rotation, layerMask);
-
         if (hit == null)
         {
             return;
         }
         hit.GetComponent<SliceableObject>().Slice(cutPlane);
-       /* SlicedHull hull = SliceObject(hit, crossMaterial);
-        if (hull != null)
-        {
-            GameObject bottom = hull.CreateLowerHull(hit, crossMaterial);
-            GameObject top = hull.CreateUpperHull(hit, crossMaterial);
-            AddHullComponents(bottom);
-            AddHullComponents(top);
-            Destroy(hit.gameObject);
-
-        }*/
     }
-
-  /*  public void AddHullComponents(GameObject go)
-    {
-        go.layer = 9;
-        go.tag = "Sliceable";
-        Rigidbody rb = go.AddComponent<Rigidbody>();
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        MeshCollider collider = go.AddComponent<MeshCollider>();
-        collider.convex = true;
-
-        rb.AddExplosionForce(100, go.transform.position, 20);
-    }
-
-    public SlicedHull SliceObject(GameObject obj, Material crossSectionMaterial = null)
-    {
-        // slice the provided object using the transforms of this object
-        if (obj.GetComponent<MeshFilter>() == null)
-        {
-            return null;
-        }
-
-        return obj.Slice(cutPlane.position, cutPlane.up, crossSectionMaterial);
-    }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -74,6 +39,10 @@ public class ProjectileBehaviour : MonoBehaviour
         {
             Slice(other.gameObject);
             lifeTime -= lifeLose;
+        }
+        else
+        {
+            lifeTime -= lifeLose * 2;
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
-//[RequireComponent(typeof(Rigidbody), typeof(MeshCollider))]
+
 public class SliceableObject : MonoBehaviour
 {
     private float timeLeft;
@@ -16,9 +16,7 @@ public class SliceableObject : MonoBehaviour
         timeLeft = 0.1f;
         gameObject.layer = LayerMask.NameToLayer("Sliceable");        
         player = GameObject.FindWithTag("Player");
-          //  Vector3 expulsion = transform.position - player.transform.position;
-      //  float push = player.GetComponent<PlayerAttack>().forcePush;
-      //  GetComponent<Rigidbody>().AddForce(expulsion * push);
+
     }
 
     public void Update()
@@ -62,7 +60,6 @@ public class SliceableObject : MonoBehaviour
 
     public SlicedHull SliceObject(Transform slicePlane, GameObject obj, Material crossSectionMaterial = null)
     {
-        // slice the provided object using the transforms of this object
         if (obj.GetComponent<MeshFilter>() == null)
             return null;
 

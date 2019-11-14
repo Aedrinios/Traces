@@ -7,10 +7,6 @@ public class RotateArrow : MonoBehaviour
 {
     private float rotationZ;
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         rotationZ = MouseControl.angle;

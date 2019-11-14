@@ -16,10 +16,16 @@ public class MouseControl : MonoBehaviour
 
     void CalculateAxeMouse()
     {
+
+
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
-        inputCut = (new Vector3(mouseX, mouseY)).normalized;
+        Vector3 inputMouse = (new Vector3(mouseX, mouseY));
+        if(inputMouse.magnitude >= mouseSensitivity)
+        {
+            inputCut = inputMouse.normalized;
+        }
 
         if (inputCut != Vector3.zero)
         {
