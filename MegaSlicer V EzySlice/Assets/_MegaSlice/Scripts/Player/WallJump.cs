@@ -7,7 +7,7 @@ using UnityEngine;
 public class WallJump : MonoBehaviour
 {
     public float radius = 1;
-
+	public LayerMask layerMask; 
 
     FPS_Controller fps;
     CharacterController characterController;   
@@ -32,7 +32,7 @@ public class WallJump : MonoBehaviour
     {
         if (!characterController.isGrounded)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layerMask);
  
             if (colliders.Length > 1)
             {

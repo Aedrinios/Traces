@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1245947399}
   - component: {fileID: 1245947402}
   - component: {fileID: 1245947401}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SlicePlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2571783897046970755}
   - component: {fileID: 2571783897046970753}
   - component: {fileID: 2571783897046970754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 2571783897981708028}
   - component: {fileID: 2571783897984575196}
   - component: {fileID: 2571783897983607836}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,7 +4923,7 @@ GameObject:
   - component: {fileID: 114503920325459236}
   - component: {fileID: 54239493773302262}
   - component: {fileID: 5525719535148714470}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4959,6 +4959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 0.2
+  lifeLose: 0.02
   speed: 100
   cutPlane: {fileID: 1245947399}
   layerMask:
