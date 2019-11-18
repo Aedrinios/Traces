@@ -6,12 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class WallJump : MonoBehaviour
 {
-    public float radius = 1;
-	public LayerMask layerMask; 
+	public LayerMask layerMask;
+	public float radius = 1;
+	public int maxWallJump = 3;
+
+	int countJump = 0; 
 
     FPS_Controller fps;
     CharacterController characterController;   
-
 
     private void Start()
     {
@@ -26,19 +28,30 @@ public class WallJump : MonoBehaviour
             ResetCanJump();
         }
 
+		if (characterController.isGrounded && countJump != 0)
+		{
+			countJump = 0;
+		}
+
     }
 
     void ResetCanJump()
     {
-        if (!characterController.isGrounded)
+        if (!characterController.isGrounded && countJump < maxWallJump)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, radius, layerMask);
+			Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
+
+			Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
  
             if (colliders.Length > 1)
             {
                 fps.canJump = true;
+				countJump++;
+
             }
         }
     }
+
+
 
 }
