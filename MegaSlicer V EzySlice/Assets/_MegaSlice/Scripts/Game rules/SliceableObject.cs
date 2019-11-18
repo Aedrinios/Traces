@@ -5,32 +5,22 @@ using EzySlice;
 
 public class SliceableObject : MonoBehaviour
 {
-    private float timeLeft;
-    private bool isSliceable;
-    public GameObject player;
-    public Material crossMaterial;
+	public Material crossMaterial;
+	private float timeLeft = 0.1f;
+	private bool isSliceable;
 
-    void Start()
+	Vector3 posOrigin; 
+
+	void Start()
     {
         isSliceable = false;
-        timeLeft = 0.1f;
-        gameObject.layer = LayerMask.NameToLayer("Sliceable");        
-        player = GameObject.FindWithTag("Player");
-
-    }
-
-    public void Update()
-    { 
-        timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
-        {
-            isSliceable = true;
-}
-    }
+        gameObject.layer = LayerMask.NameToLayer("Sliceable");
+		Invoke("ResetIsSliceable", timeLeft);
+		posOrigin = transform.position; 
+	}
 
     public void Slice(Transform slicePlane)
     {
-        transform.localScale *= 0.999f;
         if (isSliceable)
         {
             SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
@@ -40,7 +30,7 @@ public class SliceableObject : MonoBehaviour
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
-                Destroy(this.gameObject);
+				Destroy(this.gameObject);
             }
         }
     }
@@ -49,13 +39,20 @@ public class SliceableObject : MonoBehaviour
     {
         go.tag = "Sliceable";
         Rigidbody rb = go.AddComponent<Rigidbody>();
+		if (GetComponent<Rigidbody>())
+		{
+			rb.mass = GetComponent<Rigidbody>().mass;
+		}
+
         MeshCollider collider = go.AddComponent<MeshCollider>();
         collider.convex = true;
         SliceableObject so = go.AddComponent<SliceableObject>();
         so.crossMaterial = crossMaterial;
-        Vector3 positionToPlayer = transform.position - player.transform.position;
-        Vector3 explosion = new Vector3(positionToPlayer.x + Random.Range(0, 10), positionToPlayer.y + Random.Range(0, 10), positionToPlayer.z);
-        rb.AddExplosionForce(5000, explosion, 20);
+
+		//Vector3 explosion = new Vector3(positionToPlayer.x + Random.Range(0, 10), positionToPlayer.y + Random.Range(0, 10), positionToPlayer.z);
+
+		rb.AddExplosionForce(250, go.transform.position, 10); 
+		
     }
 
     public SlicedHull SliceObject(Transform slicePlane, GameObject obj, Material crossSectionMaterial = null)
@@ -65,4 +62,9 @@ public class SliceableObject : MonoBehaviour
 
         return obj.Slice(slicePlane.position, slicePlane.up, crossSectionMaterial);
     }
+
+	void ResetIsSliceable()
+	{
+		isSliceable = true; 
+	}
 }

@@ -5,7 +5,6 @@ using EzySlice;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
-
     [SerializeField] private float lifeTime;
     [SerializeField] private float lifeLose = 0.02F;
     [SerializeField] [Range(0, 100)] private float speed;
