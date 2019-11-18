@@ -7,23 +7,25 @@ public class SliceableObject : MonoBehaviour
 {
 	public Material crossMaterial;
 	private float timeLeft = 0.1f;
+	public float explosionForce = 300; 
 	private bool isSliceable;
 
-	Vector3 posOrigin; 
+	Vector3 originPos; 
 
 	void Start()
     {
         isSliceable = false;
         gameObject.layer = LayerMask.NameToLayer("Sliceable");
 		Invoke("ResetIsSliceable", timeLeft);
-		posOrigin = transform.position; 
+
 	}
 
     public void Slice(Transform slicePlane)
     {
         if (isSliceable)
         {
-            SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
+			originPos = transform.position; 
+			SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
             if (hull != null)
             {
                 GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
@@ -51,7 +53,12 @@ public class SliceableObject : MonoBehaviour
 
 		//Vector3 explosion = new Vector3(positionToPlayer.x + Random.Range(0, 10), positionToPlayer.y + Random.Range(0, 10), positionToPlayer.z);
 
-		rb.AddExplosionForce(250, go.transform.position, 10); 
+		//GameObject player = GameObject.FindGameObjectWithTag("Player");
+		//Vector3 dirExplose = originPos - player.transform.position;
+		//Debug.Log(dirExplose); 
+		//rb.AddForce(dirExplose.normalized * explosionForce);
+
+		rb.AddExplosionForce(explosionForce, originPos, 10); 
 		
     }
 

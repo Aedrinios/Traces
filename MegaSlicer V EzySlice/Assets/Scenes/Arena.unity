@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &4263795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &21827714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -638,6 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &27695377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -1112,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &56350747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -1336,6 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &61520668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -1497,172 +1502,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &69118131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
     type: 3}
   m_PrefabInstance: {fileID: 69118125}
   m_PrefabAsset: {fileID: 0}
---- !u!43 &69253713
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15832
-  serializedVersion: 9
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
-      m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
-  m_VertexData:
-    serializedVersion: 2
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00000000516488c10000000000000000000000000000803f000080bf0000000000000000000080bf00000000516488c1409ca040516488c10000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0516488c100000000a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf00000000a26a2e40409ca040a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0a26a2e40409ca040516488c1000000000000803f000000000000000000000000000000000000803f000080bf00000000516488c1409ca040516488c140a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0516488c1409ca040a26a2e40000000000000803f000000000000000000000000000000000000803f000080bf00000000a26a2e40409ca040a26a2e4040a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0a26a2e40409ca040516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040516488c100000000516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000516488c1409ca040a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040a26a2e4000000000a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000a26a2e4000000000516488c140a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40516488c100000000516488c100000000000080bf00000000000000000000000000000000000080bf000080bf00000000516488c100000000a26a2e4040a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40a26a2e4000000000a26a2e4000000000000080bf00000000000000000000000000000000000080bf000080bf00000000a26a2e4000000000a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000409ca040a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf409ca0400000000000000000a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf0000000040a2dbc0409ca040a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf409ca04040a2dbc000000000516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf0000008040a2dbc0409ca040516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf409ca0c040a2dbc000000000516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf0000000000000000409ca040516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf409ca0c000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
-    m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimized: 0
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &78888443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1734,6 +1580,7 @@ GameObject:
   - component: {fileID: 80485674}
   - component: {fileID: 80485673}
   - component: {fileID: 80485672}
+  - component: {fileID: 80485678}
   m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Sliceable
@@ -1754,6 +1601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &80485673
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2162,6 +2010,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &80485678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80485671}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &83870057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2311,6 +2175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &84409991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -2393,6 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &95479704 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -2418,6 +2284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &96271262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -2519,6 +2386,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -2541,6 +2413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &131982251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951343261086952, guid: e4d5c0d3d9b21f840a3309933254e833,
@@ -2696,6 +2569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &141252393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -2894,6 +2768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &143529338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4922272387448978, guid: 2b49cf6b0e2134c4a81f3474c005ca8a,
@@ -2914,6 +2789,7 @@ GameObject:
   - component: {fileID: 159643064}
   - component: {fileID: 159643063}
   - component: {fileID: 159643062}
+  - component: {fileID: 159643068}
   m_Layer: 0
   m_Name: Cube (23)
   m_TagString: Sliceable
@@ -2934,6 +2810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &159643063
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3342,6 +3219,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &159643068
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159643061}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &165289062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1638214763830248, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -3361,6 +3254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &165289067 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -3508,6 +3402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &167212873 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -3679,6 +3574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &177487574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -3691,7 +3587,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16958
+  m_Name: pb_Mesh9644
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -4016,6 +3912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &204205670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -4420,6 +4317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &212382143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -4578,6 +4476,7 @@ GameObject:
   - component: {fileID: 219952100}
   - component: {fileID: 219952099}
   - component: {fileID: 219952098}
+  - component: {fileID: 219952104}
   m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Sliceable
@@ -4598,6 +4497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &219952099
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5006,6 +4906,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &219952104
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219952097}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &224207582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5082,6 +4998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &238637494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -5164,6 +5081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &248810068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -5374,6 +5292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &279494158 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -5527,6 +5446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &291763168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4744360382656540, guid: ee291aa36cc91a34bb83babb65b717db,
@@ -5625,6 +5545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &297067947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -5650,6 +5571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &301244396 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -5675,6 +5597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &303296977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -5901,6 +5824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &319784880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -5991,6 +5915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &320981594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -6233,6 +6158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &341714944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -6258,6 +6184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &345021063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -6737,6 +6664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &351700956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -6762,6 +6690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &359412891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -6787,6 +6716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &363314756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -6812,6 +6742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &364955696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -6889,6 +6820,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -6898,7 +6834,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16558
+  m_Name: pb_Mesh9236
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -7136,6 +7072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &375800232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -7281,6 +7218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &389681953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -7312,6 +7250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &393665918 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -7402,6 +7341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &398313914 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -7427,6 +7367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &404724182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -7517,6 +7458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &412891447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -7542,6 +7484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &413880407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -7567,6 +7510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &414779030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -13045,6 +12989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &425674859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -13070,6 +13015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &426007513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -13095,6 +13041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &426563391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -13339,7 +13286,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14848
+  m_Name: pb_Mesh7516
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -13583,6 +13530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &453100518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4143405420243982, guid: 568f19399467fe54196f7374d3df0632,
@@ -14054,6 +14002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &458143124 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -14255,6 +14204,166 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47645e6370fb9eb498189c1439e90c3a, type: 3}
+--- !u!43 &465923140
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh8506
+  serializedVersion: 9
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
+      m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 2
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 00000000516488c10000000000000000000000000000803f000080bf0000000000000000000080bf00000000516488c1409ca040516488c10000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0516488c100000000a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf00000000a26a2e40409ca040a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0a26a2e40409ca040516488c1000000000000803f000000000000000000000000000000000000803f000080bf00000000516488c1409ca040516488c140a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0516488c1409ca040a26a2e40000000000000803f000000000000000000000000000000000000803f000080bf00000000a26a2e40409ca040a26a2e4040a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0a26a2e40409ca040516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040516488c100000000516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000516488c1409ca040a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040a26a2e4000000000a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000a26a2e4000000000516488c140a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40516488c100000000516488c100000000000080bf00000000000000000000000000000000000080bf000080bf00000000516488c100000000a26a2e4040a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40a26a2e4000000000a26a2e4000000000000080bf00000000000000000000000000000000000080bf000080bf00000000a26a2e4000000000a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000409ca040a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf409ca0400000000000000000a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf0000000040a2dbc0409ca040a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf409ca04040a2dbc000000000516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf0000008040a2dbc0409ca040516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf409ca0c040a2dbc000000000516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf0000000000000000409ca040516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf409ca0c000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
+    m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimized: 0
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!4 &469225189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4238871909904612, guid: 4d225f970f8e37d4e820f1cb8440987b,
@@ -14275,6 +14384,7 @@ GameObject:
   - component: {fileID: 474995686}
   - component: {fileID: 474995685}
   - component: {fileID: 474995684}
+  - component: {fileID: 474995690}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Sliceable
@@ -14295,6 +14405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &474995685
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14703,6 +14814,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &474995690
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474995683}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &477094560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1299800976710666, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -14722,6 +14849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &477094566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -14747,6 +14875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &480439133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -14765,7 +14894,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16424
+  m_Name: pb_Mesh9102
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -15145,6 +15274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &520387327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -15499,6 +15629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &554110327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -15649,6 +15780,7 @@ GameObject:
   - component: {fileID: 562793248}
   - component: {fileID: 562793247}
   - component: {fileID: 562793246}
+  - component: {fileID: 562793252}
   m_Layer: 0
   m_Name: Cube (22)
   m_TagString: Sliceable
@@ -15669,6 +15801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &562793247
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16077,6 +16210,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &562793252
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562793245}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &564599111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16222,6 +16371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &568197305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -16312,6 +16462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &568880902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -16337,6 +16488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &572724480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -16368,6 +16520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &574455714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -16458,6 +16611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &580531311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -16737,6 +16891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &606019306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -16768,6 +16923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &615478690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -16814,7 +16970,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14794
+  m_Name: pb_Mesh7462
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -17259,6 +17415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &632920460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -17604,7 +17761,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15624
+  m_Name: pb_Mesh8298
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -17834,6 +17991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &650866289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -17924,6 +18082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &651125994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -18020,6 +18179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &659052505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -18040,6 +18200,7 @@ GameObject:
   - component: {fileID: 660276095}
   - component: {fileID: 660276094}
   - component: {fileID: 660276093}
+  - component: {fileID: 660276099}
   m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Sliceable
@@ -18060,6 +18221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &660276094
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18468,6 +18630,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &660276099
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660276092}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &660814295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18545,7 +18723,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14948
+  m_Name: pb_Mesh7618
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -18770,6 +18948,7 @@ GameObject:
   - component: {fileID: 677639972}
   - component: {fileID: 677639971}
   - component: {fileID: 677639970}
+  - component: {fileID: 677639976}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Sliceable
@@ -18790,6 +18969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &677639971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19198,13 +19378,29 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &677639976
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677639969}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!43 &680494208
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16146
+  m_Name: pb_Mesh8820
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -19434,6 +19630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &680998941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951343261086952, guid: e4d5c0d3d9b21f840a3309933254e833,
@@ -19459,6 +19656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &681385611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -19685,6 +19883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &701197741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -19775,6 +19974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &706327540 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4143405420243982, guid: 568f19399467fe54196f7374d3df0632,
@@ -19863,6 +20063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &713760100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -20598,6 +20799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &747540218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -20623,6 +20825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &750020587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -20766,7 +20969,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15928
+  m_Name: pb_Mesh8602
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -21022,6 +21225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &774036374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -21099,6 +21303,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -21116,6 +21325,7 @@ GameObject:
   - component: {fileID: 775988430}
   - component: {fileID: 775988429}
   - component: {fileID: 775988428}
+  - component: {fileID: 775988434}
   m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Sliceable
@@ -21136,6 +21346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &775988429
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21544,6 +21755,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &775988434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775988427}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &777862082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4238871909904612, guid: 4d225f970f8e37d4e820f1cb8440987b,
@@ -21697,6 +21924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &797353133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -22056,7 +22284,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14480
+  m_Name: pb_Mesh7148
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -22295,7 +22523,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14688
+  m_Name: pb_Mesh7356
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -22468,6 +22696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &829078457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -22488,6 +22717,7 @@ GameObject:
   - component: {fileID: 833434702}
   - component: {fileID: 833434701}
   - component: {fileID: 833434700}
+  - component: {fileID: 833434706}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Sliceable
@@ -22508,6 +22738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &833434701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22916,6 +23147,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &833434706
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833434699}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &834530856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23000,6 +23247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &834530862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -23025,6 +23273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &836387660 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -23171,7 +23420,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15092
+  m_Name: pb_Mesh7762
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -23398,6 +23647,166 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a80f1159de6c8249a43aee2815a177d, type: 3}
+--- !u!43 &868484407
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: pb_Mesh9208
+  serializedVersion: 9
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 36
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
+      m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
+  m_VertexData:
+    serializedVersion: 2
+    m_VertexCount: 24
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 40
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 1152
+    _typelessdata: 00000000516488c10000000000000000000000000000803f000080bf0000000000000000000080bf00000000516488c1409ca040516488c10000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0516488c100000000a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf00000000a26a2e40409ca040a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0a26a2e40409ca040516488c1000000000000803f000000000000000000000000000000000000803f000080bf00000000516488c1409ca040516488c140a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0516488c1409ca040a26a2e40000000000000803f000000000000000000000000000000000000803f000080bf00000000a26a2e40409ca040a26a2e4040a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0a26a2e40409ca040516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040516488c100000000516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000516488c1409ca040a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040a26a2e4000000000a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000a26a2e4000000000516488c140a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40516488c100000000516488c100000000000080bf00000000000000000000000000000000000080bf000080bf00000000516488c100000000a26a2e4040a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40a26a2e4000000000a26a2e4000000000000080bf00000000000000000000000000000000000080bf000080bf00000000a26a2e4000000000a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000409ca040a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf409ca0400000000000000000a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf0000000040a2dbc0409ca040a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf409ca04040a2dbc000000000516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf0000008040a2dbc0409ca040516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf409ca0c040a2dbc000000000516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf0000000000000000409ca040516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf409ca0c000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
+    m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimized: 0
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &870863744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1299800976710666, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -23417,6 +23826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &870863750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -23513,6 +23923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &872430151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -23537,7 +23948,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14560
+  m_Name: pb_Mesh7228
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -23710,6 +24121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &895179518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -24151,6 +24563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &919735409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -24176,6 +24589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &923761625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -24339,6 +24753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &928255233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -24437,6 +24852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &932391889 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -24462,6 +24878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &933522615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -24680,6 +25097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &941461677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -24705,6 +25123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &952489524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -25089,6 +25508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &981439776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -25372,6 +25792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &990162374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -25613,7 +26034,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16230
+  m_Name: pb_Mesh8904
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -25879,6 +26300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1019854857 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -25961,6 +26383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1021443565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951343261086952, guid: e4d5c0d3d9b21f840a3309933254e833,
@@ -26051,6 +26474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1026350028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -26206,6 +26630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1037693999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -26231,6 +26656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1038019306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -26459,6 +26885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1048129683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -26484,6 +26911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1051031125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -26753,6 +27181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1055265554 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -26843,6 +27272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1066134253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -27120,6 +27550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1086700790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -27282,6 +27713,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -27649,6 +28085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1101280040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -28307,6 +28744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1115362391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -28509,6 +28947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1144424373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -28527,7 +28966,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15234
+  m_Name: pb_Mesh7904
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -28700,6 +29139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1152497657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -28798,6 +29238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1156045897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -29022,6 +29463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1168252897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -29047,6 +29489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1168717303 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -29376,6 +29819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1200521348 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -29527,6 +29971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1206571715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -29617,6 +30062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1208220286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -29642,6 +30088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1209014580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -29740,6 +30187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1210215546 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044780752081588, guid: cd883448e719018428c96f034ddbf3ad,
@@ -29771,6 +30219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1212708137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -29802,6 +30251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1216980072 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4576494197170744, guid: 02c19b863feda5b45bcb19319bc3248f,
@@ -29892,6 +30342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1219798061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -30169,6 +30620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1235667625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -30259,6 +30711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1254347230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -30271,7 +30724,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15114
+  m_Name: pb_Mesh7784
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -30521,6 +30974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1263151186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -30668,6 +31122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1276219986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -30823,6 +31278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1283310088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -30868,7 +31324,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 69253713}
+  m_Mesh: {fileID: 465923140}
 --- !u!114 &1286658832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31136,7 +31592,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286658830}
-  m_Mesh: {fileID: 69253713}
+  m_Mesh: {fileID: 465923140}
 --- !u!4 &1286658835
 Transform:
   m_ObjectHideFlags: 0
@@ -31560,6 +32016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1299386678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -31585,6 +32042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1300804629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -31732,6 +32190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1308750312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -31940,6 +32399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1315335696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -32101,6 +32561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1323957095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -32126,6 +32587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1327304299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -32214,6 +32676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1350446034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -32304,6 +32767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1350781113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -32914,6 +33378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1357869682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -33008,6 +33473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1364406225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -33020,7 +33486,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16402
+  m_Name: pb_Mesh9080
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -33445,6 +33911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1384603946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -33470,6 +33937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1394148974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -33572,6 +34040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1410720397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -33597,6 +34066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1412795824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -33756,6 +34226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1424636342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -33844,6 +34315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1446989891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34007,6 +34479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1451088120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34103,6 +34576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1459414981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34128,6 +34602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1459482876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -34224,6 +34699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1472237610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -34314,6 +34790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1478867166 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -34339,6 +34816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1479756848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -34571,6 +35049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1508708408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -34596,6 +35075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1508927355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34621,6 +35101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1512470359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34646,6 +35127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1512838355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -34734,6 +35216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1518269748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -34765,6 +35248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1524411492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -35013,6 +35497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1532289512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -35450,6 +35935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1544774585 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -35540,6 +36026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1545892888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -35699,6 +36186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1549009623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -35931,6 +36419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1553739029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -36090,6 +36579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1557384240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -36180,6 +36670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1558811556 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -36218,6 +36709,7 @@ GameObject:
   - component: {fileID: 1565334529}
   - component: {fileID: 1565334528}
   - component: {fileID: 1565334527}
+  - component: {fileID: 1565334533}
   m_Layer: 0
   m_Name: Cube (24)
   m_TagString: Sliceable
@@ -36238,6 +36730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1565334528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -36646,6 +37139,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1565334533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565334526}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1573452663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36703,166 +37212,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d225f970f8e37d4e820f1cb8440987b, type: 3}
---- !u!43 &1578886348
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16530
-  serializedVersion: 9
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 36
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 24
-    localAABB:
-      m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
-      m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00100011001200110013001200140015001600150017001600
-  m_VertexData:
-    serializedVersion: 2
-    m_VertexCount: 24
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 40
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 1152
-    _typelessdata: 00000000516488c10000000000000000000000000000803f000080bf0000000000000000000080bf00000000516488c1409ca040516488c10000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0516488c100000000a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf00000000a26a2e40409ca040a26a2e400000000000000000000000000000803f000080bf0000000000000000000080bf409ca0c0a26a2e40409ca040516488c1000000000000803f000000000000000000000000000000000000803f000080bf00000000516488c1409ca040516488c140a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0516488c1409ca040a26a2e40000000000000803f000000000000000000000000000000000000803f000080bf00000000a26a2e40409ca040a26a2e4040a2dbc00000803f000000000000000000000000000000000000803f000080bf40a2dbc0a26a2e40409ca040516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040516488c100000000516488c140a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000516488c1409ca040a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf409ca040a26a2e4000000000a26a2e4040a2dbc00000000000000000000080bf0000803f0000000000000000000080bf00000000a26a2e4000000000516488c140a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40516488c100000000516488c100000000000080bf00000000000000000000000000000000000080bf000080bf00000000516488c100000000a26a2e4040a2dbc0000080bf00000000000000000000000000000000000080bf000080bf40a2db40a26a2e4000000000a26a2e4000000000000080bf00000000000000000000000000000000000080bf000080bf00000000a26a2e4000000000a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf0000000000000000409ca040a26a2e4000000000000000000000803f000000000000803f0000000000000000000080bf409ca0400000000000000000a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf0000000040a2dbc0409ca040a26a2e4040a2dbc0000000000000803f000000000000803f0000000000000000000080bf409ca04040a2dbc000000000516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf0000008040a2dbc0409ca040516488c140a2dbc000000000000080bf00000000000080bf0000000000000000000080bf409ca0c040a2dbc000000000516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf0000000000000000409ca040516488c10000000000000000000080bf00000000000080bf0000000000000000000080bf409ca0c000000000
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 2.5095367, y: -7.1618624, z: -3.431778}
-    m_Extent: {x: 2.5095367, y: 9.88712, z: 3.431778}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimized: 0
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1581364131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36997,7 +37346,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16382
+  m_Name: pb_Mesh9060
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -37300,6 +37649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1591996202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -37710,6 +38060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1611654868 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4576494197170744, guid: 02c19b863feda5b45bcb19319bc3248f,
@@ -37763,6 +38114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1623810403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -37910,6 +38262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1631165671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -37935,6 +38288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1632580466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -38023,6 +38377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1643284879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -38108,7 +38463,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14536
+  m_Name: pb_Mesh7204
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -38346,6 +38701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1649194392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -38436,6 +38792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1650115571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -38608,6 +38965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1654412165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -38755,6 +39113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1658190965 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -38857,6 +39216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1664333949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -38947,6 +39307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1665484346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -39288,6 +39649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1671759476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -39373,6 +39735,7 @@ GameObject:
   - component: {fileID: 1674317936}
   - component: {fileID: 1674317935}
   - component: {fileID: 1674317934}
+  - component: {fileID: 1674317940}
   m_Layer: 0
   m_Name: Cube (19)
   m_TagString: Sliceable
@@ -39393,6 +39756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1674317935
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -39801,6 +40165,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1674317940
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674317933}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1674525110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39885,6 +40265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1675421927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4744360382656540, guid: ee291aa36cc91a34bb83babb65b717db,
@@ -39905,6 +40286,7 @@ GameObject:
   - component: {fileID: 1676676298}
   - component: {fileID: 1676676297}
   - component: {fileID: 1676676296}
+  - component: {fileID: 1676676302}
   m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Sliceable
@@ -39925,6 +40307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1676676297
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40333,6 +40716,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1676676302
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676676295}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1678027184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40409,6 +40808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1678578331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -40434,6 +40834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1680027811 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -40517,6 +40918,7 @@ GameObject:
   - component: {fileID: 1698698243}
   - component: {fileID: 1698698242}
   - component: {fileID: 1698698241}
+  - component: {fileID: 1698698247}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Sliceable
@@ -40537,6 +40939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1698698242
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40945,6 +41348,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1698698247
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698698240}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1703252595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41029,6 +41448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1703252601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -41054,6 +41474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1706543991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -41131,6 +41552,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -41348,6 +41774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1726612972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -41379,6 +41806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1733442584 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -41404,6 +41832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1738652168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -41567,6 +41996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1749604106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -41657,6 +42087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1750552456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -41696,7 +42127,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 1578886348}
+  m_Mesh: {fileID: 868484407}
 --- !u!114 &1753421997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41964,7 +42395,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753421995}
-  m_Mesh: {fileID: 1578886348}
+  m_Mesh: {fileID: 868484407}
 --- !u!4 &1753422000
 Transform:
   m_ObjectHideFlags: 0
@@ -42071,6 +42502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1759297669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -42161,6 +42593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1760193452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4519548827744782, guid: 8c39b59b8609eeb41846d53ddd3ce2a8,
@@ -42999,6 +43432,7 @@ GameObject:
   - component: {fileID: 1802337965}
   - component: {fileID: 1802337964}
   - component: {fileID: 1802337963}
+  - component: {fileID: 1802337969}
   m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Sliceable
@@ -43019,6 +43453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1802337964
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -43427,6 +43862,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1802337969
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802337962}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1805157090 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1299800976710666, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -43446,6 +43897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1805157096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -43523,6 +43975,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -43532,7 +43989,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14400
+  m_Name: pb_Mesh7068
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -43837,6 +44294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1826895093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -43849,7 +44307,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15298
+  m_Name: pb_Mesh7968
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -44087,6 +44545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1840888944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -44183,6 +44642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1850452579 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -44266,6 +44726,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -44294,6 +44759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1865184430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -44384,6 +44850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1868507027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -44792,7 +45259,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14880
+  m_Name: pb_Mesh7546
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -45030,6 +45497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1913886194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -45242,6 +45710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1918617902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -45274,6 +45743,7 @@ GameObject:
   - component: {fileID: 1923503213}
   - component: {fileID: 1923503212}
   - component: {fileID: 1923503211}
+  - component: {fileID: 1923503217}
   m_Layer: 0
   m_Name: Cube (21)
   m_TagString: Sliceable
@@ -45294,6 +45764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &1923503212
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -45702,6 +46173,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1923503217
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923503210}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1923648983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45765,7 +46252,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16590
+  m_Name: pb_Mesh9272
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -46003,6 +46490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1935116622 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -46171,6 +46659,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.560801
       objectReference: {fileID: 0}
+    - target: {fileID: 23398949866201934, guid: 8b1fc8f56ae45b44a91ace88f0db210c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e232897cbb2ffc14fa3fa5475b91d5e7, type: 2}
     m_RemovedComponents:
     - {fileID: 114446387691272520, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b1fc8f56ae45b44a91ace88f0db210c, type: 3}
@@ -46361,7 +46854,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16706
+  m_Name: pb_Mesh9388
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -46534,6 +47027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1967710869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -46624,6 +47118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1970905543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4143405420243982, guid: 568f19399467fe54196f7374d3df0632,
@@ -47000,6 +47495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1982851237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -47025,6 +47521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1985723632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -47065,7 +47562,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15184
+  m_Name: pb_Mesh7854
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -47238,6 +47735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1994303282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -47263,6 +47761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &1994814839 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -47688,6 +48187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2003138530 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -47910,6 +48410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2024337649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4143405420243982, guid: 568f19399467fe54196f7374d3df0632,
@@ -47944,7 +48445,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16880
+  m_Name: pb_Mesh9566
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -48247,6 +48748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2038072904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -48394,6 +48896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2038770009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -48498,6 +49001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2043748159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -48588,6 +49092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2049909711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -48929,6 +49434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2054176845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -49025,6 +49531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2057739310 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -49050,6 +49557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2073647370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -49075,6 +49583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2074688156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
@@ -49173,6 +49682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2080903127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -49198,6 +49708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2081273759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -49296,6 +49807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2082847854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -49694,6 +50206,7 @@ GameObject:
   - component: {fileID: 2098631572}
   - component: {fileID: 2098631571}
   - component: {fileID: 2098631570}
+  - component: {fileID: 2098631576}
   m_Layer: 0
   m_Name: Cube (20)
   m_TagString: Sliceable
@@ -49714,6 +50227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!64 &2098631571
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50122,6 +50636,22 @@ Transform:
   m_Father: {fileID: 1995779882}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2098631576
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098631569}
+  serializedVersion: 2
+  m_Mass: 0.5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2106567666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50273,6 +50803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2123519472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4951343261086952, guid: e4d5c0d3d9b21f840a3309933254e833,
@@ -50298,6 +50829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2126274562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480815832082898, guid: 9a80f1159de6c8249a43aee2815a177d,
@@ -50329,6 +50861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2129058397 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853827799442656, guid: 47645e6370fb9eb498189c1439e90c3a,
@@ -50341,7 +50874,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16456
+  m_Name: pb_Mesh9134
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -50672,7 +51205,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15602
+  m_Name: pb_Mesh8276
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -50902,6 +51435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  explosionForce: 0
 --- !u!4 &2140993256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4286189942280034, guid: b87038a107f3a6c46a43a708f8f4e175,
