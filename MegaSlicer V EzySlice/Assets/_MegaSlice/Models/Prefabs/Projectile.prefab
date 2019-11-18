@@ -4958,7 +4958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe3b4a45e41bdc41ae20fbf5f55188a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 0.2
+  lifeTime: 1
   lifeLose: 0.02
   speed: 100
   cutPlane: {fileID: 1245947399}
