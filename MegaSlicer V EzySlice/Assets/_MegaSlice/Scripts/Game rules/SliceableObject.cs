@@ -10,7 +10,7 @@ public class SliceableObject : MonoBehaviour
     public GameObject player;
     public Material crossMaterial;
 
-    void Start()
+    private void Start()
     {
         isSliceable = false;
         timeLeft = 0.1f;
@@ -19,7 +19,7 @@ public class SliceableObject : MonoBehaviour
 
     }
 
-    public void Update()
+    private void Update()
     { 
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
@@ -28,7 +28,7 @@ public class SliceableObject : MonoBehaviour
 }
     }
 
-    public void Slice(Transform slicePlane)
+    public virtual void Slice(Transform slicePlane)
     {
         transform.localScale *= 0.999f;
         if (isSliceable)
