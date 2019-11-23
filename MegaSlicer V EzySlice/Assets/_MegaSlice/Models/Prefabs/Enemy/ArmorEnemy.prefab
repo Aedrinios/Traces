@@ -93,7 +93,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 5
-  m_Acceleration: 8
+  m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bb558904a0c1142bc19654f8969f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  agentSpeed: 20
+  detectionDistance: 20
 --- !u!54 &2363491345899442291
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -163,3 +164,4 @@ MonoBehaviour:
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
   requiredAngle: 0
   tolerance: 20
+  armorCounter: 5
