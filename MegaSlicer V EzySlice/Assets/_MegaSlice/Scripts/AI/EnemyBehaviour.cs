@@ -34,13 +34,10 @@ public class EnemyBehaviour : MonoBehaviour
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
         }
-        if(playerDistance <= 1.15f)
+        if(playerDistance <= 1.15f && !BasicTools.isInvicible)
         {
             target.GetComponent<GameOver>().Die();
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("agent distance " + playerDistance);
-        }
+
     }
 }

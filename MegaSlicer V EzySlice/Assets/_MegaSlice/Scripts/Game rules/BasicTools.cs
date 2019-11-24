@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class BasicTools : MonoBehaviour
 {
+    [HideInInspector] public static bool isInvicible;
+
     public static void NextScene()
     {
         int lengthScenes = SceneManager.sceneCountInBuildSettings;
@@ -31,6 +33,11 @@ public class BasicTools : MonoBehaviour
         Application.Quit();
     }
 
+    private void Start()
+    {
+        isInvicible = false;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -41,5 +48,10 @@ public class BasicTools : MonoBehaviour
         {
             QuitGame();
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isInvicible = !isInvicible;
+        }
+
     }
 }
