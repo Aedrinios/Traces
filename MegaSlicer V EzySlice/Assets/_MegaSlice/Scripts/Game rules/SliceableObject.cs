@@ -10,7 +10,7 @@ public class SliceableObject : MonoBehaviour
     public GameObject player;
     public Material crossMaterial;
 
-    private void Start()
+    public virtual void Start()
     {
         isSliceable = false;
         timeLeft = 0.1f;

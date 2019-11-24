@@ -6,21 +6,18 @@ public class SliceableEnemy : SliceableObject
 {
     [SerializeField] private float requiredAngle;
     [SerializeField] private float tolerance;
-
+    [SerializeField] private int armorCounter;
     private bool isArmorOn = true;
 
     public override void Slice(Transform slicePlane)
     {
-        Debug.Log("souris : " + MouseControl.angle);
-        Debug.Log("requiredAngle : " + requiredAngle);
-        Debug.Log("difference : " + Mathf.Abs(MouseControl.angle - requiredAngle));
-        if(Mathf.Abs(MouseControl.angle - requiredAngle) < tolerance || !isArmorOn)
+        if(Mathf.Abs(MouseControl.angle - requiredAngle) < tolerance || armorCounter <= 0)
         {
             base.Slice(slicePlane);
         }
         else
         {
-            isArmorOn = false;
+            armorCounter--;
         }
     }
 }
