@@ -21,6 +21,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float playerDistance = Vector3.Distance(target.transform.position, transform.position);
         if(playerDistance < detectionDistance)
         {
@@ -33,9 +34,13 @@ public class EnemyBehaviour : MonoBehaviour
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
         }
-        if(playerDistance <= 0)
+        if(playerDistance <= 1.15f)
         {
             target.GetComponent<GameOver>().Die();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("agent distance " + playerDistance);
         }
     }
 }
