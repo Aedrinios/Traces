@@ -21,7 +21,7 @@ public class EnemyBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float playerDistance = Vector3.Distance(GameObject.Find("Player").transform.position, transform.position);
+        float playerDistance = Vector3.Distance(target.transform.position, transform.position);
         if(playerDistance < detectionDistance)
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
@@ -33,17 +33,9 @@ public class EnemyBehaviour : MonoBehaviour
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = true;
         }
-
-
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        GameObject player = collision.gameObject;
-
-        if (player.CompareTag("Player"))
+        if(playerDistance <= 0)
         {
-            player.GetComponent<GameOver>().Die(); 
+            target.GetComponent<GameOver>().Die();
         }
     }
 }

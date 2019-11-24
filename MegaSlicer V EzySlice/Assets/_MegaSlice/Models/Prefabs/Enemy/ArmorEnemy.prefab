@@ -9,12 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 69087463309077548}
-  - component: {fileID: 69087463309077537}
+  - component: {fileID: 1460794074543004670}
   - component: {fileID: 69087463309077538}
   - component: {fileID: 69087463309077543}
   - component: {fileID: 69087463309077539}
   - component: {fileID: 5193842219090258062}
-  - component: {fileID: 2363491345899442291}
   - component: {fileID: 2363491345899442298}
   m_Layer: 0
   m_Name: ArmorEnemy
@@ -37,14 +36,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &69087463309077537
+--- !u!33 &1460794074543004670
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69087463309077549}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: ae65a14d85dada24687ea923a71b4caa, type: 3}
 --- !u!23 &69087463309077538
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 80e8554df92dd3f488982ca12d159711, type: 2}
+  - {fileID: 2100000, guid: d43b2416d895c8d428286b64b21a3a1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,8 +90,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 69087463309077549}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 5
+  m_Radius: 0.7674025
+  m_Speed: 3.5
   m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -100,8 +99,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 1.5358379
+  m_BaseOffset: 0.76791894
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!64 &69087463309077539
@@ -117,7 +116,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: ae65a14d85dada24687ea923a71b4caa, type: 3}
 --- !u!114 &5193842219090258062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,24 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bb558904a0c1142bc19654f8969f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentSpeed: 20
+  agentSpeed: 10
   detectionDistance: 20
---- !u!54 &2363491345899442291
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69087463309077549}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &2363491345899442298
 MonoBehaviour:
   m_ObjectHideFlags: 0
