@@ -12,9 +12,10 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
 
-    [HideInInspector] public bool canJump = true; 
+    [HideInInspector] public bool canJump = true;
+	[HideInInspector] public bool canMoveCamera = true;
 
-    CharacterController characterController;
+	CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
     float velocityVertical = 0;
     float cameraRotationX = 0;
@@ -23,14 +24,15 @@ public class FPS_Controller : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         cameraRotationX = 0;
-        Cursor.visible = false; 
-    }
+        Cursor.visible = false;
+		canMoveCamera = true;
+	}
 
     private void Update()
     {
         Gravity();
         Jump();
-        RotateWithMouse(); 
+        if (canMoveCamera) RotateWithMouse(); 
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime); 
     }
