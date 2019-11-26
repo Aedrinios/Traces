@@ -10,7 +10,6 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField] private float lifeLose = 0.02F;
     [SerializeField] [Range(0, 100)] private float speed;
     public Transform cutPlane;
-    public LayerMask layerMask;
     public Material crossMaterial;
 
     private void Update()
@@ -42,7 +41,7 @@ public class ProjectileBehaviour : MonoBehaviour
         }
         else
         {
-            lifeTime -= lifeLose * 2;
+            lifeTime -= lifeLose * 2.5f;
         }
     }
 }

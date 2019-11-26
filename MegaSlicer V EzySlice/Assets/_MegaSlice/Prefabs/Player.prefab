@@ -88,17 +88,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048abb23c88225845890dabccfd6ce5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 512
-  playerCamera: {fileID: 6229600815805751350}
   prefabSlice: {fileID: 6146719789378699888, guid: 8144bac791d104248a6ea358bd1e5a99,
     type: 3}
   cutPlane: {fileID: 6229600816414948495}
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
-  cut: {x: 0, y: 0, z: 0}
-  angle: 0
-  nearSliceable: []
+  DelaySpamShot: 0.12
+  canShot: 1
 --- !u!114 &6229600815430756842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116baf4c52f22dd44948c18f74220fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Notes: "!!! EN TEST !!! en cochant, on d\xE9sactive la m\xE9canique de lock"
 --- !u!114 &2336409157628062297
 MonoBehaviour:
   m_ObjectHideFlags: 0
