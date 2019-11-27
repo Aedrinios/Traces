@@ -37,7 +37,7 @@ namespace SNAP
                 var packageListFile = Directory.GetFiles(Application.dataPath, "PackageImportList.txt", SearchOption.AllDirectories);
                 if (packageListFile.Length == 0)
                 {
-                    //Debug.LogError("[Auto Package] : Couldn't find the packages list. Be sure there is a file called PackageImportList in your project");
+                    Debug.LogError("[Auto Package] : Couldn't find the packages list. Be sure there is a file called PackageImportList in your project");
                 }
                 else
                 {

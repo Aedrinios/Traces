@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33938770557622018}
   - component: {fileID: 23282681918627430}
   - component: {fileID: 64861996425426804}
-  - component: {fileID: 114267291367580256}
+  - component: {fileID: 114187875595539324}
   m_Layer: 0
   m_Name: Barrel_03_snaps002
   m_TagString: Sliceable
@@ -95,7 +95,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 552db02216e7d864fb3a19958a79991d, type: 2}
---- !u!114 &114267291367580256
+--- !u!114 &114187875595539324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,5 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6229600815430756837, guid: 9694f46dcaf811a45a675ea05b06ef6b, type: 3}
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}

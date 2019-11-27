@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33602661722684522}
   - component: {fileID: 23483772066548700}
   - component: {fileID: 64866832583366742}
-  - component: {fileID: 114067086879451052}
+  - component: {fileID: 114974213274756144}
   m_Layer: 0
   m_Name: Crate_04_snaps002
   m_TagString: Sliceable
@@ -95,7 +95,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 9a39cc5689cb2fb4083473b6e66506dc, type: 2}
---- !u!114 &114067086879451052
+--- !u!114 &114974213274756144
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,5 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6229600815430756837, guid: 9694f46dcaf811a45a675ea05b06ef6b, type: 3}
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}

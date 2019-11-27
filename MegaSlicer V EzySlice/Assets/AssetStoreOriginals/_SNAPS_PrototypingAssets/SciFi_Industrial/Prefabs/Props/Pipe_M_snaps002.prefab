@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33222298950565538}
   - component: {fileID: 23428897077881996}
   - component: {fileID: 64429655646330596}
-  - component: {fileID: 114421218374817494}
+  - component: {fileID: 114336334108868888}
   m_Layer: 0
   m_Name: Pipe_M_snaps002
   m_TagString: Sliceable
@@ -93,7 +93,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: dec801b251362a24e832ae5ecc9e640d, type: 2}
---- !u!114 &114421218374817494
+--- !u!114 &114336334108868888
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,5 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6229600815430756837, guid: 9694f46dcaf811a45a675ea05b06ef6b, type: 3}
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
