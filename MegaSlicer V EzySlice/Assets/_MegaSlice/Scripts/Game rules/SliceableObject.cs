@@ -8,9 +8,12 @@ public class SliceableObject : MonoBehaviour
     private float timeLeft;
     private bool isSliceable;
     public Material crossMaterial;
-	float limitVolume = 0.2f;
-	float limitNumberCutting = 5; 
-	float numberCutting = 0;
+	float bonusTime = 1;
+
+	float limitVolume = 0.25f;
+	float ratioDestroy = 0.075f; 
+	float limitNumberCutting = 15; 
+	[HideInInspector] public float numberCutting = 0;
 	float volume; 
 
 	public void Start()
@@ -22,10 +25,14 @@ public class SliceableObject : MonoBehaviour
     {
         if (isSliceable)
         {
+			DetachObjectChild(); 
             SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
+
             if (hull != null)
             {
-                GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
+				EventHandler.cutObject?.Invoke();
+				GainBonusTime(); 
+				GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
@@ -39,14 +46,18 @@ public class SliceableObject : MonoBehaviour
         Rigidbody rb = go.AddComponent<Rigidbody>();
         MeshCollider collider = go.AddComponent<MeshCollider>();
         collider.convex = true;
+		if (numberCutting < limitNumberCutting - 1)
+		{
+			collider.material = this.GetComponent<Collider>().material;
+		}
         SliceableObject so = go.AddComponent<SliceableObject>();
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
         Vector3 explosion = this.transform.position;
 		float inverseVolume = 1 / volume;
-		inverseVolume = Mathf.Clamp(inverseVolume, 0.001f, 1.4f); 
-        rb.AddExplosionForce(300 * inverseVolume, explosion, 20);
-    }
+		inverseVolume = Mathf.Clamp(inverseVolume, 0.001f, 1.8f); 
+        rb.AddExplosionForce(400 * inverseVolume, explosion, 20);
+	}
 
     public SlicedHull SliceObject(Transform slicePlane, GameObject obj, Material crossSectionMaterial = null)
     {
@@ -55,7 +66,7 @@ public class SliceableObject : MonoBehaviour
 
         return obj.Slice(slicePlane.position, slicePlane.up, crossSectionMaterial);
     }
-
+	
 	void InitSliceableObject()
 	{
 		isSliceable = false;
@@ -63,7 +74,7 @@ public class SliceableObject : MonoBehaviour
 		Vector3 mySize = GetComponent<Collider>().bounds.size;
 		volume = mySize.x * mySize.y * mySize.z; 		
 
-		if (volume <= limitVolume * 0.05f)
+		if (volume <= limitVolume * ratioDestroy)
 		{
 			Destroy(gameObject); 
 		}
@@ -78,4 +89,36 @@ public class SliceableObject : MonoBehaviour
 		gameObject.tag = "Sliceable";
 		isSliceable = true;
 	}
+
+	void DetachObjectChild()
+	{
+		transform.parent = null; 
+		Transform[] children = GetComponentsInChildren<Transform>();
+		for (int i = 1; i < children.Length; i++)
+		{
+			children[i].parent = null; 
+		}
+	}
+
+	public void GainBonusTime()
+	{
+		if (numberCutting == 0)
+		{
+			LifeTimerManager.lifeTimer += bonusTime;
+		}
+		else if (numberCutting == 1)
+		{
+			LifeTimerManager.lifeTimer += bonusTime * 0.25f;
+		}
+		else if (numberCutting == 2)
+		{
+			LifeTimerManager.lifeTimer += bonusTime * 0.05f;
+		}
+		else
+		{
+			LifeTimerManager.lifeTimer += bonusTime * 0.01f;
+		}
+	}
+
+
 }
