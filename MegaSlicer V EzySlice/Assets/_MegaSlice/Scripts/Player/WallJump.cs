@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class WallJump : MonoBehaviour
 {
+	public bool wallJumpIsUnlock = false; 
 	public LayerMask layerMask;
 	public float radius = 1;
 	public int maxWallJump = 3;
@@ -22,17 +23,19 @@ public class WallJump : MonoBehaviour
     }
 
     private void Update()
-    {        
-        if (!fps.canJump)
-        {
-            ResetCanJump();
-        }
-
-		if (characterController.isGrounded && countJump != 0)
+    {     
+		if (wallJumpIsUnlock)
 		{
-			countJump = 0;
-		}
+			if (!fps.canJump)
+			{
+				ResetCanJump();
+			}
 
+			if (characterController.isGrounded && countJump != 0)
+			{
+				countJump = 0;
+			}
+		}
     }
 
     void ResetCanJump()
