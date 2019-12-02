@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pasteque: {fileID: 6391077094023448595, guid: 10f8523838850974f9112e86dbdf8d0b,
     type: 3}
+  trigger: 0
   numberPasteque: 100
   variationNumber: 10
   range: 60
@@ -62,8 +63,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5181918375578776810}
   - component: {fileID: 5181918375578776813}
-  - component: {fileID: 969624865}
   - component: {fileID: 678258818}
+  - component: {fileID: 969624865}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -98,22 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0884725d75bcd4693179ac26f635ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &969624865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5181918375578776812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b914ac4c663b144c90681088bff54f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  textTimer: {fileID: 0}
-  delayStart: 4
-  speedTimer: 1.8
 --- !u!114 &678258818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,4 +113,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerStart: 100
   timerMax: 150
+  multiplierSpeedTimer: 1
+  multiplierBonusCut: 1
   playing: 0
+--- !u!114 &969624865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181918375578776812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b914ac4c663b144c90681088bff54f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  startTimerText: {fileID: 0}
+  delayStart: 4
+  speedTimer: 1.8

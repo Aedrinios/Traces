@@ -104,19 +104,19 @@ public class SliceableObject : MonoBehaviour
 	{
 		if (numberCutting == 0)
 		{
-			LifeTimerManager.lifeTimer += bonusTime;
+			LifeTimerManager.lifeTimer += bonusTime * LifeTimerManager.multiplierBonusCutStatic;
 		}
 		else if (numberCutting == 1)
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.25f;
+			LifeTimerManager.lifeTimer += bonusTime * 0.25f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 		else if (numberCutting == 2)
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.05f;
+			LifeTimerManager.lifeTimer += bonusTime * 0.05f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 		else
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.01f;
+			LifeTimerManager.lifeTimer += bonusTime * 0.01f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 	}
 

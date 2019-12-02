@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class LifeTimerManager : MonoBehaviour
 {
+	[Header("Settings Life Timer")]
 	public static float lifeTimer;
 	public float timerStart = 70f; 
-	public float timerMax = 100; 
-
+	public float timerMax = 100;
+	public float multiplierSpeedTimer = 1;
+	public float multiplierBonusCut = 1; 
 	[HideInInspector] public bool playing = false;
+
+	public static float multiplierBonusCutStatic; 
 
 	private void Start()
 	{
 		playing = false;
-		lifeTimer = timerStart; 
+		lifeTimer = timerStart;
+		multiplierBonusCutStatic = multiplierBonusCut; 
 	}
 
 	private void Update()
 	{
 		if (playing)
 		{
-			lifeTimer -= Time.deltaTime;
+			lifeTimer -= Time.deltaTime * multiplierSpeedTimer;
 			lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax); 
 
 			if (lifeTimer <= 0)
