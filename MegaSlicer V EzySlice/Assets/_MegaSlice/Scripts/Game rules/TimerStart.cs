@@ -6,19 +6,20 @@ using UnityEngine.UI;
 public class TimerStart : MonoBehaviour
 {
 	public GameObject player;
-	public Text textTimer; 
+	public Text startTimerText; 
 	public float delayStart = 3f;
 	public float speedTimer = 1.5f; 
 	float chrono = 0;
 
 	bool playing = false; 
-
+	   	 
 	private void Start()
 	{
+		FindObject(); 
 		chrono = 0;
-		playing = false; 
-		textTimer.enabled = true;
-		textTimer.text = ""; 
+		playing = false;
+		startTimerText.enabled = true;
+		startTimerText.text = ""; 
 		player.GetComponent<FPS_Controller>().enabled = false;
 		player.GetComponent<PlayerAttack>().enabled = false;
 		player.GetComponent<MouseControl>().enabled = false;
@@ -35,23 +36,38 @@ public class TimerStart : MonoBehaviour
 		}
 		else if (chrono >= delayStart)
 		{
-			textTimer.text = "CUT !!!"; 
+			startTimerText.text = "CUT !!!"; 
 		}
 		else if (chrono != 0)
 		{
 			string chronoText = Mathf.Floor(chrono).ToString();
-			textTimer.text = chronoText; 
+			startTimerText.text = chronoText; 
 		}
 
 	}
 
 	void BeginGame()
 	{
-		EventHandler.BeginGame?.Invoke(); 
-		textTimer.enabled = false;
+		EventHandler.BeginGame?.Invoke();
+		startTimerText.enabled = false;
 		player.GetComponent<FPS_Controller>().enabled = true;
 		player.GetComponent<PlayerAttack>().enabled = true;
 		player.GetComponent<MouseControl>().enabled = true;
 		this.enabled = false; 
+	}
+
+	void FindObject()
+	{
+		if (player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player");
+			Debug.Log("il faut attacher le joueur au GameController"); 
+		}
+		if (startTimerText == null)
+		{
+			startTimerText = GameObject.Find("StartTimerText").GetComponent<Text>(); 
+			Debug.Log("il faut attacher le StartTimerText au GameController");
+		}
+
 	}
 }
