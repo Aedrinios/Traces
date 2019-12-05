@@ -14,6 +14,7 @@ public class FPS_Controller : MonoBehaviour
 
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
+	public static Vector3 playerPos; 
 
 	CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
@@ -28,13 +29,14 @@ public class FPS_Controller : MonoBehaviour
 		canMoveCamera = true;
 	}
 
-    private void Update()
+    private void FixedUpdate()
     {
         Gravity();
         Jump();
         if (canMoveCamera) RotateWithMouse(); 
         DefineMoveDirection();
-        characterController.Move(moveDir * Time.deltaTime); 
+        characterController.Move(moveDir * Time.deltaTime);
+		playerPos = transform.position; 
     }
 
     void DefineMoveDirection()
