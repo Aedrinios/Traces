@@ -28,12 +28,12 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
 		canMoveCamera = true;
 	}
-
-    private void FixedUpdate()
+	// attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
+	private void Update()
     {
-        Gravity();
-        Jump();
-        if (canMoveCamera) RotateWithMouse(); 
+		Gravity();
+		Jump();
+		if (canMoveCamera) RotateWithMouse(); 
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
 		playerPos = transform.position; 
