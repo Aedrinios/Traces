@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ProjectSD_Events\ProjectSD_Events.fspro
+  sourceProjectPath: ProjectSD_Events/ProjectSD_Events.fspro
   sourceBankPath: ProjectSD_Events\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
@@ -74,8 +74,7 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks:
-  - Master
+  MasterBanks: []
   Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264
