@@ -112,10 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4d11e33affc6a48b0b14a3af88c0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerStart: 100
+  timerStart: 50
   timerMax: 100
-  multiplierSpeedTimer: 9
-  multiplierBonusCut: 1
+  multiplierSpeedTimer: 5
+  multiplierBonusCut: 0.7
   playing: 0
 --- !u!114 &969624865
 MonoBehaviour:
@@ -132,7 +132,7 @@ MonoBehaviour:
   player: {fileID: 0}
   startTimerText: {fileID: 0}
   delayStart: 4
-  speedTimer: 1.8
+  speedTimer: 3
 --- !u!114 &643412778
 MonoBehaviour:
   m_ObjectHideFlags: 0
