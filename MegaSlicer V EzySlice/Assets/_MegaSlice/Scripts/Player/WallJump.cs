@@ -14,7 +14,7 @@ public class WallJump : MonoBehaviour
 	int countJump = 0; 
 
     FPS_Controller fps;
-    CharacterController characterController;   
+    CharacterController characterController;
 
     private void Start()
     {

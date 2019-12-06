@@ -12,8 +12,14 @@ public class ProjectileBehaviour : MonoBehaviour
     public Transform cutPlane;
     public Material crossMaterial;
 
+    private void Awake()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Weapon/Strike Woosh");
+    }
+
     private void Update()
     {
+
         transform.position = transform.position + transform.forward * Time.deltaTime * speed;
 
         lifeTime -= Time.deltaTime;
