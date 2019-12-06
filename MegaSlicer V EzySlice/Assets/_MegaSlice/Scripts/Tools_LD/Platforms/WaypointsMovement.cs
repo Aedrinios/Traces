@@ -10,8 +10,11 @@ public class WaypointsMovement : MonoBehaviour
 
     private List<Transform> waypoints = new List<Transform>();
     private bool moving;
+    private bool canChange;
     private int targetWaypointId;
     private int direction = -1;
+
+
 
     //Cet enum est essentiellement utilisé par soucis de clareté (voir comment il est utilisé dans SetTargetPosition et
     //InvertTargetPosition plus bas. 
@@ -29,6 +32,7 @@ public class WaypointsMovement : MonoBehaviour
         GetWaypoints();
         targetWaypointId = 0;
         moving = true;
+        canChange = true;
     }
 
     private void FixedUpdate()
@@ -39,6 +43,7 @@ public class WaypointsMovement : MonoBehaviour
             Vector3 targetPos = Vector3.MoveTowards(platformRb.position, nextPos, speed * Time.deltaTime);
             if (targetPos == nextPos)
             {
+                canChange = true;
                 StopOrSetNextPosition();
             }
 
@@ -76,8 +81,12 @@ public class WaypointsMovement : MonoBehaviour
 
     private void InvertMovement()
     {
-        direction = -direction;
-        UpdateWaypointId(targetWaypointId + direction);
+        if (canChange)
+        {
+            direction = -direction;
+            UpdateWaypointId(targetWaypointId + direction);
+            canChange = false;
+        }
     }
 
     #region Public Control
