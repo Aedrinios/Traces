@@ -14,17 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114567688522393468}
-  - {fileID: 114965132114718714}
+  - {fileID: 114895295467287038}
   EditorEvents:
   - {fileID: 114650158834864924}
   - {fileID: 114124222727719424}
   - {fileID: 114256526615470494}
+  - {fileID: 114195610122888446}
+  - {fileID: 114193377856743302}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114965132114718714}
+  - {fileID: 114895295467287038}
   StringsBanks:
   - {fileID: 114567688522393468}
-  stringsBankWriteTime: 637113200221615217
+  stringsBankWriteTime: 637113532173883214
   cacheVersion: 3
 --- !u!114 &114032755402541666
 MonoBehaviour:
@@ -100,7 +102,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Projectile
   guid: 87d6d8d2efe69442bb80141dc0f47b99
   Banks:
-  - {fileID: 114965132114718714}
+  - {fileID: 114895295467287038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -126,6 +128,52 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114193377856743302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Environmental Objects/Hit Object
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Environmental Objects/Hit Object
+  guid: e072bab5d31c354b94526d8900df1021
+  Banks:
+  - {fileID: 114895295467287038}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 600
+--- !u!114 &114195610122888446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Environmental Objects/ImpactWall
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Environmental Objects/ImpactWall
+  guid: 525b23a03e34fb40b7312b0a09d5a627
+  Banks:
+  - {fileID: 114895295467287038}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1468
 --- !u!114 &114249951876384502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +207,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Jump
   guid: 93dc32fe07e53149ab51e0b701ccdb39
   Banks:
-  - {fileID: 114965132114718714}
+  - {fileID: 114895295467287038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -385,11 +433,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637113200221615217
+  lastModified: 637113532173883214
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 876
+    Value: 992
   Exists: 1
 --- !u!114 &114618529019574618
 MonoBehaviour:
@@ -472,7 +520,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Strike Woosh
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114965132114718714}
+  - {fileID: 114895295467287038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -638,6 +686,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114895295467287038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637113532173823382
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114917934009883808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -673,7 +739,7 @@ MonoBehaviour:
   lastModified: 637113200221535414
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &114975423518330460
 MonoBehaviour:
   m_ObjectHideFlags: 0
