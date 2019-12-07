@@ -20,7 +20,7 @@ public class FPS_Controller : MonoBehaviour
     Vector3 moveDir = Vector3.zero;
     float velocityVertical = 0;
     float cameraRotationX = 0;
-    
+
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -85,7 +85,8 @@ public class FPS_Controller : MonoBehaviour
         if (Input.GetButtonDown("Jump") && canJump)
         {
             velocityVertical = jumpForce;
-            canJump = false; 
+            canJump = false;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump");
         }
     }
 }
