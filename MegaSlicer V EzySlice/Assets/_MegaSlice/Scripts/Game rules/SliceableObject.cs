@@ -10,16 +10,19 @@ public class SliceableObject : MonoBehaviour
     public Material crossMaterial;
 	float bonusTime = 1;
 
+	float volume;
 	float limitVolume = 0.25f;
 	float ratioDestroy = 0.15f; 
 	float limitNumberCutting = 15; 
+
 	[HideInInspector] public float numberCutting = 0;
-	float volume; 
+	[HideInInspector] public float forcePush = 80;
 
 	public void Start()
     {
-		InitSliceableObject();        		
-    }
+		InitSliceableObject();
+		forcePush = GameManager.forcePushCutStc; 
+	}
 
     public virtual void Slice(Transform slicePlane)
     {
@@ -124,13 +127,13 @@ public class SliceableObject : MonoBehaviour
 		Vector3 explosion = this.transform.position;
 		float inverseVolume = 1 / volume;
 		inverseVolume = Mathf.Clamp(inverseVolume, 0.001f, 1.8f);
-		rb.AddExplosionForce(400 * inverseVolume, explosion, 20);
+		rb.AddExplosionForce(forcePush * 10 * inverseVolume, explosion, 20);
 	}
 
 	public void RepulsionAfterCut(Rigidbody rb)
 	{
 		Vector3 posPlayer = FPS_Controller.playerPos;
-		rb.AddExplosionForce(900, posPlayer, 800); 
+		rb.AddExplosionForce(forcePush * 10, posPlayer, 800); 
 		
 	}
 }
