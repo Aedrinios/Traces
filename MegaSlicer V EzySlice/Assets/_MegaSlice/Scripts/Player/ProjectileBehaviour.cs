@@ -42,7 +42,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Sliceable"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/Hit Object");
+          //  FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/Hit Object");
             Slice(other.gameObject);
             lifeTime -= lifeLose;
         }

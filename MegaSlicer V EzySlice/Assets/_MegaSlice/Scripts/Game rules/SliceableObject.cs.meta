@@ -4,8 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - player: {instanceID: 0}
   - crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  - soundHitPrefab: {fileID: 2544815016989653292, guid: 0b02ae21f3a94a24899fe5d4a96f9cf8,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
