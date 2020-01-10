@@ -8,6 +8,7 @@ public class SliceableObject : MonoBehaviour
     private float timeLeft;
     private bool isSliceable;
     public Material crossMaterial;
+	public GameObject hitSound; 
 	float bonusTime = 1;
 
 	float volume;
@@ -39,6 +40,10 @@ public class SliceableObject : MonoBehaviour
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
+				if (hitSound != null) 
+				{
+					Instantiate(hitSound, transform.position, transform.rotation);
+				}
                 Destroy(this.gameObject);
             }
         }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114230518323368356}
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   EditorEvents:
   - {fileID: 114462741737319680}
   - {fileID: 114958080167795726}
@@ -22,10 +22,10 @@ MonoBehaviour:
   - {fileID: 114149436962532866}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   StringsBanks:
   - {fileID: 114230518323368356}
-  stringsBankWriteTime: 637142508825246552
+  stringsBankWriteTime: 637142533833195033
   cacheVersion: 3
 --- !u!114 &114032755402541666
 MonoBehaviour:
@@ -68,6 +68,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 420
+--- !u!114 &114073368193773582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637142532741571864
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114073655794550510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +160,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/Hit Object
   guid: e072bab5d31c354b94526d8900df1021
   Banks:
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -231,11 +249,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637142508825246552
+  lastModified: 637142533833195033
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 944
+  Exists: 1
+--- !u!114 &114231770640071030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637142533833105300
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &114249951876384502
 MonoBehaviour:
@@ -385,6 +421,46 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &114371263161364218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637142531289225077
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &114374280549252060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Ambient/Fight Music
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Ambient/Fight Music
+  guid: 1c790cc58b11c7488423a6960aa3d2d3
+  Banks: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 186723
 --- !u!114 &114390194725163494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +537,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Strike Woosh
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -551,6 +627,24 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 420
+--- !u!114 &114545430243909268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637142533302332908
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114567688522393468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +807,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Jump
   guid: 93dc32fe07e53149ab51e0b701ccdb39
   Banks:
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -759,6 +853,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 688
   Exists: 1
+--- !u!114 &114777007809396746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Ambient/Test_musique
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Ambient/Test_musique
+  guid: 1c9b9e8bdec1264fba3bef77125902ba
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 186723
 --- !u!114 &114786337231507736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,6 +990,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114849536992456136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637142531978358574
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114864200913895850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,7 +1048,7 @@ MonoBehaviour:
   lastModified: 637142508825186712
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &114895295467287038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,7 +1118,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Proctile Moving
   guid: 87d6d8d2efe69442bb80141dc0f47b99
   Banks:
-  - {fileID: 114865093734698270}
+  - {fileID: 114231770640071030}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
