@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23483772066548700}
   - component: {fileID: 64866832583366742}
   - component: {fileID: 114974213274756144}
-  - component: {fileID: 2081604761120055493}
   m_Layer: 0
   m_Name: Crate_04_snaps002
   m_TagString: Sliceable
@@ -109,19 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  numberCutting: 0
-  forcePush: 80
---- !u!114 &2081604761120055493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062870459301972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d042fc0deeddd45aa03f5fa4e5da09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
     type: 3}
+  numberCutting: 0
+  forcePush: 80

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23845424831015320}
   - component: {fileID: 64815769448152428}
   - component: {fileID: 114061202275029128}
-  - component: {fileID: 1499310338}
   m_Layer: 0
   m_Name: GuardRail_01_snaps002
   m_TagString: Sliceable
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1938284170932658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7959, y: 1.7959, z: 1.7959}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -60,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4666166040fc2024791e4c3483459492, type: 2}
+  - {fileID: 2100000, guid: abbba6a8ef5ae9f4b864662d522758b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,20 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  numberCutting: 0
-  forcePush: 80
---- !u!114 &1499310338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1938284170932658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1d042fc0deeddd45aa03f5fa4e5da09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
+  crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
