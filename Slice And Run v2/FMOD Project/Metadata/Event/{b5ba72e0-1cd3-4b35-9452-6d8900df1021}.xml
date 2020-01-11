@@ -98,8 +98,17 @@
 		<property name="totalSounds">
 			<value>25</value>
 		</property>
+		<property name="minimumTimeBetweenSounds">
+			<value>58</value>
+		</property>
+		<property name="maximumTimeBetweenSounds">
+			<value>4000</value>
+		</property>
+		<property name="minimumScatterDistance">
+			<value>0</value>
+		</property>
 		<property name="maximumScatterDistance">
-			<value>85</value>
+			<value>70</value>
 		</property>
 		<property name="volumeRandomization">
 			<value>-19</value>
@@ -171,7 +180,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{f769639f-23d2-477b-bc8d-7d740b5e6106}" />
 	<object class="MixerBusFader" id="{9108cefd-04c8-4e84-9219-cb84ce9393c5}" />
-	<object class="SpatialiserEffect" id="{ffcfb6ff-f3cc-4576-9dcd-92e8e4a5bb66}" />
+	<object class="SpatialiserEffect" id="{ffcfb6ff-f3cc-4576-9dcd-92e8e4a5bb66}">
+		<property name="minimumDistance">
+			<value>3.4000001</value>
+		</property>
+		<property name="maximumDistance">
+			<value>350</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{8ef88a38-e131-40d8-9f44-619fcb66aea7}">
 		<relationship name="audioFile">
 			<destination>{d7cd7e76-6f81-4209-8dc3-505d02bb128a}</destination>
