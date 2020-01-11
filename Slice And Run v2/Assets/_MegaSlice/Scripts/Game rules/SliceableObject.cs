@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
 
+[RequireComponent(typeof(ReactionAtSlice))]
 public class SliceableObject : MonoBehaviour
 {
     private float timeLeft;
     private bool isSliceable;
     public Material crossMaterial;
-	public GameObject hitSound; 
-	float bonusTime = 1;
-
-	float volume;
-	float limitVolume = 0.25f;
-	float ratioDestroy = 0.15f; 
 	float limitNumberCutting = 15; 
 
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public float forcePush = 80;
+	ReactionAtSlice reaction; 
 
 	public void Start()
     {
 		InitSliceableObject();
-		forcePush = GameManager.forcePushCutStc; 
+		reaction = GetComponent<ReactionAtSlice>(); 
+		forcePush = GameManager.forcePushCutStc; 		
 	}
 
     public virtual void Slice(Transform slicePlane)
@@ -34,17 +31,18 @@ public class SliceableObject : MonoBehaviour
 
             if (hull != null)
             {
-				EventHandler.cutObject?.Invoke();
-				GainBonusTime(); 
+				//slice this item
+				EventHandler.cutObject?.Invoke();				 
 				GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
-				if (hitSound != null) 
-				{
-					Instantiate(hitSound, transform.position, transform.rotation);
-				}
-                Destroy(this.gameObject);
+				//reaction at slice
+				if (reaction != null) reaction.allReactionAtSlice();
+				//GainBonusTime();
+
+				//end of slice
+				Destroy(this.gameObject);
             }
         }
     }
@@ -61,8 +59,6 @@ public class SliceableObject : MonoBehaviour
         SliceableObject so = go.AddComponent<SliceableObject>();
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
-
-		//ExplosionAfterCut(rb); 
 		RepulsionAfterCut(rb); 
 	}
 
@@ -78,14 +74,8 @@ public class SliceableObject : MonoBehaviour
 	{
 		isSliceable = false;
 		timeLeft = 0.1f;
-		Vector3 mySize = GetComponent<Collider>().bounds.size;
-		volume = mySize.x * mySize.y * mySize.z; 		
 
-		if (volume <= limitVolume * ratioDestroy)
-		{
-			Destroy(gameObject); 
-		}
-		else if (volume > limitVolume && numberCutting < limitNumberCutting)
+		if ( numberCutting < limitNumberCutting)
 		{
 			Invoke("ResetIsSliceable", timeLeft); 
 		}
@@ -111,29 +101,22 @@ public class SliceableObject : MonoBehaviour
 	{
 		if (numberCutting == 0)
 		{
-			LifeTimerManager.lifeTimer += bonusTime * LifeTimerManager.multiplierBonusCutStatic;
+			LifeTimerManager.lifeTimer += LifeTimerManager.multiplierBonusCutStatic;
 		}
 		else if (numberCutting == 1)
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.25f * LifeTimerManager.multiplierBonusCutStatic; 
+			LifeTimerManager.lifeTimer += 0.25f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 		else if (numberCutting == 2)
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.05f * LifeTimerManager.multiplierBonusCutStatic; 
+			LifeTimerManager.lifeTimer += 0.05f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 		else
 		{
-			LifeTimerManager.lifeTimer += bonusTime * 0.01f * LifeTimerManager.multiplierBonusCutStatic; 
+			LifeTimerManager.lifeTimer += 0.01f * LifeTimerManager.multiplierBonusCutStatic; 
 		}
 	}
 
-	public void ExplosionAfterCut(Rigidbody rb)
-	{
-		Vector3 explosion = this.transform.position;
-		float inverseVolume = 1 / volume;
-		inverseVolume = Mathf.Clamp(inverseVolume, 0.001f, 1.8f);
-		rb.AddExplosionForce(forcePush * 10 * inverseVolume, explosion, 20);
-	}
 
 	public void RepulsionAfterCut(Rigidbody rb)
 	{
