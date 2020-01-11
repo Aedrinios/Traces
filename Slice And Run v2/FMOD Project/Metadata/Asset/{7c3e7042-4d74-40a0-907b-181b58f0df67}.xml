@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{7c3e7042-4d74-40a0-907b-181b58f0df67}">
+		<property name="assetPath">
+			<value>PROJECTILE/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0bcd38e7-5c02-43b8-8808-6d68cfb87578}</destination>
+		</relationship>
+	</object>
+</objects>
