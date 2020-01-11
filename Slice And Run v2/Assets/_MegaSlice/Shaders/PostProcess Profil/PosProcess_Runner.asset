@@ -35,10 +35,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.06
+    value: 0.14
   threshold:
     overrideState: 1
-    value: 0.7
+    value: 0.8
   softKnee:
     overrideState: 0
     value: 0.5
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb84e30e02715445aeb9959894e3b4d, type: 3}
   m_Name: ColorGrading
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
@@ -129,7 +129,7 @@ MonoBehaviour:
     value: 180
   saturation:
     overrideState: 1
-    value: 48
+    value: 13
   brightness:
     overrideState: 0
     value: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
     value: 0.83
   contrast:
     overrideState: 1
-    value: 61
+    value: -46
   mixerRedOutRedIn:
     overrideState: 1
     value: 110
@@ -1409,7 +1409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
   m_Name: LensDistortion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
