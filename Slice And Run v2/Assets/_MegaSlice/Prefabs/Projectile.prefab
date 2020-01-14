@@ -4965,6 +4965,8 @@ MonoBehaviour:
   speed: 100
   cutPlane: {fileID: 1245947399}
   crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  hitParticle: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
+    type: 3}
 --- !u!54 &54239493773302262
 Rigidbody:
   m_ObjectHideFlags: 0

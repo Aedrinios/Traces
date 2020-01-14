@@ -11,6 +11,7 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField] [Range(0, 100)] private float speed;
     public Transform cutPlane;
     public Material crossMaterial;
+    public GameObject hitParticle;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class ProjectileBehaviour : MonoBehaviour
         if (other.CompareTag("Sliceable"))
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/Hit Object");
+            Instantiate(hitParticle, transform.position, transform.rotation);
             Slice(other.gameObject);
             lifeTime -= lifeLose;
         }
