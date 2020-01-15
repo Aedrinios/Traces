@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114021693578122082}
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   EditorEvents:
   - {fileID: 114548678736128346}
   - {fileID: 114821792852023518}
@@ -22,10 +22,10 @@ MonoBehaviour:
   - {fileID: 114622839591530052}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   StringsBanks:
   - {fileID: 114021693578122082}
-  stringsBankWriteTime: 637144547766287450
+  stringsBankWriteTime: 637143380062011665
   cacheVersion: 3
 --- !u!114 &114005186257509432
 MonoBehaviour:
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637144547766287450
+  lastModified: 637143380062011665
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1023,6 +1023,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114497751001355292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637143380061832146
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114533079981228350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,7 +1115,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Strike Woosh
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1214,7 +1232,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/Hit Object
   guid: e072bab5d31c354b94526d8900df1021
   Banks:
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1573,7 +1591,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Proctile Moving
   guid: 87d6d8d2efe69442bb80141dc0f47b99
   Banks:
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1994,7 +2012,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Jump
   guid: 93dc32fe07e53149ab51e0b701ccdb39
   Banks:
-  - {fileID: 114839448516655720}
+  - {fileID: 114497751001355292}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
