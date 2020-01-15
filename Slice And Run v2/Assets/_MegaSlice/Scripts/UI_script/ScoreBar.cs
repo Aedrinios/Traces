@@ -21,5 +21,10 @@ public class ScoreBar : MonoBehaviour
 	{
 		ratioFill = LifeTimerManager.lifeTimer / fifeTimerManager.timerMax;
 		img.fillAmount = ratioFill;
+
+        if(img.fillAmount < 0.2)
+        {
+            img.color = Color.Lerp(img.color, Color.red, 0.05f);
+        }
 	}
 }
