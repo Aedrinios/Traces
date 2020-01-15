@@ -26,5 +26,9 @@ public class ScoreBar : MonoBehaviour
         {
             img.color = Color.Lerp(img.color, Color.red, 0.05f);
         }
+        else
+        {
+            img.color = Color.Lerp(img.color, originalColor, 0.05f);
+        }
 	}
 }
