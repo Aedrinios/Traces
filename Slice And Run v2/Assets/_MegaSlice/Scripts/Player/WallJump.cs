@@ -48,11 +48,31 @@ public class WallJump : MonoBehaviour
  
             if (colliders.Length > 1)
             {
+                FindNearestCollider(colliders);
                 fps.canJump = true;
 				countJump++;
 
             }
         }
+    }
+
+    void FindNearestCollider(Collider[] colliders)
+    {
+        float nearestDistance = Mathf.Infinity;
+        Collider nearestCollider = null;
+
+        foreach (Collider col in colliders)
+        {
+            float distance = Vector3.Distance(transform.position, col.transform.position);
+
+            if (distance < nearestDistance)
+            {
+                nearestDistance = distance;
+                nearestCollider = col;
+            }
+        }
+        fps.wallCollider = nearestCollider;
+
     }
 
 
