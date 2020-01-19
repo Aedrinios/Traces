@@ -21,6 +21,7 @@ public class WindowTool : EditorWindow
 
 		// manière spéciale de mettre ce qu'on veut dans la fenetre
 		matSliceable = (Material)EditorGUILayout.ObjectField("material", matSliceable, typeof(Material));
+
 		if (GUILayout.Button("Change Slice Mat"))
 		{
 			ChangeMaterial(); 
