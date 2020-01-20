@@ -50,7 +50,7 @@ public class ProjectileBehaviour : MonoBehaviour
         }
         else
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/ImpactWall");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/ImpactWall");
             lifeTime -= lifeLose * 2.5f;
         }
     }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2546504387214751595}
   - component: {fileID: 2546504387214751591}
   - component: {fileID: 6145279408424924372}
-  - component: {fileID: 8441149572957194068}
   - component: {fileID: 1400862735458761585}
   m_Layer: 0
   m_Name: Player
@@ -91,7 +90,7 @@ MonoBehaviour:
   prefabSlice: {fileID: 6146719789378699888, guid: 8144bac791d104248a6ea358bd1e5a99,
     type: 3}
   cutPlane: {fileID: 2546504388377453058}
-  crossMaterial: {fileID: 2100000, guid: 5ced6ec6b5fcd3e409a3806a1ee841d2, type: 2}
+  crossMaterial: {fileID: 0}
   DelaySpamShot: 0.12
   canShot: 1
 --- !u!114 &2546504387214751591
@@ -125,18 +124,7 @@ MonoBehaviour:
     m_Bits: 1
   radius: 1
   maxWallJump: 3
---- !u!114 &8441149572957194068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546504387214751592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294c4df7bf473ea44aa5312c1c7438ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  nearestCollider: {fileID: 0}
 --- !u!114 &1400862735458761585
 MonoBehaviour:
   m_ObjectHideFlags: 0
