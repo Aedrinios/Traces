@@ -13,124 +13,21 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114418919055960668}
-  - {fileID: 114188435140170036}
+  - {fileID: 114992477379446506}
+  - {fileID: 114577625432306480}
   EditorEvents:
-  - {fileID: 114979049281613056}
-  - {fileID: 114479731187378450}
-  - {fileID: 114900054295553780}
-  - {fileID: 114884443019266936}
+  - {fileID: 114919245286154926}
+  - {fileID: 114460776667891784}
+  - {fileID: 114451493942339952}
+  - {fileID: 114171741189973118}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114188435140170036}
+  - {fileID: 114577625432306480}
   StringsBanks:
-  - {fileID: 114418919055960668}
-  stringsBankWriteTime: 637151389606102338
+  - {fileID: 114992477379446506}
+  stringsBankWriteTime: 637151566736806996
   cacheVersion: 3
---- !u!114 &114007844961140312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/Weapon/Proctile Moving
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/Weapon/Proctile Moving
-  guid: 87d6d8d2efe69442bb80141dc0f47b99
-  Banks:
-  - {fileID: 114146449198318466}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 80
-  MaxDistance: 7500
-  Length: 62380
---- !u!114 &114084340914866892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menus/Home/Navigation
-  m_EditorClassIdentifier: 
-  Path: event:/Menus/Home/Navigation
-  guid: daf6e68bd82819458088bcc2b958a7d4
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114146449198318466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637151389606022542
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &114176458256255358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menus/Game Over/Navigation 2
-  m_EditorClassIdentifier: 
-  Path: event:/Menus/Game Over/Navigation 2
-  guid: 9227754aedf54d4da02dd46007121051
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114188435140170036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637151389606022542
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &114344489297200772
+--- !u!114 &114041692068406292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +49,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &114418919055960668
+--- !u!114 &114127980752713544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,60 +59,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.strings.bank
+  Path: FMOD Project/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637151389606102338
+  lastModified: 637151562529607096
   LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 944
+  FileSizes: []
   Exists: 1
---- !u!114 &114479731187378450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/Weapon/Proctile Moving
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/Weapon/Proctile Moving
-  guid: 87d6d8d2efe69442bb80141dc0f47b99
-  Banks:
-  - {fileID: 114188435140170036}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 80
-  MaxDistance: 7500
-  Length: 62380
---- !u!114 &114524625529640486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.strings.bank
-  SubDir: 
-  lastModified: 637151389606102338
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 944
-  Exists: 1
---- !u!114 &114589174165894094
+--- !u!114 &114171741189973118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,7 +82,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/Hit Object
   guid: e072bab5d31c354b94526d8900df1021
   Banks:
-  - {fileID: 114146449198318466}
+  - {fileID: 114577625432306480}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -238,179 +90,7 @@ MonoBehaviour:
   MinDistance: 3.4
   MaxDistance: 350
   Length: 31
---- !u!114 &114617766891060908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menus/Game Over/Death Music
-  m_EditorClassIdentifier: 
-  Path: event:/Menus/Game Over/Death Music
-  guid: 94c6e44440c42540b870a605ad716637
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114727047763915534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637151404942971923
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &114735837694995614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMODSlice/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637151333920000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &114741517700959228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/Weapon/Strike Woosh
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/Weapon/Strike Woosh
-  guid: 0b324975b9113d4cb4fb0d8e6c84aa31
-  Banks:
-  - {fileID: 114146449198318466}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 31
---- !u!114 &114869755378898674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Menus/Game Over/Selection 2
-  m_EditorClassIdentifier: 
-  Path: event:/Menus/Game Over/Selection 2
-  guid: 0d4325ebe3128b40904e445a1609e4a3
-  Banks: []
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114884443019266936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/Environmental Objects/Hit Object
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/Environmental Objects/Hit Object
-  guid: e072bab5d31c354b94526d8900df1021
-  Banks:
-  - {fileID: 114188435140170036}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 3.4
-  MaxDistance: 350
-  Length: 31
---- !u!114 &114900054295553780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/PlayerCharacter/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/PlayerCharacter/Jump
-  guid: 93dc32fe07e53149ab51e0b701ccdb39
-  Banks:
-  - {fileID: 114188435140170036}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &114910487096635414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/InGame/Actions/PlayerCharacter/Jump
-  m_EditorClassIdentifier: 
-  Path: event:/InGame/Actions/PlayerCharacter/Jump
-  guid: 93dc32fe07e53149ab51e0b701ccdb39
-  Banks:
-  - {fileID: 114146449198318466}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
---- !u!114 &114957439112345318
+--- !u!114 &114237913197069964
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,7 +112,177 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &114979049281613056
+--- !u!114 &114451493942339952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/PlayerCharacter/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/PlayerCharacter/Jump
+  guid: 93dc32fe07e53149ab51e0b701ccdb39
+  Banks:
+  - {fileID: 114577625432306480}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &114460776667891784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Weapon/Proctile Moving
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Weapon/Proctile Moving
+  guid: 87d6d8d2efe69442bb80141dc0f47b99
+  Banks:
+  - {fileID: 114577625432306480}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 80
+  MaxDistance: 7500
+  Length: 62380
+--- !u!114 &114545462930014178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Game Over/Navigation 2
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Game Over/Navigation 2
+  guid: 9227754aedf54d4da02dd46007121051
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114577625432306480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637151566736737182
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &114581663053305100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Game Over/Selection 2
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Game Over/Selection 2
+  guid: 0d4325ebe3128b40904e445a1609e4a3
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114651304101816494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637151333920000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &114753548086421118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Game Over/Death Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Game Over/Death Music
+  guid: 94c6e44440c42540b870a605ad716637
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114828525942000156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Home/Navigation
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Home/Navigation
+  guid: daf6e68bd82819458088bcc2b958a7d4
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114919245286154926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,7 +297,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Strike Woosh
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114188435140170036}
+  - {fileID: 114577625432306480}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -455,3 +305,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 31
+--- !u!114 &114992477379446506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637151566736806996
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 944
+  Exists: 1

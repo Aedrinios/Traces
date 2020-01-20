@@ -13,11 +13,6 @@ public class ProjectileBehaviour : MonoBehaviour
     public Material crossMaterial;
     public GameObject hitParticle;
 
-    private void Awake()
-    {
-        FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Weapon/Strike Woosh");
-    }
-
     private void Update()
     {
 
@@ -43,14 +38,12 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Sliceable"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/Hit Object");
             Instantiate(hitParticle, transform.position, transform.rotation);
             Slice(other.gameObject);
             lifeTime -= lifeLose;
         }
         else
         {
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/Environmental Objects/ImpactWall");
             lifeTime -= lifeLose * 2.5f;
         }
     }

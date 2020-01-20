@@ -63,7 +63,7 @@ public class SliceableObject : MonoBehaviour
         SliceableObject so = go.AddComponent<SliceableObject>();
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
-
+        so.hitSound = hitSound;
 		RepulsionAfterCut(rb); 
 	}
 

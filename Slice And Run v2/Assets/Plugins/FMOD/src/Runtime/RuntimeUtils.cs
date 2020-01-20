@@ -420,9 +420,10 @@ namespace FMODUnity
                     return FMODPlatform.PS4;
                 #if !UNITY_2019_2_OR_NEWER
                 case BuildTarget.StandaloneLinux:
-                #endif
                 case BuildTarget.StandaloneLinuxUniversal:
+                #else
                 case BuildTarget.StandaloneLinux64:
+                #endif
                     return FMODPlatform.Linux;
                 case BuildTarget.StandaloneOSX:
                     return FMODPlatform.Mac;
