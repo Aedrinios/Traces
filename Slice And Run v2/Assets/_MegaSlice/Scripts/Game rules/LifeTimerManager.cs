@@ -26,7 +26,7 @@ public class LifeTimerManager : MonoBehaviour
 		if (playing)
 		{
 			lifeTimer -= Time.deltaTime * multiplierSpeedTimer;
-			lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax); 
+
 
 			if (lifeTimer <= 0)
 			{
@@ -34,6 +34,11 @@ public class LifeTimerManager : MonoBehaviour
 				Invoke("ResetScene", 1f); 
 			}
 		}
+	}
+
+	private void FixedUpdate()
+	{
+		lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax);
 	}
 
 	void StartLifeTimer()
