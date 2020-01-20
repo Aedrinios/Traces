@@ -75,7 +75,7 @@ MonoBehaviour:
   timerStart: 100
   timerMax: 100
   multiplierSpeedTimer: 7
-  multiplierBonusCut: 0.7
+  multiplierBonusCut: 0.2
   playing: 0
 --- !u!114 &969624865
 MonoBehaviour:
