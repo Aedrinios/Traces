@@ -14,7 +14,6 @@ public class FPS_Controller : MonoBehaviour
 
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
-	[HideInInspector] public Collider wallCollider;
 
 	public static Vector3 playerPos; 
 
@@ -86,22 +85,9 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            if (!characterController.isGrounded)
-            {
-                RotateCamera();
-            }
-
             velocityVertical = jumpForce;
             canJump = false;
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump");
         }
-    }
-
-    void RotateCamera()
-    {
-        Vector3 heading = wallCollider.transform.position - transform.position;
-        Vector3 perp = Vector3.Cross(transform.forward, heading);
-        float dir = Vector3.Dot(perp, transform.up);
-        Debug.Log("dir : " + dir);
     }
 }
