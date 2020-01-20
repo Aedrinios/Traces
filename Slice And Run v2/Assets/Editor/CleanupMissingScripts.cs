@@ -9,7 +9,7 @@ public class CleanupMissingScriptsHelper
     static void CleanupMissingScripts()
     {
         GameObject[] allGameobject = GameObject.FindObjectsOfType<GameObject>();
-
+        int numberCleanUp = 0; 
         for (int i = 0; i < allGameobject.Length; i++)
         {
             Component[] allComponent = allGameobject[i].GetComponents<Component>();
@@ -24,11 +24,13 @@ public class CleanupMissingScriptsHelper
                 {
                     prop.DeleteArrayElementAtIndex(j - r);
                     r++; 
+                    numberCleanUp++; 
                 }
             }
             serializedObject.ApplyModifiedProperties();
         }
 
-        Debug.Log("Clean is done"); 
+        Debug.Log(numberCleanUp + " scripts are clean"); 
+
     }
 }

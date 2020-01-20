@@ -14,24 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114524625529640486}
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   EditorEvents:
   - {fileID: 114741517700959228}
-  - {fileID: 114869755378898674}
-  - {fileID: 114957439112345318}
-  - {fileID: 114344489297200772}
   - {fileID: 114007844961140312}
-  - {fileID: 114176458256255358}
   - {fileID: 114910487096635414}
-  - {fileID: 114617766891060908}
-  - {fileID: 114084340914866892}
   - {fileID: 114589174165894094}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   StringsBanks:
   - {fileID: 114524625529640486}
-  stringsBankWriteTime: 637151333920000000
+  stringsBankWriteTime: 637151389606102338
   cacheVersion: 3
 --- !u!114 &114007844961140312
 MonoBehaviour:
@@ -48,7 +42,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Proctile Moving
   guid: 87d6d8d2efe69442bb80141dc0f47b99
   Banks:
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -70,8 +64,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Home/Navigation
   guid: daf6e68bd82819458088bcc2b958a7d4
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -79,6 +72,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114146449198318466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODSlice/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637151389606022542
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114176458256255358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,8 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Game Over/Navigation 2
   guid: 9227754aedf54d4da02dd46007121051
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -116,8 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Home/Home Music
   guid: 40a5642061979b409b6a6557e6154072
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -139,11 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMODSlice/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637151333920000000
+  lastModified: 637151389606102338
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1262
+    Value: 944
   Exists: 1
 --- !u!114 &114589174165894094
 MonoBehaviour:
@@ -160,7 +169,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/Hit Object
   guid: e072bab5d31c354b94526d8900df1021
   Banks:
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -182,8 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Game Over/Death Music
   guid: 94c6e44440c42540b870a605ad716637
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -208,7 +216,7 @@ MonoBehaviour:
   lastModified: 637151333920000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &114741517700959228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +232,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Strike Woosh
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -246,8 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Game Over/Selection 2
   guid: 0d4325ebe3128b40904e445a1609e4a3
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -270,7 +277,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Jump
   guid: 93dc32fe07e53149ab51e0b701ccdb39
   Banks:
-  - {fileID: 114735837694995614}
+  - {fileID: 114146449198318466}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -292,8 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Menus/Home/Selection
   guid: 2d4bff90bd422f47a8d496668eea240b
-  Banks:
-  - {fileID: 114735837694995614}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
