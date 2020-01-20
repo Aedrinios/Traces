@@ -18,7 +18,8 @@ public class LifeTimerManager : MonoBehaviour
 	{
 		playing = false;
 		lifeTimer = timerStart;
-		multiplierBonusCutStatic = multiplierBonusCut; 
+		multiplierBonusCutStatic = multiplierBonusCut;
+		timerMax += 0.95f; 
 	}
 
 	private void Update()
@@ -26,7 +27,7 @@ public class LifeTimerManager : MonoBehaviour
 		if (playing)
 		{
 			lifeTimer -= Time.deltaTime * multiplierSpeedTimer;
-
+			lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax);
 
 			if (lifeTimer <= 0)
 			{
