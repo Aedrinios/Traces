@@ -527,36 +527,39 @@ namespace FMODUnity
             try
             {
                 // Clean out any stale .bank files
-                string[] currentBankFiles = Directory.GetFiles(bankTargetFolder, "*." + bankTargetExension);
+                string[] currentBankFiles = Directory.GetFiles(bankTargetFolder, "*." + bankTargetExension, SearchOption.AllDirectories);
+                List<string> directories = new List<string>();
                 foreach (var bankFileName in currentBankFiles)
                 {
-                    string assetString = bankFileName.Replace(Application.dataPath, "Assets");
-                    AssetDatabase.ImportAsset(assetString);
-                    UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetString);
-                    string[] labels = AssetDatabase.GetLabels(obj);
-                    bool containsLabel = false;
-                    foreach (string label in labels)
-                    {
-                        if (label.Equals("FMOD"))
-                        {
-                            containsLabel = true;
-                            break;
-                        }
-                    }
-
-                    string bankName = Path.GetFileNameWithoutExtension(bankFileName);
-                    if (containsLabel && (!eventCache.EditorBanks.Exists((x) => bankName == x.Name)))
+                    var targetShortName = RuntimeUtils.GetCommonPlatformPath(bankFileName).Replace(bankTargetFolder + '/', "");
+                    if (!eventCache.EditorBanks.Exists((x) => targetShortName == x.Name + "." + bankTargetExension))
                     {
                         File.Delete(bankFileName);
                         madeChanges = true;
+                    }
+                    directories.Add(RuntimeUtils.GetCommonPlatformPath(Path.GetDirectoryName(bankFileName)));
+                }
+                if (madeChanges)
+                {
+                    AssetDatabase.Refresh();
+                    foreach (var dir in directories)
+                    {
+                        if (Directory.Exists(dir) && Directory.GetFiles(dir).Length <= 0)
+                        {
+                            Directory.Delete(dir);
+                        }
                     }
                 }
 
                 // Copy over any files that don't match timestamp or size or don't exist
                 foreach (var bankRef in eventCache.EditorBanks)
                 {
-                    string sourcePath = bankSourceFolder + "/" + bankRef.Name + ".bank";
-                    string targetPath = bankTargetFolder + "/" + bankRef.Name + "." + bankTargetExension;
+                    var dirName = RuntimeUtils.GetCommonPlatformPath(Path.GetDirectoryName(bankRef.Path));
+                    string subDir = dirName.Replace(bankSourceFolder, "");
+                    bankRef.SubDir = subDir.TrimStart('/');
+
+                    string sourcePath = bankSourceFolder + '/' + bankRef.Name + ".bank";
+                    string targetPath = bankTargetFolder + '/' + bankRef.Name + "." + bankTargetExension;
 
                     FileInfo sourceInfo = new FileInfo(sourcePath);
                     FileInfo targetInfo = new FileInfo(targetPath);
@@ -565,7 +568,11 @@ namespace FMODUnity
                         sourceInfo.Length != targetInfo.Length ||
                         sourceInfo.LastWriteTime != targetInfo.LastWriteTime)
                     {
-                        if (targetInfo.Exists)
+                        if (!targetInfo.Directory.Exists)
+                        {
+                            targetInfo.Directory.Create();
+                        }
+                        else if (targetInfo.Exists)
                         {
                             targetInfo.IsReadOnly = false;
                         }
@@ -573,15 +580,9 @@ namespace FMODUnity
                         targetInfo = new FileInfo(targetPath);
                         targetInfo.IsReadOnly = false;
                         targetInfo.LastWriteTime = sourceInfo.LastWriteTime;
-
+                        
                         madeChanges = true;
-
-                        string assetString = targetPath.Replace(Application.dataPath, "Assets");
-                        AssetDatabase.ImportAsset(assetString);
-                        UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(assetString);
-                        AssetDatabase.SetLabels(obj, new string[] { "FMOD" });
                     }
-                    AssetDatabase.SaveAssets();
                 }
             }
             catch(Exception exception)
