@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: FMODSlice/ProjectSD_Events.fspro
+  sourceProjectPath: FMODSlice\ProjectSD_Events.fspro
   sourceBankPath: FMODSlice\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
