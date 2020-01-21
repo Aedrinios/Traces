@@ -57,11 +57,11 @@ public class LifeTimerManager : MonoBehaviour
 
 	private void OnEnable()
 	{
-		EventHandler.BeginGame += StartLifeTimer; 
+		EventHandler.BeginTimer += StartLifeTimer; 
 	}
 
 	private void OnDisplay()
 	{
-		EventHandler.BeginGame += StartLifeTimer;
+		EventHandler.BeginTimer += StartLifeTimer;
 	}
 }

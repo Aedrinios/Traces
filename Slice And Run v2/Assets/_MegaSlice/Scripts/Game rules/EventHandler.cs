@@ -9,7 +9,7 @@ public class EventHandler : MonoBehaviour
 	public delegate void Action();
 	public static Action cutObject;
 
-	public static Action BeginGame; 
+	public static Action BeginTimer; 
 
 	public static Action GainWallJump;
 	public static Action StartPastequeRain;
