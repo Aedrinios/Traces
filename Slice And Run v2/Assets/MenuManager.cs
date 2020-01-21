@@ -9,6 +9,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject loadingPanel;
     [SerializeField] private Image loadingBar;
 
+    private void Awake()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     public void LaunchGame()
     {
         StartCoroutine(LoadScene(1));
