@@ -4,42 +4,35 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject loadingPanel;
-    [SerializeField] private Image loadingBar;
+    #region Singleton
+
+    private static GameManager instance;
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<GameManager>();
+            }
+
+            return instance;
+        }
+    }
+
+    #endregion
+
+    public Transform playerPosition;
 
     public float forcePushCut = 80;
 	public static float forcePushCutStc;
 
 	private void Awake()
 	{
-		forcePushCutStc = forcePushCut; 
-	}
-
-    public void LaunchGame()
-    {
-        StartCoroutine(LoadScene(1));
-    }
-
-    private IEnumerator LoadScene(int id)
-    {
-        loadingPanel.SetActive(true);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(id, LoadSceneMode.Additive);
-        loadingBar.fillAmount = 0f;
-
-        while (!asyncLoad.isDone)
-        {
-            loadingBar.fillAmount = asyncLoad.progress;
-            yield return null;
-        }
-
-        loadingPanel.SetActive(false);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
+        DontDestroyOnLoad(this.gameObject);
+		forcePushCutStc = forcePushCut;
+        playerPosition = GameObject.Find("StartSpawner").transform;
     }
 }

@@ -24,8 +24,12 @@ public class SliceableObject : MonoBehaviour
 	public void Start()
     {
 		InitSliceableObject();
-		forcePush = GameManager.forcePushCutStc;
-		reaction = GetComponent<ReactionAtSlice>(); 
+        if(GameManager.forcePushCutStc <= 0)
+            forcePush = 80;
+        else
+            forcePush = GameManager.forcePushCutStc;
+
+        reaction = GetComponent<ReactionAtSlice>(); 
 	}
 
     public virtual void Slice(Transform slicePlane)

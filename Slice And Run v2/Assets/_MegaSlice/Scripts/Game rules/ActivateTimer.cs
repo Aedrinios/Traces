@@ -12,9 +12,9 @@ public class ActivateTimer : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.gameObject.GetComponent<FPS_Controller>().enabled)
         {
             EventHandler.BeginTimer?.Invoke();
         }

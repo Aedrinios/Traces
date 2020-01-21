@@ -25,6 +25,8 @@ public class BasicTools : MonoBehaviour
     public static void RestartScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("current scene is " + currentScene);
+
         SceneManager.LoadScene(currentScene);
     }
 
