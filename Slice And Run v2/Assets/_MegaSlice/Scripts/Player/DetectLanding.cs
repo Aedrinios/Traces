@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class DetectLanding : MonoBehaviour
 {
-    public UnityEvent LandingEvent; 
+    public GameObject landingSd; 
     CharacterController characterController;
     float chrono = 0; 
 
@@ -22,8 +22,13 @@ public class DetectLanding : MonoBehaviour
         }
         else
         {
-            if (chrono >= 0.5f) LandingEvent.Invoke(); 
+            if (chrono >= 0.5f) Landing(); 
             chrono = 0; 
         }
+    }
+
+    void Landing()
+    {
+        Instantiate(landingSd, transform.position, transform.rotation); 
     }
 }

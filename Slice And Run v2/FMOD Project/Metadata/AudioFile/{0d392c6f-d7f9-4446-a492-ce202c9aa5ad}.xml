@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{0d392c6f-d7f9-4446-a492-ce202c9aa5ad}">
+		<property name="assetPath">
+			<value>NewCut1Alt2.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.83591836734693881</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0bcd38e7-5c02-43b8-8808-6d68cfb87578}</destination>
+		</relationship>
+	</object>
+</objects>
