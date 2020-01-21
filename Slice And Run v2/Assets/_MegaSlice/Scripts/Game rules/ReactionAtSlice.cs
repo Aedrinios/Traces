@@ -10,6 +10,7 @@ public class ReactionAtSlice : MonoBehaviour
 
 	private void Start()
 	{
+		powerVolume = LifeTimerManager.powerVolumeStc; 
 		numberCutting = GetComponent<SliceableObject>().numberCutting; 
 	}
 

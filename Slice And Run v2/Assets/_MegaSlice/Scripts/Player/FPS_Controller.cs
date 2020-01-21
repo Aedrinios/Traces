@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
 [RequireComponent(typeof(CharacterController))]
 public class FPS_Controller : MonoBehaviour
@@ -11,6 +12,8 @@ public class FPS_Controller : MonoBehaviour
     public float gravity = 20;
     public float sensivityX = 200;
     public float sensivityY = 200;
+
+
 
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
@@ -29,6 +32,7 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
 		canMoveCamera = true;
 	}
+
 	// attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
 	private void Update()
     {
@@ -48,7 +52,6 @@ public class FPS_Controller : MonoBehaviour
         if (inputs.magnitude >= 1) inputs = inputs.normalized;
         moveDir = inputs * speed;
         moveDir = transform.TransformDirection(moveDir); 
-
         moveDir.y = velocityVertical; 
     }
 
@@ -85,11 +88,12 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
+
             velocityVertical = jumpForce;
             canJump = false;
-            Debug.Log("hello?");
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump");
-            Debug.Log("nope.");
+            //Debug.Log("hello?");
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump");
+            //Debug.Log("nope.");
         }
     }
 }

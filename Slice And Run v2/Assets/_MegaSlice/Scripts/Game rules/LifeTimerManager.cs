@@ -9,15 +9,18 @@ public class LifeTimerManager : MonoBehaviour
 	public float timerStart = 70f; 
 	public float timerMax = 100;
 	public float multiplierSpeedTimer = 1;
-	public float multiplierBonusCut = 1; 
+	public float multiplierBonusCut = 1;
+	public float powerVolume = 1.2f; 
 	[HideInInspector] public bool playing = false;
 
-	public static float multiplierBonusCutStatic; 
+	public static float multiplierBonusCutStatic;
+	public static float powerVolumeStc;
 
 	private void Start()
 	{
 		playing = false;
 		lifeTimer = timerStart;
+		powerVolumeStc = powerVolume; 
 		multiplierBonusCutStatic = multiplierBonusCut;
 		timerMax += 0.95f; 
 	}

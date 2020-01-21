@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class CameraWallJump : MonoBehaviour
 {
+	[Range(-1,1)] public float way = 0;
 	public float speedRotate = 150;
 	public float delay = 0.5f;
 
+	public float radius = 1; 
+
 	bool isDuring = false;
-	int way = 1; 
 
 	public void RotateCamera()
 	{
+		IdentifyWallNear(); 
 		if (!isDuring) StartCoroutine(RotateCameraCor()); 
+	}
+
+	void IdentifyWallNear()
+	{
+		way = 0; 
+		RaycastHit hitRight; 
+		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, radius))
+		{
+			way = 1; 
+		}
+		RaycastHit hitLeft;
+		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, radius))
+		{
+			way = -1;
+		}
 	}
 
 	IEnumerator RotateCameraCor()
