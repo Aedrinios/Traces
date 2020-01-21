@@ -4,32 +4,49 @@ using UnityEngine;
 
 public class WallRunningCamera : MonoBehaviour
 {
-	//le wallRunning est en fait lié à la présence d'un mur ou non
-	// Ne s'active que quand on est en l'air, mais pour les tests je fais le faire à terre aussi.
-
 	public Transform cam;
-	public float angleZ; 
-	public float radius = 0.75f;
-	float way = 0;
 
+	public float speedRotation = 55;
+	public float maxRotation = 10; 
+	public float radius = 0.75f;
+	float angleZ;
+	CharacterController characterController;
+	private void Start()
+	{
+		characterController = GetComponent<CharacterController>(); 
+	}
 
 	private void Update()
 	{
-		cam.eulerAngles = new Vector3(cam.eulerAngles.x, cam.eulerAngles.y, angleZ); 
+		RotationCamera(); 
 	}
 
-	void IdentifyWallNear()
+	void RotationCamera()
 	{
-		angleZ = 0;
-		RaycastHit hitRight;
-		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hitRight, radius))
+		RaycastHit hit;
+		if (!characterController.isGrounded)
 		{
-			angleZ = 10;
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, radius))
+			{
+				angleZ += speedRotation * Time.deltaTime;
+			}
+			else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, radius))
+			{
+				angleZ -= speedRotation * Time.deltaTime;
+			}
+			else
+			{
+				angleZ = Mathf.MoveTowards(angleZ, 0, speedRotation * Time.deltaTime);
+			}
 		}
-		RaycastHit hitLeft;
-		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hitLeft, radius))
+		else
 		{
-			angleZ = -10;
+			angleZ = Mathf.MoveTowards(angleZ, 0, speedRotation * Time.deltaTime);
 		}
+		angleZ = Mathf.Clamp(angleZ, -maxRotation, maxRotation);
+
+		Vector3 camHolderRotation = cam.parent.transform.eulerAngles;
+
+		cam.eulerAngles = new Vector3(camHolderRotation.x, camHolderRotation.y, angleZ);
 	}
 }
