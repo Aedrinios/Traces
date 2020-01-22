@@ -93,10 +93,10 @@
 			<value>0.03125</value>
 		</property>
 		<property name="volume">
-			<value>-0.5</value>
+			<value>4</value>
 		</property>
 		<property name="volumeRandomization">
-			<value>-16</value>
+			<value>-7.5</value>
 		</property>
 		<property name="pitchRandomization">
 			<value>6.20000029</value>
@@ -107,7 +107,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{29f80067-6c0d-4b9e-a2dd-9e29c4dde941}">
 		<property name="volume">
-			<value>-1</value>
+			<value>7.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -173,7 +173,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{960579c2-a281-4214-ac28-cdce983fb619}" />
 	<object class="MixerBusFader" id="{9d25298b-47af-43d8-82cd-3f8488f7d275}" />
-	<object class="SpatialiserEffect" id="{abc113ec-2867-424f-98a3-e764b023ace3}" />
+	<object class="SpatialiserEffect" id="{abc113ec-2867-424f-98a3-e764b023ace3}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+		<property name="minimumDistance">
+			<value>4.20000029</value>
+		</property>
+		<property name="maximumDistance">
+			<value>55</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{1e46639b-4fbe-435b-a0cd-9d7c65474fb4}">
 		<relationship name="audioFile">
 			<destination>{9db99fc0-6722-4790-a43f-a40d2f34f698}</destination>

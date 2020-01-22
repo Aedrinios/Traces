@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{c13af847-3791-4f20-8807-fc4aa3e33427}">
 		<property name="assetPath">
-			<value>WhooshLoop5.mp3</value>
+			<value>PROJECTILE/WhooshLoop5.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

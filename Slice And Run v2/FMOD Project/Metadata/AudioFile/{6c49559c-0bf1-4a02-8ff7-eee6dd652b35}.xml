@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{6c49559c-0bf1-4a02-8ff7-eee6dd652b35}">
 		<property name="assetPath">
-			<value>WhooshLoop6.mp3</value>
+			<value>PROJECTILE/WhooshLoop6.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

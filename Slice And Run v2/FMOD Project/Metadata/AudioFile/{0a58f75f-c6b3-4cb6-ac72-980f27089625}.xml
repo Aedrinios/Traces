@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{0a58f75f-c6b3-4cb6-ac72-980f27089625}">
 		<property name="assetPath">
-			<value>NewCut2Alt3.mp3</value>
+			<value>SLICE/NewCut2Alt3.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{19d0336f-a3cf-43c7-a149-64f20a8b6c34}">
 		<property name="assetPath">
-			<value>FrenzySwoosh27.wav</value>
+			<value>PROJECTILE/FrenzySwoosh27.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
