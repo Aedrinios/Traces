@@ -15,8 +15,6 @@ public class WallJump : MonoBehaviour
 
     FPS_Controller fps;
     CharacterController characterController;
-    public Collider nearestCollider = null;
-
 
     private void Start()
     {
@@ -50,30 +48,9 @@ public class WallJump : MonoBehaviour
  
             if (colliders.Length > 1)
             {
-                FindNearestCollider(colliders);
-
                 fps.canJump = true;
                 countJump++;
             }
         }
     }
-
-    void FindNearestCollider(Collider[] colliders)
-    {
-        float nearestDistance = Mathf.Infinity;
-
-        foreach (Collider col in colliders)
-        {
-            float distance = Vector3.Distance(transform.position, col.transform.position);
-
-            if (distance < nearestDistance && col.gameObject != this.gameObject)
-            {
-                nearestDistance = distance;
-                nearestCollider = col;
-            }
-        }
-    }
-
-
-
 }

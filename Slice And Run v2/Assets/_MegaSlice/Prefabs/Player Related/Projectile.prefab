@@ -4924,6 +4924,7 @@ GameObject:
   - component: {fileID: 54239493773302262}
   - component: {fileID: 5525719535148714470}
   - component: {fileID: 5509957460945364289}
+  - component: {fileID: 114541312296093322}
   m_Layer: 10
   m_Name: Projectile
   m_TagString: Untagged
@@ -5003,7 +5004,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6146719789378699888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -5011,7 +5012,7 @@ MonoBehaviour:
   CollisionTag: 
   Event: event:/InGame/Actions/Weapon/Strike Woosh
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -5019,6 +5020,29 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 80
   OverrideMaxDistance: 7500
+--- !u!114 &114541312296093322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146719789378699888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/InGame/Actions/Weapon/Proctile Moving
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 10
+  OverrideMaxDistance: 30
 --- !u!1001 &3416930026442451364
 PrefabInstance:
   m_ObjectHideFlags: 0

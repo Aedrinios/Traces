@@ -88,12 +88,10 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-
             velocityVertical = jumpForce;
             canJump = false;
-            //Debug.Log("hello?");
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump");
-            //Debug.Log("nope.");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump2D", transform.position);
+
         }
     }
 }
