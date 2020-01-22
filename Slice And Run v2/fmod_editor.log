@@ -19,6 +19,13 @@
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
