@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07515b128eba4564096f49fc97f54d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fmodEvent: event:/InGame/Actions/PlayerCharacter/Landing
+  fmodEvent: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
   nameParameter: 
   valueParameter: 0
   delay: 700

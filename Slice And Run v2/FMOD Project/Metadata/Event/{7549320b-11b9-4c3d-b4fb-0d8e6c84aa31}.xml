@@ -96,19 +96,16 @@
 			<value>4</value>
 		</property>
 		<property name="volumeRandomization">
-			<value>-7.5</value>
+			<value>-4.5</value>
 		</property>
 		<property name="pitchRandomization">
-			<value>6.20000029</value>
+			<value>2.49999976</value>
 		</property>
 		<relationship name="sound">
 			<destination>{bbe56070-2eb6-437a-be72-13bf8c651906}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{29f80067-6c0d-4b9e-a2dd-9e29c4dde941}">
-		<property name="volume">
-			<value>-4</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

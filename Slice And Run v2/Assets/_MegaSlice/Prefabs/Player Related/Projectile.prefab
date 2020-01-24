@@ -5010,7 +5010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/InGame/Actions/Weapon/Strike Woosh
+  Event: event:/InGame/Actions/Weapon/Projectile
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1

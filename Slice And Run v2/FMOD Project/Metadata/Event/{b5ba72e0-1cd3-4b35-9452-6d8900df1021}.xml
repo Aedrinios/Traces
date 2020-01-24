@@ -114,19 +114,16 @@
 			<value>6.80000019</value>
 		</property>
 		<property name="volumeRandomization">
-			<value>-15</value>
+			<value>-2</value>
 		</property>
 		<property name="pitchRandomization">
-			<value>7</value>
+			<value>1.29999995</value>
 		</property>
 		<relationship name="sound">
 			<destination>{e01554c9-0ec6-424d-b737-6f200d3ae27a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3f264828-75cd-4860-82d2-12b801116dc8}">
-		<property name="volume">
-			<value>-6</value>
-		</property>
 		<property name="overridingInputFormat">
 			<value>1</value>
 		</property>
@@ -170,6 +167,9 @@
 	<object class="ThreeEQEffect" id="{839d595e-9838-4020-a5bb-4a70fe8663f2}">
 		<property name="highGain">
 			<value>-31</value>
+		</property>
+		<property name="lowCrossover">
+			<value>75</value>
 		</property>
 	</object>
 	<object class="SpatialiserEffect" id="{be9ba1fc-0482-4a5c-8925-193101d8b7ea}">

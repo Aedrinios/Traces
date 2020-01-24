@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/InGame/Actions/Environmental Objects/Hit Object
+  Event: event:/InGame/Actions/Environmental Objects/Impacte
   PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1

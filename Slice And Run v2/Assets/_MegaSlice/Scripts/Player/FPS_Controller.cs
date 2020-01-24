@@ -90,7 +90,7 @@ public class FPS_Controller : MonoBehaviour
         {
             velocityVertical = jumpForce;
             canJump = false;
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Jump2D", transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
 
         }
     }
