@@ -7,9 +7,8 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject prefabSlice;
     public Transform cutPlane;
-    public Material crossMaterial;
 
-	public float DelaySpamShot = 0.1f;
+    public float DelaySpamShot = 0.1f;
 	[HideInInspector] public bool canShot = true; 	
 
     private void Start()
