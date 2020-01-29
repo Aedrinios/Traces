@@ -9,18 +9,16 @@ public class PlayerAttack : MonoBehaviour
     public Transform cutPlane;
 
     public float DelaySpamShot = 0.1f;
-	[HideInInspector] public bool canShot = true; 	
+	private bool canShot; 	
 
     private void Start()
     {
 		canShot = true; 
-		Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1") && canShot)
+        if (Input.GetButtonDown("Projectile") && canShot)
         {
             LaunchProjectile();
 			canShot = false;
