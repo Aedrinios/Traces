@@ -30,7 +30,8 @@ public class FPS_Controller : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         cameraRotationX = 0;
         Cursor.visible = false;
-		canMoveCamera = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        canMoveCamera = true;
 	}
 
 	// attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
