@@ -4,45 +4,31 @@ using UnityEngine;
 
 public class LifeTimerManager : MonoBehaviour
 {
-	[Header("Settings Life Timer")]
-	public static float lifeTimer;
-	public float timerStart = 70f; 
-	public float timerMax = 100;
-	public float multiplierSpeedTimer = 1;
-	public float multiplierBonusCut = 1;
-	public float powerVolume = 1.2f; 
-	[HideInInspector] public bool playing = false;
+    [Header("Settings Life Timer")]
+    public static float lifeTimer;
 
-	public static float multiplierBonusCutStatic;
-	public static float powerVolumeStc;
+    private float timerMax;
+    public float TimerMax { get { return timerMax;} private set { timerMax = value; } }
+    public float timerStart = 70f;
+    [SerializeField] private  bool playing;
 
 	private void Start()
 	{
-		playing = false;
 		lifeTimer = timerStart;
-		powerVolumeStc = powerVolume; 
-		multiplierBonusCutStatic = multiplierBonusCut;
-		timerMax += 0.95f; 
+        TimerMax = timerStart;
 	}
 
 	private void Update()
 	{
 		if (playing)
 		{
-			lifeTimer -= Time.deltaTime * multiplierSpeedTimer;
-			lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax);
+			lifeTimer -= Time.deltaTime;
 
 			if (lifeTimer <= 0)
 			{
-				Debug.Log("TU AS PERDU");
 				Invoke("ResetScene", 1f); 
 			}
 		}
-	}
-
-	private void FixedUpdate()
-	{
-		lifeTimer = Mathf.Clamp(lifeTimer, 0, timerMax);
 	}
 
 	void StartLifeTimer()

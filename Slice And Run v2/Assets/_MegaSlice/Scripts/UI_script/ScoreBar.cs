@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class ScoreBar : MonoBehaviour
 {
-	LifeTimerManager fifeTimerManager; 
+	LifeTimerManager lifeTimerManager; 
 	Image img;
 	float ratioFill;
 	Color originalColor; 
 
 	private void Start()
 	{
-		fifeTimerManager = GameObject.FindObjectOfType<LifeTimerManager>();
+		lifeTimerManager = GameObject.FindObjectOfType<LifeTimerManager>();
 		img = GetComponent<Image>();
 		originalColor = img.color; 
 	}
 
 	private void Update()
 	{
-		ratioFill = LifeTimerManager.lifeTimer / fifeTimerManager.timerMax;
+		ratioFill = LifeTimerManager.lifeTimer / lifeTimerManager.TimerMax;
 		img.fillAmount = ratioFill;
 
         if(img.fillAmount < 0.2)

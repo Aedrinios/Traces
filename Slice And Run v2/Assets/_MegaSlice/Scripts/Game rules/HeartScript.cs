@@ -34,7 +34,6 @@ public class HeartScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("temps recommence");
             Time.timeScale = Mathf.Lerp(Time.timeScale, originalTimeScale, Time.unscaledDeltaTime * smooth);
         }
     }

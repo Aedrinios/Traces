@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
 
-[RequireComponent(typeof(ReactionAtSlice))]
 public class SliceableObject : MonoBehaviour
 {
     private float timeLeft;
@@ -19,7 +18,6 @@ public class SliceableObject : MonoBehaviour
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public float forcePush = 80;
 
-	ReactionAtSlice reaction; 
 
 	public void Start()
     {
@@ -28,8 +26,6 @@ public class SliceableObject : MonoBehaviour
             forcePush = 80;
         else
             forcePush = GameManager.forcePushCutStc;
-
-        reaction = GetComponent<ReactionAtSlice>(); 
 	}
 
     public virtual void Slice(Transform slicePlane)
@@ -41,7 +37,6 @@ public class SliceableObject : MonoBehaviour
 
             if (hull != null)
             {
-				reaction.GainBonusTime(); 
 				GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
