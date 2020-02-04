@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 1400862735458761585}
   - component: {fileID: 6229600815486438845}
   - component: {fileID: 4429569699078343997}
-  - component: {fileID: 6229600815486438854}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,9 +123,7 @@ MonoBehaviour:
   prefabSlice: {fileID: 6146719789378699888, guid: 8144bac791d104248a6ea358bd1e5a99,
     type: 3}
   cutPlane: {fileID: 2546504388377453058}
-  crossMaterial: {fileID: 0}
   DelaySpamShot: 0.12
-  canShot: 1
 --- !u!114 &2546504387214751591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,18 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landingSd: {fileID: 7885645183104195367, guid: 6533e0b250a9e1341be4ece19f115b5f,
     type: 3}
---- !u!114 &6229600815486438854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546504387214751592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25d94a1fef896d42a9546a59c68963f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2546504388042997439
 GameObject:
   m_ObjectHideFlags: 0
