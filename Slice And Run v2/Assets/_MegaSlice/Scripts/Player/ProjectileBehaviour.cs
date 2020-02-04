@@ -1,21 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EzySlice;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
 
     [SerializeField] private float lifeTime;
     [SerializeField] private float lifeLose = 0.02F;
-    [SerializeField] [Range(0, 100)] private float speed;
+    [SerializeField] private float speed;
     public Transform cutPlane;
-    public Material crossMaterial;
     public GameObject hitParticle;
 
     private void Update()
     {
-
         transform.position = transform.position + transform.forward * Time.deltaTime * speed;
 
         lifeTime -= Time.deltaTime;
@@ -25,7 +22,7 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
 
-    public void Slice(GameObject hit)
+    public virtual void Slice(GameObject hit)
     {
         if (hit == null)
         {
@@ -34,7 +31,7 @@ public class ProjectileBehaviour : MonoBehaviour
         hit.GetComponent<SliceableObject>().Slice(cutPlane);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sliceable"))
         {
