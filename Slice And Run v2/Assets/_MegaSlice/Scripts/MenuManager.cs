@@ -15,9 +15,9 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
     }
 
-    public void LaunchGame()
+    public void LaunchLevel(int sceneIndex)
     {
-        StartCoroutine(LoadScene(1));
+        StartCoroutine(LoadScene(sceneIndex));
     }
 
     private IEnumerator LoadScene(int id)
