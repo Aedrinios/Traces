@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI; 
 
 public class LifeTimerDisplay : MonoBehaviour
 {
-	Text timeText;
+	TextMeshProUGUI timeText;
     public float minTimer;
     public float maxTimer;
     private Color originalColor;
 
-	private void Start()
+    private void OnEnable()
+    {
+        LevelManager.onLevelComplete += SaveScore;
+    }
+
+    private void Start()
 	{
-        timeText = GetComponent<Text>();
+        timeText = GetComponent<TextMeshProUGUI>();
         originalColor = timeText.color;
 	}
 
@@ -28,6 +34,12 @@ public class LifeTimerDisplay : MonoBehaviour
             timeText.color = Color.Lerp(timeText.color, originalColor, 0.05f);
         }
         timeText.text = currentTime.ToString(); 
-		
 	}
+
+    public void SaveScore()
+    {
+        GameObject.Find("Canvas").transform.Find("scoreScreen").Find("ScoreText").GetComponent<TextMeshProUGUI>().text = timeText.text;
+    }
 }
+
+

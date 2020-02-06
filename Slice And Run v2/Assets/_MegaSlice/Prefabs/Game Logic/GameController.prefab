@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 678258818}
   - component: {fileID: 969624865}
   - component: {fileID: 643412778}
+  - component: {fileID: 4130159445169362199}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -59,10 +60,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerStart: 50
-  timerMax: 100
-  multiplierSpeedTimer: 7
-  multiplierBonusCut: 0.2
-  powerVolume: 1.2
   playing: 0
 --- !u!114 &969624865
 MonoBehaviour:
@@ -94,3 +91,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cheatInput: 102
   cheatModeIsOn: 0
+--- !u!114 &4130159445169362199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181918375578776812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186de4d7f6dbe4a48aa4dea01860eb71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

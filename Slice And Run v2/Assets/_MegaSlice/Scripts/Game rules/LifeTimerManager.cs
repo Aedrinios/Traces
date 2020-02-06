@@ -23,7 +23,6 @@ public class LifeTimerManager : MonoBehaviour
 		if (playing)
 		{
 			lifeTimer -= Time.deltaTime;
-
 			if (lifeTimer <= 0)
 			{
 				Invoke("ResetScene", 1f); 

@@ -53,6 +53,23 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadScene(sceneIndex));
     }
 
+    public void RetryLevel()
+    {
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex));
+    }
+
+    public void LaunchNextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
+        {
+            StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
+        }
+        else
+        {
+            StartCoroutine(LoadScene(0));
+        }
+    }
+
     private IEnumerator LoadScene(int id)
     {
         loadingScreen.SetActive(true);
@@ -83,7 +100,6 @@ public class GameManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
     }
-
 
     public void QuitGame()
     {
