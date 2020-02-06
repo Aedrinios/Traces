@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114086072303301154}
-  - {fileID: 114902878141159268}
+  - {fileID: 114868224726728516}
   EditorEvents:
   - {fileID: 114074226741027876}
-  - {fileID: 114328608997866754}
-  - {fileID: 114382473091536196}
-  - {fileID: 114567486777396460}
-  - {fileID: 114535253548534018}
+  - {fileID: 114350415863924590}
+  - {fileID: 114184373985722326}
+  - {fileID: 114114256433437052}
+  - {fileID: 114703497474892906}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114902878141159268}
+  - {fileID: 114868224726728516}
   StringsBanks:
   - {fileID: 114086072303301154}
-  stringsBankWriteTime: 637159055197810834
+  stringsBankWriteTime: 637153824567116416
   cacheVersion: 3
 --- !u!114 &114074226741027876
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Jump2D
   guid: 6a034934d1e95c409ecd69a23552df4d
   Banks:
-  - {fileID: 114902878141159268}
+  - {fileID: 114868224726728516}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -65,12 +65,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637159055197810834
+  lastModified: 637153824567116416
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 972
+    Value: 980
   Exists: 1
+--- !u!114 &114114256433437052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/PlayerCharacter/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/PlayerCharacter/Jump
+  guid: 93dc32fe07e53149ab51e0b701ccdb39
+  Banks:
+  - {fileID: 114868224726728516}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &114176001635653354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +117,29 @@ MonoBehaviour:
   MinDistance: 3600
   MaxDistance: 4000
   Length: 0
+--- !u!114 &114184373985722326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/PlayerCharacter/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/PlayerCharacter/Landing
+  guid: 2ccc044136af2c41958d39ba50398560
+  Banks:
+  - {fileID: 114868224726728516}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &114328608997866754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,8 +154,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/InGame/Actions/Weapon/Projectile
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 4.2000003
+  MaxDistance: 55
+  Length: 31
+--- !u!114 &114350415863924590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Weapon/Strike Woosh
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Weapon/Strike Woosh
+  guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114902878141159268}
+  - {fileID: 114868224726728516}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -149,8 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
   guid: 2ccc044136af2c41958d39ba50398560
-  Banks:
-  - {fileID: 114902878141159268}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -172,8 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/InGame/Actions/Environmental Objects/Impacte
   guid: e072bab5d31c354b94526d8900df1021
-  Banks:
-  - {fileID: 114902878141159268}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -218,8 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/InGame/Actions/PlayerCharacter/Saut
   guid: 93dc32fe07e53149ab51e0b701ccdb39
-  Banks:
-  - {fileID: 114902878141159268}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -273,6 +338,47 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &114703497474892906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Environmental Objects/Hit Object
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Environmental Objects/Hit Object
+  guid: e072bab5d31c354b94526d8900df1021
+  Banks:
+  - {fileID: 114868224726728516}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 3600
+  MaxDistance: 4000
+  Length: 0
+--- !u!114 &114868224726728516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637153824567076517
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114902878141159268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,4 +396,4 @@ MonoBehaviour:
   lastModified: 637159055197740994
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
