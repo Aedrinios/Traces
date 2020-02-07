@@ -184,7 +184,8 @@ MonoBehaviour:
   cam: {fileID: 2546504388042997438}
   speedRotation: 55
   maxRotation: 10
-  radius: 0.75
+  radius: 0.6
+  delayDectection: 0.002
 --- !u!114 &4429569699078343997
 MonoBehaviour:
   m_ObjectHideFlags: 0

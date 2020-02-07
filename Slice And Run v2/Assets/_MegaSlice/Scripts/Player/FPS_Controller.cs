@@ -106,6 +106,7 @@ public class FPS_Controller : MonoBehaviour
         {
             jumpDirection = new Vector3(0, 1, 0); 
             jumpDirection = cameraPlayer.TransformDirection(jumpDirection); 
+            //jumpDirection = 
             velocityVertical = jumpDirection * jumpForce;  
             canJump = false;
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);

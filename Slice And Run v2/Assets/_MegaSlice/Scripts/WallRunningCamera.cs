@@ -9,9 +9,15 @@ public class WallRunningCamera : MonoBehaviour
 	public float speedRotation = 55;
 	public float maxRotation = 10; 
 	public float radius = 0.75f;
+	public float delayDectection = 0.05f; 
+
 	float angleZ;
 	Vector3 jumpDirection; 
 	CharacterController characterController;
+	bool onGround;
+
+	float chrono = 0; 
+
 
 	private void Start()
 	{
@@ -20,14 +26,14 @@ public class WallRunningCamera : MonoBehaviour
 
 	private void Update()
 	{
+		CheckOnGround(); 
 		RotationCamera();
-		ModifJumpDirection(); 
 	}
 
 	void RotationCamera()
 	{
 		RaycastHit hit;
-		if (!characterController.isGrounded)
+		if (!onGround)
 		{
 			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, radius))
 			{
@@ -53,9 +59,21 @@ public class WallRunningCamera : MonoBehaviour
 		cam.eulerAngles = new Vector3(camHolderRotation.x, camHolderRotation.y, angleZ);
 	}
 
-	void ModifJumpDirection()
+	void CheckOnGround()
 	{
-
-
+		chrono += Time.deltaTime; 
+		if (chrono >= delayDectection)
+		{
+			if (characterController.isGrounded)
+			{
+				onGround = true;
+			}
+			else
+			{
+				onGround = false;
+			}
+			chrono = 0; 
+		}
 	}
+
 }
