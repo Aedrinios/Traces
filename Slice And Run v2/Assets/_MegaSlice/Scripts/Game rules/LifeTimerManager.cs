@@ -10,12 +10,23 @@ public class LifeTimerManager : MonoBehaviour
     private float timerMax;
     public float TimerMax { get { return timerMax;} private set { timerMax = value; } }
     public float timerStart = 70f;
-    [SerializeField] private  bool playing;
+    public static bool playing;
 
-	private void Start()
+    private void OnEnable()
+    {
+        LevelManager.onLevelComplete += StopLifeTimer;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.onLevelComplete -= StopLifeTimer;
+    }
+
+    private void Start()
 	{
 		lifeTimer = timerStart;
         TimerMax = timerStart;
+        playing = true;
 	}
 
 	private void Update()
@@ -35,18 +46,13 @@ public class LifeTimerManager : MonoBehaviour
 		playing = true;
 	}
 
-	void ResetScene()
-	{
-		BasicTools.RestartScene(); 
-	}
+    void StopLifeTimer()
+    {
+        playing = false;
+    }
 
-	private void OnEnable()
-	{
-		EventHandler.BeginTimer += StartLifeTimer; 
-	}
-
-	private void OnDisplay()
-	{
-		EventHandler.BeginTimer += StartLifeTimer;
-	}
+    void ResetScene()
+    {
+        BasicTools.RestartScene();
+    }
 }
