@@ -10,7 +10,9 @@ public class WallRunningCamera : MonoBehaviour
 	public float maxRotation = 10; 
 	public float radius = 0.75f;
 	float angleZ;
+	Vector3 jumpDirection; 
 	CharacterController characterController;
+
 	private void Start()
 	{
 		characterController = GetComponent<CharacterController>(); 
@@ -18,7 +20,8 @@ public class WallRunningCamera : MonoBehaviour
 
 	private void Update()
 	{
-		RotationCamera(); 
+		RotationCamera();
+		ModifJumpDirection(); 
 	}
 
 	void RotationCamera()
@@ -48,5 +51,11 @@ public class WallRunningCamera : MonoBehaviour
 		Vector3 camHolderRotation = cam.parent.transform.eulerAngles;
 
 		cam.eulerAngles = new Vector3(camHolderRotation.x, camHolderRotation.y, angleZ);
+	}
+
+	void ModifJumpDirection()
+	{
+
+
 	}
 }
