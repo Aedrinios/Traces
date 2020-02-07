@@ -10,8 +10,6 @@ public class LevelManager : MonoBehaviour
     public delegate void OnLevelFailed();
     public static OnLevelFailed onLevelFailed;
 
-
-
     private GameObject scoreScreen;
     private GameObject failedScreen;
     private GameObject playerInterface;
