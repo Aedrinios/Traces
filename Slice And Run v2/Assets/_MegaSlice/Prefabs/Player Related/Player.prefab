@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5843f1546b8fbb64789ad1a465edb3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPlayer: {fileID: 8441149572097763817}
+  cameraHolder: {fileID: 8441149572097763817}
   speed: 15
   jumpForce: 20
   gravity: 45

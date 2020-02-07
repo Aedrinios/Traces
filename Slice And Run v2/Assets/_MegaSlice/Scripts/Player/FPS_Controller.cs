@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(CharacterController))]
 public class FPS_Controller : MonoBehaviour
 {
-    public Transform cameraPlayer; 
+    public Transform cameraHolder; 
     public float speed = 20;
     public float jumpForce = 20; 
     public float gravity = 20;
@@ -17,12 +17,16 @@ public class FPS_Controller : MonoBehaviour
 	[HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
 
-	public static Vector3 playerPos; 
+	public static Vector3 playerPos;
+    
 
 	CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
-    float velocityVertical = 0;
+    Vector3 velocityVertical = Vector3.zero;
+    Vector3 jumpDirection; 
     float cameraRotationX = 0;
+
+    Transform cameraPlayer; 
 
     private void Start()
     {
@@ -31,18 +35,21 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         canMoveCamera = true;
+        cameraPlayer = cameraHolder.GetComponentInChildren<Camera>().gameObject.transform; 
 	}
 
 	// attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
 	private void Update()
     {
-		Gravity();
+        Gravity();
 		Jump();
 		if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
-		playerPos = transform.position; 
+		playerPos = transform.position;
     }
+
+
 
     void DefineMoveDirection()
     {
@@ -54,13 +61,13 @@ public class FPS_Controller : MonoBehaviour
             if (inputs.magnitude >= 1) inputs = inputs.normalized;
             moveDir = inputs * speed;
             moveDir = transform.TransformDirection(moveDir);
-            moveDir.y = velocityVertical;
+            moveDir += velocityVertical; 
         }
         else
         {
             moveDir = Vector3.zero;
             moveDir = transform.TransformDirection(moveDir);
-            moveDir.y = velocityVertical;
+            moveDir += velocityVertical; 
         }
     }
 
@@ -73,18 +80,18 @@ public class FPS_Controller : MonoBehaviour
 
         cameraRotationX += -rotY * sensivityY * Time.deltaTime;
         cameraRotationX = Mathf.Clamp(cameraRotationX, -89, 89); 
-        cameraPlayer.transform.localEulerAngles = new Vector3(cameraRotationX, 0, 0);
+        cameraHolder.transform.localEulerAngles = new Vector3(cameraRotationX, 0, 0);
     }
 
     void Gravity()
     {
         if (!characterController.isGrounded)
         {
-            velocityVertical -= gravity * Time.deltaTime;
+            velocityVertical.y -= gravity * Time.deltaTime;
         }
         else
         {
-            velocityVertical = -gravity * Time.deltaTime;
+            velocityVertical = Vector3.zero; 
         }
     }
 
@@ -92,15 +99,16 @@ public class FPS_Controller : MonoBehaviour
     {
         if (characterController.isGrounded)
         {
-            canJump = true; 
+            canJump = true;
         }
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            velocityVertical = jumpForce;
+            jumpDirection = new Vector3(0, 1, 0); 
+            jumpDirection = cameraPlayer.TransformDirection(jumpDirection); 
+            velocityVertical = jumpDirection * jumpForce;  
             canJump = false;
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
-
         }
     }
 
