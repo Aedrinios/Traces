@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7994167363304620193}
   m_Layer: 0
   m_Name: Plane (2)
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 1521326380}
   - component: {fileID: 1521326378}
   - component: {fileID: 1521326381}
+  - component: {fileID: 532097321}
   m_Layer: 0
   m_Name: CuBE
   m_TagString: Sliceable
@@ -156,9 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443f44ffae3dd4f46997a78326631179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowPower: 0.5
-  smooth: 0.95
-  slowDuration: 3
+  slowPower: 0.2
+  slowDuration: 1.5
 --- !u!114 &1521326381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +176,25 @@ MonoBehaviour:
     type: 3}
   numberCutting: 0
   forcePush: 80
+--- !u!95 &532097321
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846631436315035740}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 66102baed5a9569459b4f4a454b7e8c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4846631436315035742
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +208,7 @@ GameObject:
   - component: {fileID: 4846631436317234844}
   m_Layer: 0
   m_Name: sci_fi_box
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -267,7 +286,7 @@ GameObject:
   - component: {fileID: 1526616563518948129}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,7 +378,7 @@ GameObject:
   - component: {fileID: 6263337647836196962}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +470,7 @@ GameObject:
   - component: {fileID: 2084382825284078603}
   m_Layer: 0
   m_Name: Plane (4)
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +562,7 @@ GameObject:
   - component: {fileID: 5513123831257980254}
   m_Layer: 0
   m_Name: Plane (3)
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
