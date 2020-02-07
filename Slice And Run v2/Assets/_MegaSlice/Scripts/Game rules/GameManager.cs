@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public float forcePushCut = 80;
 	public static float forcePushCutStc;
 
+    [HideInInspector] public bool hasFailed;
+
     private void Awake()
     {
         forcePushCutStc = forcePushCut;
@@ -43,6 +45,15 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void Update()
+    {
+        if(Input.anyKeyDown && hasFailed)
+        {
+            hasFailed = false;
+            RetryLevel();
+        }
     }
 
     public void LaunchLevel(int sceneIndex)

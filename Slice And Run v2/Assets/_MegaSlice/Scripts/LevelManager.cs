@@ -7,7 +7,13 @@ public class LevelManager : MonoBehaviour
     public delegate void OnLevelComplete();
     public static OnLevelComplete onLevelComplete;
 
+    public delegate void OnLevelFailed();
+    public static OnLevelFailed onLevelFailed;
+
+
+
     private GameObject scoreScreen;
+    private GameObject failedScreen;
     private GameObject playerInterface;
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
@@ -16,12 +22,14 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
         onLevelComplete += ShowScoreScreen;
+        onLevelFailed += ShowFailedScreen;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
         onLevelComplete -= ShowScoreScreen;
+        onLevelFailed -= ShowFailedScreen;
     }
 
     private void Start()
@@ -35,12 +43,25 @@ public class LevelManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
+        scoreScreen.SetActive(true);
+
+        DeactivatePlayer();
+    }
+
+    private void ShowFailedScreen()
+    {
+        failedScreen.SetActive(true);
+        GameManager.Instance.hasFailed = true;
+        DeactivatePlayer();
+    }
+
+    private void DeactivatePlayer()
+    {
         fpsController.canPlay = false;
         fpsController.canMoveCamera = false;
         fpsController.canJump = false;
         attackController.enabled = false;
         playerInterface.SetActive(false);
-        scoreScreen.SetActive(true);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -48,7 +69,8 @@ public class LevelManager : MonoBehaviour
         if(scene.buildIndex > 0)
         {
             playerInterface = GameObject.Find("PlayerInterface");
-            scoreScreen = GameObject.Find("Canvas").transform.Find("scoreScreen").gameObject;
+            scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
+            failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
         }
     }
 }

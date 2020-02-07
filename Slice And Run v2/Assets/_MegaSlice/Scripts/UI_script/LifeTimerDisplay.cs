@@ -38,7 +38,7 @@ public class LifeTimerDisplay : MonoBehaviour
 
     public void SaveScore()
     {
-        GameObject.Find("Canvas").transform.Find("scoreScreen").Find("ScoreText").GetComponent<TextMeshProUGUI>().text = timeText.text;
+        GameObject.Find("Canvas").transform.Find("ScoreScreen").Find("ScoreText").GetComponent<TextMeshProUGUI>().text = timeText.text;
     }
 }
 
