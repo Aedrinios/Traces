@@ -108,6 +108,7 @@ MonoBehaviour:
   sensivityY: 22
   canJump: 1
   canMoveCamera: 0
+  canPlay: 1
 --- !u!114 &2546504387214751595
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,8 +13,6 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
 
-
-
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
@@ -41,21 +39,29 @@ public class FPS_Controller : MonoBehaviour
 		Gravity();
 		Jump();
 		if (canMoveCamera) RotateWithMouse();
-        if (canPlay)
-            DefineMoveDirection();
+        DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
 		playerPos = transform.position; 
     }
 
     void DefineMoveDirection()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        Vector3 inputs = new Vector3(h, 0, v);
-        if (inputs.magnitude >= 1) inputs = inputs.normalized;
-        moveDir = inputs * speed;
-        moveDir = transform.TransformDirection(moveDir); 
-        moveDir.y = velocityVertical; 
+        if (canPlay)
+        {
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+            Vector3 inputs = new Vector3(h, 0, v);
+            if (inputs.magnitude >= 1) inputs = inputs.normalized;
+            moveDir = inputs * speed;
+            moveDir = transform.TransformDirection(moveDir);
+            moveDir.y = velocityVertical;
+        }
+        else
+        {
+            moveDir = Vector3.zero;
+            moveDir = transform.TransformDirection(moveDir);
+            moveDir.y = velocityVertical;
+        }
     }
 
     void RotateWithMouse()
@@ -96,5 +102,17 @@ public class FPS_Controller : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
 
         }
+    }
+
+    public void StopPlayer()
+    {
+        canPlay = false;
+        canMoveCamera = false; 
+    }
+
+    public void StartPlayer()
+    {
+        canPlay = true;
+        canMoveCamera = true; 
     }
 }
