@@ -27,14 +27,11 @@ public class GameManager : MonoBehaviour
     private GameObject loadingScreen;
     private Image loadingBar;
 
-    public Transform playerPosition;
-
     public float forcePushCut = 80;
 	public static float forcePushCutStc;
 
     private void Awake()
     {
-      //  DontDestroyOnLoad(this.gameObject);
         forcePushCutStc = forcePushCut;
     }
 
