@@ -12,18 +12,19 @@ public class FPS_Controller : MonoBehaviour
     public float gravity = 20;
     public float sensivityX = 200;
     public float sensivityY = 200;
+    public bool onGround; 
 
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
+    [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
 
-	public static Vector3 playerPos;
-    
+    public static Vector3 playerPos; 
 
-	CharacterController characterController;
+    CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
     Vector3 velocityVertical = Vector3.zero;
-    Vector3 jumpDirection; 
+
     float cameraRotationX = 0;
 
     Transform cameraPlayer; 
@@ -38,8 +39,13 @@ public class FPS_Controller : MonoBehaviour
         cameraPlayer = cameraHolder.GetComponentInChildren<Camera>().gameObject.transform; 
 	}
 
-	// attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
-	private void Update()
+    private void FixedUpdate()
+    {
+        CheckOnGround();
+    }
+
+    // attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
+    private void Update()
     {
         Gravity();
 		Jump();
@@ -48,8 +54,6 @@ public class FPS_Controller : MonoBehaviour
         characterController.Move(moveDir * Time.deltaTime);
 		playerPos = transform.position;
     }
-
-
 
     void DefineMoveDirection()
     {
@@ -104,12 +108,26 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            jumpDirection = new Vector3(0, 1, 0); 
-            jumpDirection = cameraPlayer.TransformDirection(jumpDirection); 
-            //jumpDirection = 
+            jumpDirection = new Vector3(0, 1, 0);
+            jumpDirection = cameraPlayer.TransformDirection(jumpDirection);
+            jumpDirection.y = 1;
+            jumpDirection.x = 0; 
             velocityVertical = jumpDirection * jumpForce;  
             canJump = false;
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
+        }
+    }
+
+    void CheckOnGround()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1.5f))
+        {
+            onGround = true;
+        }
+        else
+        {
+            onGround = false;
         }
     }
 

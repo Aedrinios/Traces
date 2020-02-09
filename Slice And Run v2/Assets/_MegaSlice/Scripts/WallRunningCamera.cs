@@ -9,31 +9,27 @@ public class WallRunningCamera : MonoBehaviour
 	public float speedRotation = 55;
 	public float maxRotation = 10; 
 	public float radius = 0.75f;
-	public float delayDectection = 0.05f; 
 
 	float angleZ;
-	Vector3 jumpDirection; 
 	CharacterController characterController;
-	bool onGround;
-
-	float chrono = 0; 
-
+	FPS_Controller fps; 
+	public bool onGround = true;
 
 	private void Start()
 	{
-		characterController = GetComponent<CharacterController>(); 
+		characterController = GetComponent<CharacterController>();
+		fps = GetComponent<FPS_Controller>(); 
 	}
 
 	private void Update()
 	{
-		CheckOnGround(); 
 		RotationCamera();
 	}
 
 	void RotationCamera()
 	{
 		RaycastHit hit;
-		if (!onGround)
+		if (!fps.onGround)
 		{
 			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, radius))
 			{
@@ -52,28 +48,12 @@ public class WallRunningCamera : MonoBehaviour
 		{
 			angleZ = Mathf.MoveTowards(angleZ, 0, speedRotation * Time.deltaTime);
 		}
+
+		// rectifie l'angle et l'applique à la camera
 		angleZ = Mathf.Clamp(angleZ, -maxRotation, maxRotation);
-
 		Vector3 camHolderRotation = cam.parent.transform.eulerAngles;
-
 		cam.eulerAngles = new Vector3(camHolderRotation.x, camHolderRotation.y, angleZ);
 	}
 
-	void CheckOnGround()
-	{
-		chrono += Time.deltaTime; 
-		if (chrono >= delayDectection)
-		{
-			if (characterController.isGrounded)
-			{
-				onGround = true;
-			}
-			else
-			{
-				onGround = false;
-			}
-			chrono = 0; 
-		}
-	}
 
 }
