@@ -70,7 +70,6 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
-            Debug.Log("yes ok");
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
         }
         else

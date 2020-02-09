@@ -221,9 +221,10 @@ GameObject:
   - component: {fileID: 5634502263749909401}
   - component: {fileID: 5634502263749909400}
   - component: {fileID: 5634502263749909407}
+  - component: {fileID: 270363763}
   m_Layer: 0
   m_Name: Icosphere
-  m_TagString: Untagged
+  m_TagString: Sliceable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2678,6 +2679,20 @@ MonoBehaviour:
     type: 3}
   numberCutting: 0
   forcePush: 80
+--- !u!114 &270363763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634502263749909406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443f44ffae3dd4f46997a78326631179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGamePrefab: {fileID: 4166079048446866006, guid: 91e1aabda2d9cd346949defc8411f42d,
+    type: 3}
 --- !u!1 &7365712758333850563
 GameObject:
   m_ObjectHideFlags: 0

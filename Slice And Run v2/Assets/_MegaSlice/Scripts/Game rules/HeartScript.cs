@@ -4,10 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class HeartScript : MonoBehaviour
 {
-    [Header("Time control")]
-    [SerializeField] private float slowPower;
-  //  [SerializeField] private float smooth;
-    [SerializeField] private float slowDuration;
+    public GameObject endGamePrefab;
 
     private float originalTimeScale;
     private float timePast;
@@ -20,35 +17,12 @@ public class HeartScript : MonoBehaviour
         slowed = false;
     }
 
-    private void Update()
-    {
-        float showTimeScale = Time.timeScale;
-        if (slowed)
-        {
-            Time.timeScale = slowPower;
-            timePast += Time.unscaledDeltaTime;
-            LifeTimerManager.playing = false;
-            if (timePast > slowDuration)
-            {
-                slowed = false;
-                timePast = 0f;
-                Time.timeScale = originalTimeScale;
-                LevelManager.onLevelComplete?.Invoke();
-            }
-        }
-        else
-        {
-            //  Time.timeScale = Mathf.Lerp(Time.timeScale, originalTimeScale, Time.unscaledDeltaTime * smooth);
-            Time.timeScale = originalTimeScale;
-
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Projectile"))
         {
-            slowed = true;
+            GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);
+            go.GetComponent<EndGameManager>().slowed = true;
         }
     }
 }
