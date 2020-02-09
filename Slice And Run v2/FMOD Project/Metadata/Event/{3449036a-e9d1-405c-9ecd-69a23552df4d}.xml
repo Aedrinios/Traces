@@ -5,7 +5,7 @@
 			<value>Jump2D</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{a897233d-c0ab-4d94-8f30-ee5878362d5f}</destination>
@@ -126,7 +126,7 @@
 			<value>-12</value>
 		</property>
 		<relationship name="sounds">
-			<destination>{30ffcd83-8964-4965-9107-e1a3737e95c2}</destination>
+			<destination>{de66dcf6-4dcf-4d7c-86f6-26f71cfc9a07}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{91cb9279-71fd-438c-8bc6-fb097732107b}">
@@ -147,9 +147,9 @@
 			<value>-35</value>
 		</property>
 	</object>
-	<object class="SingleSound" id="{30ffcd83-8964-4965-9107-e1a3737e95c2}">
+	<object class="SingleSound" id="{de66dcf6-4dcf-4d7c-86f6-26f71cfc9a07}">
 		<relationship name="audioFile">
-			<destination>{fffc229b-f2e9-4bd4-8a6f-be0143d84d76}</destination>
+			<destination>{0ce9404f-f8df-49b8-967e-e2a0895bf5cb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{8be1cb40-200e-4e07-a21e-6a0769bb4456}" />

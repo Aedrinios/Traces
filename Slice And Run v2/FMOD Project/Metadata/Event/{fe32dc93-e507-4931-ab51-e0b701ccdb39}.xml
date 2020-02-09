@@ -5,7 +5,7 @@
 			<value>Saut</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{a897233d-c0ab-4d94-8f30-ee5878362d5f}</destination>
@@ -93,7 +93,7 @@
 			<value>2</value>
 		</property>
 		<relationship name="sounds">
-			<destination>{c7150379-5bb4-460b-b3a1-4fd2da5ef3de}</destination>
+			<destination>{34c52df0-878d-4867-9472-e2a7c9c6b622}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1e3d6a58-633d-4b64-8657-29b86e104776}">
@@ -118,9 +118,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{9cfe5163-c929-4a41-aa46-4934f590ca4b}" />
 	<object class="MixerBusFader" id="{ded0b208-f2b5-4572-9ab7-e0f1376c1f66}" />
-	<object class="SingleSound" id="{c7150379-5bb4-460b-b3a1-4fd2da5ef3de}">
+	<object class="SingleSound" id="{34c52df0-878d-4867-9472-e2a7c9c6b622}">
 		<relationship name="audioFile">
-			<destination>{fffc229b-f2e9-4bd4-8a6f-be0143d84d76}</destination>
+			<destination>{0ce9404f-f8df-49b8-967e-e2a0895bf5cb}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{17ef4309-ad4f-4df8-ac2f-c94de8cd099a}">
