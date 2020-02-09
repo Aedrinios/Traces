@@ -13,13 +13,11 @@ public class WallRunningCamera : MonoBehaviour
 
 	float angleZ;
 	bool nearWall = false; 
-	CharacterController characterController;
 	FPS_Controller fps; 
 	public bool onGround = true;
 
 	private void Start()
 	{
-		characterController = GetComponent<CharacterController>();
 		fps = GetComponent<FPS_Controller>(); 
 	}
 

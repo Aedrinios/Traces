@@ -13,10 +13,10 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
     public bool onGround;
+    public bool canJump = true;
 
     public UnityEvent Jump; 
-
-    [HideInInspector] public bool canJump = true;
+     
 	[HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);

@@ -6,11 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class WallJump : MonoBehaviour
 {
-	public bool wallJumpIsUnlock = false; 
 	public LayerMask layerMask;
 	public float radius = 1;
 	public int maxWallJump = 3;
-
 	int countJump = 0; 
 
     FPS_Controller fps;
@@ -23,34 +21,39 @@ public class WallJump : MonoBehaviour
     }
 
     private void Update()
-    {     
-		if (wallJumpIsUnlock)
-		{
-			if (!fps.canJump)
-			{
-				ResetCanJump();
-			}
-
-			if (characterController.isGrounded && countJump != 0)
-			{
-				countJump = 0;
-			}
-		}
-    }
-
-    void ResetCanJump()
-    {
-        if (!characterController.isGrounded && countJump < maxWallJump)
+    {           
+        if (!fps.onGround)
         {
-			Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
-
-			Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
- 
-            if (colliders.Length > 1)
+            if (DetectIfWallNear() && countJump <= maxWallJump)
             {
-                fps.canJump = true;
-                countJump++;
+                fps.canJump = true; 
+            }
+            else
+            {
+                fps.canJump = false; 
             }
         }
+
+        if (characterController.isGrounded && countJump != 0)
+		{
+			countJump = 0;
+		}		
     }
+
+    bool DetectIfWallNear()
+    {
+        Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
+        Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
+
+        if (colliders.Length > 1) return true;
+        else return false; 
+    }
+
+    public void CountWallJump()
+    {
+        countJump++; 
+    }
+
+
+
 }
