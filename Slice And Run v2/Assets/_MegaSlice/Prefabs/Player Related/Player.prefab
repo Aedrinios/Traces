@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 2546504387214751595}
   - component: {fileID: 2546504387214751591}
   - component: {fileID: 6145279408424924372}
-  - component: {fileID: 1400862735458761585}
   - component: {fileID: 6229600815486438845}
+  - component: {fileID: 1400862735458761585}
   - component: {fileID: 4429569699078343997}
   m_Layer: 0
   m_Name: Player
@@ -106,9 +106,25 @@ MonoBehaviour:
   gravity: 45
   sensivityX: 18
   sensivityY: 22
+  onGround: 0
+  Jump:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6229600815486438845}
+        m_MethodName: ModifDirectionJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   canJump: 1
   canMoveCamera: 0
   canPlay: 1
+  jumpDirection: {x: 0, y: 1, z: 0}
 --- !u!114 &2546504387214751595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,19 +172,6 @@ MonoBehaviour:
     m_Bits: 1
   radius: 1
   maxWallJump: 3
---- !u!114 &1400862735458761585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546504387214751592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31ca94db3c28b04789c45b8fa032c42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayCastDistance: 0.1
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,10 +185,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2546504388042997438}
+  forcePropulsion: 3
   speedRotation: 55
   maxRotation: 10
   radius: 0.6
-  delayDectection: 0.002
+  onGround: 1
+--- !u!114 &1400862735458761585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546504387214751592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31ca94db3c28b04789c45b8fa032c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCastDistance: 0.1
 --- !u!114 &4429569699078343997
 MonoBehaviour:
   m_ObjectHideFlags: 0

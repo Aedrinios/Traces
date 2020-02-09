@@ -6,11 +6,13 @@ public class WallRunningCamera : MonoBehaviour
 {
 	public Transform cam;
 
+	public float forcePropulsion = 5; 
 	public float speedRotation = 55;
 	public float maxRotation = 10; 
 	public float radius = 0.75f;
 
 	float angleZ;
+	bool nearWall = false; 
 	CharacterController characterController;
 	FPS_Controller fps; 
 	public bool onGround = true;
@@ -34,19 +36,23 @@ public class WallRunningCamera : MonoBehaviour
 			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, radius))
 			{
 				angleZ += speedRotation * Time.deltaTime;
+				nearWall = true; 
 			}
 			else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, radius))
 			{
 				angleZ -= speedRotation * Time.deltaTime;
+				nearWall = true; 
 			}
 			else
 			{
 				angleZ = Mathf.MoveTowards(angleZ, 0, speedRotation * Time.deltaTime);
+				nearWall = false; 
 			}
 		}
 		else
 		{
 			angleZ = Mathf.MoveTowards(angleZ, 0, speedRotation * Time.deltaTime);
+			nearWall = false;
 		}
 
 		// rectifie l'angle et l'applique à la camera
@@ -55,5 +61,13 @@ public class WallRunningCamera : MonoBehaviour
 		cam.eulerAngles = new Vector3(camHolderRotation.x, camHolderRotation.y, angleZ);
 	}
 
+	public void ModifDirectionJump()
+	{
+		if (nearWall && angleZ != 0)
+		{
+			float modifX = forcePropulsion * 0.1f * Mathf.Sign(angleZ); 
+			fps.jumpDirection = new Vector3(-modifX, 1, 0);
+		}
+	}
 
 }

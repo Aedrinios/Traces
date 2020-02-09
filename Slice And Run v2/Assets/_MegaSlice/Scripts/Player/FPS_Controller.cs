@@ -12,7 +12,9 @@ public class FPS_Controller : MonoBehaviour
     public float gravity = 20;
     public float sensivityX = 200;
     public float sensivityY = 200;
-    public bool onGround; 
+    public bool onGround;
+
+    public UnityEvent Jump; 
 
     [HideInInspector] public bool canJump = true;
 	[HideInInspector] public bool canMoveCamera = true;
@@ -24,10 +26,7 @@ public class FPS_Controller : MonoBehaviour
     CharacterController characterController;
     Vector3 moveDir = Vector3.zero;
     Vector3 velocityVertical = Vector3.zero;
-
     float cameraRotationX = 0;
-
-    Transform cameraPlayer; 
 
     private void Start()
     {
@@ -36,7 +35,6 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         canMoveCamera = true;
-        cameraPlayer = cameraHolder.GetComponentInChildren<Camera>().gameObject.transform; 
 	}
 
     private void FixedUpdate()
@@ -48,7 +46,7 @@ public class FPS_Controller : MonoBehaviour
     private void Update()
     {
         Gravity();
-		Jump();
+		DoJump();
 		if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
@@ -99,7 +97,7 @@ public class FPS_Controller : MonoBehaviour
         }
     }
 
-    void Jump()
+    void DoJump()
     {
         if (characterController.isGrounded)
         {
@@ -108,12 +106,12 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            jumpDirection = new Vector3(0, 1, 0);
-            jumpDirection = cameraPlayer.TransformDirection(jumpDirection);
-            jumpDirection.y = 1;
-            jumpDirection.x = 0; 
+            Jump.Invoke();
+            jumpDirection = transform.TransformDirection(jumpDirection); 
+
             velocityVertical = jumpDirection * jumpForce;  
             canJump = false;
+            jumpDirection = new Vector3(0, 1, 0);
             FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
         }
     }
