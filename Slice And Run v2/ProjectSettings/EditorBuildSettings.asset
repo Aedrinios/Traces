@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level/Level 02 - Jump.unity
     guid: 01a21887704d0aa4d9e60802b8ba404a
+  - enabled: 1
+    path: Assets/_Scenes/Level/Level 03 - Wall Jump.unity
+    guid: 3efa00e86a90acb499c352f5b45bfb7f
+  - enabled: 1
+    path: Assets/_Scenes/Level/Level 04 - Cut.unity
+    guid: 19d7edf0042f8164290d676a6c9bdd49
   m_configObjects: {}
