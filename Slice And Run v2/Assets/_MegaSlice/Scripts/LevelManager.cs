@@ -38,9 +38,10 @@ public class LevelManager : MonoBehaviour
 
     void ShowScoreScreen()
     {
+        ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
         scoreScreen.SetActive(true);
 
         DeactivatePlayer();

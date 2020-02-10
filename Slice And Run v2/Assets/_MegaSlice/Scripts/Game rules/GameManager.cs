@@ -101,11 +101,22 @@ public class GameManager : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            OnMenuLoaded();
         }
         else
         {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
+    public void OnMenuLoaded()
+    {
+        LevelButton[] allButtons = FindObjectsOfType<LevelButton>();
+        foreach (LevelButton button in allButtons)
+        {
+            if(ProgressionManager.listLevel[button.id])
+                button.onLevelUnlocked?.Invoke();
         }
     }
 
