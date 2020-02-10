@@ -26,7 +26,7 @@ public class LifeTimerManager : MonoBehaviour
 	{
 		lifeTimer = timerStart;
         TimerMax = timerStart;
-        playing = true;
+        playing = false;
 	}
 
 	private void Update()
@@ -39,14 +39,21 @@ public class LifeTimerManager : MonoBehaviour
 				LevelManager.onLevelFailed?.Invoke(); 
 			}
 		}
+        else
+        {
+            if (Input.anyKeyDown)
+            {
+                StartLifeTimer();
+            }
+        }
 	}
 
-	void StartLifeTimer()
+	public void StartLifeTimer()
 	{
 		playing = true;
 	}
 
-    void StopLifeTimer()
+    public void StopLifeTimer()
     {
         playing = false;
     }
