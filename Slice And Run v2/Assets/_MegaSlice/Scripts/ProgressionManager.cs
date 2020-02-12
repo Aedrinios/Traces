@@ -29,6 +29,6 @@ public class ProgressionManager : MonoBehaviour
     public static void UnlockLevel(int i)
     {
 
-        listLevel[i] = true;
+       listLevel[i] = true;
     }
 }
