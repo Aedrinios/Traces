@@ -115,8 +115,10 @@ public class GameManager : MonoBehaviour
         LevelButton[] allButtons = FindObjectsOfType<LevelButton>();
         foreach (LevelButton button in allButtons)
         {
-            if(ProgressionManager.listLevel[button.id])
+            if (ProgressionManager.listLevel[button.id])
+            {
                 button.onLevelUnlocked?.Invoke();
+            }
         }
     }
 

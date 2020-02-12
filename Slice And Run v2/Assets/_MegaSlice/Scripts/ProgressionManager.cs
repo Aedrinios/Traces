@@ -8,22 +8,27 @@ public class ProgressionManager : MonoBehaviour
     public int numberOfLevel;
 
     public static bool[] listLevel;
+
     private void OnEnable()
     {
-        listLevel = new bool[numberOfLevel];
-        Debug.Log(listLevel.Length);
-        UnlockLevel(0);
-        Debug.Log(listLevel.Length);
-
-        for (int i = 1; i < listLevel.Length; i++)
+        if (listLevel == null)
         {
-            listLevel[i] = false;
+            listLevel = new bool[numberOfLevel];
+            UnlockLevel(0);
+
+            for (int i = 1; i < listLevel.Length; i++)
+            {
+                listLevel[i] = false;
+            }
         }
+
         DontDestroyOnLoad(this.gameObject);
     }
 
+
     public static void UnlockLevel(int i)
     {
-        //listLevel[i] = true;
+
+        listLevel[i] = true;
     }
 }
