@@ -12,8 +12,11 @@ public class LifeTimerManager : MonoBehaviour
     public float timerStart = 70f;
     public static bool playing;
 
+    private GameObject startText;
+
     private void OnEnable()
     {
+        startText = GameObject.Find("StartText");
         LevelManager.onLevelComplete += StopLifeTimer;
     }
 
@@ -50,6 +53,7 @@ public class LifeTimerManager : MonoBehaviour
 
 	public void StartLifeTimer()
 	{
+        startText.SetActive(false);
 		playing = true;
 	}
 
