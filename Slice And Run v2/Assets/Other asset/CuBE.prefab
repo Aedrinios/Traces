@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1727123079943573789}
   - component: {fileID: 1727123079943573788}
   - component: {fileID: 1727123079943573791}
+  - component: {fileID: 7295521491756366099}
   m_Layer: 0
   m_Name: CuBE
   m_TagString: Untagged
@@ -3050,8 +3051,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossMaterial: {fileID: 2100000, guid: 17f9fc988ec20f54da30a95c6584c04c, type: 2}
+  crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
   hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
     type: 3}
   numberCutting: 0
   forcePush: 80
+--- !u!114 &7295521491756366099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727123079943573790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 443f44ffae3dd4f46997a78326631179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGamePrefab: {fileID: 4166079048446866006, guid: 91e1aabda2d9cd346949defc8411f42d,
+    type: 3}

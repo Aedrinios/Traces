@@ -184,7 +184,7 @@ RectTransform:
   m_GameObject: {fileID: 1964586788064953478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.275, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1069138629664845882}
   m_RootOrder: 2
@@ -519,7 +519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -18.27}
+  m_AnchoredPosition: {x: 0, y: -14.700012}
   m_SizeDelta: {x: 66.05, y: 36.54001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3892454466947698412
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: Time
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b6b5d3b20fe975f4d9ae602f0ffda813, type: 2}
   m_sharedMaterial: {fileID: 21454429073928714, guid: b6b5d3b20fe975f4d9ae602f0ffda813,
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3892454466947698414}
-    characterCount: 3
+    characterCount: 4
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

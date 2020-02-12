@@ -24,7 +24,7 @@ public class LifeTimerDisplay : MonoBehaviour
 
 	private void Update()
 	{
-        float currentTime = Mathf.Floor(Mathf.Clamp(LifeTimerManager.lifeTimer, minTimer, maxTimer));
+        float currentTime = Mathf.Clamp(LifeTimerManager.lifeTimer, minTimer, maxTimer);
         if(currentTime < 20f)
         {
             timeText.color = Color.Lerp(timeText.color, Color.red, 0.05f);
@@ -33,7 +33,7 @@ public class LifeTimerDisplay : MonoBehaviour
         {
             timeText.color = Color.Lerp(timeText.color, originalColor, 0.05f);
         }
-        timeText.text = currentTime.ToString(); 
+        timeText.text = currentTime.ToString("F2"); 
 	}
 
     public void SaveScore()

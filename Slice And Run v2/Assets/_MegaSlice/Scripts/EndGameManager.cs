@@ -6,7 +6,7 @@ public class EndGameManager : MonoBehaviour
 {
     [Header("Time control")]
     [SerializeField] private float slowPower;
-    //  [SerializeField] private float smooth;
+    [SerializeField] private float smooth;
     [SerializeField] private float slowDuration;
 
     private float originalTimeScale;
@@ -27,7 +27,8 @@ public class EndGameManager : MonoBehaviour
         float showTimeScale = Time.timeScale;
         if (slowed)
         {
-            Time.timeScale = slowPower;
+            Time.timeScale = Mathf.Lerp(Time.timeScale, slowPower, Time.unscaledDeltaTime * smooth); ;
+            Debug.Log(Time.timeScale);
             timePast += Time.unscaledDeltaTime;
             LifeTimerManager.playing = false;
             if (timePast > slowDuration)
