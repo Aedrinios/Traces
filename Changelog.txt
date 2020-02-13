@@ -1,5 +1,8 @@
 Semaine du 10/02/2020
 
-- 
--
--
+- ajout d'un bouton retour au menu dans les niveaux
+- le temps restant affiche désormais les millisecondes
+- finir un niveau débloque le niveau suivant
+- le cube de fin de niveau a un nouveau visuel
+- le ralentissement du temps est fluide
+- affichage d'un texte "press any button to start" au début des niveaux
