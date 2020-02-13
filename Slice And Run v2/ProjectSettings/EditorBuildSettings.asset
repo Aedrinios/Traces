@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Level/Onboarding/Level 04 - Cut.unity
     guid: 19d7edf0042f8164290d676a6c9bdd49
+  - enabled: 1
+    path: Assets/_Scenes/Level/Level 1-1/Level 11 - Right Path.unity
+    guid: c5e6ee45911ee9044bfea54a83fd401e
   m_configObjects: {}
