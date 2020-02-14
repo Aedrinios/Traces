@@ -10,7 +10,8 @@ public class PauseManager : MonoBehaviour
 
     private void Start()
     {
-        pauseScreen = GameObject.Find("Canvas").transform.Find("PauseScreen").gameObject;
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0)
+            pauseScreen = GameObject.Find("Canvas").transform.Find("PauseScreen").gameObject;
         playerInterface = GameObject.Find("PlayerInterface");
     }
 
