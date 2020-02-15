@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheatMode : MonoBehaviour
 {
 	public KeyCode cheatInput = KeyCode.F;
-	public bool cheatModeIsOn = false; 
+	public static bool cheatModeIsOn = false; 
 
     void Update()
     {

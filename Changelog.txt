@@ -1,4 +1,4 @@
-Semaine du 10/02/2020
+﻿Semaine du 10/02/2020
 
 - ajout d'un bouton retour au menu dans les niveaux
 - le temps restant affiche désormais les millisecondes
@@ -6,3 +6,5 @@ Semaine du 10/02/2020
 - le cube de fin de niveau a un nouveau visuel
 - le ralentissement du temps est fluide
 - affichage d'un texte "press any button to start" au début des niveaux
+- ajout d'un calculateur automatique du nombre de scène (plus besoin d'indiquer le nombre de scène sur le gameobject "progression"
+- ajout d'un mode Cinematique : "c'est un prefab qui permet d'activer une camera volante pour faire des trailers sympa" 

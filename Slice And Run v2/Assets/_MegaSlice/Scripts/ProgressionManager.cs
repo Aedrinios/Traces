@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ProgressionManager : MonoBehaviour
 {
-    public int numberOfLevel;
-
+    [HideInInspector] public int numberOfLevel;
     public static bool[] listLevel;
 
     private void OnEnable()
     {
+        CalculateNumberLevel(); 
         if (listLevel == null)
         {
             listLevel = new bool[numberOfLevel];
@@ -21,14 +22,16 @@ public class ProgressionManager : MonoBehaviour
                 listLevel[i] = false;
             }
         }
-
         DontDestroyOnLoad(this.gameObject);
     }
 
-
     public static void UnlockLevel(int i)
     {
-
        listLevel[i] = true;
+    }
+
+    void CalculateNumberLevel()
+    {
+        numberOfLevel = SceneManager.sceneCountInBuildSettings - 1;
     }
 }
