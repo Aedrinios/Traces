@@ -70,6 +70,8 @@ public class LevelManager : MonoBehaviour
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
+            scoreScreen.SetActive(false);
+            failedScreen.SetActive(false);
         }
     }
 }
