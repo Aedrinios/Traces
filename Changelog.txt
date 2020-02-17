@@ -8,3 +8,4 @@
 - affichage d'un texte "press any button to start" au début des niveaux
 - ajout d'un calculateur automatique du nombre de scène (plus besoin d'indiquer le nombre de scène sur le gameobject "progression"
 - ajout d'un mode Cinematique : "c'est un prefab qui permet d'activer une camera volante pour faire des trailers sympa" 
+- implémetantation en cours de l'écran de fin de niveau
