@@ -37,6 +37,8 @@ public class PauseManager : MonoBehaviour
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Pause()
@@ -45,6 +47,8 @@ public class PauseManager : MonoBehaviour
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 }
