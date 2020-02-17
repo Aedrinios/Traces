@@ -25,12 +25,14 @@ public class GameManager : MonoBehaviour
     #endregion
 
     private GameObject loadingScreen;
+    private GameObject levelScreen;
     private Image loadingBar;
 
     public float forcePushCut = 80;
 	public static float forcePushCutStc;
 
     [HideInInspector] public bool hasFailed;
+    public static bool levelScreenOpened;
 
     private void Awake()
     {
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         loadingScreen = GameObject.Find("Canvas").transform.Find("LoadingScreen").gameObject;
+        levelScreen = GameObject.Find("Canvas").transform.Find("LevelScreen").gameObject;
         loadingBar = loadingScreen.transform.GetChild(2).gameObject.GetComponent<Image>();
         if (scene.buildIndex == 0)
         {
@@ -112,19 +115,28 @@ public class GameManager : MonoBehaviour
 
     public void OnMenuLoaded()
     {
-        LevelButton[] allButtons = GameObject.Find("Canvas").GetComponentsInChildren<LevelButton>(true);
-        foreach (LevelButton button in allButtons)
+        if (levelScreenOpened)
         {
-            Debug.Log("i'm here");
-            Debug.Log("button id " + button.id);
-            Debug.Log("is it unlock ?" + ProgressionManager.listLevel[button.id]);
-
-            if (ProgressionManager.listLevel[button.id])
+            levelScreen.SetActive(true);
+            LevelButton[] allButtons = GameObject.Find("Canvas").GetComponentsInChildren<LevelButton>(true);
+            foreach (LevelButton button in allButtons)
             {
-                Debug.Log("then i'm here");
-                button.onLevelUnlocked?.Invoke();
+                Debug.Log("i'm here");
+                Debug.Log("button id " + button.id);
+                Debug.Log("is it unlock ?" + ProgressionManager.listLevel[button.id]);
+
+                if (ProgressionManager.listLevel[button.id])
+                {
+                    Debug.Log("then i'm here");
+                    button.onLevelUnlocked?.Invoke();
+                }
             }
         }
+    }
+
+    public void SetLevelScreenToLoaded()
+    {
+        levelScreenOpened = true;
     }
 
     public void QuitGame()
