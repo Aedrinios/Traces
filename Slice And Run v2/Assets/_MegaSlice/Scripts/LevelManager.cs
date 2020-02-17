@@ -60,7 +60,7 @@ public class LevelManager : MonoBehaviour
         fpsController.canMoveCamera = false;
         fpsController.canJump = false;
         attackController.enabled = false;
-        playerInterface.SetActive(false);
+        playerInterface.SetActive(false);   
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

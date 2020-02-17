@@ -112,18 +112,16 @@ public class GameManager : MonoBehaviour
 
     public void OnMenuLoaded()
     {
-        Debug.Log("lelelellele");
         LevelButton[] allButtons = GameObject.Find("Canvas").GetComponentsInChildren<LevelButton>(true);
-        Debug.Log(allButtons.Length);
         foreach (LevelButton button in allButtons)
         {
             Debug.Log("i'm here");
+            Debug.Log("button id " + button.id);
+            Debug.Log("is it unlock ?" + ProgressionManager.listLevel[button.id]);
 
             if (ProgressionManager.listLevel[button.id])
             {
                 Debug.Log("then i'm here");
-                Debug.Log(button.id);
-                Debug.Log(ProgressionManager.listLevel[button.id]);
                 button.onLevelUnlocked?.Invoke();
             }
         }

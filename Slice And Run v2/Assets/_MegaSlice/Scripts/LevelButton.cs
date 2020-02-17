@@ -28,6 +28,7 @@ public class LevelButton : MonoBehaviour
 
     public void UnlockLevel()
     {
+        Debug.Log("unlocked " + id);
         SpriteState unlockedState = new SpriteState();
         unlockedState.highlightedSprite = unlockedSpriteHighlight;
         button.interactable = true;
