@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000000003F4CD228 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000005CB06ED8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,6 +18,28 @@
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
+[LOG] SoundI::release                          :  (000000004B34B7A8)
+[LOG] SoundI::release                          :     WHOOSH_Air_Blade_RR1_mono (0000000019D8B278)
+[LOG] SoundI::release                          :  (000000004B34C048)
+[LOG] SoundI::release                          :     PLASMA_CANNON_Deep_Noisy_Tail_stereo (000000004131BC98)
+[LOG] SoundI::release                          :  (000000004B34C608)
+[LOG] SoundI::release                          :     TestJump (0000000040ACE898)
+[LOG] SoundI::release                          :  (000000004B34BBF8)
+[LOG] SoundI::release                          :     NewLanding3 (0000000040ACF8D8)
+[LOG] SoundI::release                          :  (000000004B34B358)
+[LOG] SoundI::release                          :     NewLanding1 (0000000040ACFDB8)
+[LOG] SoundI::release                          :  (000000004B34D188)
+[LOG] SoundI::release                          :     NewLanding2 (00000000381E4608)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
