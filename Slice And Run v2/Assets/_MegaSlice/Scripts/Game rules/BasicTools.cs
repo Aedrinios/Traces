@@ -46,10 +46,7 @@ public class BasicTools : MonoBehaviour
         {
             RestartScene();
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            QuitGame();
-        }
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             isInvicible = !isInvicible;
