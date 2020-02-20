@@ -98,10 +98,11 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         loadingScreen = GameObject.Find("Canvas").transform.Find("LoadingScreen").gameObject;
-        levelScreen = GameObject.Find("Canvas").transform.Find("LevelScreen").gameObject;
+
         loadingBar = loadingScreen.transform.GetChild(2).gameObject.GetComponent<Image>();
         if (scene.buildIndex == 0)
         {
+            levelScreen = GameObject.Find("Canvas").transform.Find("LevelScreen").gameObject;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             OnMenuLoaded();
