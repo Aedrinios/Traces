@@ -100,6 +100,10 @@ public class GameManager : MonoBehaviour
         loadingScreen = GameObject.Find("Canvas").transform.Find("LoadingScreen").gameObject;
 
         loadingBar = loadingScreen.transform.GetChild(2).gameObject.GetComponent<Image>();
+        if(Time.timeScale < 1)
+        {
+            Time.timeScale = 1;
+        }
         if (scene.buildIndex == 0)
         {
             levelScreen = GameObject.Find("Canvas").transform.Find("LevelScreen").gameObject;
