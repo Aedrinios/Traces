@@ -7,7 +7,16 @@
 - le ralentissement du temps est fluide
 - affichage d'un texte "press any button to start" au début des niveaux
 - ajout d'un calculateur automatique du nombre de scène (plus besoin d'indiquer le nombre de scène sur le gameobject "progression"
+
+Semaine du 17/02/2020
+
 - ajout d'un mode Cinematique : "c'est un prefab qui permet d'activer une camera volante pour faire des trailers sympa" 
 - implémentation en cours de l'écran de fin de niveau
 - Modifications du Sound Design : Nouveau son de saut, modification du son de réception, nouveau son de création du projectile,
 modification du son de découpe d'objet.
+- nouveau niveau 
+- correction du timer qui continuait après la fin du niveau
+- correction de la pause qui ne marchait pas dans certains niveaux
+- correction de l'écran de fin qui restait en lançant un nouveau niveau
+- correction du joueur qui était désactivé en lançant un niveau depuis le menu après une pause
+- rebake du niveau 1 et 2 
