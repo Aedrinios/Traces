@@ -44,7 +44,7 @@ public class LifeTimerManager : MonoBehaviour
 		}
         else
         {
-            if (Input.anyKeyDown)
+            if (Input.anyKeyDown && startText.activeSelf)
             {
                 StartLifeTimer();
             }
