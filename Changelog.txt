@@ -20,3 +20,5 @@ modification du son de découpe d'objet.
 - correction de l'écran de fin qui restait en lançant un nouveau niveau
 - correction du joueur qui était désactivé en lançant un niveau depuis le menu après une pause
 - rebake du niveau 1 et 2 
+- ajout d'un niveau
+- correction de la scène de menu
