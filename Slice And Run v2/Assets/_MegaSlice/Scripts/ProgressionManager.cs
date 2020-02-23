@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ProgressionManager : MonoBehaviour
 {
-    [HideInInspector] public int numberOfLevel;
+    private static ProgressionManager instance;
+
+    public static int numberOfLevel;
     public static bool[] listLevel;
 
     private void OnEnable()
     {
+        DontDestroyOnLoad(this.gameObject);
+
+        IsLoaded();
         CalculateNumberLevel(); 
         if (listLevel == null)
         {
@@ -22,12 +27,23 @@ public class ProgressionManager : MonoBehaviour
                 listLevel[i] = false;
             }
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public static void UnlockLevel(int i)
     {
        listLevel[i] = true;
+    }
+
+    void IsLoaded()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void CalculateNumberLevel()
