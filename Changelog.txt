@@ -27,3 +27,4 @@ Semaine du 24/02/2020
 
 - correction du bug (interraction entre la fin de niveau et la pause)
 - rajout de l'ambience sonore
+- SD réglé 
