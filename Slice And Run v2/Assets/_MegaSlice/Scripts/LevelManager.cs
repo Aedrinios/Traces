@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
 
+    public static bool isLevelEnding = false; 
+
     private int sceneIndex;
 
     private void OnEnable()
@@ -37,14 +39,15 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        isLevelEnding = false; 
         fpsController = FindObjectOfType<FPS_Controller>();
         attackController = FindObjectOfType<PlayerAttack>();
     }
 
     void ShowScoreScreen()
     {
-        ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);
- 
+        isLevelEnding = true; 
+        ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         scoreScreen.SetActive(true);
@@ -54,6 +57,7 @@ public class LevelManager : MonoBehaviour
 
     private void ShowFailedScreen()
     {
+        isLevelEnding = true; 
         failedScreen.SetActive(true);
         GameManager.Instance.hasFailed = true;
         DeactivatePlayer();
@@ -76,6 +80,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        isLevelEnding = false; 
         sceneIndex = scene.buildIndex;
         if (sceneIndex > 0)
         {

@@ -17,6 +17,8 @@ public class PauseManager : MonoBehaviour
         playerInterface = GameObject.Find("PlayerInterface");
         fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
         playerAttack = GameObject.FindWithTag("Player").GetComponent<PlayerAttack>();
+
+        if (isPaused) isPaused = false; 
     }
 
     private void Update()
@@ -36,14 +38,24 @@ public class PauseManager : MonoBehaviour
 
     public void Resume()
     {
-        playerInterface.SetActive(true);
         pauseScreen.SetActive(false);
+        playerInterface.SetActive(true);
+        fps.canMoveCamera = true;
+        playerAttack.canShot = true;
         Time.timeScale = 1f;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        fps.canMoveCamera = true;
-        playerAttack.canShot = true; 
+
+        if (LevelManager.isLevelEnding)
+        {
+            //BasicTools.RestartScene(); 
+            playerInterface.SetActive(false);
+            fps.canMoveCamera = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
     }
 
     void Pause()
@@ -56,6 +68,8 @@ public class PauseManager : MonoBehaviour
         Cursor.visible = true;
         fps.canMoveCamera = false;
         playerAttack.canShot = false;
+
+
     }
 
 }
