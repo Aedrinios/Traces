@@ -25,6 +25,8 @@ modification du son de découpe d'objet.
 
 Semaine du 24/02/2020
 
-- correction du bug (interraction entre la fin de niveau et la pause)
+- correction du bug (interaction entre la fin de niveau et la pause)
+- ajout d'un script de sauvegarde de donnée
+- ajout d'une zone de texte pour choisir un pseudo
 - rajout de l'ambience sonore
 - SD réglé 

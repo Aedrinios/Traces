@@ -45,14 +45,14 @@ public class PauseManager : MonoBehaviour
         playerInterface.SetActive(true);
         if(fps != null)
         {
+            fps.canPlay = true;
             fps.canMoveCamera = true;
             playerAttack.canShot = true;
         }
-        Time.timeScale = 1f;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        LifeTimerManager.playing = true;
         if (LevelManager.isLevelEnding)
         {
             //BasicTools.RestartScene(); 
@@ -60,20 +60,22 @@ public class PauseManager : MonoBehaviour
             fps.canMoveCamera = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            LifeTimerManager.playing = false;
         }
 
     }
 
     void Pause()
     {
+        LifeTimerManager.playing = false;
         playerInterface.SetActive(false);
         pauseScreen.SetActive(true);
-        Time.timeScale = 0f;
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         if(fps != null)
         {
+            fps.canPlay = false;
             fps.canMoveCamera = false;
             playerAttack.canShot = false;
         }
