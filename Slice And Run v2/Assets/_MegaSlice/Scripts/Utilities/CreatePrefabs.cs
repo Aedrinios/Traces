@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CreatePrefabs : MonoBehaviour
 {
-	public GameObject prefabToSpawn; 
+	public GameObject prefabToSpawn;
 
 	public void SpawnPrefabs()
 	{
-		Instantiate(prefabToSpawn, transform.position, transform.rotation); 
+		Instantiate(prefabToSpawn, transform.position, transform.rotation); 		
 	}
+
+
 }

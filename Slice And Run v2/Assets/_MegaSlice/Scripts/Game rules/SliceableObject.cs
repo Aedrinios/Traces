@@ -18,14 +18,15 @@ public class SliceableObject : MonoBehaviour
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public float forcePush = 80;
 
+	public delegate void HitHappen();
+	public static HitHappen hitHappen;
+	public static Vector3 positionSlice; 
 
 	public void Start()
     {
 		InitSliceableObject();
-        if(GameManager.forcePushCutStc <= 0)
-            forcePush = 80;
-        else
-            forcePush = GameManager.forcePushCutStc;
+        if (GameManager.forcePushCutStc <= 0) forcePush = 80;
+        else forcePush = GameManager.forcePushCutStc;
 	}
 
     public virtual void Slice(Transform slicePlane)
@@ -41,11 +42,15 @@ public class SliceableObject : MonoBehaviour
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
-				if (hitSound != null) 
-				{
-					Instantiate(hitSound, transform.position, transform.rotation);
-				}
-                Destroy(this.gameObject);
+
+				//sound Hit 
+				//if (hitSound != null) Instantiate(hitSound, transform.position, transform.rotation);
+				hitHappen.Invoke();
+				positionSlice = transform.position; 
+
+
+
+				Destroy(this.gameObject);
             }
         }
     }

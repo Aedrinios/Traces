@@ -30,7 +30,7 @@ public class FmodParameter : MonoBehaviour
         instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); 
     }
 
-    void PlaySound()
+    public void PlaySound()
     {
         instance = RuntimeManager.CreateInstance(fmodEvent);
         instance.set3DAttributes(RuntimeUtils.To3DAttributes(Camera.main.transform.position));
