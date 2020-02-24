@@ -8,13 +8,9 @@ public class PlayerData
     public string name;
     public float[] scoreList;
 
-    public void SetName(string name)
+    public PlayerData(string name, float[] scoreList)
     {
         this.name = name;
-    }
-
-    public void SetScore(int levelIndex, float score)
-    {
-        scoreList[levelIndex] = score;
+        this.scoreList = scoreList;
     }
 }

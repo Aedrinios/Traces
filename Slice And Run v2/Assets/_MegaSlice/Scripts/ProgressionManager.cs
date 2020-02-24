@@ -48,6 +48,6 @@ public class ProgressionManager : MonoBehaviour
 
     void CalculateNumberLevel()
     {
-        numberOfLevel = SceneManager.sceneCountInBuildSettings - 1;
+        numberOfLevel = SceneManager.sceneCountInBuildSettings;
     }
 }

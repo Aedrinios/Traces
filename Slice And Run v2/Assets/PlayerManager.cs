@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Awake()
     {
-        scoreList = new float[UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings - 1];
+        scoreList = new float[SceneManager.sceneCountInBuildSettings - 1];
     }
 
     public void Start() {     
@@ -30,7 +30,8 @@ public class PlayerManager : MonoBehaviour
     public void SaveName()
     {
         name = inputName.text;
-        }
+        SaveSystem.SavePlayer(this);
+    }
 
     public void SaveScore(int levelIndex, float score)
     {

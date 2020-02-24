@@ -6,18 +6,33 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class SaveSystem
 {
-    public static string name;
+    private static string path = Application.persistentDataPath + "/playerscores.cut";
 
-    public static void SavePlayerScore(int levelIndex, float score)
+    public static void SavePlayer(PlayerManager player)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/playerscores.cut";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        PlayerData data = new PlayerData();
-        data.SetName(name);
-
+        PlayerData data = new PlayerData(player.name, player.scoreList);
         formatter.Serialize(stream, data);
         stream.Close();
+    }
+
+    public static PlayerData LoadPlayer()
+    {
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            PlayerData data = formatter.Deserialize(stream) as PlayerData;
+
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found in " + path);
+            return null;
+        }
     }
 }

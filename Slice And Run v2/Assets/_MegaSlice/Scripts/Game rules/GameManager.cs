@@ -126,13 +126,8 @@ public class GameManager : MonoBehaviour
             LevelButton[] allButtons = GameObject.Find("Canvas").GetComponentsInChildren<LevelButton>(true);
             foreach (LevelButton button in allButtons)
             {
-                Debug.Log("i'm here");
-                Debug.Log("button id " + button.id);
-                Debug.Log("is it unlock ?" + ProgressionManager.listLevel[button.id]);
-
                 if (ProgressionManager.listLevel[button.id])
                 {
-                    Debug.Log("then i'm here");
                     button.onLevelUnlocked?.Invoke();
                 }
             }
