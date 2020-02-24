@@ -22,3 +22,8 @@ modification du son de découpe d'objet.
 - rebake du niveau 1 et 2 
 - ajout d'un niveau
 - correction de la scène de menu
+
+Semaine du 24/02/2020
+
+- correction du bug (interraction entre la fin de niveau et la pause)
+- rajout de l'ambience sonore
