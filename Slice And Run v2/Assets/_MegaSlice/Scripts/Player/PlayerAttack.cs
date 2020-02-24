@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform cutPlane;
 
     public float DelaySpamShot = 0.1f;
-	private bool canShot;
+	[HideInInspector] public bool canShot;
     private bool startGame;
 
     private void Start()

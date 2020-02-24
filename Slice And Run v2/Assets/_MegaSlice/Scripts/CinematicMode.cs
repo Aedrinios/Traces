@@ -30,6 +30,10 @@ public class CinematicMode : MonoBehaviour
 		///CamCinematic = GetComponentInChildren<Camera>().gameObject;
 		CamCinematic.SetActive(true);
 
+		GameObject player = GameObject.FindWithTag("Player");
+		transform.position = player.transform.position;
+		transform.rotation = player.transform.rotation; 
+
 		GameObject[] allGameObjects = FindObjectsOfType<GameObject>();
 		for (int i = 0; i < allGameObjects.Length; i++)
 		{
