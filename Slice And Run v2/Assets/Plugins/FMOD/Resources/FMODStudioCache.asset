@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114124929110960362}
-  - {fileID: 114963483809619066}
+  - {fileID: 114883989904737960}
+  - {fileID: 114979325733377298}
   EditorEvents:
-  - {fileID: 114847148560027236}
-  - {fileID: 114858737958453110}
-  - {fileID: 114970941881064360}
-  - {fileID: 114015802746505504}
-  - {fileID: 114794143908552094}
-  - {fileID: 114542380852365136}
-  - {fileID: 114022024898105072}
-  - {fileID: 114286686918535242}
+  - {fileID: 114447686793238704}
+  - {fileID: 114946201821806180}
+  - {fileID: 114957069855433686}
+  - {fileID: 114098625785935016}
+  - {fileID: 114606538251738208}
+  - {fileID: 114462063380933954}
+  - {fileID: 114145315862771432}
+  - {fileID: 114509445994797730}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114963483809619066}
+  - {fileID: 114979325733377298}
   StringsBanks:
-  - {fileID: 114124929110960362}
-  stringsBankWriteTime: 637181459115795165
+  - {fileID: 114883989904737960}
+  stringsBankWriteTime: 637181539371639542
   cacheVersion: 3
 --- !u!114 &114003130874080444
 MonoBehaviour:
@@ -222,6 +222,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &114098625785935016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Home/Selection
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Home/Selection
+  guid: 2d4bff90bd422f47a8d496668eea240b
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 500
 --- !u!114 &114124929110960362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +283,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114145315862771432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menus/Home/Navigation
+  m_EditorClassIdentifier: 
+  Path: event:/Menus/Home/Navigation
+  guid: daf6e68bd82819458088bcc2b958a7d4
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1253
 --- !u!114 &114167113007309208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +581,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114447686793238704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Weapon/Projectile
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Weapon/Projectile
+  guid: 0b324975b9113d4cb4fb0d8e6c84aa31
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 4.2000003
+  MaxDistance: 10
+  Length: 31
 --- !u!114 &114458344857444032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +627,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &114462063380933954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/PlayerCharacter/Saut
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/PlayerCharacter/Saut
+  guid: 93dc32fe07e53149ab51e0b701ccdb39
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 992
 --- !u!114 &114486333956951150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +749,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114509445994797730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/Environmental Objects/Impacte
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/Environmental Objects/Impacte
+  guid: e072bab5d31c354b94526d8900df1021
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 3600
+  MaxDistance: 4000
+  Length: 0
 --- !u!114 &114534055186961928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +872,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114606538251738208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Actions/PlayerCharacter/Jump2D
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Actions/PlayerCharacter/Jump2D
+  guid: 6a034934d1e95c409ecd69a23552df4d
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &114633847995764060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,6 +1231,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114883989904737960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637181539371639542
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1150
+  Exists: 1
 --- !u!114 &114886437340132144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1129,6 +1287,52 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114946201821806180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/InGame/Ambient/Ambient Loop
+  m_EditorClassIdentifier: 
+  Path: event:/InGame/Ambient/Ambient Loop
+  guid: 12f44cb691e4564a8edf95d3cf7281fa
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 6060
+--- !u!114 &114957069855433686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
+  m_EditorClassIdentifier: 
+  Path: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
+  guid: 2ccc044136af2c41958d39ba50398560
+  Banks:
+  - {fileID: 114979325733377298}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 992
 --- !u!114 &114963483809619066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1374,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 992
+--- !u!114 &114979325733377298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637181539371564367
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114990517008758800
 MonoBehaviour:
   m_ObjectHideFlags: 0

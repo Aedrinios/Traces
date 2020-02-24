@@ -13,10 +13,13 @@ public class PauseManager : MonoBehaviour
     private void Start()
     {
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0)
+        {
             pauseScreen = GameObject.Find("Canvas").transform.Find("PauseScreen").gameObject;
+            fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
+            playerAttack = GameObject.FindWithTag("Player").GetComponent<PlayerAttack>();
+        }
+
         playerInterface = GameObject.Find("PlayerInterface");
-        fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
-        playerAttack = GameObject.FindWithTag("Player").GetComponent<PlayerAttack>();
 
         if (isPaused) isPaused = false; 
     }
@@ -40,8 +43,11 @@ public class PauseManager : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         playerInterface.SetActive(true);
-        fps.canMoveCamera = true;
-        playerAttack.canShot = true;
+        if(fps != null)
+        {
+            fps.canMoveCamera = true;
+            playerAttack.canShot = true;
+        }
         Time.timeScale = 1f;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -66,8 +72,11 @@ public class PauseManager : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        fps.canMoveCamera = false;
-        playerAttack.canShot = false;
+        if(fps != null)
+        {
+            fps.canMoveCamera = false;
+            playerAttack.canShot = false;
+        }
 
 
     }
