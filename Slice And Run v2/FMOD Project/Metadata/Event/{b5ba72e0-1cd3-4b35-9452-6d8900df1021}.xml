@@ -72,9 +72,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c8dc69d6-c545-4eb1-9090-b408e0b15bb7}">
-		<property name="volume">
-			<value>-2.5</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{e05360b2-c052-4140-b799-d6f9be24cd0d}</destination>
 		</relationship>
@@ -95,11 +92,8 @@
 		<property name="length">
 			<value>0.0001220703125</value>
 		</property>
-		<property name="volume">
-			<value>10</value>
-		</property>
 		<property name="pitch">
-			<value>1.80000007</value>
+			<value>1.20000005</value>
 		</property>
 		<property name="minimumTimeBetweenSounds">
 			<value>10</value>
@@ -125,7 +119,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{3f264828-75cd-4860-82d2-12b801116dc8}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-5.5</value>
 		</property>
 		<property name="overridingInputFormat">
 			<value>1</value>
@@ -168,8 +162,11 @@
 	<object class="MixerBusPanner" id="{f769639f-23d2-477b-bc8d-7d740b5e6106}" />
 	<object class="MixerBusFader" id="{9108cefd-04c8-4e84-9219-cb84ce9393c5}" />
 	<object class="ThreeEQEffect" id="{839d595e-9838-4020-a5bb-4a70fe8663f2}">
+		<property name="lowGain">
+			<value>-9</value>
+		</property>
 		<property name="highGain">
-			<value>-31</value>
+			<value>-26</value>
 		</property>
 		<property name="lowCrossover">
 			<value>75</value>
@@ -180,10 +177,10 @@
 			<value>2</value>
 		</property>
 		<property name="minimumDistance">
-			<value>3600</value>
+			<value>6800</value>
 		</property>
 		<property name="maximumDistance">
-			<value>4000</value>
+			<value>10000</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{bf75b8cc-4952-40e4-bdf9-f599caad76dd}">

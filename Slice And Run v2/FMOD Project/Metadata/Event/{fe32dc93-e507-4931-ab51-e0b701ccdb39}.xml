@@ -90,13 +90,22 @@
 	<object class="MixerBusPanner" id="{349988c6-f123-40fd-8ec6-b48bed8e3a48}" />
 	<object class="SingleSound" id="{f0688da6-db13-477c-bb0e-41cf634d45b3}">
 		<property name="length">
-			<value>0.99265306122448982</value>
+			<value>0.79265306122448964</value>
 		</property>
-		<property name="volume">
-			<value>-15.5</value>
+		<property name="timelockedOffset">
+			<value>0.19901250458887332</value>
+		</property>
+		<property name="pitch">
+			<value>-3</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{b2c6ffcf-e9c6-4527-a835-85d74361f83f}</destination>
+		</relationship>
+		<relationship name="fadeInCurve">
+			<destination>{ca8561ae-653b-4652-b1b7-a3b10e968b0e}</destination>
+		</relationship>
+		<relationship name="fadeOutCurve">
+			<destination>{227295c1-8000-40a8-8b9c-a978d3050ca4}</destination>
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{6879e110-8c75-42b8-aaf2-8ed8f71399a0}</destination>
@@ -104,7 +113,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{1e3d6a58-633d-4b64-8657-29b86e104776}">
 		<property name="volume">
-			<value>10</value>
+			<value>-12</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -135,9 +144,27 @@
 			<value>21.5</value>
 		</property>
 	</object>
+	<object class="FadeCurve" id="{ca8561ae-653b-4652-b1b7-a3b10e968b0e}">
+		<relationship name="startPoint">
+			<destination>{727b7e48-90c8-4c06-a29f-57336f37dd32}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{61f76e48-ea98-40d0-932f-18443d3d1bfa}</destination>
+		</relationship>
+	</object>
+	<object class="FadeCurve" id="{227295c1-8000-40a8-8b9c-a978d3050ca4}">
+		<relationship name="startPoint">
+			<destination>{9b3d1c12-2ea0-4270-b824-8dbd685d52a5}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{fc01ba3b-8b32-452c-8631-69a0056e5c37}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{17ef4309-ad4f-4df8-ac2f-c94de8cd099a}">
 		<relationship name="effects">
+			<destination>{ed36c523-2c9b-4022-adc6-92fb041f2d94}</destination>
 			<destination>{72738905-6e21-46b9-a811-634bf6bc339f}</destination>
+			<destination>{b086afaa-a65c-4896-9537-df0547cf4a45}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6a6e6c7c-601f-4c3d-b970-5368ab286004}" />
@@ -153,5 +180,65 @@
 			<value>-35</value>
 		</property>
 	</object>
+	<object class="AutomationPoint" id="{727b7e48-90c8-4c06-a29f-57336f37dd32}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.2547189</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{61f76e48-ea98-40d0-932f-18443d3d1bfa}">
+		<property name="position">
+			<value>0.01</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{9b3d1c12-2ea0-4270-b824-8dbd685d52a5}">
+		<property name="position">
+			<value>0.75</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{fc01ba3b-8b32-452c-8631-69a0056e5c37}">
+		<property name="position">
+			<value>0.79265306122448964</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{ed36c523-2c9b-4022-adc6-92fb041f2d94}">
+		<property name="lowGain">
+			<value>5</value>
+		</property>
+		<property name="midGain">
+			<value>-13</value>
+		</property>
+		<property name="highGain">
+			<value>-4</value>
+		</property>
+		<property name="crossoverSlope">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{72738905-6e21-46b9-a811-634bf6bc339f}" />
+	<object class="SFXReverbEffect" id="{b086afaa-a65c-4896-9537-df0547cf4a45}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="decayTime">
+			<value>700</value>
+		</property>
+	</object>
 </objects>

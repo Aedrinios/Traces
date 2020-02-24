@@ -47,7 +47,7 @@ MonoBehaviour:
   fmodEvent: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
   nameParameter: 
   valueParameter: 0
-  delay: 700
+  delay: 1000
 --- !u!114 &7885645183104195366
 MonoBehaviour:
   m_ObjectHideFlags: 0

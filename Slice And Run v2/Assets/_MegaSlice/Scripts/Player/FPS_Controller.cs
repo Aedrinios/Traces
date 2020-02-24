@@ -112,7 +112,7 @@ public class FPS_Controller : MonoBehaviour
             velocityVertical = jumpDirection * jumpForce;  
             canJump = false;
             jumpDirection = new Vector3(0, 1, 0);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
+            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
         }
     }
 
