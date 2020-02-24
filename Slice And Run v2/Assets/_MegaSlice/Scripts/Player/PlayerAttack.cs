@@ -9,11 +9,13 @@ public class PlayerAttack : MonoBehaviour
     public Transform cutPlane;
 
     public float DelaySpamShot = 0.1f;
-	private bool canShot; 	
+	private bool canShot;
+    private bool startGame;
 
     private void Start()
     {
-		canShot = true; 
+        canShot = false;
+        startGame = true; 
     }
 
     public void Update()
@@ -24,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
 			canShot = false;
 			Invoke("ResetCanShot", DelaySpamShot); 
 		}
+        DelockShooter();
     }
 
     public void LaunchProjectile()
@@ -37,4 +40,13 @@ public class PlayerAttack : MonoBehaviour
 	{
 		canShot = true;
 	}
+
+    void DelockShooter()
+    {
+        if (Input.anyKeyDown && startGame)
+        {
+            startGame = false;
+            canShot = true; 
+        }
+    }
 }
