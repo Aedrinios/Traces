@@ -18,6 +18,7 @@ public class PlayerManager : MonoBehaviour
     public void Start() {     
         if(SceneManager.GetActiveScene().buildIndex == 0)
         {
+            inputName = FindObjectOfType<TMP_InputField>();
             inputName.onEndEdit.AddListener(delegate { SaveName(); });
         }
         else
@@ -29,8 +30,7 @@ public class PlayerManager : MonoBehaviour
     public void SaveName()
     {
         name = inputName.text;
-        Debug.Log(name);
-    }
+        }
 
     public void SaveScore(int levelIndex, float score)
     {

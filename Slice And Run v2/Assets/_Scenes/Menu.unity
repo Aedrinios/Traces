@@ -10820,7 +10820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   scoreList: []
-  inputName: {fileID: 1436150569}
+  inputName: {fileID: 0}
 --- !u!1 &503323741
 GameObject:
   m_ObjectHideFlags: 0
@@ -19747,7 +19747,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0

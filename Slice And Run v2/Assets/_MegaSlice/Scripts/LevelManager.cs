@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
+
 public class LevelManager : MonoBehaviour
 {
     public delegate void OnLevelComplete();
@@ -10,11 +12,14 @@ public class LevelManager : MonoBehaviour
     public delegate void OnLevelFailed();
     public static OnLevelFailed onLevelFailed;
 
+    private PlayerManager playerManager;
     private GameObject scoreScreen;
     private GameObject failedScreen;
     private GameObject playerInterface;
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
+
+    private int sceneIndex;
 
     private void OnEnable()
     {
@@ -43,7 +48,7 @@ public class LevelManager : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         scoreScreen.SetActive(true);
-
+        SaveScore();
         DeactivatePlayer();
     }
 
@@ -63,10 +68,18 @@ public class LevelManager : MonoBehaviour
         playerInterface.SetActive(false);   
     }
 
+    private void SaveScore()
+    {
+        scoreScreen.transform.Find("ScoreText").GetComponent<TMP_Text>().text = LifeTimerManager.lifeTimer.ToString("F2");
+        playerManager.SaveScore(sceneIndex, LifeTimerManager.lifeTimer);
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if(scene.buildIndex > 0)
+        sceneIndex = scene.buildIndex;
+        if (sceneIndex > 0)
         {
+            playerManager = FindObjectOfType<PlayerManager>();
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
