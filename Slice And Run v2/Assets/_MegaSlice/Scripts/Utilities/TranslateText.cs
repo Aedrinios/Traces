@@ -6,7 +6,8 @@ using TMPro;
 public class TranslateText : MonoBehaviour
 {
     [TextArea] public string frenchText;
-    public float modifSize = 0f; 
+    public float modifSize = 0f;
+
 
     private void Start()
     {
@@ -27,6 +28,5 @@ public class TranslateText : MonoBehaviour
             textMesh.text = frenchText;
             textMesh.fontSize += modifSize;
         }
-
     }
 }

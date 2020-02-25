@@ -30,3 +30,5 @@ Semaine du 24/02/2020
 - ajout d'une zone de texte pour choisir un pseudo
 - rajout de l'ambience sonore
 - SD réglé 
+- traduction en français des textes
+- Rajout d'une zone limite de découpe autour de l'objet

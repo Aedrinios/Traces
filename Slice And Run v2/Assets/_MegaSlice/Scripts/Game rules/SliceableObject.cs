@@ -6,7 +6,7 @@ using EzySlice;
 public class SliceableObject : MonoBehaviour
 {
     private float timeLeft;
-    private bool isSliceable;
+	private bool isSliceable;
     public Material crossMaterial;
 	public GameObject hitSound; 
 
@@ -17,12 +17,13 @@ public class SliceableObject : MonoBehaviour
 
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public float forcePush = 80;
+	[HideInInspector] public bool canSlice = true;
 
 	public delegate void HitHappen();
 	public static HitHappen hitHappen;
 	public static Vector3 positionSlice; 
 
-	public void Start()
+	public void Awake()
     {
 		InitSliceableObject();
         if (GameManager.forcePushCutStc <= 0) forcePush = 80;
@@ -31,7 +32,7 @@ public class SliceableObject : MonoBehaviour
 
     public virtual void Slice(Transform slicePlane)
     {
-        if (isSliceable)
+        if (isSliceable && canSlice)
         {
 			DetachObjectChild(); 
             SlicedHull hull = SliceObject(slicePlane, this.gameObject, crossMaterial);
@@ -47,8 +48,6 @@ public class SliceableObject : MonoBehaviour
 				//if (hitSound != null) Instantiate(hitSound, transform.position, transform.rotation);
 				hitHappen.Invoke();
 				positionSlice = transform.position; 
-
-
 
 				Destroy(this.gameObject);
             }
