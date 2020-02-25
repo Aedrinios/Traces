@@ -2,19 +2,382 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20005 (105402), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000030818FE8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000070E7F928 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000B5E0F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF0107F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF0107EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF0107FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF01080B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000BDE7BC08
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NewWhooshTest1 ', format=2, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=31346, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.792908.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000B5E0F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF0107F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF0107EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF0107FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF01080B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000BDE80A68
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NewJumpTest1', format=2, channels=2, frequency=48000, lengthbytes=11136, lengthpcm=47647, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.870483.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000B5E0F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF0107F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF0107EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF0107FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF01080B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000BDE7D4C8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NewLandingAltered2', format=2, channels=2, frequency=48000, lengthbytes=10528, lengthpcm=42631, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.864502.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000B5E0F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF0107F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF0107EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF0107FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF01080B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000BDE7D4C8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NewLandingAltered3', format=2, channels=2, frequency=48000, lengthbytes=11872, lengthpcm=47647, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.799347.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000B5E0F5FC
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFFF0107F20
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFFF0107EF0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFFF0107FF0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFFF01080B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000BDE7D4C8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NewLandingAltered1', format=2, channels=2, frequency=48000, lengthbytes=9376, lengthpcm=38870, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.811279.
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4BAF8 : node = 000000006870E1C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4BAF8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E2D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4BAF8
+[LOG] SoundI::getSubSound                      : sound 0000000077B4BAF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000052BA8628)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FCCC9D8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000052BA8B38)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4B798 : node = 000000006870E300
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4B798
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4B798
+[LOG] SoundI::getSubSound                      : sound 0000000077B4B798.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4BCA8 : node = 000000006870EF80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4BCA8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870F090
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4BCA8
+[LOG] SoundI::getSubSound                      : sound 0000000077B4BCA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4BAF8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (00000000445536F8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4BE58)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4C368 : node = 000000006870E1C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4C368
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E2D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4C368
+[LOG] SoundI::getSubSound                      : sound 0000000077B4C368.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4B798)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000044553898)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4C008)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4AF28 : node = 000000006870F980
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4AF28
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870FA90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4AF28
+[LOG] SoundI::getSubSound                      : sound 0000000077B4AF28.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4BE58 : node = 000000006870E300
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4BE58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4BE58
+[LOG] SoundI::getSubSound                      : sound 0000000077B4BE58.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4BCA8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAE9568)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4A868)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4C1B8 : node = 000000006870EF80
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4C1B8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870F090
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4C1B8
+[LOG] SoundI::getSubSound                      : sound 0000000077B4C1B8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4C368)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAE9F28)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4B438)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4B288 : node = 000000006870E800
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4B288
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4B288
+[LOG] SoundI::getSubSound                      : sound 0000000077B4B288.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4B948 : node = 000000006870E1C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4B948
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870E2D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4B948
+[LOG] SoundI::getSubSound                      : sound 0000000077B4B948.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4AF28)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEAA88)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4B5E8)
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4BE58)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEA0C8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4B0D8)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4C008 : node = 000000006870F480
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4C008
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006870F590
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4C008
+[LOG] SoundI::getSubSound                      : sound 0000000077B4C008.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4C1B8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEADC8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4A868)
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4B5E8 : node = 000000004F05FD60
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4B5E8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004F05FE70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4B5E8
+[LOG] SoundI::getSubSound                      : sound 0000000077B4B5E8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000000077B4C518 : node = 000000004F05E820
+[LOG] SystemI::createSound                     : add node to async list : head = 000000004FCC9248.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000077B4C518
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1961312
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13184
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000004F05E930
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000077B4C518
+[LOG] SoundI::getSubSound                      : sound 0000000077B4C518.  Subsound index 0 / 1
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4B288)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEB108)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4B798)
+[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4B948)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEB5E8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4BAF8)
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4C008)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAE9F28)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4AA18)
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4C518)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEAA88)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4A868)
+[LOG] SoundI::release                          : earthquake-rumble-sound-effect (0000000077B4B5E8)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000004FAEB928)
+[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (0000000077B4C1B8)
+[LOG] SoundI::release                          :  (00000000AFD51408)
+[LOG] SoundI::release                          :     NewWhooshTest1  (0000000044556958)
+[LOG] SoundI::release                          :  (00000000AFD50888)
+[LOG] SoundI::release                          :     AmbientLoop2Alt2 (000000004FCCF758)
+[LOG] SoundI::release                          :  (00000000AFD509F8)
+[LOG] SoundI::release                          :     NewJumpTest1 (0000000044554598)
+[LOG] SoundI::release                          :  (00000000AFD50FB8)
+[LOG] SoundI::release                          :     NewLandingAltered1 (00000000445533B8)
+[LOG] SoundI::release                          :  (00000000AFD50B68)
+[LOG] SoundI::release                          :     NewLandingAltered2 (0000000044555918)
+[LOG] SoundI::release                          :  (00000000AFD50E48)
+[LOG] SoundI::release                          :     NewLandingAltered3 (0000000044555AB8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
@@ -25,4 +388,6 @@
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
