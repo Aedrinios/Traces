@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114883989904737960}
-  - {fileID: 114356958249608198}
+  - {fileID: 114456486061832476}
   EditorEvents:
   - {fileID: 114447686793238704}
   - {fileID: 114946201821806180}
@@ -25,10 +25,10 @@ MonoBehaviour:
   - {fileID: 114133311643345550}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114456486061832476}
   StringsBanks:
   - {fileID: 114883989904737960}
-  stringsBankWriteTime: 637182270174558857
+  stringsBankWriteTime: 637181784293982706
   cacheVersion: 3
 --- !u!114 &114003130874080444
 MonoBehaviour:
@@ -184,16 +184,17 @@ MonoBehaviour:
   m_Name: event:/InGame/Actions/Environmental Objects/Impacte
   m_EditorClassIdentifier: 
   Path: event:/InGame/Actions/Environmental Objects/Impacte
-  guid: ef7c0eecbfea564b96893368eaed0d23
+  guid: e072bab5d31c354b94526d8900df1021
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 6
-  MaxDistance: 50
-  Length: 1998
+  MinDistance: 6800
+  MaxDistance: 10000
+  Length: 0
 --- !u!114 &114043429404070786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1253
+--- !u!114 &114043638913872758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637181784293912888
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114053906773925726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +368,8 @@ MonoBehaviour:
   Path: event:/Menus/Home/Selection
   guid: 2d4bff90bd422f47a8d496668eea240b
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -446,7 +466,8 @@ MonoBehaviour:
   Path: event:/Menus/Home/AmbiantMenu
   guid: 196eb08efd51744e974d5f67d8332d96
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1085,7 +1106,8 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Weapon/Projectile
   guid: 0b324975b9113d4cb4fb0d8e6c84aa31
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1129,6 +1151,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114456486061832476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637181784293912888
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114458344857444032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1167,7 +1207,8 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/Saut
   guid: 93dc32fe07e53149ab51e0b701ccdb39
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2115,7 +2156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637182270174558857
+  lastModified: 637181784293982706
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2208,8 +2249,9 @@ MonoBehaviour:
   Path: event:/InGame/Ambient/Ambient Loop
   guid: 12f44cb691e4564a8edf95d3cf7281fa
   Banks:
-  - {fileID: 114356958249608198}
-  IsStream: 1
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
@@ -2231,7 +2273,8 @@ MonoBehaviour:
   Path: "event:/InGame/Actions/PlayerCharacter/R\xE9c\xE9ption"
   guid: 2ccc044136af2c41958d39ba50398560
   Banks:
-  - {fileID: 114356958249608198}
+  - {fileID: 114043638913872758}
+  - {fileID: 114456486061832476}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
