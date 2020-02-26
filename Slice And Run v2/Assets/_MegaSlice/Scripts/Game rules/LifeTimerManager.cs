@@ -44,6 +44,7 @@ public class LifeTimerManager : MonoBehaviour
 		}
         else
         {
+            Debug.Log("activeSelf" + startText.activeSelf);
             if (Input.anyKeyDown && startText.activeSelf)
             {
                 StartLifeTimer();

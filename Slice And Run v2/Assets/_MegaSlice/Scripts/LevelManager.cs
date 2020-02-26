@@ -75,7 +75,7 @@ public class LevelManager : MonoBehaviour
     private void SaveScore()
     {
         scoreScreen.transform.Find("ScoreText").GetComponent<TMP_Text>().text = LifeTimerManager.lifeTimer.ToString("F2");
-        playerManager.SaveScore(sceneIndex, LifeTimerManager.lifeTimer);
+        playerManager.SaveScore(sceneIndex - 1, LifeTimerManager.lifeTimer);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

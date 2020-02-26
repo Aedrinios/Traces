@@ -32,3 +32,7 @@ Semaine du 24/02/2020
 - SD réglé 
 - traduction en français des textes
 - Rajout d'une zone limite de découpe autour de l'objet
+- Système de sauvegarde et de chargement fonctionnel
+- Choisir un pseudo est obligatoire avant de commencer le jeu
+- bouton dans l'écran de sélection de niveau pour revenir à l'écran de menu
+- Sauvegarde du score seulement s'il est supérieur au précédent record

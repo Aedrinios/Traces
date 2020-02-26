@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         forcePushCutStc = forcePushCut;
+        levelScreenOpened = false;
     }
 
     private void OnEnable()
@@ -145,7 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void SetLevelScreenToLoaded()
     {
-        levelScreenOpened = true;
+        levelScreenOpened = !levelScreen;
     }
 
     public void QuitGame()
