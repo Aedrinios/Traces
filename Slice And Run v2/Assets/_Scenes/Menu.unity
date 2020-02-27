@@ -10991,6 +10991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   scoreList: []
+  inputName: {fileID: 0}
   changeNameButton: {fileID: 1488846451}
 --- !u!1 &500184154
 GameObject:
