@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         forcePushCutStc = forcePushCut;
-        levelScreenOpened = false;
     }
 
     private void OnEnable()
@@ -52,6 +51,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(levelScreenOpened);
         if(Input.anyKeyDown && hasFailed)
         {
             hasFailed = false;
@@ -130,8 +130,10 @@ public class GameManager : MonoBehaviour
 
     public void OnMenuLoaded()
     {
+        Debug.Log("menu is loaded");
         if (levelScreenOpened)
         {
+            Debug.Log("update progression");
             levelScreen.SetActive(true);
             LevelButton[] allButtons = GameObject.Find("Canvas").GetComponentsInChildren<LevelButton>(true);
             foreach (LevelButton button in allButtons)
@@ -146,7 +148,7 @@ public class GameManager : MonoBehaviour
 
     public void SetLevelScreenToLoaded()
     {
-        levelScreenOpened = !levelScreen;
+        levelScreenOpened = true;
     }
 
     public void QuitGame()
