@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class LevelManager : MonoBehaviour
     private GameObject playerInterface;
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
+
+    private HighscoreTable leaderboard;
 
     public static bool isLevelEnding = false; 
 
@@ -47,11 +50,12 @@ public class LevelManager : MonoBehaviour
     void ShowScoreScreen()
     {
         isLevelEnding = true; 
-        ProgressionManager.UnlockLevel(SceneManager.GetActiveScene().buildIndex);        
+        ProgressionManager.UnlockLevel(sceneIndex);        
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         scoreScreen.SetActive(true);
         SaveScore();
+        leaderboard.SortPlayerList(sceneIndex - 1);
         DeactivatePlayer();
     }
 
@@ -74,7 +78,10 @@ public class LevelManager : MonoBehaviour
 
     private void SaveScore()
     {
-        scoreScreen.transform.Find("ScoreText").GetComponent<TMP_Text>().text = LifeTimerManager.lifeTimer.ToString("F2");
+        TimeSpan timeSpan = TimeSpan.FromSeconds(LifeTimerManager.lifeTimer);
+        scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+        scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+
         playerManager.SaveScore(sceneIndex - 1, LifeTimerManager.lifeTimer);
     }
 
@@ -87,6 +94,7 @@ public class LevelManager : MonoBehaviour
             playerManager = FindObjectOfType<PlayerManager>();
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
+            leaderboard = scoreScreen.GetComponent<HighscoreTable>();
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
             scoreScreen.SetActive(false);
             failedScreen.SetActive(false);

@@ -8,13 +8,13 @@ public static class SaveSystem
 {
     public static readonly string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
+
     public static void Init()
     {
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
         }
-
     }
 
     public static bool CreateFile(PlayerManager player)
@@ -48,6 +48,22 @@ public static class SaveSystem
          stream.Close();*/
     }
 
+    public static List<PlayerData> LoadAllPlayers()
+    {
+        List<PlayerData> allPlayersData = new List<PlayerData>();
+        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
+        FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
+        foreach (FileInfo fileInfo in saveFiles)
+        {
+            if(fileInfo != null)
+            {
+                string savedData = File.ReadAllText(fileInfo.FullName);
+                PlayerData data = JsonUtility.FromJson<PlayerData>(savedData);
+                allPlayersData.Add(data);
+            }
+        }
+        return allPlayersData;
+    }
     public static PlayerData LoadGame()
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
