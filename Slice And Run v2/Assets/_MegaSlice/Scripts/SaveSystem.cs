@@ -22,6 +22,7 @@ public static class SaveSystem
         if(!File.Exists(SAVE_FOLDER + "/Save_" + player.name + ".txt"))
         {
             float[] initScoreList = new float[player.scoreList.Length];
+            player.scoreList = initScoreList;
             PlayerData data = new PlayerData(player.name, initScoreList);
             string jsonData = JsonUtility.ToJson(data);
             File.WriteAllText(SAVE_FOLDER + "/Save_" + player.name + ".txt", jsonData);

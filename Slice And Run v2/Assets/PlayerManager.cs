@@ -14,17 +14,13 @@ public class PlayerManager : MonoBehaviour
 
     public void Awake()
     {
-        Debug.Log("hello");
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            Debug.Log("ah yes");
             inputName = FindObjectOfType<TMP_InputField>();
-            Debug.Log(FindObjectOfType<TMP_InputField>());
             inputName.onEndEdit.AddListener(delegate { SaveName(); });
         }
         else
         {
-            Debug.Log("am i here?");
             inputName.onEndEdit.RemoveAllListeners();
         }
 
@@ -41,20 +37,13 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        
-    }
-
     public void SaveName()
     {
-        Debug.Log("should be here");
         name = inputName.text;
         if(inputName.text.Length > 0)
         {
             if (SaveSystem.CreateFile(this))
             {
-                Debug.Log("or here");
                 inputName.gameObject.SetActive(false);
                 changeNameButton.SetActive(true);
             }
