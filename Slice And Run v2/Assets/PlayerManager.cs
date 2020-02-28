@@ -14,16 +14,10 @@ public class PlayerManager : MonoBehaviour
 
     public void Awake()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if(SceneManager.GetActiveScene().buildIndex == 0)
         {
-            inputName = FindObjectOfType<TMP_InputField>();
-            inputName.onEndEdit.AddListener(delegate { SaveName(); });
+            FindInputField();
         }
-        else
-        {
-            inputName.onEndEdit.RemoveAllListeners();
-        }
-
         SaveSystem.Init();
         PlayerData data = SaveSystem.LoadGame();
         scoreList = new float[SceneManager.sceneCountInBuildSettings - 1];
@@ -35,6 +29,13 @@ public class PlayerManager : MonoBehaviour
             inputName.gameObject.SetActive(false);
             changeNameButton.SetActive(true);
         }
+    }
+
+    public void FindInputField()
+    {
+        inputName = GameObject.Find("MenuScreen").transform.Find("Name").gameObject.GetComponent<TMP_InputField>();
+        changeNameButton = GameObject.Find("MenuScreen").transform.Find("ChangeName").gameObject;
+        inputName.onEndEdit.AddListener(delegate { SaveName(); });
     }
 
     public void SaveName()

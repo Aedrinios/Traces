@@ -89,9 +89,13 @@ public class LevelManager : MonoBehaviour
     {
         isLevelEnding = false; 
         sceneIndex = scene.buildIndex;
-        if (sceneIndex > 0)
+        playerManager = FindObjectOfType<PlayerManager>();
+        if(sceneIndex == 0)
         {
-            playerManager = FindObjectOfType<PlayerManager>();
+            playerManager.FindInputField();
+        }
+        else if (sceneIndex > 0)
+        {
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
             leaderboard = scoreScreen.GetComponent<HighscoreTable>();
