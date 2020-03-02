@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1146776454251213953}
   - component: {fileID: 3210042531572494756}
   - component: {fileID: 6219747065639727465}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ZoneToSlice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 5450778752968499194}
   - component: {fileID: 5450778752968499193}
   - component: {fileID: 5450778752968499175}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: CuBE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
