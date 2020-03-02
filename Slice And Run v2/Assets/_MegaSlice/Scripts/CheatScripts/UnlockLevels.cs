@@ -9,12 +9,9 @@ public class UnlockLevels : MonoBehaviour
 
     private void Update()
     {
-        if (CheatMode.cheatModeIsOn)
+        if (Input.GetKeyDown(keyUnlock))
         {
-            if (Input.GetKeyDown(keyUnlock))
-            {
-                UnlockAllLevels(); 
-            }
+            UnlockAllLevels(); 
         }
     }
 
