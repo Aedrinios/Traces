@@ -10944,6 +10944,7 @@ GameObject:
   - component: {fileID: 463631526}
   - component: {fileID: 463631525}
   - component: {fileID: 463631527}
+  - component: {fileID: 463631528}
   m_Layer: 0
   m_Name: DataManager
   m_TagString: Untagged
@@ -10993,6 +10994,19 @@ MonoBehaviour:
   scoreList: []
   inputName: {fileID: 0}
   changeNameButton: {fileID: 1488846451}
+--- !u!114 &463631528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463631524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2426a713c02a294b8d20bb95ffd2814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyUnlock: 117
 --- !u!1 &500184154
 GameObject:
   m_ObjectHideFlags: 0

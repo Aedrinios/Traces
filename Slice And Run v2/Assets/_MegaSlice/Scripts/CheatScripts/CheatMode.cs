@@ -14,14 +14,14 @@ public class CheatMode : MonoBehaviour
 			if (!cheatModeIsOn)
 			{
 				LifeTimerManager lifeTimerManager = GameObject.FindObjectOfType<LifeTimerManager>();
-				lifeTimerManager.enabled = false;
+				if (lifeTimerManager != null) lifeTimerManager.enabled = false;
 				cheatModeIsOn = true;
 				Debug.Log("Cheat Mode is on"); 
 			}
 			else
 			{
 				LifeTimerManager lifeTimerManager = GameObject.FindObjectOfType<LifeTimerManager>();
-				lifeTimerManager.enabled = true;
+				if (lifeTimerManager != null) lifeTimerManager.enabled = true;
 				cheatModeIsOn = false;
 				Debug.Log("Cheat Mode is off");
 			}
