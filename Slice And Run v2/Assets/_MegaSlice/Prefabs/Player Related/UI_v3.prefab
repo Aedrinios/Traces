@@ -2323,6 +2323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7937843805253260370}
   - component: {fileID: 4421396778679936051}
+  - component: {fileID: 962980273330577295}
   - component: {fileID: 9029985171411938583}
   m_Layer: 5
   m_Name: FailedText
@@ -2345,10 +2346,10 @@ RectTransform:
   m_Father: {fileID: 2831157035999733165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 696.4, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4421396778679936051
 CanvasRenderer:
@@ -2358,6 +2359,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4358617458176320474}
   m_CullTransparentMesh: 0
+--- !u!114 &962980273330577295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358617458176320474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae1006fe2f4a854a8c84b52edd289f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frenchText: "NIVEAU Echoue\n\nAppuyer sur un bouton pour recommencer \n"
+  modifSize: -5
 --- !u!114 &9029985171411938583
 MonoBehaviour:
   m_ObjectHideFlags: 0

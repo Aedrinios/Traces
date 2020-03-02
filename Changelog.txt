@@ -36,3 +36,8 @@ Semaine du 24/02/2020
 - Choisir un pseudo est obligatoire avant de commencer le jeu
 - bouton dans l'écran de sélection de niveau pour revenir à l'écran de menu
 - Sauvegarde du score seulement s'il est supérieur au précédent record
+
+Semaine du 02/03/2020
+
+- traduction de l'écran de défaite 
+- suppression de la touche CTRL pour tirer
