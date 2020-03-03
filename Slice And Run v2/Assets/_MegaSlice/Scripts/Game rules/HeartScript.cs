@@ -31,6 +31,7 @@ public class HeartScript : MonoBehaviour
     void EndGame()
     {
         GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);
+        
         go.GetComponent<EndGameManager>().slowed = true;
     }
 }

@@ -29,7 +29,7 @@ public class EndGameManager : MonoBehaviour
         {
             Time.timeScale = Mathf.Lerp(Time.timeScale, slowPower, Time.unscaledDeltaTime * smooth); ;
             timePast += Time.unscaledDeltaTime;
-            LifeTimerManager.playing = false;
+            ChronoSystem.playing = false;
             if (timePast > slowDuration)
             {
                 slowed = false;

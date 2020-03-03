@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5181918375578776810}
   - component: {fileID: 5181918375578776813}
-  - component: {fileID: 678258818}
   - component: {fileID: 4130159445169362199}
   m_Layer: 0
   m_Name: GameController
@@ -45,19 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0884725d75bcd4693179ac26f635ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &678258818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5181918375578776812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd4d11e33affc6a48b0b14a3af88c0ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerStart: 15
 --- !u!114 &4130159445169362199
 MonoBehaviour:
   m_ObjectHideFlags: 0

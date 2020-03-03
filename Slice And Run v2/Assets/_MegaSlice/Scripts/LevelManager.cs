@@ -78,11 +78,11 @@ public class LevelManager : MonoBehaviour
 
     private void SaveScore()
     {
-        TimeSpan timeSpan = TimeSpan.FromSeconds(LifeTimerManager.lifeTimer);
+        TimeSpan timeSpan = TimeSpan.FromSeconds(ChronoSystem.chronoStc);
         scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
-        playerManager.SaveScore(sceneIndex - 1, LifeTimerManager.lifeTimer);
+        playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

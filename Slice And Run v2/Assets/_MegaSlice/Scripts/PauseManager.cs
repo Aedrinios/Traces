@@ -52,22 +52,20 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        LifeTimerManager.playing = true;
+        ChronoSystem.playing = true;
         if (LevelManager.isLevelEnding)
         {
-            //BasicTools.RestartScene(); 
             playerInterface.SetActive(false);
             fps.canMoveCamera = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            LifeTimerManager.playing = false;
+            ChronoSystem.playing = false;
         }
-
     }
 
     void Pause()
     {
-        LifeTimerManager.playing = false;
+        ChronoSystem.playing = false;
         playerInterface.SetActive(false);
         pauseScreen.SetActive(true);
         isPaused = true;

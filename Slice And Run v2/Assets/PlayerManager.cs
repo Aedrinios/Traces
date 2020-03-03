@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class PlayerManager : MonoBehaviour
 {
     public string name;

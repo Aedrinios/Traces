@@ -5,30 +5,35 @@ using UnityEngine.UI;
 
 public class ScoreBar : MonoBehaviour
 {
-	LifeTimerManager lifeTimerManager; 
+	ChronoSystem chronoSystem; 
 	Image img;
 	float ratioFill;
 	Color originalColor; 
 
 	private void Start()
 	{
-		lifeTimerManager = GameObject.FindObjectOfType<LifeTimerManager>();
+		chronoSystem = GameObject.FindObjectOfType<ChronoSystem>();
+
+
 		img = GetComponent<Image>();
 		originalColor = img.color; 
 	}
 
 	private void Update()
 	{
-		ratioFill = LifeTimerManager.lifeTimer / lifeTimerManager.TimerMax;
+		ratioFill = 1 - (ChronoSystem.chronoStc / chronoSystem.limitTimer);
 		img.fillAmount = ratioFill;
+	}
 
-        if(img.fillAmount < 0.2)
-        {
-            img.color = Color.Lerp(img.color, Color.red, 0.05f);
-        }
-        else
-        {
-            img.color = Color.Lerp(img.color, originalColor, 0.05f);
-        }
+	void ColorChange()
+	{
+		if (img.fillAmount < 0.2)
+		{
+			img.color = Color.Lerp(img.color, Color.red, 0.05f);
+		}
+		else
+		{
+			img.color = Color.Lerp(img.color, originalColor, 0.05f);
+		}
 	}
 }
