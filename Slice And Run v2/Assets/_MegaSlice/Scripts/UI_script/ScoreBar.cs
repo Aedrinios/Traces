@@ -13,16 +13,15 @@ public class ScoreBar : MonoBehaviour
 	private void Start()
 	{
 		chronoSystem = GameObject.FindObjectOfType<ChronoSystem>();
-
-
 		img = GetComponent<Image>();
 		originalColor = img.color; 
 	}
 
 	private void Update()
 	{
-		ratioFill = 1 - (ChronoSystem.chronoStc / chronoSystem.limitTimer);
+		ratioFill = (ChronoSystem.timerStc / chronoSystem.limitTimer);
 		img.fillAmount = ratioFill;
+		ColorChange(); 
 	}
 
 	void ColorChange()

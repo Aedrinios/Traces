@@ -5,12 +5,12 @@ using UnityEngine;
 public class ChronoSystem : MonoBehaviour
 {
 	public float limitTimer = 30;
-	public static float chronoStc;
 
+	public static float timerStc; 
+	public static float chronoStc;
 	public static bool playing = false;
 
 	bool gameIsStart = false; 
-
 	float chrono = 0;
 
 	private void Start()
@@ -30,7 +30,8 @@ public class ChronoSystem : MonoBehaviour
 		}
 
 		chrono = Mathf.Clamp(chrono, 0, limitTimer); 
-		chronoStc = chrono; 
+		chronoStc = chrono;
+		timerStc = limitTimer - chrono; 
 
 		if (!gameIsStart)
 		{
