@@ -60,7 +60,7 @@ public class PlayerManager : MonoBehaviour
 
     public void SaveScore(int levelIndex, float score)
     {
-        if (scoreList[levelIndex] < score)
+        if (scoreList[levelIndex] > score || scoreList[levelIndex] == 0)
         {
             scoreList[levelIndex] = score;
             SaveSystem.SavePlayer(this);
