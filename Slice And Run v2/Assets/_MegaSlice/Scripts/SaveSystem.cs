@@ -48,7 +48,7 @@ public static class SaveSystem
          stream.Close();*/
     }
 
-    public static List<PlayerData> LoadAllPlayers()
+    public static List<PlayerData> LoadAllPlayersFromLevel(int levelIndex)
     {
         List<PlayerData> allPlayersData = new List<PlayerData>();
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
@@ -59,7 +59,10 @@ public static class SaveSystem
             {
                 string savedData = File.ReadAllText(fileInfo.FullName);
                 PlayerData data = JsonUtility.FromJson<PlayerData>(savedData);
-                allPlayersData.Add(data);
+                if(data.scoreList[levelIndex] > 0)
+                {
+                    allPlayersData.Add(data);
+                }
             }
         }
         return allPlayersData;
