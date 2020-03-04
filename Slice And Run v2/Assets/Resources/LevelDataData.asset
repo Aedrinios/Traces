@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: LevelDataData
   m_EditorClassIdentifier: 
   saveObjects:
-  - {fileID: 6391077094023448595, guid: 10f8523838850974f9112e86dbdf8d0b, type: 3}
-  - {fileID: 6391077094023448595, guid: 10f8523838850974f9112e86dbdf8d0b, type: 3}
+  - {fileID: 5181918375578776812, guid: 11d7acab155aeb24ca88f3db7ab0ef25, type: 3}
+  - {fileID: 2144786900052532790, guid: 4cea64b485dd8b242aa20adab6998b8e, type: 3}
+  - {fileID: 1448963223253234552, guid: d1b655228a4b50c48a3a120bdf5d648a, type: 3}
+  - {fileID: 2546504387214751592, guid: 9694f46dcaf811a45a675ea05b06ef6b, type: 3}
+  - {fileID: 6034790859888506437, guid: 1f5b937248f14cd48831e578d74a4258, type: 3}
+  - {fileID: 5490781679833507319, guid: c202d166b712ec94cbfe9a90b4e4bd3c, type: 3}
+  - {fileID: 8510617295500926485, guid: 1b9dae24e9fa05345a7754bc1cb7273c, type: 3}
