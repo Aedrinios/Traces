@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class AnimVariationLight : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Renderer myRenderer;
+    public AnimationCurve curve;
+
+    public float speed = 8;
+    public float amount = 1.5f;
+    public float gap = 0; 
+    public float basicIntensity = 0.1f;
+    public int numberMat = 0; 
+
+    float ratioCurve;
+    Color myColor;
+
+    private void Start()
     {
-        
+        myColor =  myRenderer.materials[numberMat].GetColor("_EmissionColor");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (myRenderer != null)
+        {
+            ratioCurve = curve.Evaluate((Time.time / 10) * speed + gap);
+            ratioCurve += basicIntensity;
+            myRenderer.materials[numberMat].SetColor("_EmissionColor", myColor * ratioCurve * amount);
+        }
     }
 }

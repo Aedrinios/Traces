@@ -61,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a273525ca520a604c8bb8e00da3e865e, type: 2}
-  - {fileID: 2100000, guid: bdfc139c6705d1d4badb8e615d66ba55, type: 2}
+  - {fileID: 2100000, guid: 5c383619d2aef4446aceb21f7f00e329, type: 2}
+  - {fileID: 2100000, guid: d35ee24c3dbd2c54dacf57f9ce9817ac, type: 2}
   - {fileID: 2100000, guid: 3fa17f873ded41243a45dfad15c601c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2530,7 +2530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490781679275303122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5490781679833507272}
@@ -2573,6 +2573,8 @@ GameObject:
   - component: {fileID: 5490781679833507272}
   - component: {fileID: 5490781679833507274}
   - component: {fileID: 5490781679833507273}
+  - component: {fileID: 831326938}
+  - component: {fileID: 831326942}
   m_Layer: 12
   m_Name: HeartCube
   m_TagString: Untagged
@@ -2587,7 +2589,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5490781679833507319}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.739, y: 3.805, z: -47.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2624,3 +2626,105 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeRotation: {x: 0, y: 1, z: 0}
   speedRotate: 80
+--- !u!114 &831326938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490781679833507319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb86ad482b1dd7468977e4a87b06994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRenderer: {fileID: 7189393861715674616}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5282596
+      value: 0.1567061
+      inSlope: 0.67981505
+      outSlope: 0.67981505
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.7689436
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  speed: 5
+  amount: 1
+  gap: 0
+  basicIntensity: 0.03
+  numberMat: 0
+--- !u!114 &831326942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490781679833507319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb86ad482b1dd7468977e4a87b06994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRenderer: {fileID: 7189393861715674616}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5282596
+      value: 0.1567061
+      inSlope: 0.67981505
+      outSlope: 0.67981505
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.7689436
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  speed: 5
+  amount: 1
+  gap: 1
+  basicIntensity: 0.03
+  numberMat: 1
