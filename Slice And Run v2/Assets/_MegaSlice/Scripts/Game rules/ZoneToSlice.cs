@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ZoneToSlice : MonoBehaviour
 {
+    public GameObject sliableGameObject; 
+
     private void Start()
     {
         ChangeSliceableScript(false);
@@ -26,9 +28,8 @@ public class ZoneToSlice : MonoBehaviour
     }
 
     void ChangeSliceableScript(bool isOn)
-    {
-        GameObject parent = transform.parent.gameObject;
-        SliceableObject sliceScript = parent.GetComponent<SliceableObject>();
+    {        
+        SliceableObject sliceScript = sliableGameObject.GetComponent<SliceableObject>();
         if (sliceScript != null) sliceScript.canSlice = isOn; 
     }
 
