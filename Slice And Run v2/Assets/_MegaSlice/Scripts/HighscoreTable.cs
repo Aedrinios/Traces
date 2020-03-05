@@ -14,6 +14,7 @@ public class HighscoreTable : MonoBehaviour
     private Transform entryContainer;
     private PlayerManager playerManager;
     private List<PlayerData> allPlayersData = new List<PlayerData>();
+    private List<GameObject> listEntryTransform = new List<GameObject>();
 
     private int playerIndex;
     private bool playerInLeaderboard = false;
@@ -87,6 +88,16 @@ public class HighscoreTable : MonoBehaviour
             rankText.color = Color.red;
             nameText.color = Color.red;
             timeText.color = Color.red;
+        }
+
+        listEntryTransform.Add(entryTransform.gameObject);
+    }
+
+    public void DeleteLeaderboard()
+    {
+        foreach (GameObject entryTransform in listEntryTransform)
+        {
+            Destroy(entryTransform);
         }
     }
 }
