@@ -17,6 +17,7 @@ public class LevelManager : MonoBehaviour
     private GameObject scoreScreen;
     private GameObject failedScreen;
     private GameObject playerInterface;
+    private GameObject newRecord;
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
 
@@ -82,7 +83,9 @@ public class LevelManager : MonoBehaviour
         scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
 
-        playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc);
+        if (playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc)) {
+            newRecord.SetActive(true);
+        };
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -99,6 +102,7 @@ public class LevelManager : MonoBehaviour
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
             leaderboard = scoreScreen.GetComponent<HighscoreTable>();
+            newRecord = scoreScreen.transform.Find("NewRecord").gameObject;
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
             scoreScreen.SetActive(false);
             failedScreen.SetActive(false);

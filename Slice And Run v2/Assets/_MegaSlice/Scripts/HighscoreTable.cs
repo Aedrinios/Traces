@@ -7,7 +7,8 @@ using System;
 
 public class HighscoreTable : MonoBehaviour
 {
-    public float templateHeigth;
+    [SerializeField] private float templateHeigth;
+    [SerializeField] private int numberOfPlayersDisplayed;
 
     private Transform entryTemplate;
     private Transform entryContainer;
@@ -49,7 +50,7 @@ public class HighscoreTable : MonoBehaviour
             }
         }
 
-        int numberOfHighscore = allPlayersData.Count < 9 ? allPlayersData.Count : 9;
+        int numberOfHighscore = allPlayersData.Count < numberOfPlayersDisplayed ? allPlayersData.Count : numberOfPlayersDisplayed;
 
         int rank = 1;
         for (int i = 0; i < numberOfHighscore; i++)
@@ -59,7 +60,7 @@ public class HighscoreTable : MonoBehaviour
         }
         if (!playerInLeaderboard)
         {
-            InstantiateLeaderboard(playerIndex, playerIndex, levelIndex, 9);
+            InstantiateLeaderboard(playerIndex, playerIndex, levelIndex, numberOfPlayersDisplayed);
         }
     }
 
@@ -82,7 +83,6 @@ public class HighscoreTable : MonoBehaviour
 
         if (playerManager.name == nameText.text)
         {
-            Debug.Log("ouille ouille ouille");
             playerInLeaderboard = true;
             rankText.color = Color.red;
             nameText.color = Color.red;

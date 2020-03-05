@@ -58,12 +58,17 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void SaveScore(int levelIndex, float score)
+    public bool SaveScore(int levelIndex, float score)
     {
         if (scoreList[levelIndex] > score || scoreList[levelIndex] == 0)
         {
             scoreList[levelIndex] = score;
             SaveSystem.SavePlayer(this);
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
