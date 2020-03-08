@@ -38,7 +38,8 @@ public class ChronoSystem : MonoBehaviour
 			playing = false; 
 			if (Input.anyKeyDown) 
 			{
-				GameObject.Find("StartText").SetActive(false); 
+				GameObject startText = GameObject.Find("StartText");
+				if (startText != null) startText.SetActive(false); 
 				playing = true;
 				gameIsStart = true; 
 			}
