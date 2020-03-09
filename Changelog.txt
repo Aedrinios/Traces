@@ -42,3 +42,7 @@ Semaine du 02/03/2020
 - traduction de l'écran de défaite 
 - suppression de la touche CTRL pour tirer
 - passage du timer au chronometre
+
+Semaine du 09/03/2020
+
+- Ajout des nouveaux sons (mort et victoire)

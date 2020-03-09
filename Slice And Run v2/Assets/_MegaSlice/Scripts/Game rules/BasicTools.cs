@@ -7,6 +7,9 @@ public class BasicTools : MonoBehaviour
 {
     [HideInInspector] public static bool isInvicible;
 
+    public delegate void EventHappen();
+    public static EventHappen resetEvent;
+
     public static void NextScene()
     {
         int lengthScenes = SceneManager.sceneCountInBuildSettings;
@@ -24,9 +27,9 @@ public class BasicTools : MonoBehaviour
 
     public static void RestartScene()
     {
+        resetEvent.Invoke(); 
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         Debug.Log("current scene is " + currentScene);
-
         SceneManager.LoadScene(currentScene);
     }
 
@@ -53,4 +56,6 @@ public class BasicTools : MonoBehaviour
         }
 
     }
+
+
 }

@@ -89,11 +89,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{122441f8-30a8-40b2-8dbb-8c2a19782eb8}" />
 	<object class="SingleSound" id="{1a488ca0-271b-4a24-acc7-c7baf1e3c0cc}">
+		<property name="isAsync">
+			<value>true</value>
+		</property>
 		<property name="length">
 			<value>1.7533990147783252</value>
 		</property>
 		<property name="timelockedOffset">
 			<value>0.02</value>
+		</property>
+		<property name="pitch">
+			<value>-9</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{f28dbee3-8ce5-4b43-9e88-f60ee06eff08}</destination>
@@ -101,7 +107,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{871bd09c-8549-432b-8401-03884fe1656c}">
 		<property name="volume">
-			<value>-2</value>
+			<value>-3</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -126,9 +132,21 @@
 	<object class="MixerBusEffectChain" id="{f4254a06-b579-4ed8-a4b2-81a7b3add4f2}">
 		<relationship name="effects">
 			<destination>{6bd3154d-83ae-4e72-9351-1b2ee8aba586}</destination>
+			<destination>{1d013c38-9f01-4de4-bfb0-08009f5267e5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{836ffe2e-9d53-4139-98dc-0afaed9e56bf}" />
 	<object class="MixerBusFader" id="{9882c967-946b-47fd-b726-d07d255877bf}" />
 	<object class="MixerBusFader" id="{6bd3154d-83ae-4e72-9351-1b2ee8aba586}" />
+	<object class="MixerSend" id="{1d013c38-9f01-4de4-bfb0-08009f5267e5}">
+		<property name="level">
+			<value>-12</value>
+		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{17ce8361-5d3b-42e0-a75f-00c832b5aabd}</destination>
+		</relationship>
+	</object>
 </objects>

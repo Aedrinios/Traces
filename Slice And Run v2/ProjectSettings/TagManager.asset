@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Sliceable
   - Projectile
+  - HeartCube
   layers:
   - Default
   - TransparentFX

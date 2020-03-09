@@ -21,6 +21,7 @@ public class SliceableObject : MonoBehaviour
 
 	public delegate void HitHappen();
 	public static HitHappen hitHappen;
+	public static GameObject gameObjectSliced;
 	public static Vector3 positionSlice; 
 
 	public void Awake()
@@ -43,14 +44,14 @@ public class SliceableObject : MonoBehaviour
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
                 AddHullComponents(bottom);
                 AddHullComponents(top);
+				Destroy(this.gameObject);
 
 				//sound Hit 
 				//if (hitSound != null) Instantiate(hitSound, transform.position, transform.rotation);
+				gameObjectSliced = gameObject; 
+				positionSlice = transform.position;
 				hitHappen.Invoke();
-				positionSlice = transform.position; 
-
-				Destroy(this.gameObject);
-            }
+			}
         }
     }
 

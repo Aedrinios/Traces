@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6851404180439084312}
   m_Layer: 12
   m_Name: HeartCubeModel
-  m_TagString: Untagged
+  m_TagString: HeartCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2455,9 +2455,17 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 04000000
+  m_SelectedEdges:
+  - a: 16
+    b: 17
+  - a: 18
+    b: 16
+  - a: 17
+    b: 19
+  - a: 19
+    b: 18
+  m_SelectedVertices: 10000000110000001200000013000000
 --- !u!64 &5900596209204052921
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2504,6 +2512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGamePrefab: {fileID: 4166079048446866006, guid: 91e1aabda2d9cd346949defc8411f42d,
     type: 3}
+  soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
+    type: 3}
 --- !u!1 &5490781679275303122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,7 +2527,7 @@ GameObject:
   - component: {fileID: 5490781679275303124}
   m_Layer: 12
   m_Name: ZoneToSlice
-  m_TagString: Untagged
+  m_TagString: HeartCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2577,7 +2587,7 @@ GameObject:
   - component: {fileID: 831326942}
   m_Layer: 12
   m_Name: HeartCube
-  m_TagString: Untagged
+  m_TagString: HeartCube
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

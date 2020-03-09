@@ -39,6 +39,11 @@ public class SoundHitManager : MonoBehaviour
 			audioSrc.volume = 0;
 		}
 
+		if (SliceableObject.gameObjectSliced.tag == "HeartCube")
+		{
+			audioSrc.volume = 0;
+		}
+
 		chrono = 0; 
 	}
 
