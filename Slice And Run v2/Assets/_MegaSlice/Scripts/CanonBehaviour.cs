@@ -47,13 +47,4 @@ public class CanonBehaviour : MonoBehaviour
         Instantiate(bulletPrefab, muzzle.position, Quaternion.LookRotation(turret.forward));
         isReloading = true;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("collision");
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("is this a collision ?");
-        }
-    }
 }
