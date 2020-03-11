@@ -37,6 +37,7 @@ public class LevelDesignTools : EditorWindow
 				newObject.transform.rotation = newParent.transform.rotation;
 				newObject.transform.parent = newParent.transform; 
 			}
+			ChangeLighting(); 
 		}
 
 		GUILayout.Label("\n Les paramètres pour placer les objets en rond", EditorStyles.boldLabel);
@@ -47,6 +48,13 @@ public class LevelDesignTools : EditorWindow
 			PlaceOnCircle(radiusCircle); 
 		}
 
+	}
+
+	void ChangeLighting()
+	{
+		RenderSettings.skybox = null;
+		RenderSettings.sun = null;
+		//RenderSettings.ambientSkyColor = new Color(54, 58, 66); 
 	}
 
 	void PlaceOnCircle(float radius)
