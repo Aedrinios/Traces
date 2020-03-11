@@ -21,13 +21,13 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level/Onboarding/Level 04 - Cut.unity
     guid: 19d7edf0042f8164290d676a6c9bdd49
   - enabled: 0
-    path: Assets/_Scenes/Level/Level 1-1/Level 11 - Journey Begin.unity
+    path: Assets/_Scenes/Level/Level 1-1/Archive/Level 11 - Journey Begin.unity
     guid: bf7456e1ff874b648b4a111f85c275e6
   - enabled: 0
-    path: Assets/_Scenes/Level/Level 1-1/Level 12 - king bridge.unity
+    path: Assets/_Scenes/Level/Level 1-1/Archive/Level 12 - king bridge.unity
     guid: 8ba3f52cd5e75354cb236693be6833f1
   - enabled: 0
-    path: Assets/_Scenes/Level/Level 1-1/Level 13 - Right Path.unity
+    path: Assets/_Scenes/Level/Level 1-1/Archive/Level 13 - Right Path.unity
     guid: c5e6ee45911ee9044bfea54a83fd401e
   - enabled: 1
     path: Assets/_Scenes/Level/Level 1-1/lvl 1-1  The long run.unity

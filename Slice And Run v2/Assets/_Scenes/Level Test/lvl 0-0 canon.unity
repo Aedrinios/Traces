@@ -7410,8 +7410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4427547981714786002, guid: 3bbe4a1addf348b43b401108da44c683,
     type: 3}
-  muzzle: {fileID: 1867029511}
   reloadTimer: 5
+  followPlayer: 0
 --- !u!4 &639175447
 Transform:
   m_ObjectHideFlags: 0
