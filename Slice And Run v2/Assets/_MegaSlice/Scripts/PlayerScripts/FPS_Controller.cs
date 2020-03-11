@@ -15,18 +15,20 @@ public class FPS_Controller : MonoBehaviour
     public bool onGround;
     public bool canJump = true;
 
-    public UnityEvent Jump; 
-     
-	[HideInInspector] public bool canMoveCamera = true;
+    public UnityEvent Jump;
+
+    //la variable velocity permet de bouger le personnage
+    //la variable moveDir permet au joueur de contrôler les personnages
+    Vector3 moveDir = Vector3.zero;
+    Vector3 velocity = Vector3.zero;
+    CharacterController characterController;
+    float cameraRotationX = 0;
+
+    [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
 
     public static Vector3 playerPos; 
-
-    CharacterController characterController;
-    Vector3 moveDir = Vector3.zero;
-    Vector3 velocityVertical = Vector3.zero;
-    float cameraRotationX = 0;
 
     private void Start()
     {
@@ -64,13 +66,13 @@ public class FPS_Controller : MonoBehaviour
             if (inputs.magnitude >= 1) inputs = inputs.normalized;
             moveDir = inputs * speed;
             moveDir = transform.TransformDirection(moveDir);
-            moveDir += velocityVertical; 
+            moveDir += velocity; 
         }
         else
         {
             moveDir = Vector3.zero;
             moveDir = transform.TransformDirection(moveDir);
-            moveDir += velocityVertical; 
+            moveDir += velocity; 
         }
     }
 
@@ -90,11 +92,11 @@ public class FPS_Controller : MonoBehaviour
     {
         if (!characterController.isGrounded)
         {
-            velocityVertical.y -= gravity * Time.deltaTime;
+            velocity.y -= gravity * Time.deltaTime;
         }
         else
         {
-            velocityVertical = Vector3.zero; 
+            velocity = Vector3.zero; 
         }
     }
 
@@ -110,10 +112,9 @@ public class FPS_Controller : MonoBehaviour
             Jump.Invoke();
             jumpDirection = transform.TransformDirection(jumpDirection); 
 
-            velocityVertical = jumpDirection * jumpForce;  
+            velocity = jumpDirection * jumpForce;  
             canJump = false;
             jumpDirection = new Vector3(0, 1, 0);
-            //FMODUnity.RuntimeManager.PlayOneShot("event:/InGame/Actions/PlayerCharacter/Saut", transform.position);
         }
     }
 
@@ -128,6 +129,11 @@ public class FPS_Controller : MonoBehaviour
         {
             onGround = false;
         }
+    }
+
+    public void PushPlayer(Vector3 pushDir)
+    {
+        velocity += pushDir; 
     }
 
     public void StopPlayer()

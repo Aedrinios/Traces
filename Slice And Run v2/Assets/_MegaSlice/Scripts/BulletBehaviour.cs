@@ -16,4 +16,13 @@ public class BulletBehaviour : MonoBehaviour
     {
         rb.AddForce(bulletSpeed * transform.forward);
     }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("collision");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("is this a collision ?");
+        }
+    }
 }
