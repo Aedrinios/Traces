@@ -2563,8 +2563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4427547981714786002, guid: 3bbe4a1addf348b43b401108da44c683,
     type: 3}
-  reloadTimer: 0.2
-  followPlayer: 0
+  reloadTimer: 0.5
+  followPlayer: 1
 --- !u!1 &403150486306370723
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,7 +6386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403150487432243821}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.014999986, y: 1.15, z: 6.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

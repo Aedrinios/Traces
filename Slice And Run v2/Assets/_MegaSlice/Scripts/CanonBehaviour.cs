@@ -8,7 +8,9 @@ public class CanonBehaviour : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     private Transform muzzle;
     private Transform turret;
+
     private Transform target;
+
     private bool isReloading;
     [SerializeField] private float reloadTimer;
     [SerializeField] private bool followPlayer;
@@ -19,13 +21,13 @@ public class CanonBehaviour : MonoBehaviour
         turret = transform.Find("Turret");
         muzzle = turret.Find("Muzzle");
 
-        target = GameObject.Find("Player").transform;
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()
     {
         if(followPlayer)
-            turret.LookAt(target);
+            turret.LookAt(target.transform);
 
         if (isReloading)
         {
@@ -44,7 +46,10 @@ public class CanonBehaviour : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, muzzle.position, Quaternion.LookRotation(turret.forward));
+        GameObject bullet = Instantiate(bulletPrefab, muzzle.position, Quaternion.LookRotation(turret.forward));
+        BulletBehaviour bulletBehaviour = bullet.GetComponent<BulletBehaviour>();
+        bulletBehaviour.player = target;
+        bulletBehaviour.direction = muzzle.forward;
         isReloading = true;
     }
 }

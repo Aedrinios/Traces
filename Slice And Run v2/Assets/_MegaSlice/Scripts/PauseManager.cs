@@ -18,7 +18,6 @@ public class PauseManager : MonoBehaviour
             fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
             playerAttack = GameObject.FindWithTag("Player").GetComponent<PlayerAttack>();
         }
-
         playerInterface = GameObject.Find("PlayerInterface");
 
         if (isPaused) isPaused = false; 
@@ -41,6 +40,7 @@ public class PauseManager : MonoBehaviour
 
     public void Resume()
     {
+        Time.timeScale = 1;
         pauseScreen.SetActive(false);
         playerInterface.SetActive(true);
         if(fps != null)
@@ -65,6 +65,7 @@ public class PauseManager : MonoBehaviour
 
     void Pause()
     {
+        Time.timeScale = 0f;
         ChronoSystem.playing = false;
         playerInterface.SetActive(false);
         pauseScreen.SetActive(true);

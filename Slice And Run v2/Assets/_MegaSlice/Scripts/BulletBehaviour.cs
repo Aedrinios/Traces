@@ -5,7 +5,10 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float forcePush;
     private Rigidbody rb;
+    [HideInInspector] public Transform player;
+    [HideInInspector] public Vector3 direction;
 
     private void Start()
     {
@@ -14,15 +17,18 @@ public class BulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(bulletSpeed * transform.forward);
+        rb.AddForce(bulletSpeed * direction);
     }
     
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision");
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("is this a collision ?");
+            Debug.Log("bim bam boum");
+            rb.velocity = Vector3.zero;
+            rb.AddForce(bulletSpeed * -transform.forward);
+            Vector3 direction = (player.position - transform.position).normalized;
+            player.GetComponent<FPS_Controller>().PushPlayer(direction * forcePush);
         }
     }
 }

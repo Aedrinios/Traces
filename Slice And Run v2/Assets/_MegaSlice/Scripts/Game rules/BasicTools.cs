@@ -29,7 +29,6 @@ public class BasicTools : MonoBehaviour
     {
         resetEvent.Invoke(); 
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("current scene is " + currentScene);
         SceneManager.LoadScene(currentScene);
     }
 

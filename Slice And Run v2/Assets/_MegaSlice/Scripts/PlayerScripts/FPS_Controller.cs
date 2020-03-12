@@ -133,6 +133,10 @@ public class FPS_Controller : MonoBehaviour
 
     public void PushPlayer(Vector3 pushDir)
     {
+        if(pushDir.y < 0 && onGround)
+        {
+            pushDir.y = 20; 
+        }
         velocity += pushDir; 
     }
 
