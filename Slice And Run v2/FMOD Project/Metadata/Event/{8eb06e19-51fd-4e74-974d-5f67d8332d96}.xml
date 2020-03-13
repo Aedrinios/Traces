@@ -139,25 +139,28 @@
 	<object class="MixerBusFader" id="{97120112-3dae-4738-8675-4cb971c9ebca}" />
 	<object class="MixerBusEffectChain" id="{61e784fe-5ddd-41ce-b67a-e45729294aa1}">
 		<relationship name="effects">
-			<destination>{5d3800be-9a46-4715-bfb2-30ed81241a28}</destination>
 			<destination>{6ebf0002-302a-4f49-a138-860523d43d80}</destination>
+			<destination>{5d3800be-9a46-4715-bfb2-30ed81241a28}</destination>
 			<destination>{9aad06f7-1740-4476-96f2-c317e7e16e17}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0e06c3ac-7cb2-480e-ab69-82d6746b1af3}" />
 	<object class="MixerBusFader" id="{295dced3-6de7-4a66-8c44-6cfb9e820bd9}" />
+	<object class="MixerBusFader" id="{6ebf0002-302a-4f49-a138-860523d43d80}" />
 	<object class="ThreeEQEffect" id="{5d3800be-9a46-4715-bfb2-30ed81241a28}">
+		<property name="lowGain">
+			<value>-2.5</value>
+		</property>
 		<property name="midGain">
-			<value>-4</value>
+			<value>-0.5</value>
 		</property>
 		<property name="highGain">
-			<value>-24.5</value>
+			<value>-14</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{6ebf0002-302a-4f49-a138-860523d43d80}" />
 	<object class="SFXReverbEffect" id="{9aad06f7-1740-4476-96f2-c317e7e16e17}">
 		<property name="decayTime">
-			<value>2600</value>
+			<value>4300</value>
 		</property>
 	</object>
 </objects>

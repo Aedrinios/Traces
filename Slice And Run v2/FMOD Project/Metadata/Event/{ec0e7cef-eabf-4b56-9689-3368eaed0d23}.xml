@@ -92,6 +92,9 @@
 		<property name="length">
 			<value>1.9987755102040816</value>
 		</property>
+		<property name="volume">
+			<value>-4</value>
+		</property>
 		<property name="pitch">
 			<value>2</value>
 		</property>
@@ -156,14 +159,14 @@
 	<object class="MixerBusPanner" id="{8abcba79-3028-434f-9711-126c9c99afd4}" />
 	<object class="MixerBusFader" id="{e998f755-fbd0-4d8f-bd66-218fa063cde2}" />
 	<object class="SpatialiserEffect" id="{a8923a8b-5ed7-46a4-9aeb-cca1a12d6abd}">
-		<property name="distanceRolloffType">
-			<value>2</value>
+		<property name="bypass">
+			<value>true</value>
 		</property>
 		<property name="minimumDistance">
-			<value>6</value>
+			<value>6.80000019</value>
 		</property>
 		<property name="maximumDistance">
-			<value>50</value>
+			<value>40</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b0b75abd-ea47-4d2d-a76c-a7466519df15}">
@@ -187,7 +190,7 @@
 	</object>
 	<object class="AutomationPoint" id="{59500e27-f970-41f8-b0b4-490d9e980bb4}">
 		<property name="position">
-			<value>1.4999999999999998</value>
+			<value>1.0600000000000001</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -198,7 +201,7 @@
 	</object>
 	<object class="AutomationPoint" id="{82e98b0b-56ed-44bc-945e-448a86ce6d81}">
 		<property name="position">
-			<value>1.9987755102040814</value>
+			<value>1.9987755102040816</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -207,18 +210,21 @@
 	<object class="MixerBusFader" id="{9ba9763b-594b-4040-8b70-c5567ff5b62b}" />
 	<object class="DelayEffect" id="{1dce8d51-dc5a-46b2-a597-2bbcb6db13fe}">
 		<property name="delay">
-			<value>18</value>
+			<value>20</value>
 		</property>
 		<property name="feedback">
-			<value>90.5</value>
+			<value>64.5</value>
 		</property>
 		<property name="level">
-			<value>-6.5</value>
+			<value>-2</value>
+		</property>
+		<property name="dryLevel">
+			<value>-11.5</value>
 		</property>
 	</object>
 	<object class="MixerSend" id="{e42b7953-4d7e-4f81-b0fd-10807343c2cc}">
 		<property name="level">
-			<value>-15</value>
+			<value>-3.5</value>
 		</property>
 		<property name="inputFormat">
 			<value>1</value>
