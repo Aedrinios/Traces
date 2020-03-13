@@ -1731,8 +1731,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -3729,8 +3727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -7485,8 +7481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -8608,8 +8602,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -9648,8 +9640,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -13619,8 +13609,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -14898,8 +14886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -16718,8 +16704,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -17561,21 +17545,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546504388042997435, guid: 9694f46dcaf811a45a675ea05b06ef6b,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546504388042997435, guid: 9694f46dcaf811a45a675ea05b06ef6b,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546504388042997435, guid: 9694f46dcaf811a45a675ea05b06ef6b,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9694f46dcaf811a45a675ea05b06ef6b, type: 3}
@@ -19349,8 +19318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -30988,8 +30955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -31799,8 +31764,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -32610,8 +32573,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -33421,8 +33382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -33908,8 +33867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -42109,8 +42066,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -42436,8 +42391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -43719,8 +43672,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -47778,8 +47729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -49697,8 +49646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -50664,8 +50611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -51475,8 +51420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -53710,8 +53653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -56101,8 +56042,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -59136,8 +59075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -59947,8 +59884,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -61382,8 +61317,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -66781,8 +66714,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -67752,8 +67683,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -69831,8 +69760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -72127,8 +72054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -74210,8 +74135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -75341,8 +75264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -76792,8 +76713,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
@@ -78695,8 +78614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: c8b8b8a78cbce0c4890323fe34afda2d, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
   numberCutting: 0
   forcePush: 80
   canSlice: 1
