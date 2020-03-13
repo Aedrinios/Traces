@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7737b3acea840d4bac97e65bdb12ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitTimer: 30
+  limitTimer: 20
 --- !u!1 &2144786900052532790
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 1785322910}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

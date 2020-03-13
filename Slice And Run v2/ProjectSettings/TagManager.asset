@@ -7,6 +7,7 @@ TagManager:
   - Sliceable
   - Projectile
   - HeartCube
+  - GameManager
   layers:
   - Default
   - TransparentFX

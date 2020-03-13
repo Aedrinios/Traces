@@ -1014,6 +1014,7 @@ GameObject:
   - component: {fileID: 5279544905833992737}
   - component: {fileID: 5569116269230678873}
   - component: {fileID: 6975865317148746473}
+  - component: {fileID: 1548404309}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -1089,17 +1090,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LaunchLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1844928046}
         m_MethodName: SpawnPrefabs
         m_Mode: 1
@@ -1111,8 +1101,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SetLevelScreenToLoaded
+      - m_Target: {fileID: 1548404309}
+        m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1122,6 +1112,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1548404309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674263087305151633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f39635a8be33c14a8fe996ebb003208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &725183648232111521
 GameObject:
   m_ObjectHideFlags: 0
@@ -3256,6 +3258,7 @@ GameObject:
   - component: {fileID: 8641204981662595296}
   - component: {fileID: 7200256426751125438}
   - component: {fileID: 8802783610672635923}
+  - component: {fileID: 1548404307}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -3331,17 +3334,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1844928046}
         m_MethodName: SpawnPrefabs
         m_Mode: 1
@@ -3353,6 +3345,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1548404307}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &1548404307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5354596064426170047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f39635a8be33c14a8fe996ebb003208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5591608091388017010
 GameObject:
   m_ObjectHideFlags: 0
