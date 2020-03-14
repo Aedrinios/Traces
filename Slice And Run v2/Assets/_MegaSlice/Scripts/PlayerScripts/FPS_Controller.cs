@@ -133,13 +133,18 @@ public class FPS_Controller : MonoBehaviour
         {
             onGround = false;
         }
+
+        if (characterController.isGrounded)
+        {
+            onGround = true; 
+        }
     }
 
     public void PushPlayer(Vector3 pushDir)
     {
         if(pushDir.y < 0 && onGround)
         {
-            pushDir.y = 20; 
+           // pushDir.y = 20; 
         }
         velocity += pushDir; 
     }

@@ -34,7 +34,7 @@ public class WallJump : MonoBehaviour
             }
         }
 
-        if (characterController.isGrounded && countJump != 0)
+        if (fps.onGround && countJump != 0)
 		{
 			countJump = 0;
 		}		
