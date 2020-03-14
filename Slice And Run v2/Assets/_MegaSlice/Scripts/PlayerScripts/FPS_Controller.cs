@@ -125,7 +125,7 @@ public class FPS_Controller : MonoBehaviour
     void CheckOnGround()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1.5f))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1.5f, gameObject.layer))
         {
             onGround = true;
         }
