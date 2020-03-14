@@ -19,10 +19,25 @@ public class PauseButton : MonoBehaviour
         pauseManager.Resume(); 
     }
 
+    public void Pause()
+    {
+        pauseManager.Pause();
+    }
+
     public void GoToMenu()
     {
         gameManager.LaunchLevel(0);
         Time.timeScale = 1;
+    }
+
+    public void RetryLevel()
+    {
+        gameManager.RetryLevel(); 
+    }
+
+    public void LaunchNextLevel()
+    {
+        gameManager.LaunchNextLevel(); 
     }
 
 }

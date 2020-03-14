@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1569876558}
   - component: {fileID: 1569876560}
   - component: {fileID: 1569876559}
+  - component: {fileID: 3892454465735567742}
   m_Layer: 5
   m_Name: MenuButton
   m_TagString: Untagged
@@ -86,9 +87,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LaunchLevel
-        m_Mode: 3
+      - m_Target: {fileID: 3892454465735567742}
+        m_MethodName: GoToMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -119,17 +120,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SetLevelScreenToLoaded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!114 &3892454465735567742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569876557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f39635a8be33c14a8fe996ebb003208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1683227591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +1964,7 @@ GameObject:
   - component: {fileID: 3892454465673712264}
   - component: {fileID: 3892454465673712270}
   - component: {fileID: 3892454465673712265}
+  - component: {fileID: 3892454465735567743}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -2037,7 +2040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3892454465735567743}
         m_MethodName: LaunchNextLevel
         m_Mode: 1
         m_Arguments:
@@ -2070,6 +2073,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3892454465735567743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3892454465673712267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f39635a8be33c14a8fe996ebb003208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3892454466129003293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3154,7 @@ GameObject:
   - component: {fileID: 7181197756402873385}
   - component: {fileID: 4442131235060316848}
   - component: {fileID: 6459044795365264110}
+  - component: {fileID: 3892454465735567744}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -3214,7 +3230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3892454465735567744}
         m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
@@ -3247,6 +3263,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3892454465735567744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5350126072844073558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f39635a8be33c14a8fe996ebb003208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5354596064426170047
 GameObject:
   m_ObjectHideFlags: 0
