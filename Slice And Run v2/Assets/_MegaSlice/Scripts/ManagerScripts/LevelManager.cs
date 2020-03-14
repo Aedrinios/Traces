@@ -30,15 +30,21 @@ public class LevelManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-        onLevelComplete += ShowScoreScreen;
-        onLevelFailed += ShowFailedScreen;
+        if(SceneManager.GetActiveScene().buildIndex > 0)
+        {
+            onLevelComplete += ShowScoreScreen;
+            onLevelFailed += ShowFailedScreen;
+        }
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-        onLevelComplete -= ShowScoreScreen;
-        onLevelFailed -= ShowFailedScreen;
+        if (SceneManager.GetActiveScene().buildIndex > 0)
+        {
+            onLevelComplete -= ShowScoreScreen;
+            onLevelFailed -= ShowFailedScreen;
+        }
     }
 
     private void Start()

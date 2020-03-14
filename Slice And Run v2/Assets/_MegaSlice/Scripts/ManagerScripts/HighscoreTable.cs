@@ -67,30 +67,34 @@ public class HighscoreTable : MonoBehaviour
 
     private void InstantiateLeaderboard(int rank, int indexInList, int levelIndex, int transformIncrementation)
     {
-        Transform entryTransform = Instantiate(entryTemplate, entryContainer);
-        RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-        entryRectTransform.anchoredPosition = new Vector3(0, -templateHeigth * transformIncrementation, 0);
-        entryTransform.gameObject.SetActive(true);
-
-        TextMeshProUGUI rankText = entryTransform.Find("rankText").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI nameText = entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI timeText = entryTransform.Find("timeText").GetComponent<TextMeshProUGUI>();
-
-        rankText.text = rank.ToString();
-        nameText.text = allPlayersData[indexInList].name;
-        TimeSpan timeSpan = TimeSpan.FromSeconds(allPlayersData[indexInList].scoreList[levelIndex]);
-
-        timeText.text = string.Format("{0:D2}:{1:D2}:{2:00}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
-
-        if (playerManager.name == nameText.text)
+        if(allPlayersData.Count > 0)
         {
-            playerInLeaderboard = true;
-            rankText.color = Color.red;
-            nameText.color = Color.red;
-            timeText.color = Color.red;
-        }
+            Transform entryTransform = Instantiate(entryTemplate, entryContainer);
+            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
+            entryRectTransform.anchoredPosition = new Vector3(0, -templateHeigth * transformIncrementation, 0);
+            entryTransform.gameObject.SetActive(true);
 
-        listEntryTransform.Add(entryTransform.gameObject);
+            TextMeshProUGUI rankText = entryTransform.Find("rankText").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI nameText = entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI timeText = entryTransform.Find("timeText").GetComponent<TextMeshProUGUI>();
+
+            rankText.text = rank.ToString();
+
+            nameText.text = allPlayersData[indexInList].name;
+            TimeSpan timeSpan = TimeSpan.FromSeconds(allPlayersData[indexInList].scoreList[levelIndex]);
+
+            timeText.text = string.Format("{0:D2}:{1:D2}:{2:00}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+
+            if (playerManager.name == nameText.text)
+            {
+                playerInLeaderboard = true;
+                rankText.color = Color.red;
+                nameText.color = Color.red;
+                timeText.color = Color.red;
+            }
+
+            listEntryTransform.Add(entryTransform.gameObject);
+        }
     }
 
     public void DeleteLeaderboard()
