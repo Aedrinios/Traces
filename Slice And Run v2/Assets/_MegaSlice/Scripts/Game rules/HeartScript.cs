@@ -25,7 +25,7 @@ public class HeartScript : MonoBehaviour
     {
         if (other.CompareTag("Projectile") && sliceScript.canSlice)
         {
-            EndGame();            
+            EndGame();
         }
     }
 

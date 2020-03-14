@@ -7,19 +7,18 @@ public class SuperProjectileBehaviour : ProjectileBehaviour
 {
     [SerializeField] private Material cutMaterial;
 
-    public override void Slice(GameObject hit)
-    {
-        SlicedHull hull = SliceObject(cutPlane, hit, cutMaterial);
+    //public override void Slice(GameObject hit)
+    //{
+    //    SlicedHull hull = SliceObject(cutPlane, hit, cutMaterial);
 
-        if (hull != null)
-        {
-            GameObject bottom = hull.CreateLowerHull(this.gameObject, cutMaterial);
-            GameObject top = hull.CreateUpperHull(this.gameObject, cutMaterial);
-            AddHullComponents(bottom);
-            AddHullComponents(top);
-
-        }
-    }
+    //    if (hull != null)
+    //    {
+    //        GameObject bottom = hull.CreateLowerHull(this.gameObject, cutMaterial);
+    //        GameObject top = hull.CreateUpperHull(this.gameObject, cutMaterial);
+    //        AddHullComponents(bottom);
+    //        AddHullComponents(top);
+    //    }
+    //}
 
     public void AddHullComponents(GameObject go)
     {
@@ -43,11 +42,12 @@ public class SuperProjectileBehaviour : ProjectileBehaviour
         return obj.Slice(slicePlane.position, slicePlane.up, crossSectionMaterial);
     }
 
-    public override void OnTriggerEnter(Collider other)
-    {
-        if (!other.CompareTag("Player"))
-        {
-            Slice(other.gameObject);
-        }
-    }
+    //public override void OnTriggerEnter(Collider other)
+    //{
+    //    if (!other.CompareTag("Player"))
+    //    {
+    //        Slice(other.gameObject);
+    //    }
+    //}
+
 }

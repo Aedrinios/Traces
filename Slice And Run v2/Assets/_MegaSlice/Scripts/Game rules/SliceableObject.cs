@@ -8,7 +8,6 @@ public class SliceableObject : MonoBehaviour
     private float timeLeft;
 	private bool isSliceable;
     public Material crossMaterial;
-	//public GameObject hitSound; 
 
 	float volume;
 	float limitVolume = 0.25f;
@@ -46,8 +45,6 @@ public class SliceableObject : MonoBehaviour
                 AddHullComponents(top);
 				Destroy(this.gameObject);
 
-				//sound Hit 
-				//if (hitSound != null) Instantiate(hitSound, transform.position, transform.rotation);
 				gameObjectSliced = gameObject; 
 				positionSlice = transform.position;
 				hitHappen.Invoke();
@@ -67,7 +64,7 @@ public class SliceableObject : MonoBehaviour
         SliceableObject so = go.AddComponent<SliceableObject>();
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
-        //so.hitSound = hitSound;
+
 		RepulsionAfterCut(rb); 
 	}
 
