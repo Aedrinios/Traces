@@ -42,12 +42,10 @@ public class WallJump : MonoBehaviour
 
     bool DetectIfWallNear()
     {
-
-
         Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
         Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
 
-        if (colliders.Length > 1) return true;
+        if (colliders.Length > 0) return true;
         else return false; 
     }
 

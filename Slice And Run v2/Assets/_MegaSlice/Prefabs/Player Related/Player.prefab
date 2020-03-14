@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257275253}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: StartSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 6229600815486438845}
   - component: {fileID: 1400862735458761585}
   - component: {fileID: 4429569699078343997}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   gravity: 45
   sensivityX: 18
   sensivityY: 22
+  maxFallSpeed: 58
   onGround: 0
   canJump: 1
   Jump:
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 2546504388042997432}
   - component: {fileID: 2546504388042997433}
   - component: {fileID: 8305711104260940701}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -410,7 +411,7 @@ GameObject:
   - component: {fileID: 2546504388377453087}
   - component: {fileID: 2546504388377453084}
   - component: {fileID: 2546504388377453085}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Slice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846828471650752459}
   - component: {fileID: 8208521970860062544}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: JumpSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -543,7 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2704335425438982036}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SoundPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8441149572097763817}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: CameraHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

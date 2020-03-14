@@ -61,4 +61,5 @@ Semaine du 09/03/2020
 - ré-intégration du son de coupe dans le Fmod 
 - remixage des sons
 - Bouton de menu de fin réparé 
-- Projectilles remake
+- Projectilles refaits
+- Controller FPS rajout d'une vitesse de chute max
