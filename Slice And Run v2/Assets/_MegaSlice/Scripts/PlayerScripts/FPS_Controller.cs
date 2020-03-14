@@ -124,19 +124,13 @@ public class FPS_Controller : MonoBehaviour
 
     void CheckOnGround()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, 1.5f, gameObject.layer))
+        if (characterController.isGrounded)
         {
-            onGround = true;
+            onGround = true; 
         }
         else
         {
             onGround = false;
-        }
-
-        if (characterController.isGrounded)
-        {
-            onGround = true; 
         }
     }
 
