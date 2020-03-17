@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class HeartScript : MonoBehaviour
 {
-    public GameObject particleEndPrefab;
     public GameObject endGamePrefab;
+    public GameObject particleEndPrefab;
     public GameObject soundSliceEnd;
 
     SliceableObject sliceScript; 
@@ -26,13 +26,13 @@ public class HeartScript : MonoBehaviour
     {
         if (other.CompareTag("Projectile") && sliceScript.canSlice)
         {
-            EndGame();
+            EndGame(other.gameObject.transform);
         }
     }
 
-    void EndGame()
+    void EndGame(Transform projectile)
     {
-Instantiate(particleEndPrefab, transform.position, transform.rotation);
+        Instantiate(particleEndPrefab, projectile.position, projectile.rotation);
 
         GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);        
         go.GetComponent<EndGameManager>().slowed = true;

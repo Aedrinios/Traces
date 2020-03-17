@@ -2511,6 +2511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endGamePrefab: {fileID: 4166079048446866006, guid: 91e1aabda2d9cd346949defc8411f42d,
     type: 3}
+  particleEndPrefab: {fileID: 1837398281301428, guid: c6bff702ea33dbd43b35ea3d6db5f838,
+    type: 3}
   soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
     type: 3}
 --- !u!114 &7254034285658584958

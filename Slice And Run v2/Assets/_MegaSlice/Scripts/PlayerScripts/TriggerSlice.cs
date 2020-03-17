@@ -5,8 +5,9 @@ using UnityEngine;
 public class TriggerSlice : MonoBehaviour
 {
     public float loveLife = 0.05f;
-    public ProjectileBehaviour projectille; 
+    public ProjectileBehaviour projectile; 
     public GameObject hitParticle;
+    public GameObject particleEndPrefab;
     public Transform cutPlane;
 
     public virtual void Slice(GameObject hit)
@@ -22,9 +23,11 @@ public class TriggerSlice : MonoBehaviour
     {
         if (other.CompareTag("Sliceable"))
         {
+            Debug.Log("transform rotation : " + transform.rotation);
             Instantiate(hitParticle, transform.position, transform.rotation);
             Slice(other.gameObject);
-            projectille.LoseLife(loveLife); 
+            projectile.LoseLife(loveLife); 
         }
+
     }
 }

@@ -84,8 +84,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loveLife: 0.04
-  projectille: {fileID: 114503920325459236}
+  projectile: {fileID: 114503920325459236}
   hitParticle: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
+    type: 3}
+  particleEndPrefab: {fileID: 1837398281301428, guid: c6bff702ea33dbd43b35ea3d6db5f838,
     type: 3}
   cutPlane: {fileID: 1245947399}
 --- !u!65 &5290071291750935691
