@@ -67,5 +67,5 @@ Semaine du 09/03/2020
 Semaine du 16/03/2020
 
 - Modification du FPS_controller : modif des chocs bloquants
-- Ajout d'un ingredient Ventillateur
-  
+- Ajout d'un ingredient Ventilateur
+- Ajout d'une friction sur le sol 

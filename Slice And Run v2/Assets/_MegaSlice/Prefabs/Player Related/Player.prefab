@@ -108,6 +108,7 @@ MonoBehaviour:
   sensivityX: 18
   sensivityY: 22
   maxFallSpeed: 58
+  groundFriction: 45
   onGround: 0
   canJump: 1
   Jump:

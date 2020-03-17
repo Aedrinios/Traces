@@ -13,6 +13,7 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
     public float maxFallSpeed = 60;
+    public float groundFriction = 20; 
     public bool onGround;
     public bool canJump = true;
 
@@ -53,17 +54,8 @@ public class FPS_Controller : MonoBehaviour
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
-
-        //Gravity();
-
-
         characterController.Move(moveDir * Time.deltaTime);
         playerPos = transform.position;
-    }
-
-    private void LateUpdate()
-    {
-       // Gravity();
     }
 
     void DefineMoveDirection()
@@ -109,7 +101,8 @@ public class FPS_Controller : MonoBehaviour
         }
         else
         {
-            velocity.y = 0; 
+            velocity.y = 0;
+            VerticalFriction(); 
         }
     }
 
@@ -140,6 +133,27 @@ public class FPS_Controller : MonoBehaviour
         else
         {
             onGround = false;
+        }
+    }
+
+    void VerticalFriction()
+    {
+        if (velocity.x > 0)
+        {
+            velocity.x -= groundFriction * Time.deltaTime; 
+        }
+        else if (velocity.x < 0)
+        {
+            velocity.x += groundFriction * Time.deltaTime;
+        }
+
+        if (velocity.z > 0)
+        {
+            velocity.z -= groundFriction * Time.deltaTime;
+        }
+        else if (velocity.z < 0)
+        {
+            velocity.z += groundFriction * Time.deltaTime;
         }
     }
 
