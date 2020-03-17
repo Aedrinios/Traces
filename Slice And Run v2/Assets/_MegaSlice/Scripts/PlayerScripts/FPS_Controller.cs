@@ -100,7 +100,7 @@ public class FPS_Controller : MonoBehaviour
         }
         else
         {
-            velocity = Vector3.zero; 
+            velocity.y = 0; 
         }
     }
 
