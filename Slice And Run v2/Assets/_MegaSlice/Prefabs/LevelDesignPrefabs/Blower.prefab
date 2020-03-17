@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 5474385479028279402}
   - component: {fileID: 5474385479028279403}
   - component: {fileID: 5474385479028279404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zone Blower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
