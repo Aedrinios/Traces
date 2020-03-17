@@ -17,6 +17,9 @@ public class FPS_Controller : MonoBehaviour
     public bool onGround;
     public bool canJump = true;
 
+    public GameObject speedParticle;
+    public float activateSpeedParticle;
+
     public UnityEvent Jump;
 
     //la variable velocity permet de bouger le personnage
@@ -55,6 +58,14 @@ public class FPS_Controller : MonoBehaviour
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
+        if(characterController.velocity.magnitude > activateSpeedParticle)
+        {
+            speedParticle.SetActive(true);
+        }
+        else
+        {
+            speedParticle.SetActive(false);
+        }
         playerPos = transform.position;
     }
 
