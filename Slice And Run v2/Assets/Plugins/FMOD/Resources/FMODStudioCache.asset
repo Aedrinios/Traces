@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114883989904737960}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   EditorEvents:
   - {fileID: 114447686793238704}
   - {fileID: 114946201821806180}
@@ -26,17 +26,13 @@ MonoBehaviour:
   - {fileID: 114902405209828510}
   - {fileID: 114083784418996558}
   - {fileID: 114129644768688430}
-  - {fileID: 114789835204292428}
-  - {fileID: 114511009839630640}
-  - {fileID: 114712689245661426}
-  - {fileID: 114242002306408858}
   - {fileID: 114989078730905094}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   StringsBanks:
   - {fileID: 114883989904737960}
-  stringsBankWriteTime: 637198023266678448
+  stringsBankWriteTime: 637196307454013432
   cacheVersion: 3
 --- !u!114 &114001501978352074
 MonoBehaviour:
@@ -115,6 +111,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &114012955260269848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637196307453973586
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114015802746505504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,7 +463,7 @@ MonoBehaviour:
   Path: event:/InGame/Ambient/Ambient Loop 2
   guid: 52aa1eb4a6c0aa408414dc46721e542a
   Banks:
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -532,14 +546,14 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2100
+  Length: 2250
 --- !u!114 &114099278064640604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,7 +702,7 @@ MonoBehaviour:
   Path: event:/Menus/Game Over/Death Sound
   guid: 94c6e44440c42540b870a605ad716637
   Banks:
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -713,7 +727,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1911,7 +1925,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2013,7 +2027,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3667,11 +3681,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637198023266678448
+  lastModified: 637196307454013432
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1470
+    Value: 1276
   Exists: 1
 --- !u!114 &114886437340132144
 MonoBehaviour:
@@ -3747,7 +3761,7 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/Victoire
   guid: 2f66aaa399e71b43ac1941c13c4a6b07
   Banks:
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3921,7 +3935,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -3964,7 +3978,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4146,13 +4160,13 @@ MonoBehaviour:
   Path: event:/InGame/Actions/Environmental Objects/ImpactFinal
   guid: ef7c0eecbfea564b96893368eaed0d23
   Banks:
-  - {fileID: 114857723912310482}
+  - {fileID: 114012955260269848}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 6
+  MaxDistance: 50
   Length: 1998
 --- !u!114 &114990517008758800
 MonoBehaviour:
