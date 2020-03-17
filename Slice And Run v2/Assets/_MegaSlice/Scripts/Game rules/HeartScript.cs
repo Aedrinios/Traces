@@ -8,6 +8,8 @@ public class HeartScript : MonoBehaviour
     public GameObject endGamePrefab;
     public GameObject particleEndPrefab;
     public GameObject soundSliceEnd;
+    private Transform parent;
+
 
     SliceableObject sliceScript; 
     private float originalTimeScale;
@@ -16,6 +18,7 @@ public class HeartScript : MonoBehaviour
 
     private void Start()
     {
+        parent = transform.parent;
         sliceScript = GetComponent<SliceableObject>(); 
         originalTimeScale = Time.timeScale;
         timePast = 0f;
@@ -32,7 +35,7 @@ public class HeartScript : MonoBehaviour
 
     void EndGame(Transform projectile)
     {
-        Instantiate(particleEndPrefab, projectile.position, projectile.rotation);
+        Instantiate(particleEndPrefab, parent.position, projectile.rotation);
 
         GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);        
         go.GetComponent<EndGameManager>().slowed = true;
