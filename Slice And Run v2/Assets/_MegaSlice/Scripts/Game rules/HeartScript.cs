@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HeartScript : MonoBehaviour
 {
+    public GameObject particleEndPrefab;
     public GameObject endGamePrefab;
     public GameObject soundSliceEnd;
 
@@ -31,6 +32,8 @@ public class HeartScript : MonoBehaviour
 
     void EndGame()
     {
+Instantiate(particleEndPrefab, transform.position, transform.rotation);
+
         GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);        
         go.GetComponent<EndGameManager>().slowed = true;
 
