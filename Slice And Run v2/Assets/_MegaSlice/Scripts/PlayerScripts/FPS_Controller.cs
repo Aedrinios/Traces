@@ -53,8 +53,17 @@ public class FPS_Controller : MonoBehaviour
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
+
+        //Gravity();
+
+
         characterController.Move(moveDir * Time.deltaTime);
         playerPos = transform.position;
+    }
+
+    private void LateUpdate()
+    {
+       // Gravity();
     }
 
     void DefineMoveDirection()
