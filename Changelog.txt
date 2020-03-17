@@ -63,3 +63,9 @@ Semaine du 09/03/2020
 - Bouton de menu de fin réparé 
 - Projectilles refaits
 - Controller FPS rajout d'une vitesse de chute max
+
+Semaine du 16/03/2020
+
+- Modification du FPS_controller : modif des chocs bloquants
+- Ajout d'un ingredient Ventillateur
+  
