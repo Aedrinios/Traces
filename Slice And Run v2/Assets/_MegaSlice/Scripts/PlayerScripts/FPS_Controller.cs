@@ -61,10 +61,9 @@ public class FPS_Controller : MonoBehaviour
     private void Update()
     {
         Gravity();
-        if (!hasPressedJump)
-        {
-            hasPressedJump = Input.GetButtonDown("Jump");
-        }
+
+        hasPressedJump = Input.GetButtonDown("Jump");
+        
         if (hasPressedJump)
         {
             timeJump -= Time.deltaTime;
