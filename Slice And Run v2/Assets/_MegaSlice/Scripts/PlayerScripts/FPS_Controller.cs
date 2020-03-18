@@ -12,11 +12,16 @@ public class FPS_Controller : MonoBehaviour
     public float gravity = 20;
     public float sensivityX = 200;
     public float sensivityY = 200;
+
     public float coyoteTime = 0.15f; 
+    public float jumpMemory = 0.15f; 
+    private float timeJump;
+
     public float maxFallSpeed = 60;
     public float groundFriction = 20; 
     public bool onGround;
     public bool canJump = true;
+    private bool hasPressedJump;
 
     public GameObject speedParticle;
     public float activateSpeedParticle;
@@ -43,6 +48,7 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         canMoveCamera = false;
+        timeJump = jumpMemory;
         Invoke("StartPlayer", 0.3f);
     }
 
@@ -55,6 +61,19 @@ public class FPS_Controller : MonoBehaviour
     private void Update()
     {
         Gravity();
+        if (!hasPressedJump)
+        {
+            hasPressedJump = Input.GetButtonDown("Jump");
+        }
+        if (hasPressedJump)
+        {
+            timeJump -= Time.deltaTime;
+            if (timeJump <= 0)
+            {
+                hasPressedJump = false;
+                timeJump = jumpMemory;
+            }
+        }
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
@@ -125,7 +144,7 @@ public class FPS_Controller : MonoBehaviour
             canJump = true;
         }
 
-        if (Input.GetButtonDown("Jump") && canJump)
+        if (hasPressedJump && canJump)
         {
             BlockJump();
             Jump.Invoke();
