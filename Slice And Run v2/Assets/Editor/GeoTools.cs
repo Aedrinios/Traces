@@ -13,11 +13,15 @@ public class GeoTools : EditorWindow
 	}
 
 	// variables
-	public enum TypeForm { Circle, Spiral };
+	public enum TypeForm { Circle, Spiral, Curve };
 	TypeForm form;
+	public float radius = 10f;
+	public float gap = 0f;
+	public bool withRotation = false;
 
-	public float radius = 10;
-	public bool withRotation = false; 
+	public AnimationCurve curveZ;
+	public bool withCurveY = false;
+	public AnimationCurve curveY;
 
 	//rajout des fonctionalités
 	private void OnGUI()
@@ -26,7 +30,14 @@ public class GeoTools : EditorWindow
 
 		form = (TypeForm)EditorGUILayout.EnumPopup("Form selected", form);
 		radius = EditorGUILayout.FloatField("Radius : ", radius);
-		withRotation = EditorGUILayout.Toggle("With Rotation : ", withRotation);
+		if (form == TypeForm.Spiral) gap = EditorGUILayout.FloatField("Gap : ", gap);
+		if (form != TypeForm.Curve) withRotation = EditorGUILayout.Toggle("With Rotation : ", withRotation);
+		if (form == TypeForm.Curve)
+		{
+			curveZ = EditorGUILayout.CurveField("Curve Z form", curveZ);
+			withCurveY = EditorGUILayout.Toggle("With Curve Y : ", withCurveY);
+			if (withCurveY) curveY = EditorGUILayout.CurveField("Curve Y form", curveY);
+		}
 
 		if (GUILayout.Button("Order"))
 		{
@@ -45,6 +56,10 @@ public class GeoTools : EditorWindow
 			case TypeForm.Spiral:
 				MakeSpiral(); 
 				Debug.Log("Spiral maked");
+				break;
+			case TypeForm.Curve:
+				MakeCurve();
+				Debug.Log("Curve maked");
 				break;
 		}
 	}
@@ -79,26 +94,67 @@ public class GeoTools : EditorWindow
 				transformSelection[i].LookAt(center);
 			}
 		}
-
-		
-
 	}
 
 	void MakeSpiral()
 	{
 		Transform[] transformSelection = cleanSelectionTransform();
 
+		Vector3 center = Vector3.zero;
+
+		float modifRadius = radius; 
+
 		for (int i = 0; i < transformSelection.Length; i++)
 		{
-			Vector3 center = Vector3.zero; 
+			float angle = -3.141f * 0.1f * i;
+			float posX = Mathf.Cos(angle);
+			float posZ = Mathf.Sin(angle);
+			
+			float decal = angle / -3.141f;
+			Vector3 newPosition = new Vector3(posX, 0, posZ) * modifRadius;
 
+			float posY = i * gap;
+			newPosition.y = posY; 
+
+			newPosition += center; 
+			transformSelection[i].localPosition = newPosition;
+
+			if (decal % 1 == 0 && i > 0)
+			{
+				modifRadius += radius;
+
+				if (center.x == 0) { center.x = radius; }
+				else { center.x = 0; }
+			}
+
+			if (withRotation)
+			{
+				Vector3 lookPoint = center;
+				lookPoint.y = posY; 
+				transformSelection[i].LookAt(lookPoint);
+			}
 		}
 
 	}
 
+	void MakeCurve()
+	{
+		Transform[] transformSelection = cleanSelectionTransform();
 
+		float length = transformSelection.Length; 		
 
+		for (int i = 0; i < transformSelection.Length; i++)
+		{
+			float posX = i / (length - 1);
+			float posZ = curveZ.Evaluate(posX);			
+			float posY = 0; 
+			if (withCurveY)	posY = curveY.Evaluate(posX);
 
+			Vector3 newPosition = new Vector3(posX, posY, posZ) * radius * (length - 1);
+			transformSelection[i].localPosition = newPosition; 
+		}
+	}
+	   	 
 	Transform[] cleanSelectionTransform()
 	{
 		Transform[] selectionTransform = Selection.transforms;
