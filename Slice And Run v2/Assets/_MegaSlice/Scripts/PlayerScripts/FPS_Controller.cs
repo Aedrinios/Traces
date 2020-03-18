@@ -12,6 +12,7 @@ public class FPS_Controller : MonoBehaviour
     public float gravity = 20;
     public float sensivityX = 200;
     public float sensivityY = 200;
+    public float coyoteTime = 0.15f; 
     public float maxFallSpeed = 60;
     public float groundFriction = 20; 
     public bool onGround;
@@ -112,7 +113,7 @@ public class FPS_Controller : MonoBehaviour
         }
         else
         {
-            velocity.y = 0;
+            velocity.y = -0.1f;
             VerticalFriction(); 
         }
     }
@@ -126,11 +127,11 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
+            BlockJump();
             Jump.Invoke();
             jumpDirection = transform.TransformDirection(jumpDirection); 
 
-            velocity = jumpDirection * jumpForce;  
-            canJump = false;
+            velocity = jumpDirection * jumpForce;              
             jumpDirection = new Vector3(0, 1, 0);
         }
     }
@@ -143,8 +144,17 @@ public class FPS_Controller : MonoBehaviour
         }
         else
         {
+            if (onGround && canJump)
+            {
+                Invoke("BlockJump", coyoteTime); 
+            }
             onGround = false;
         }
+    }
+
+    void BlockJump()
+    {
+         canJump = false;
     }
 
     void VerticalFriction()
@@ -170,10 +180,6 @@ public class FPS_Controller : MonoBehaviour
 
     public void PushPlayer(Vector3 pushDir)
     {
-        if(pushDir.y < 0 && onGround)
-        {
-           // pushDir.y = 20; 
-        }
         velocity += pushDir; 
     }
 

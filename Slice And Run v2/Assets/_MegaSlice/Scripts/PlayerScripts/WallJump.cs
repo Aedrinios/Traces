@@ -28,10 +28,6 @@ public class WallJump : MonoBehaviour
             {
                 fps.canJump = true; 
             }
-            else
-            {
-                fps.canJump = false; 
-            }
         }
 
         if (fps.onGround && countJump != 0)

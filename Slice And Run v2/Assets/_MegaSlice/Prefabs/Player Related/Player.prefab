@@ -107,6 +107,7 @@ MonoBehaviour:
   gravity: 45
   sensivityX: 18
   sensivityY: 22
+  coyoteTime: 0.4
   maxFallSpeed: 58
   groundFriction: 45
   onGround: 0
