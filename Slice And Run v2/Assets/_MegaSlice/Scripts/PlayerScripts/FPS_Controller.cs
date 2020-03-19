@@ -23,15 +23,12 @@ public class FPS_Controller : MonoBehaviour
     public bool canJump = true;
     private bool hasPressedJump;
 
-    public GameObject speedParticle;
-    public float activateSpeedParticle;
-
     public UnityEvent Jump;
 
     //la variable velocity permet de bouger le personnage
     //la variable moveDir permet au joueur de contrôler les personnages
     Vector3 moveDir = Vector3.zero;
-    Vector3 velocity = Vector3.zero;
+    [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
     float cameraRotationX = 0;
 
@@ -61,30 +58,10 @@ public class FPS_Controller : MonoBehaviour
     private void Update()
     {
         Gravity();
-
-        hasPressedJump = Input.GetButtonDown("Jump");
-        
-        if (hasPressedJump)
-        {
-            timeJump -= Time.deltaTime;
-            if (timeJump <= 0)
-            {
-                hasPressedJump = false;
-                timeJump = jumpMemory;
-            }
-        }
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
-        if(characterController.velocity.magnitude > activateSpeedParticle)
-        {
-            speedParticle.SetActive(true);
-        }
-        else
-        {
-            speedParticle.SetActive(false);
-        }
         playerPos = transform.position;
     }
 
@@ -141,6 +118,18 @@ public class FPS_Controller : MonoBehaviour
         if (onGround)
         {
             canJump = true;
+        }
+
+        hasPressedJump = Input.GetButtonDown("Jump");
+
+        if (hasPressedJump)
+        {
+            timeJump += Time.deltaTime;
+            if (timeJump >= jumpMemory)
+            {
+                hasPressedJump = false;
+                timeJump = 0;
+            }
         }
 
         if (hasPressedJump && canJump)
