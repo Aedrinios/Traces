@@ -71,3 +71,4 @@ Semaine du 16/03/2020
 - Ajout d'une friction sur le sol 
 - Polish du FPS_controller 
 - Ventilo opérationnel
+- Ajout de l'AnimWaypoints et des plateformes
