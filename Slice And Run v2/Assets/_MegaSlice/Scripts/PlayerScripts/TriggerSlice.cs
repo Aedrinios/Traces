@@ -23,7 +23,7 @@ public class TriggerSlice : MonoBehaviour
     {
         if (other.CompareTag("Sliceable"))
         {
-            Debug.Log("transform rotation : " + transform.rotation);
+            //Debug.Log("transform rotation : " + transform.rotation);
             Instantiate(hitParticle, transform.position, transform.rotation);
             Slice(other.gameObject);
             projectile.LoseLife(loveLife); 
