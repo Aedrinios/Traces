@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class BlowerSystem : MonoBehaviour
 {
-    public float power = 20;
-    
-    public AnimationCurve smoothDistance;
-    public float distanceMax = 10; 
+    public GameObject zone;
+    public float powerMax = 20;
 
-    float originalPower; 
+    public AnimationCurve curve;  
+
     FPS_Controller fps;
+
+    float size;
+    float power; 
 
     private void Start()
     {
         fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
-        originalPower = power; 
+        //originalPower = power; 
+
+        Vector3 colMesh = zone.GetComponent<MeshFilter>().mesh.bounds.size;
+        Vector3 scale = zone.transform.localScale; 
+        size = colMesh.y * scale.y;
     }
 
     private void OnTriggerStay(Collider other)
@@ -23,22 +29,29 @@ public class BlowerSystem : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             PowerSmooth(); 
+            //EquilibreForce(); 
+
             fps.PushPlayer(Vector3.up * power * Time.deltaTime);
         }
     }
 
+    // l'idée serait de donner une force au joueur en fonction de sa vitesse de chute pour le stabiliser
+    void EquilibreForce()
+    {
+        power = fps.gravity; 
+    }
+
+
+    // j'arrive pas à faire marcher la curve
     void PowerSmooth()
     {
         float distance =  transform.position.y - FPS_Controller.playerPos.y;
         distance = Mathf.Abs(distance);
 
-        float ratioDistance = distance / distanceMax;
-        ratioDistance = Mathf.Clamp(ratioDistance, 0f, 1f); 
-
-
-        power = originalPower * smoothDistance.Evaluate(ratioDistance); 
-
-
-        Debug.Log(power); 
+        float ratioDistance = distance / size;
+        ratioDistance = 1- ratioDistance;  
+        ratioDistance = Mathf.Clamp(ratioDistance, 0f, 1f);
+        
+        power = powerMax * curve.Evaluate(ratioDistance); 
     }
 }

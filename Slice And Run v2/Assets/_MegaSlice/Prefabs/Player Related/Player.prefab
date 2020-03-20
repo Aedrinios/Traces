@@ -108,7 +108,6 @@ MonoBehaviour:
   sensivityX: 18
   sensivityY: 22
   coyoteTime: 0.4
-  jumpMemory: 0.15
   maxFallSpeed: 58
   groundFriction: 45
   onGround: 0
@@ -711,6 +710,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5189636500878149938, guid: 4b74aa94fc46375459dd71961f30138d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b01311281a1aac42b654c2d8210b98a, type: 2}
     - target: {fileID: 5189636500878149939, guid: 4b74aa94fc46375459dd71961f30138d,
         type: 3}
       propertyPath: InitialModule.startSpeed.scalar
@@ -719,22 +723,27 @@ PrefabInstance:
     - target: {fileID: 5189636500878149939, guid: 4b74aa94fc46375459dd71961f30138d,
         type: 3}
       propertyPath: ShapeModule.radiusThickness
-      value: 0.8
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5189636500878149939, guid: 4b74aa94fc46375459dd71961f30138d,
         type: 3}
       propertyPath: ShapeModule.m_Position.z
-      value: -20
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 5189636500878149939, guid: 4b74aa94fc46375459dd71961f30138d,
         type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 12.61
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5189636500878149941, guid: 4b74aa94fc46375459dd71961f30138d,
         type: 3}
       propertyPath: m_Name
       value: SpeedParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5189636500878149941, guid: 4b74aa94fc46375459dd71961f30138d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b74aa94fc46375459dd71961f30138d, type: 3}
