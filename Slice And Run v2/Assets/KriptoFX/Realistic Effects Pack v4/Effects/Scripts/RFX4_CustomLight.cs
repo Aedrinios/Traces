@@ -1,21 +1,22 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.Rendering;
 
+
 [ExecuteInEditMode]
 public class RFX4_CustomLight : MonoBehaviour
 {
-    static int MaxLightsCount = 4;
+    public Light[] ImportantLights;
+
+    static int MaxLightsCount = 8;
     Texture2D PointLightAttenuation;
     List<Light> sceneLights;
 
     private void Awake()
     {
         sceneLights = GameObject.FindObjectsOfType<Light>().ToList();
-        PointLightAttenuation = GeneratePointAttenuationTexture();
-        Shader.SetGlobalTexture("RFX4_PointLightAttenuation", PointLightAttenuation);
     }
 
     void Update()
@@ -31,7 +32,7 @@ public class RFX4_CustomLight : MonoBehaviour
         allLights = SortPointLightsByDistance(allLights);
         lightCount += FillPointLights(allLights, lightPositions, lightColors);
 
-        Shader.SetGlobalInt("RFX4_LightCount", lightCount);
+        Shader.SetGlobalInt("RFX4_LightCount", Mathf.Min(MaxLightsCount,  lightCount));
         Shader.SetGlobalVectorArray("RFX4_LightPositions", ListToArrayWithMaxCount(lightPositions, MaxLightsCount));
         Shader.SetGlobalVectorArray("RFX4_LightColors", ListToArrayWithMaxCount(lightColors, MaxLightsCount));
 
@@ -52,7 +53,7 @@ public class RFX4_CustomLight : MonoBehaviour
         var allLights = transform.root.GetComponentsInChildren<Light>().ToList();
         foreach (var sceneLight in sceneLights)
         {
-            if(sceneLight!=null) allLights.Add(sceneLight);
+            if (sceneLight != null) allLights.Add(sceneLight);
         }
         return allLights;
     }
@@ -90,6 +91,7 @@ public class RFX4_CustomLight : MonoBehaviour
 
                 lightPositions.Add(new Vector4(pos.x, pos.y, pos.z, lights[i].range));
                 var color = lights[i].color * lights[i].intensity;
+
                 lightColors.Add(new Vector4(color.r, color.g, color.b, 1));
                 lightCount++;
             }
@@ -114,8 +116,14 @@ public class RFX4_CustomLight : MonoBehaviour
         var dict = new SortedDictionary<float, Light>();
         foreach (var customLight in lights)
         {
-            float distance = (pos - customLight.transform.position).magnitude + Random.Range(-10000f, 10000f)/1000000;
-            if (!dict.ContainsKey(distance)) dict.Add(distance, customLight);
+            if (customLight.type == LightType.Point && customLight.isActiveAndEnabled)
+            {
+                float distance = (pos - customLight.transform.position).magnitude;
+                if (ImportantLights.Contains(customLight)) distance = 0;
+                distance += Random.Range(-10000f, 10000f) / 1000000;
+
+                if (!dict.ContainsKey(distance)) dict.Add(distance , customLight);
+            }
         }
 
         return dict.Values.ToList();
@@ -162,17 +170,5 @@ public class RFX4_CustomLight : MonoBehaviour
         else return finalColor;
     }
 
-    Texture2D GeneratePointAttenuationTexture()
-    {
-        var tex = new Texture2D(256, 1);
-        tex.wrapMode = TextureWrapMode.Clamp;
-        for (int i = 0; i < 256; i++)
-        {
-            float distance = i / 256f;
-            var color = Mathf.Clamp01(1.0f / (1.0f + 25.0f * distance * distance) * Mathf.Clamp01((1f - distance) * 5.0f));
-            tex.SetPixel(i, 0, Color.white * color);
-        }
-        tex.Apply();
-        return tex;
-    }
 }
+

@@ -1,4 +1,4 @@
-#if !KRIPTO_FX_LWRP_RENDERING && !KRIPTO_FX_HDRP_RENDERING
+
 using System;
 using System.IO;
 using UnityEngine;
@@ -83,4 +83,3 @@ public class RFX4_ReplaceDistortionForMobile : IActiveBuildTargetChanged
         return code.Insert(transparentIdx, "Transparent" + queueOrder);
     }
 }
-#endif

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Rendering;
+
 #if KRIPTO_FX_LWRP_RENDERING
 using UnityEngine.Experimental.Rendering.LightweightPipeline;
 #endif
@@ -23,6 +25,8 @@ public class RFX4_Decal : MonoBehaviour
         if (ps != null) psMain = ps.main;
 
         if (Camera.main.depthTextureMode != DepthTextureMode.Depth) Camera.main.depthTextureMode = DepthTextureMode.Depth;
+
+        GetComponent<MeshRenderer>().reflectionProbeUsage = ReflectionProbeUsage.Off;
 
 #if KRIPTO_FX_LWRP_RENDERING
         var addCamData = Camera.main.GetComponent<LWRPAdditionalCameraData>();

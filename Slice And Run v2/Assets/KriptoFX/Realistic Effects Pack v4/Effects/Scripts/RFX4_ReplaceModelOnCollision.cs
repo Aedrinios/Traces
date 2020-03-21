@@ -4,7 +4,7 @@ using System.Collections;
 public class RFX4_ReplaceModelOnCollision : MonoBehaviour
 {
 
-    public GameObject PhysicsObjects;
+    public GameObject[] PhysicsObjects;
 
     private bool isCollided = false;
     Transform t;
@@ -14,7 +14,10 @@ public class RFX4_ReplaceModelOnCollision : MonoBehaviour
         if (!isCollided)
         {
             isCollided = true;
-            PhysicsObjects.SetActive(true);
+            foreach (var physicsObj in PhysicsObjects)
+            {
+                physicsObj.SetActive(true);
+            }
             var mesh = GetComponent<MeshRenderer>();
             if (mesh != null)
                 mesh.enabled = false;
@@ -27,7 +30,10 @@ public class RFX4_ReplaceModelOnCollision : MonoBehaviour
     void OnEnable()
     {
         isCollided = false;
-        PhysicsObjects.SetActive(false);
+        foreach (var physicsObj in PhysicsObjects)
+        {
+            physicsObj.SetActive(false);
+        }
         var mesh = GetComponent<MeshRenderer>();
         if (mesh!=null)
             mesh.enabled = true;

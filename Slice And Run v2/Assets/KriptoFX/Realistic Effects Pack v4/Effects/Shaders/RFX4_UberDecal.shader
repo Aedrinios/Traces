@@ -1,4 +1,3 @@
-// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
 
 Shader "KriptoFX/RFX4/Decal"
 {
@@ -6,7 +5,7 @@ Shader "KriptoFX/RFX4/Decal"
 	{
 		[Header(Main Settings)]
 	[Space]
-	[PerRendererData]	[HDR]_TintColor("Tint Color", Color) = (1,1,1,1)
+	[PerRendererData] [HDR] _TintColor("Tint Color", Color) = (1,1,1,1)
 		_MainTex("Main Texture", 2D) = "white" {}
 	[Toggle(USE_ALPHA_POW)] _UseAlphaPow("Use Alpha Pow", Int) = 0
 		_AlphaPow("Alpha pow", Float) = 1
@@ -47,7 +46,7 @@ Shader "KriptoFX/RFX4/Decal"
 		Tags{ "Queue" = "Geometry+1"  "IgnoreProjector" = "True" "RenderType" = "Transparent" }
 		Blend[_SrcMode][_DstMode]
 		Cull Front
-		ZTest [_ZTest1]
+		ZTest[_ZTest1]
 		ZWrite Off
 
 		SubShader{
@@ -157,7 +156,7 @@ Shader "KriptoFX/RFX4/Decal"
 #if USE_QUAD_DECAL
 	#ifdef USE_WORLD_SPACE_UV
 			o.uv = mul(unity_ObjectToWorld, v.vertex).xz;
-	#else 
+	#else
 			o.uv = v.vertex.xz + 0.5;
 	#endif
 #endif
@@ -190,7 +189,7 @@ Shader "KriptoFX/RFX4/Decal"
 
 #ifdef USE_WORLD_SPACE_UV
 		float2 uv = wpos.xz;
-#else 
+#else
 		float2 uv = opos.xz + 0.5;
 #endif
 
@@ -224,7 +223,7 @@ Shader "KriptoFX/RFX4/Decal"
 		tex = lerp(tex, tex3, InterpolationValue);
 	#endif
 
-	#else 
+	#else
 		half4 tex = tex2D(_MainTex, uvMain);
 
 	#ifdef USE_FRAME_BLENDING
@@ -235,8 +234,10 @@ Shader "KriptoFX/RFX4/Decal"
 
 
 
+		half4 tintColor = UNITY_ACCESS_INSTANCED_PROP(_TintColor_arr, _TintColor);
+		tintColor.rgb = tintColor.rgb * tintColor.rgb * 2;
 
-		half4 res = tex * UNITY_ACCESS_INSTANCED_PROP(_TintColor_arr, _TintColor);
+		half4 res = tex * tintColor;
 		res.rgb *= 2;
 	#ifdef USE_CUTOUT
 
@@ -250,7 +251,7 @@ Shader "KriptoFX/RFX4/Decal"
 		half alphaMask = saturate((mask - (cutout * 2 - 1)) * _CutoutAlphaMul) * res.a;
 		res.a = alphaMask;
 
-	#endif	
+	#endif
 
 
 

@@ -12,13 +12,7 @@ public class RFX4_PerPlatformSettings : MonoBehaviour
     // Use this for initialization
     private bool isMobile;
 
-    void Start()
-    {
-
-
-    }
-
-    void Awake()
+        void Awake()
     {
         isMobile = IsMobilePlatform();
         if (isMobile)
@@ -26,7 +20,7 @@ public class RFX4_PerPlatformSettings : MonoBehaviour
             if (DisableOnMobiles) gameObject.SetActive(false);
             else
             {
-                ChangeParticlesBudget(ParticleBudgetForMobiles);
+                if(ParticleBudgetForMobiles < 0.99f) ChangeParticlesBudget(ParticleBudgetForMobiles);
             }
         }
     }
@@ -34,32 +28,27 @@ public class RFX4_PerPlatformSettings : MonoBehaviour
     void OnEnable()
     {
         var cam = Camera.main;
-
-        if (cam == null) return;
-        if (RenderMobileDistortion && !DisableOnMobiles && isMobile)
-        {
-#if !KRIPTO_FX_LWRP_RENDERING && !KRIPTO_FX_HDRP_RENDERING
-            var mobileDistortion = cam.GetComponent<RFX4_MobileDistortion>();
-            if (mobileDistortion == null) cam.gameObject.AddComponent<RFX4_MobileDistortion>();
-#endif
-        }
-
-        LWRP_Rendering();
+        Legacy_Rendering_Check(cam);
     }
 
     void Update()
     {
-        LWRP_Rendering();
+        var cam = Camera.main;
+        Legacy_Rendering_Check(cam);
     }
 
-    void LWRP_Rendering()
+    void Legacy_Rendering_Check(Camera cam)
     {
-#if KRIPTO_FX_LWRP_RENDERING
-        var cam = Camera.main;
-        var mobileLwrpDistortion = cam.GetComponent<RFX4_RenderTransparentDistortion>();
-        if (mobileLwrpDistortion == null) mobileLwrpDistortion = cam.gameObject.AddComponent<RFX4_RenderTransparentDistortion>();
-        mobileLwrpDistortion.IsActive = true;
-#endif
+
+        if (cam == null) return;
+        if (RenderMobileDistortion && !DisableOnMobiles && isMobile)
+        {
+            var mobileDistortion = cam.GetComponent<RFX4_MobileDistortion>();
+            if (mobileDistortion == null) mobileDistortion = cam.gameObject.AddComponent<RFX4_MobileDistortion>();
+            mobileDistortion.IsActive = true;
+
+        }
+
     }
 
     void OnDisable()
@@ -69,16 +58,10 @@ public class RFX4_PerPlatformSettings : MonoBehaviour
         if (RenderMobileDistortion && !DisableOnMobiles && isMobile)
         {
 
-#if !KRIPTO_FX_LWRP_RENDERING && !KRIPTO_FX_HDRP_RENDERING
             var mobileDistortion = cam.GetComponent<RFX4_MobileDistortion>();
-            if (mobileDistortion != null) DestroyImmediate(mobileDistortion);
-#endif
+            if (mobileDistortion != null) mobileDistortion.IsActive = false;
         }
 
-#if KRIPTO_FX_LWRP_RENDERING
-        var mobileLwrpDistortion = cam.GetComponent<RFX4_RenderTransparentDistortion>();
-        if (mobileLwrpDistortion != null) mobileLwrpDistortion.IsActive = false;
-#endif
     }
 
     bool IsMobilePlatform()

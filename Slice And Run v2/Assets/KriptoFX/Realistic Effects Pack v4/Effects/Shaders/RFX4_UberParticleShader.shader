@@ -1,12 +1,10 @@
-// Upgrade NOTE: upgraded instancing buffer 'Props' to new syntax.
-
 Shader "KriptoFX/RFX4/Particle"
 {
 	Properties
 	{
 		[Header(Main Settings)]
 	[Space]
-	[PerRendererData] [HDR]_TintColor("Tint Color", Color) = (1,1,1,1)
+	[PerRendererData] [HDR] _TintColor("Tint Color", Color) = (1,1,1,1)
 		_MainTex("Main Texture", 2D) = "white" {}
 
 	[Header(Fading)]
@@ -299,7 +297,9 @@ Shader "KriptoFX/RFX4/Particle"
 	tex = lerp(tex, tex3, InterpolationValue);
 #endif
 
-	half4 res = 2 * tex *  UNITY_ACCESS_INSTANCED_PROP(_TintColor_arr, _TintColor);
+	half4 tintColor = UNITY_ACCESS_INSTANCED_PROP(_TintColor_arr, _TintColor);
+	tintColor.rgb = tintColor.rgb * tintColor.rgb * 2;
+	half4 res = 2 * tex * tintColor;
 
 #ifdef USE_CUTOUT
 	fixed cutout = UNITY_ACCESS_INSTANCED_PROP(_Cutout_arr, _Cutout);
@@ -310,19 +310,19 @@ Shader "KriptoFX/RFX4/Particle"
 #else
 	fixed mask = tex.a;
 #endif
-	
+
 	fixed diffMask = mask - cutout;
 	fixed alphaMask = lerp(saturate(diffMask * 10000) * res.a, saturate(diffMask * 2) * res.a, _UseSoftCutout);
 
 #ifdef USE_CUTOUT_THRESHOLD
 	fixed alphaMaskThreshold = saturate((diffMask - _CutoutThreshold) * 10000) * res.a;
-	res.rgb = lerp(res.rgb, _CutoutColor, saturate((1 - alphaMaskThreshold) * alphaMask));
+	res.rgb = lerp(res.rgb, _CutoutColor.rgb * _CutoutColor.rgb * 2, saturate((1 - alphaMaskThreshold) * alphaMask));
 	res.a = alphaMask;
 #else
 	res.a = alphaMask;
 #endif
 
-#endif	
+#endif
 
 	res *= i.color;
 
@@ -343,7 +343,7 @@ Shader "KriptoFX/RFX4/Particle"
 	res.rgb = lerp(res.rgb, lerp(1, res.rgb, res.a), _FogColorMultiplier.r);
 	UNITY_APPLY_FOG_COLOR(i.fogCoord, res, _FogColorMultiplier);
 #endif
-	
+
 		return res;
 	}
 		ENDCG
