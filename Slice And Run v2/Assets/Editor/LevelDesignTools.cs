@@ -14,8 +14,8 @@ public class LevelDesignTools : EditorWindow
 
 	SaveScriptableObject data;
 	public GameObject[] essentialsGameObjects;
-	public float radiusCircle = 1; 
-	
+	public Material matSliceable; 
+
 	//rajout des fonctionalités
 	private void OnGUI()
 	{
@@ -40,49 +40,33 @@ public class LevelDesignTools : EditorWindow
 			ChangeLighting(); 
 		}
 
-		GUILayout.Label("\n Les paramètres pour placer les objets en rond", EditorStyles.boldLabel);
-
-		radiusCircle = EditorGUILayout.FloatField("Le rayon du cercle est : ", radiusCircle); 
-		if (GUILayout.Button("Placer les objets sur un cercle"))
+		GUILayout.Label(" ", EditorStyles.boldLabel);
+		matSliceable = (Material)EditorGUILayout.ObjectField("material", matSliceable, typeof(Material));
+		if (GUILayout.Button("Change Slice Mat"))
 		{
-			PlaceOnCircle(radiusCircle); 
+			ChangeMaterial();
 		}
-
 	}
 
 	void ChangeLighting()
 	{
 		RenderSettings.skybox = null;
 		RenderSettings.sun = null;
-		//RenderSettings.ambientSkyColor = new Color(54, 58, 66); 
 	}
 
-	void PlaceOnCircle(float radius)
+	void ChangeMaterial()
 	{
-		GameObject[] selectionObject = Selection.gameObjects;
-		if (selectionObject.Length > 1)
+		if (matSliceable != null)
 		{
-			for (int i = 0; i < selectionObject.Length; i++)
+			SliceableObject[] allSliceableObject = FindObjectsOfType<SliceableObject>();
+
+			for (int i = 0; i < allSliceableObject.Length; i++)
 			{
-				float angle = 6.283f / (selectionObject.Length);
-				float angle_x = Mathf.Cos(i * angle);
-				float angle_y = Mathf.Sin(i * angle);
-
-				Vector3 dir = new Vector3(angle_x, angle_y, 0);
-				selectionObject[i].transform.localPosition = Vector3.zero;
-				selectionObject[i].transform.localPosition = dir * radius;
-
-				float tourne = 360 / (selectionObject.Length) * i;
-				selectionObject[i].transform.rotation = Quaternion.Euler(new Vector3(0, 0, tourne + 90));
+				allSliceableObject[i].crossMaterial = matSliceable;
 			}
+			Debug.Log("Change Material Done"); 
 		}
-		else
-		{
-			Debug.Log("Pas assez d'objets sélectionnés"); 
-		}
-
 	}
-
 
 
 	#region
