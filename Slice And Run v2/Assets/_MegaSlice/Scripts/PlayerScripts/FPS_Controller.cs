@@ -18,10 +18,11 @@ public class FPS_Controller : MonoBehaviour
   //  private float timeJump;
 
     public float maxFallSpeed = 60;
-    public float groundFriction = 20; 
+    public float groundFriction = 20;
+    public float raycastSize = 1; 
     public bool onGround;
     public bool canJump = true;
-   // public bool hasPressedJump;
+    // public bool hasPressedJump;
 
     public UnityEvent Jump;
 
@@ -52,11 +53,6 @@ public class FPS_Controller : MonoBehaviour
     private void FixedUpdate()
     {
         CheckOnGround();
-    }
-
-    // attention la dernère fois que j'ai mis un fixedUpdate au lieu du Update, ça ne marchait plus
-    private void Update()
-    {
         Gravity();
         DoJump();
         if (canMoveCamera) RotateWithMouse();
@@ -115,10 +111,7 @@ public class FPS_Controller : MonoBehaviour
 
     void DoJump()
     {
-        if (onGround)
-        {
-            canJump = true;
-        }
+        if (onGround) canJump = true;        
 
         //hasPressedJump = Input.GetButtonDown("Jump");
 
@@ -134,10 +127,9 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            BlockJump();
             Jump.Invoke();
+            BlockJump();
             jumpDirection = transform.TransformDirection(jumpDirection); 
-
             velocity = jumpDirection * jumpForce;              
             jumpDirection = new Vector3(0, 1, 0);
         }
@@ -148,6 +140,10 @@ public class FPS_Controller : MonoBehaviour
         if (characterController.isGrounded)
         {
             onGround = true; 
+        }
+        else if (Physics.Raycast(transform.position, -Vector3.up, raycastSize, gameObject.layer))
+        {
+            onGround = true;
         }
         else
         {

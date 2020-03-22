@@ -11,17 +11,14 @@ public class EndGameManager : MonoBehaviour
 
     private float originalTimeScale;
     private float timePast;
-     public bool slowed;
+    public bool slowed;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         originalTimeScale = Time.timeScale;
         timePast = 0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float showTimeScale = Time.timeScale;
@@ -40,8 +37,10 @@ public class EndGameManager : MonoBehaviour
         }
         else
         {
-            //  Time.timeScale = Mathf.Lerp(Time.timeScale, originalTimeScale, Time.unscaledDeltaTime * smooth);
             Time.timeScale = originalTimeScale;
         }
     }
+
+
+
 }

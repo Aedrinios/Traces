@@ -9,15 +9,16 @@ public class WallJump : MonoBehaviour
 	public LayerMask layerMask;
 	public float radius = 1;
 	public int maxWallJump = 3;
+    public float wallFriction = 20;
+
+    //public bool canWallJump; 
 	int countJump = 0; 
 
     FPS_Controller fps;
-    CharacterController characterController;
 
     private void Start()
     {
         fps = GetComponent<FPS_Controller>();
-        characterController = GetComponent<CharacterController>();
     }
 
     private void Update()
@@ -28,7 +29,7 @@ public class WallJump : MonoBehaviour
             {
                 fps.canJump = true; 
             }
-        }
+        }        
 
         if (fps.onGround && countJump != 0)
 		{

@@ -15,19 +15,18 @@ public class SliceableObject : MonoBehaviour
 	float limitNumberCutting = 15; 
 
 	[HideInInspector] public float numberCutting = 0;
-	[HideInInspector] public float forcePush = 80;
 	[HideInInspector] public bool canSlice = true;
+	float forcePush; 
 
 	public delegate void HitHappen();
 	public static HitHappen hitHappen;
 	public static GameObject gameObjectSliced;
 	public static Vector3 positionSlice; 
 
-	public void Awake()
+	public void Start()
     {
+		forcePush = PlayerAttack.forcePushCutStc; 
 		InitSliceableObject();
-        if (GameManager.forcePushCutStc <= 0) forcePush = 80;
-        else forcePush = GameManager.forcePushCutStc;
 	}
 
     public virtual void Slice(Transform slicePlane)

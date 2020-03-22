@@ -107,9 +107,10 @@ MonoBehaviour:
   gravity: 45
   sensivityX: 18
   sensivityY: 22
-  coyoteTime: 0.4
+  coyoteTime: 0.2
   maxFallSpeed: 58
   groundFriction: 45
+  raycastSize: 1.1
   onGround: 0
   canJump: 1
   Jump:
@@ -168,6 +169,7 @@ MonoBehaviour:
     type: 3}
   cutPlane: {fileID: 2546504388377453058}
   DelaySpamShot: 0.12
+  forcePushCut: 80
   canShot: 0
 --- !u!114 &2546504387214751591
 MonoBehaviour:
@@ -199,6 +201,7 @@ MonoBehaviour:
     m_Bits: 1
   radius: 1
   maxWallJump: 3
+  wallFriction: 20
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0

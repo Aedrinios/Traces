@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5900596209204052921}
   - component: {fileID: 8505143514614900742}
   - component: {fileID: 6851404180439084312}
-  - component: {fileID: 7254034285658584958}
   m_Layer: 12
   m_Name: HeartCubeBody
   m_TagString: HeartCube
@@ -2496,7 +2495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5c383619d2aef4446aceb21f7f00e329, type: 2}
   numberCutting: 0
-  forcePush: 80
   canSlice: 1
 --- !u!114 &6851404180439084312
 MonoBehaviour:
@@ -2516,29 +2514,6 @@ MonoBehaviour:
     type: 3}
   soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
     type: 3}
---- !u!114 &7254034285658584958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4856001747129469467}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/InGame/Ambient/HeartPulsion
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &5490781679275303122
 GameObject:
   m_ObjectHideFlags: 0

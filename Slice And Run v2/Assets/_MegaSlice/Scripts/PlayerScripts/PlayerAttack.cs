@@ -7,13 +7,17 @@ public class PlayerAttack : MonoBehaviour
 {
     public GameObject prefabSlice;
     public Transform cutPlane;
-
     public float DelaySpamShot = 0.1f;
-	[HideInInspector] public bool canShot;
+
+    public float forcePushCut = 80;
+    public static float forcePushCutStc; 
+
+    [HideInInspector] public bool canShot;
     private bool startGame;
 
-    private void Start()
+    private void Awake()
     {
+        forcePushCutStc = forcePushCut; 
         canShot = false;
         startGame = true; 
     }

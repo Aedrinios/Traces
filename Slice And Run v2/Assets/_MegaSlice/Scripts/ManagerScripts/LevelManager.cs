@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
     private void OnEnable()
     {
+        //CheckProgressionManager(); 
         SceneManager.sceneLoaded += OnSceneLoaded;
         if(SceneManager.GetActiveScene().buildIndex > 0)
         {
@@ -112,6 +113,22 @@ public class LevelManager : MonoBehaviour
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;
             scoreScreen.SetActive(false);
             failedScreen.SetActive(false);
+        }
+    }
+
+    void CheckProgressionManager()
+    {
+        GameObject dataManager = GameObject.FindWithTag("DataManager");
+
+        if (dataManager == null)
+        {
+            GameObject go = new GameObject("DataManagerNotGood");
+            go.tag = "DataManager"; 
+            go.AddComponent<PutSceneDontDestroy>();
+            go.AddComponent<ProgressionManager>();
+            go.AddComponent<PlayerManager>();
+            go.AddComponent<UnlockLevels>();
+ 
         }
     }
 }

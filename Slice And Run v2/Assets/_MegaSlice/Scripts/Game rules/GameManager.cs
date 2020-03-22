@@ -28,16 +28,8 @@ public class GameManager : MonoBehaviour
     private GameObject levelScreen;
     private Image loadingBar;
 
-    public float forcePushCut = 80;
-	public static float forcePushCutStc;
-
     [HideInInspector] public bool hasFailed;
     public static bool levelScreenOpened;
-
-    private void Awake()
-    {
-        forcePushCutStc = forcePushCut;
-    }
 
     private void OnEnable()
     {
