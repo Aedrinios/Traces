@@ -23,7 +23,7 @@ public class CursorChangeColor : MonoBehaviour
 	private void Update()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast(camTransform.position, camTransform.TransformDirection(Vector3.forward), out hit, sizeDetection))
+		if (Physics.Raycast(camTransform.position, camTransform.TransformDirection(Vector3.forward), out hit, sizeDetection, gameObject.layer))
 		{
 			if (hit.collider.gameObject.tag == "Sliceable")
 			{
