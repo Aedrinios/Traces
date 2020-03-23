@@ -3,54 +3,75 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(FPS_Controller))]
-[RequireComponent(typeof(CharacterController))]
 public class WallJump : MonoBehaviour
 {
 	public LayerMask layerMask;
 	public float radius = 1;
+    //public float delayWallJump = 0.05f; 
 	public int maxWallJump = 3;
+
     public float wallFriction = 20;
 
-    //public bool canWallJump; 
-	int countJump = 0; 
+	int countJump = 0;
+    bool wallNear; 
 
     FPS_Controller fps;
 
     private void Start()
     {
         fps = GetComponent<FPS_Controller>();
+
     }
 
     private void Update()
-    {           
+    {
         if (!fps.onGround)
         {
-            if (DetectIfWallNear() && countJump <= maxWallJump)
+            DetectIfWallNear();
+
+            // condition du wallJump
+            if (wallNear && countJump <= maxWallJump)
             {
                 fps.canJump = true; 
+            }            
+            else if (!wallNear)
+            {
+                fps.canJump = false;
             }
-        }        
+        }      
 
+        //reset du compte de WallJump
         if (fps.onGround && countJump != 0)
 		{
 			countJump = 0;
 		}		
     }
 
-    bool DetectIfWallNear()
+    private void FixedUpdate()
+    {
+        if (!fps.onGround)
+        {
+            //wallFriction
+            if (wallNear && fps.velocity.y < 0)
+            {
+                fps.velocity.y += wallFriction * Time.deltaTime;
+            }
+        }
+    }
+
+    void DetectIfWallNear()
     {
         Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
         Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
 
-        if (colliders.Length > 0) return true;
-        else return false; 
+        if (colliders.Length > 0) wallNear = true; 
+        else wallNear = false;
     }
+
+
 
     public void CountWallJump()
     {
         countJump++; 
     }
-
-
-
 }

@@ -201,7 +201,7 @@ MonoBehaviour:
     m_Bits: 1
   radius: 1
   maxWallJump: 3
-  wallFriction: 20
+  wallFriction: 42
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0

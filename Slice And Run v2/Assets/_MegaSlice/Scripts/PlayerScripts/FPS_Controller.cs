@@ -54,6 +54,7 @@ public class FPS_Controller : MonoBehaviour
     {
         CheckOnGround();
         Gravity();
+        
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
@@ -109,10 +110,10 @@ public class FPS_Controller : MonoBehaviour
         }
     }
 
-    void DoJump()
+    public void DoJump()
     {
-        if (onGround) canJump = true;        
 
+        if (onGround) canJump = true;
         //hasPressedJump = Input.GetButtonDown("Jump");
 
         //if (hasPressedJump)
@@ -127,8 +128,8 @@ public class FPS_Controller : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
-            Jump.Invoke();
             BlockJump();
+            Jump.Invoke();
             jumpDirection = transform.TransformDirection(jumpDirection); 
             velocity = jumpDirection * jumpForce;              
             jumpDirection = new Vector3(0, 1, 0);
