@@ -110,7 +110,7 @@ MonoBehaviour:
   coyoteTime: 0.2
   maxFallSpeed: 58
   groundFriction: 45
-  raycastSize: 1.1
+  raycastSize: 1.125
   onGround: 0
   canJump: 1
   Jump:
@@ -292,8 +292,8 @@ Camera:
   m_GameObject: {fileID: 2546504388042997439}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}

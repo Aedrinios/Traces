@@ -73,3 +73,4 @@ Semaine du 16/03/2020
 - Ventilo opérationnel
 - Ajout de l'AnimWaypoints et des plateformes
 - repolish du controller
+- le curseur change de couleur si peut découper un truc 

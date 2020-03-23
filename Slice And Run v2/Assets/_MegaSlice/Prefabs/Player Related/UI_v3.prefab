@@ -87,7 +87,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3892454465735567742}
+      - m_Target: {fileID: 0}
         m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
@@ -2040,7 +2040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3892454465735567743}
+      - m_Target: {fileID: 0}
         m_MethodName: LaunchNextLevel
         m_Mode: 1
         m_Arguments:
@@ -3069,6 +3069,7 @@ GameObject:
   - component: {fileID: 3765312087336596961}
   - component: {fileID: 5123825982024511982}
   - component: {fileID: 2373522343973272709}
+  - component: {fileID: 1448220505}
   m_Layer: 5
   m_Name: NewArrow
   m_TagString: Untagged
@@ -3143,6 +3144,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decalAngle: {x: 0, y: 0, z: 90}
+--- !u!114 &1448220505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5112079908027916447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a26c9a9080d23549b0b5a400995f134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorTrigger: {r: 1, g: 0, b: 0, a: 1}
+  sizeDetection: 70
 --- !u!1 &5350126072844073558
 GameObject:
   m_ObjectHideFlags: 0
@@ -3230,7 +3245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3892454465735567744}
+      - m_Target: {fileID: 0}
         m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
