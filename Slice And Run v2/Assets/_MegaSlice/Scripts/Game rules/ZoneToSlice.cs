@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZoneToSlice : MonoBehaviour
 {
+    //pas attaché aux projectilles !!!
     public GameObject sliableGameObject; 
 
     private void Start()
@@ -30,7 +31,10 @@ public class ZoneToSlice : MonoBehaviour
     void ChangeSliceableScript(bool isOn)
     {        
         SliceableObject sliceScript = sliableGameObject.GetComponent<SliceableObject>();
-        if (sliceScript != null) sliceScript.canSlice = isOn; 
+        if (sliceScript != null)
+        {
+            sliceScript.canSlice = isOn;
+        }
     }
 
 

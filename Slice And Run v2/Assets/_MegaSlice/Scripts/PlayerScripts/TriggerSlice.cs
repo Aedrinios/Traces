@@ -15,7 +15,7 @@ public class TriggerSlice : MonoBehaviour
         if (hit == null)
         {
             return;
-        }
+        }        
         hit.GetComponent<SliceableObject>().Slice(cutPlane);
     }
 
@@ -24,6 +24,8 @@ public class TriggerSlice : MonoBehaviour
         if (other.CompareTag("Sliceable"))
         {
             Instantiate(hitParticle, transform.position, transform.rotation);
+            Vector3 forwardPorjectille = transform.forward; 
+            other.gameObject.GetComponent<SliceableObject>().dirPush = forwardPorjectille; 
             Slice(other.gameObject);
             projectile.LoseLife(loseLife); 
         }

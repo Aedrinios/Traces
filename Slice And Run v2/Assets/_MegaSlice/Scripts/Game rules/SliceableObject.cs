@@ -16,6 +16,7 @@ public class SliceableObject : MonoBehaviour
 
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public bool canSlice = true;
+	[HideInInspector] public Vector3 dirPush = Vector3.zero;
 	float forcePush; 
 
 	public delegate void HitHappen();
@@ -110,7 +111,7 @@ public class SliceableObject : MonoBehaviour
 
 	public void RepulsionAfterCut(Rigidbody rb)
 	{
-		Vector3 posPlayer = FPS_Controller.playerPos;
-		rb.AddExplosionForce(forcePush * 10, posPlayer, 800); 		
+		Vector3 posPlayer = FPS_Controller.playerPos;		
+		rb.AddForce(dirPush.normalized * 10 * forcePush); 
 	}
 }

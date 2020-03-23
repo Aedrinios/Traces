@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5900596209204052921}
   - component: {fileID: 8505143514614900742}
   - component: {fileID: 6851404180439084312}
+  - component: {fileID: 232809499080137406}
   m_Layer: 12
   m_Name: HeartCubeBody
   m_TagString: HeartCube
@@ -32,8 +33,7 @@ Transform:
   m_LocalRotation: {x: 0.35620582, y: -0.44067824, z: -0.10098697, w: 0.81775415}
   m_LocalPosition: {x: -0.65, y: -1.09, z: -0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7645654770964620876}
+  m_Children: []
   m_Father: {fileID: 5490781679833507272}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 29.576002, y: -65.704, z: -33.428}
@@ -2496,6 +2496,7 @@ MonoBehaviour:
   crossMaterial: {fileID: 2100000, guid: 5c383619d2aef4446aceb21f7f00e329, type: 2}
   numberCutting: 0
   canSlice: 1
+  dirPush: {x: 0, y: 0, z: 0}
 --- !u!114 &6851404180439084312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2514,6 +2515,29 @@ MonoBehaviour:
     type: 3}
   soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
     type: 3}
+--- !u!114 &232809499080137406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856001747129469467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/InGame/Ambient/HeartPulsion 2
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 70
 --- !u!1 &5490781679275303122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,57 +2762,3 @@ MonoBehaviour:
   gap: 1
   basicIntensity: 0.03
   numberMat: 1
---- !u!1 &5900875817349212688
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7645654770964620876}
-  - component: {fileID: 7701039177897004769}
-  m_Layer: 12
-  m_Name: HeartCubeSd
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7645654770964620876
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900875817349212688}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8833253432466125606}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7701039177897004769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5900875817349212688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/InGame/Ambient/HeartPulsion 2
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 70
