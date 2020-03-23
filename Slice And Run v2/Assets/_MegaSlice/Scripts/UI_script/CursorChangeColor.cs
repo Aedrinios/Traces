@@ -25,7 +25,7 @@ public class CursorChangeColor : MonoBehaviour
 		RaycastHit hit;
 		if (Physics.Raycast(camTransform.position, camTransform.TransformDirection(Vector3.forward), out hit, sizeDetection, gameObject.layer))
 		{
-			if (hit.collider.gameObject.tag == "Sliceable")
+			if (hit.collider.gameObject.tag == "Sliceable" || hit.collider.gameObject.tag == "HeartCube")
 			{
 				img.color = colorTrigger;
 			}
