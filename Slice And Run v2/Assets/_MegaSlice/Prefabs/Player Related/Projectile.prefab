@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11df1293273ca7b4d842807b3c9f107f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loveLife: 0.04
+  loseLife: 0.04
   projectile: {fileID: 114503920325459236}
   hitParticle: {fileID: 2462045763441574653, guid: bc20e11fe125f0c4985a160e93e1a272,
     type: 3}
@@ -4980,7 +4980,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.03, y: 0.17, z: 0.53}
+  m_Size: {x: 0.45, y: 0.045, z: 0.33}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8567093544204813730
 MonoBehaviour:
