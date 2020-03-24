@@ -32,6 +32,7 @@ public class FPS_Controller : MonoBehaviour
     [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
     float cameraRotationX = 0;
+    bool isPushed = false; 
 
     [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
@@ -46,8 +47,8 @@ public class FPS_Controller : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         canMoveCamera = false;
-    //    timeJump = jumpMemory;
-        Invoke("StartPlayer", 0.3f);
+        StopPlayer();
+        Invoke("StartPlayer", 0.4f);
     }
 
     private void Update()
@@ -104,7 +105,7 @@ public class FPS_Controller : MonoBehaviour
         }
         else
         {
-            velocity.y = -0.1f;
+            if (!isPushed) velocity.y = -0.1f;
             VerticalFriction(); 
         }
     }
@@ -183,7 +184,14 @@ public class FPS_Controller : MonoBehaviour
 
     public void PushPlayer(Vector3 pushDir)
     {
-        velocity += pushDir; 
+        velocity += pushDir;
+        isPushed = true;
+        Invoke("StopPush", 0.5f); 
+    }
+
+    void StopPush()
+    {
+        isPushed = false;
     }
 
     public void StopPlayer()
@@ -194,6 +202,7 @@ public class FPS_Controller : MonoBehaviour
 
     public void StartPlayer()
     {
+        isPushed = false;
         canPlay = true;
         canMoveCamera = true; 
     }

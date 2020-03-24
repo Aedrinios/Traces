@@ -40,8 +40,9 @@ public class BumperSystem : MonoBehaviour
     void PushBumper()
     {
         playerController.PushPlayer(transform.up * forcePush);
+        
         isOn = false;
-        Invoke("ReloadBumper", 0.05f);
+        Invoke("ReloadBumper", 0.06f);
     }
 
     void ReloadBumper()

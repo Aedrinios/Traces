@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3216048199870722617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.487, z: 0}
-  m_LocalScale: {x: 1, y: 2.2834132, z: 1}
+  m_LocalPosition: {x: 0, y: 1.786, z: 0}
+  m_LocalScale: {x: 1, y: 3.06788, z: 1}
   m_Children: []
   m_Father: {fileID: 6780146674499361241}
   m_RootOrder: 0
@@ -167,7 +167,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1203,9 +1203,15 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 1c000000
+  m_SelectedEdges:
+  - a: 75
+    b: 76
+  - a: 76
+    b: 77
+  - a: 77
+    b: 75
+  m_SelectedVertices: 4b0000004c0000004d000000
 --- !u!54 &6780146674499361243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1248,7 +1254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 697503e452a83d846a6f61732b2aec7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcePush: 50
+  type: 0
+  forcePush: 30
 --- !u!1 &7636841251764313340
 GameObject:
   m_ObjectHideFlags: 0
