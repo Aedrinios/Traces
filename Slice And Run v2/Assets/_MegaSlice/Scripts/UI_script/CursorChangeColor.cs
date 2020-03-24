@@ -22,6 +22,7 @@ public class CursorChangeColor : MonoBehaviour
 
 	private void Update()
 	{
+		img.color = originalColor;
 		RaycastHit hit;
 		if (Physics.Raycast(camTransform.position, camTransform.TransformDirection(Vector3.forward), out hit, sizeDetection, gameObject.layer))
 		{

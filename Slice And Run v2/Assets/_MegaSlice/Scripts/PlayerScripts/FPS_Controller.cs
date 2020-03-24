@@ -50,11 +50,10 @@ public class FPS_Controller : MonoBehaviour
         Invoke("StartPlayer", 0.3f);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         CheckOnGround();
-        Gravity();
-        
+        Gravity();        
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();

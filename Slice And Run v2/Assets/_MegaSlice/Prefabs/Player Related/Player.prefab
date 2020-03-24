@@ -107,7 +107,7 @@ MonoBehaviour:
   gravity: 45
   sensivityX: 18
   sensivityY: 22
-  coyoteTime: 0.2
+  coyoteTime: 0.25
   maxFallSpeed: 58
   groundFriction: 45
   raycastSize: 1.125
@@ -201,7 +201,7 @@ MonoBehaviour:
     m_Bits: 1
   radius: 1
   maxWallJump: 3
-  wallFriction: 42
+  wallFriction: 36
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2546504388042997438}
   forcePropulsion: 3
-  speedRotation: 55
+  speedRotation: 50
   maxRotation: 10
   radius: 0.6
   onGround: 1

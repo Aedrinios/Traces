@@ -5,9 +5,9 @@ using UnityEngine;
 public class AnimRotate : MonoBehaviour
 {
     public Vector3 axeRotation = Vector3.up; 
-    public float speedRotate = 100; 
+    public float speedRotate = 10; 
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.Rotate(axeRotation.normalized * speedRotate * Time.deltaTime); 
     }
