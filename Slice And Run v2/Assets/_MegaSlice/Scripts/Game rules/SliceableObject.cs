@@ -8,6 +8,7 @@ public class SliceableObject : MonoBehaviour
     private float timeLeft;
 	private bool isSliceable;
     public Material crossMaterial;
+	public float lessPower = 0; 
 
 	float volume;
 	float limitVolume = 0.25f;
@@ -64,6 +65,7 @@ public class SliceableObject : MonoBehaviour
         SliceableObject so = go.AddComponent<SliceableObject>();
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
+		so.lessPower = lessPower;
 
 		RepulsionAfterCut(rb); 
 	}
@@ -83,11 +85,7 @@ public class SliceableObject : MonoBehaviour
 		Vector3 mySize = GetComponent<Collider>().bounds.size;
 		volume = mySize.x * mySize.y * mySize.z; 		
 
-		if (volume <= limitVolume * ratioDestroy)
-		{
-			Destroy(gameObject); 
-		}
-		else if (volume > limitVolume && numberCutting < limitNumberCutting)
+		if (numberCutting < limitNumberCutting)
 		{
 			Invoke("ResetIsSliceable", timeLeft); 
 		}
@@ -112,6 +110,6 @@ public class SliceableObject : MonoBehaviour
 	public void RepulsionAfterCut(Rigidbody rb)
 	{
 		Vector3 posPlayer = FPS_Controller.playerPos;		
-		rb.AddForce(dirPush.normalized * 10 * forcePush); 
+		rb.AddForce(dirPush.normalized * 10 * (forcePush - lessPower)); 
 	}
 }

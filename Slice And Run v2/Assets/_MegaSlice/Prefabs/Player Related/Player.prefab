@@ -169,7 +169,7 @@ MonoBehaviour:
     type: 3}
   cutPlane: {fileID: 2546504388377453058}
   DelaySpamShot: 0.12
-  forcePushCut: 170
+  forcePushCut: 165
   canShot: 0
 --- !u!114 &2546504387214751591
 MonoBehaviour:
