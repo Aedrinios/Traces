@@ -20,7 +20,6 @@ public class WallJump : MonoBehaviour
     private void Start()
     {
         fps = GetComponent<FPS_Controller>();
-
     }
 
     private void Update()
@@ -54,7 +53,10 @@ public class WallJump : MonoBehaviour
             //wallFriction
             if (wallNear && fps.velocity.y < 0)
             {
-                fps.velocity.y += wallFriction * Time.deltaTime;
+                if (!fps.isPushed)
+                {
+                    fps.velocity.y += wallFriction * Time.deltaTime;                    
+                }
             }
         }
     }

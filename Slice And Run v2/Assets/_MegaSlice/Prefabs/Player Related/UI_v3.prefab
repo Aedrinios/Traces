@@ -3157,7 +3157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorTrigger: {r: 1, g: 0.25, b: 0.25, a: 1}
-  sizeDetection: 75
+  sizeDetection: 85
 --- !u!1 &5350126072844073558
 GameObject:
   m_ObjectHideFlags: 0

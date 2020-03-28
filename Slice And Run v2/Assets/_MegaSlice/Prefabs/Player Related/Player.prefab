@@ -109,7 +109,7 @@ MonoBehaviour:
   sensivityY: 22
   coyoteTime: 0.25
   maxFallSpeed: 58
-  groundFriction: 45
+  groundFriction: 35
   raycastSize: 1.125
   onGround: 0
   canJump: 1
@@ -150,6 +150,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   velocity: {x: 0, y: 0, z: 0}
+  isPushed: 0
   canMoveCamera: 0
   canPlay: 1
   jumpDirection: {x: 0, y: 1, z: 0}
@@ -169,7 +170,7 @@ MonoBehaviour:
     type: 3}
   cutPlane: {fileID: 2546504388377453058}
   DelaySpamShot: 0.12
-  forcePushCut: 150
+  forcePushCut: 140
   canShot: 0
 --- !u!114 &2546504387214751591
 MonoBehaviour:

@@ -32,8 +32,8 @@ public class FPS_Controller : MonoBehaviour
     [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
     float cameraRotationX = 0;
-    bool isPushed = false; 
 
+    [HideInInspector] public bool isPushed = false; 
     [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
@@ -102,17 +102,20 @@ public class FPS_Controller : MonoBehaviour
             {
                 velocity.y -= gravity * Time.deltaTime;
             }
+            VerticalFriction(0.15f);
         }
         else
         {
-            if (!isPushed) velocity.y = -0.1f;
-            VerticalFriction(); 
+            if (!isPushed)
+            {
+                velocity.y = -0.1f;
+                VerticalFriction(1);
+            }
         }
     }
 
     public void DoJump()
     {
-
         if (onGround) canJump = true;
         //hasPressedJump = Input.GetButtonDown("Jump");
 
@@ -130,7 +133,8 @@ public class FPS_Controller : MonoBehaviour
         {
             BlockJump();
             Jump.Invoke();
-            jumpDirection = transform.TransformDirection(jumpDirection); 
+            jumpDirection = transform.TransformDirection(jumpDirection);
+            //test si faut affiner le saut lors des poussés. 
             velocity = jumpDirection * jumpForce;              
             jumpDirection = new Vector3(0, 1, 0);
         }
@@ -161,24 +165,24 @@ public class FPS_Controller : MonoBehaviour
          canJump = false;
     }
 
-    void VerticalFriction()
+    void VerticalFriction(float multiplier)
     {
         if (velocity.x > 0)
         {
-            velocity.x -= groundFriction * Time.deltaTime; 
+            velocity.x -= groundFriction * multiplier * Time.deltaTime; 
         }
         else if (velocity.x < 0)
         {
-            velocity.x += groundFriction * Time.deltaTime;
+            velocity.x += groundFriction * multiplier * Time.deltaTime;
         }
 
         if (velocity.z > 0)
         {
-            velocity.z -= groundFriction * Time.deltaTime;
+            velocity.z -= groundFriction * multiplier * Time.deltaTime;
         }
         else if (velocity.z < 0)
         {
-            velocity.z += groundFriction * Time.deltaTime;
+            velocity.z += groundFriction * multiplier * Time.deltaTime;
         }
     }
 
