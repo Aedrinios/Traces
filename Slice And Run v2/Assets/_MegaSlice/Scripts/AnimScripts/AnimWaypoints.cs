@@ -19,12 +19,13 @@ public class AnimWaypoints : MonoBehaviour
         {            
             allWaypoints.Add(waypoints.GetChild(i)); 
         }
-        way = 1; 
+        way = 1;
+        moveBody.transform.position = allWaypoints[0].position; 
     }
 
     private void FixedUpdate()
     {
-        modifWay();
+        ModifWay();
         float absSpeed = Mathf.Abs(speed); 
         moveBody.position = Vector3.MoveTowards(moveBody.position, allWaypoints[way].position, absSpeed * Time.deltaTime);
     }
@@ -34,7 +35,7 @@ public class AnimWaypoints : MonoBehaviour
         checkIfExist();
     }
 
-    void modifWay()
+    void ModifWay()
     {
         if (Vector3.Distance(moveBody.position, allWaypoints[way].position) <= 0.1f)
         {

@@ -67,31 +67,33 @@ public class GeoTools : EditorWindow
 	void MakeCircle() 
 	{
 		Transform[] transformSelection = cleanSelectionTransform(); 
-
-		for (int i = 0; i < transformSelection.Length; i++)
+		if (transformSelection.Length > 1)
 		{
-			//position
-			float angle = (Mathf.PI * 2) / (transformSelection.Length) * -i;
-			angle += Mathf.PI / 2; 
-			float angle_x = Mathf.Cos(angle);
-			float angle_z = Mathf.Sin(angle);		
-
-			Vector3 dir = new Vector3(angle_x, 0, angle_z);
-			transformSelection[i].localPosition = dir * radius;
-
-			//rotation
-			if (withRotation)
+			for (int i = 0; i < transformSelection.Length; i++)
 			{
-				Vector3 center;
-				if (transformSelection[i].parent != null)
+				//position
+				float angle = (Mathf.PI * 2) / (transformSelection.Length) * -i;
+				angle += Mathf.PI / 2;
+				float angle_x = Mathf.Cos(angle);
+				float angle_z = Mathf.Sin(angle);
+
+				Vector3 dir = new Vector3(angle_x, 0, angle_z);
+				transformSelection[i].localPosition = dir * radius;
+
+				//rotation
+				if (withRotation)
 				{
-					center = transformSelection[i].parent.position;
+					Vector3 center;
+					if (transformSelection[i].parent != null)
+					{
+						center = transformSelection[i].parent.position;
+					}
+					else
+					{
+						center = Vector3.zero;
+					}
+					transformSelection[i].LookAt(center);
 				}
-				else
-				{
-					center = Vector3.zero;
-				}
-				transformSelection[i].LookAt(center);
 			}
 		}
 	}

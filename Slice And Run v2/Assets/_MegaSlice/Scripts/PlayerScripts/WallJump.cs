@@ -7,14 +7,13 @@ public class WallJump : MonoBehaviour
 {
 	public LayerMask layerMask;
 	public float radius = 1;
-    //public float delayWallJump = 0.05f; 
+    public float offSet_Y = -0.25f; 
 	public int maxWallJump = 3;
-
     public float wallFriction = 20;
+    bool canWallJump = false; 
 
 	int countJump = 0;
     bool wallNear; 
-
     FPS_Controller fps;
 
     private void Start()
@@ -31,13 +30,17 @@ public class WallJump : MonoBehaviour
             // condition du wallJump
             if (wallNear && countJump <= maxWallJump)
             {
-                fps.canJump = true; 
+                fps.canJump = true;
+                canWallJump = true; 
             }            
             else if (!wallNear)
             {
                 fps.canJump = false;
+                canWallJump = false;
             }
         }      
+
+        //rajout d'un choc qui stop le joueur lors de la collision avec un mur
 
         //reset du compte de WallJump
         if (fps.onGround && countJump != 0)
@@ -48,32 +51,36 @@ public class WallJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!fps.onGround)
+        if (!fps.onGround && wallNear)
         {
             //wallFriction
-            if (wallNear && fps.velocity.y < 0)
+            if (!fps.isPushed)
             {
-                if (!fps.isPushed)
+                if (fps.velocity.y < 0)
                 {
                     fps.velocity.y += wallFriction * Time.deltaTime;                    
                 }
+                fps.VerticalFriction(0.7f); 
             }
         }
     }
 
     void DetectIfWallNear()
     {
-        Vector3 center = transform.position + new Vector3(0, -0.25f, 0);
+        Vector3 center = transform.position + new Vector3(0, offSet_Y, 0);
         Collider[] colliders = Physics.OverlapSphere(center, radius, layerMask);
 
         if (colliders.Length > 0) wallNear = true; 
         else wallNear = false;
     }
 
-
-
     public void CountWallJump()
     {
-        countJump++; 
+        if (canWallJump)
+        {
+            //remet velocity à 0
+            fps.velocity.y = 0;
+            countJump++;
+        }
     }
 }

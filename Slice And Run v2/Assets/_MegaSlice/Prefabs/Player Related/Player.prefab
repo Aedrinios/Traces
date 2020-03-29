@@ -109,7 +109,7 @@ MonoBehaviour:
   sensivityY: 22
   coyoteTime: 0.25
   maxFallSpeed: 58
-  groundFriction: 35
+  groundFriction: 30
   raycastSize: 1.125
   onGround: 0
   canJump: 1
@@ -201,8 +201,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   radius: 1
+  offSet_Y: -0.25
   maxWallJump: 3
-  wallFriction: 36
+  wallFriction: 32
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0

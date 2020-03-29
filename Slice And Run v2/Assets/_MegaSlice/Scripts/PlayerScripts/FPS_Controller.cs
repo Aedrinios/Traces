@@ -19,9 +19,9 @@ public class FPS_Controller : MonoBehaviour
 
     public float maxFallSpeed = 60;
     public float groundFriction = 20;
-    public float raycastSize = 1; 
-    public bool onGround;
-    public bool canJump = true;
+    public float raycastSize = 1;
+    [HideInInspector] public bool onGround;
+    [HideInInspector] public bool canJump = true;
     // public bool hasPressedJump;
 
     public UnityEvent Jump;
@@ -102,7 +102,7 @@ public class FPS_Controller : MonoBehaviour
             {
                 velocity.y -= gravity * Time.deltaTime;
             }
-            VerticalFriction(0.15f);
+            VerticalFriction(0.2f);
         }
         else
         {
@@ -135,7 +135,15 @@ public class FPS_Controller : MonoBehaviour
             Jump.Invoke();
             jumpDirection = transform.TransformDirection(jumpDirection);
             //test si faut affiner le saut lors des poussés. 
-            velocity = jumpDirection * jumpForce;              
+            if (velocity.y >= 25)
+            {
+                velocity = jumpDirection * jumpForce;
+            }
+            else
+            {
+                velocity += jumpDirection * jumpForce;
+            }
+          
             jumpDirection = new Vector3(0, 1, 0);
         }
     }
@@ -165,7 +173,7 @@ public class FPS_Controller : MonoBehaviour
          canJump = false;
     }
 
-    void VerticalFriction(float multiplier)
+    public void VerticalFriction(float multiplier)
     {
         if (velocity.x > 0)
         {
