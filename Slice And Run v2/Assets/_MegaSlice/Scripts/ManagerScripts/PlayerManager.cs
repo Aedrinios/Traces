@@ -22,7 +22,6 @@ public class PlayerManager : MonoBehaviour
         SaveSystem.Init();
         PlayerData data = SaveSystem.LoadGame();
         scoreList = new float[SceneManager.sceneCountInBuildSettings - 1];
-        Debug.Log("score length" + scoreList.Length);
 
         if (data != null)
         {

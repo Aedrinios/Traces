@@ -59,10 +59,14 @@ public static class SaveSystem
             {
                 string savedData = File.ReadAllText(fileInfo.FullName);
                 PlayerData data = JsonUtility.FromJson<PlayerData>(savedData);
-                if(data.scoreList[levelIndex] > 0)
+                if(data.scoreList.Length > levelIndex)
                 {
-                    allPlayersData.Add(data);
+                    if (data.scoreList[levelIndex] > 0)
+                    {
+                        allPlayersData.Add(data);
+                    }
                 }
+
             }
         }
         return allPlayersData;
