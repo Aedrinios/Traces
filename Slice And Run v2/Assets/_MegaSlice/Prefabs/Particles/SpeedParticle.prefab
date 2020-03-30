@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5189636500878149936}
   - component: {fileID: 5189636500878149939}
   - component: {fileID: 5189636500878149938}
+  - component: {fileID: 2756527456012803425}
   m_Layer: 0
   m_Name: SpeedParticle
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5189636500878149941}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 1, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -115,7 +116,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.35
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -168,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 93.49
+      scalar: 100
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -663,10 +664,10 @@ ParticleSystem:
     angle: 6
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.2
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 16}
+    m_Rotation: {x: 0, y: 180, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -746,7 +747,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 3.2
+      value: 14
       mode: 0
       spread: 0
       speed:
@@ -4654,7 +4655,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0b01311281a1aac42b654c2d8210b98a, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4698,3 +4699,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2756527456012803425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189636500878149941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0dc1b5b4b3e13468754128fa9f134b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedTrigger: 10

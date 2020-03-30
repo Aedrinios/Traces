@@ -28,7 +28,7 @@ public class FPS_Controller : MonoBehaviour
 
     //la variable velocity permet de bouger le personnage
     //la variable moveDir permet au joueur de contrôler les personnages
-    Vector3 moveDir = Vector3.zero;
+    [HideInInspector] public Vector3 moveDir = Vector3.zero;
     [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
     float cameraRotationX = 0;
