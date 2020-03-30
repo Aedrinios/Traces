@@ -67,6 +67,7 @@ public static class SaveSystem
         }
         return allPlayersData;
     }
+
     public static PlayerData LoadGame()
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
