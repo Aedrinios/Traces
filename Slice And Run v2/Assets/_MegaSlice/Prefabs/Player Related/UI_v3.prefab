@@ -3143,7 +3143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9461a64cad3c64fa342f3adf143205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decalAngle: {x: 0, y: 0, z: 90}
+  decalAngle: 90
+  rotationZ: 0
 --- !u!114 &1448220505
 MonoBehaviour:
   m_ObjectHideFlags: 0

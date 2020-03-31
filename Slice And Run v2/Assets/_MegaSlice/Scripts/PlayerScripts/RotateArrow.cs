@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class RotateArrow : MonoBehaviour
 {
-    public Vector3 decalAngle = Vector3.zero; 
-    private float rotationZ;
+    public static bool canRotate = true;
+
+    public float decalAngle; 
+    public float rotationZ;
 
     private void Update()
     {
-        rotationZ = MouseControl.angle;
-        transform.localEulerAngles = new Vector3(0, 0, rotationZ) + decalAngle;
+        if (canRotate)
+        {
+            rotationZ = MouseControl.angle;
+            transform.localEulerAngles = new Vector3(0, 0, rotationZ + decalAngle);
+        }
     }
 }
