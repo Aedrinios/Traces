@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CameraWallJump : MonoBehaviour
 {
+	//pas le bon script pour la rotation de la caméra lors des wall running
+
 	[Range(-1,1)] public float way = 0;
 	public float speedRotate = 150;
 	public float delay = 0.5f;
@@ -40,10 +42,16 @@ public class CameraWallJump : MonoBehaviour
 		int step = 1;
 		isDuring = true;
 
+		float smoothSpeed = 0; 
+
 		while (playing)
 		{
-			chrono += Time.deltaTime; 
-			transform.Rotate(new Vector3(0, 0, 1) * step * way * speedRotate * Time.deltaTime);
+			chrono += Time.deltaTime;
+
+			smoothSpeed = Mathf.Lerp(0, speedRotate, chrono / (delay*0.5f));
+			Debug.Log(smoothSpeed); 
+
+			transform.Rotate(new Vector3(0, 0, 1) * step * way * smoothSpeed * Time.deltaTime);
 
 			if (chrono >= delay/2)
 			{

@@ -219,9 +219,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2546504388042997438}
   forcePropulsion: 3
-  speedRotation: 50
-  maxRotation: 10
-  radius: 0.6
+  speedRotation: 45
+  maxRotation: 8
+  radius: 0.73
   onGround: 1
 --- !u!114 &1400862735458761585
 MonoBehaviour:
