@@ -13,7 +13,9 @@ public class WallJump : MonoBehaviour
     bool canWallJump = false; 
 
 	int countJump = 0;
-    bool wallNear; 
+    bool wallNear;
+    bool sliceObjectNear;
+
     FPS_Controller fps;
 
     private void Start()
@@ -40,8 +42,6 @@ public class WallJump : MonoBehaviour
             }
         }      
 
-        //rajout d'un choc qui stop le joueur lors de la collision avec un mur
-
         //reset du compte de WallJump
         if (fps.onGround && countJump != 0)
 		{
@@ -60,7 +60,7 @@ public class WallJump : MonoBehaviour
                 {
                     fps.velocity.y += wallFriction * Time.deltaTime;                    
                 }
-                fps.VerticalFriction(0.7f); 
+                if (!sliceObjectNear) fps.VerticalFriction(0.7f); 
             }
         }
     }
@@ -72,6 +72,16 @@ public class WallJump : MonoBehaviour
 
         if (colliders.Length > 0) wallNear = true; 
         else wallNear = false;
+
+        sliceObjectNear = false;
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if(colliders[i].gameObject.tag == "Sliceable")
+            {
+                sliceObjectNear = true;
+            }
+        }
     }
 
     public void CountWallJump()
