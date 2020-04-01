@@ -36,6 +36,7 @@ public class PlayerAttack : MonoBehaviour
     public void LaunchProjectile()
     {
         Vector3 positionInstance = transform.position;
+        positionInstance -= transform.forward;
         positionInstance.y = transform.position.y + 0.8f;
         Instantiate(prefabSlice, positionInstance, cutPlane.rotation);
     }
