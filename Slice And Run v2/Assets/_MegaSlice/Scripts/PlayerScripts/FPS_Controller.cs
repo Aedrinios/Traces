@@ -13,21 +13,19 @@ public class FPS_Controller : MonoBehaviour
     public float sensivityX = 200;
     public float sensivityY = 200;
 
+    // le coyateTime est intégré 
     public float coyoteTime = 0.15f; 
- //   public float jumpMemory = 0.15f; 
-  //  private float timeJump;
 
     public float maxFallSpeed = 60;
     public float groundFriction = 20;
     public float raycastSize = 1;
     [HideInInspector] public bool onGround;
     [HideInInspector] public bool canJump = true;
-    // public bool hasPressedJump;
 
     public UnityEvent Jump;
 
     //la variable velocity permet de bouger le personnage
-    //la variable moveDir permet au joueur de contrôler les personnages
+    //la variable moveDir permet au joueur de contrôler l'avatar
     [HideInInspector] public Vector3 moveDir = Vector3.zero;
     [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
@@ -117,33 +115,14 @@ public class FPS_Controller : MonoBehaviour
     public void DoJump()
     {
         if (onGround) canJump = true;
-        //hasPressedJump = Input.GetButtonDown("Jump");
-
-        //if (hasPressedJump)
-        //{
-        //    timeJump += Time.deltaTime;
-        //    if (timeJump >= jumpMemory)
-        //    {
-        //        hasPressedJump = false;
-        //        timeJump = 0;
-        //    }
-        //}
 
         if (Input.GetButtonDown("Jump") && canJump)
         {
             BlockJump();
             Jump.Invoke();
             jumpDirection = transform.TransformDirection(jumpDirection);
-            //test si faut affiner le saut lors des poussés. 
-            if (velocity.y >= 25)
-            {
-                velocity = jumpDirection * jumpForce;
-            }
-            else
-            {
-                velocity += jumpDirection * jumpForce;
-            }
-          
+
+            velocity += jumpDirection * jumpForce;          
             jumpDirection = new Vector3(0, 1, 0);
         }
     }
@@ -175,20 +154,22 @@ public class FPS_Controller : MonoBehaviour
 
     public void VerticalFriction(float multiplier)
     {
-        if (velocity.x > 0)
+        float gap = 0.1f; 
+
+        if (velocity.x > gap)
         {
             velocity.x -= groundFriction * multiplier * Time.deltaTime; 
         }
-        else if (velocity.x < 0)
+        else if (velocity.x < -gap)
         {
             velocity.x += groundFriction * multiplier * Time.deltaTime;
         }
 
-        if (velocity.z > 0)
+        if (velocity.z > gap)
         {
             velocity.z -= groundFriction * multiplier * Time.deltaTime;
         }
-        else if (velocity.z < 0)
+        else if (velocity.z < -gap)
         {
             velocity.z += groundFriction * multiplier * Time.deltaTime;
         }
