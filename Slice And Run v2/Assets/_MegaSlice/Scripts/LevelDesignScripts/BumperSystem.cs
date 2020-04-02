@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events; 
 
 public class BumperSystem : MonoBehaviour
 {
-    public float forcePush = 100; 
+    public float forcePush = 100;
+    public UnityEvent TriggerBumper; 
     FPS_Controller playerController;
 
     bool isOn = true; 
@@ -40,7 +42,7 @@ public class BumperSystem : MonoBehaviour
     void PushBumper()
     {
         playerController.PushPlayer(transform.up * forcePush);
-        
+        TriggerBumper.Invoke(); 
         isOn = false;
         Invoke("ReloadBumper", 0.07f);
     }
