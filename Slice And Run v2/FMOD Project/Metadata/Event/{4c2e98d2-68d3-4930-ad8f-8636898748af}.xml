@@ -103,9 +103,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2516e94c-2fda-4fe5-ac01-973f0faf432d}">
-		<property name="volume">
-			<value>-13</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -140,7 +137,6 @@
 	<object class="MixerBusEffectChain" id="{30e90a58-ac31-42f1-9b3c-ee616720e254}">
 		<relationship name="effects">
 			<destination>{5956213e-463d-472f-a41d-1530f7829fd5}</destination>
-			<destination>{437788f9-47c9-4b83-b67e-b5e26c67f695}</destination>
 			<destination>{80122608-e4a2-4672-b0b3-96b9105805a9}</destination>
 		</relationship>
 	</object>
@@ -163,10 +159,7 @@
 	</object>
 	<object class="FlangerEffect" id="{b0804bbf-0400-4be9-a07c-ade33d2c4c83}">
 		<property name="rate">
-			<value>0.560000002</value>
-		</property>
-		<property name="delay">
-			<value>0.460000038</value>
+			<value>0.0440000035</value>
 		</property>
 		<property name="mix">
 			<value>81</value>
@@ -192,29 +185,15 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{5956213e-463d-472f-a41d-1530f7829fd5}" />
-	<object class="DelayEffect" id="{437788f9-47c9-4b83-b67e-b5e26c67f695}">
-		<property name="delay">
-			<value>20</value>
-		</property>
-		<property name="feedback">
-			<value>68</value>
-		</property>
-		<property name="level">
-			<value>6.5</value>
-		</property>
-		<property name="dryLevel">
-			<value>-10.5</value>
-		</property>
-	</object>
 	<object class="ThreeEQEffect" id="{80122608-e4a2-4672-b0b3-96b9105805a9}">
 		<property name="lowGain">
-			<value>6</value>
+			<value>3</value>
 		</property>
 		<property name="midGain">
-			<value>-17</value>
+			<value>-10</value>
 		</property>
 		<property name="highGain">
-			<value>-37</value>
+			<value>-47</value>
 		</property>
 	</object>
 </objects>
