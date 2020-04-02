@@ -23,7 +23,9 @@ public class LevelManager : MonoBehaviour
 
     private HighscoreTable leaderboard;
 
-    public static bool isLevelEnding = false; 
+    public static bool isLevelEnding = false;
+    public static bool hasBeatTimer = true;
+
 
     private int sceneIndex;
 
@@ -57,13 +59,26 @@ public class LevelManager : MonoBehaviour
 
     void ShowScoreScreen()
     {
-        isLevelEnding = true; 
-        ProgressionManager.UnlockLevel(sceneIndex);        
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        isLevelEnding = true;
         scoreScreen.SetActive(true);
         SaveScore();
         leaderboard.SortPlayerList(sceneIndex - 1);
+
+        if (hasBeatTimer)
+        {
+            ProgressionManager.UnlockLevel(sceneIndex);
+        }
+        else
+        {
+            Debug.Log("Then here ");
+
+            scoreScreen.transform.Find("Buttons").Find("NextButton").gameObject.SetActive(false);
+            scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = "Too slow...";
+            scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText = "Trop lent...";
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         DeactivatePlayer();
     }
 
@@ -86,6 +101,7 @@ public class LevelManager : MonoBehaviour
 
     private void SaveScore()
     {
+        Debug.Log("I'm here ");
         TimeSpan timeSpan = TimeSpan.FromSeconds(ChronoSystem.chronoStc);
         scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);

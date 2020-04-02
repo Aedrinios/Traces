@@ -26,12 +26,12 @@ public class ChronoSystem : MonoBehaviour
 
 		if (chrono >= limitTimer)
 		{
-			LevelManager.onLevelFailed?.Invoke();
+            LevelManager.hasBeatTimer = false;
 		}
 
-		chrono = Mathf.Clamp(chrono, 0, limitTimer); 
 		chronoStc = chrono;
-		timerStc = limitTimer - chrono; 
+		timerStc = limitTimer - chrono;
+        timerStc = Mathf.Clamp(timerStc, 0, limitTimer);
 
 		if (!gameIsStart)
 		{

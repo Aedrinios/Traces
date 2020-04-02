@@ -11,11 +11,6 @@ public class LifeTimerDisplay : MonoBehaviour
     public float maxTimer;
     private Color originalColor;
 
-    private void OnEnable()
-    {
-        LevelManager.onLevelComplete += SaveScore;
-    }
-
     private void Start()
 	{
         timeText = GetComponent<TextMeshProUGUI>();
@@ -35,11 +30,6 @@ public class LifeTimerDisplay : MonoBehaviour
         }
         timeText.text = currentTime.ToString("F2"); 
 	}
-
-    public void SaveScore()
-    {
-        GameObject.Find("Canvas").transform.Find("ScoreScreen").Find("ScoreText").GetComponent<TextMeshProUGUI>().text = timeText.text;
-    }
 }
 
 
