@@ -76,6 +76,9 @@ Semaine du 16/03/2020
 - le curseur change de couleur si peut découper un truc 
 - Ajout de la wallFriction
 
-Semaine du 24/03/2020
+Semaine du 23/03/2020
 - Ajout du pont
 - Ajout du ring
+
+Semaine du 30/03/2020
+- Ajout des son de bumper et anneaux

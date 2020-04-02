@@ -31,6 +31,9 @@
 		<relationship name="timeline">
 			<destination>{71f9f12a-b2fb-4863-b59e-fd6fc633495d}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{ca890c2a-2593-40a4-8c35-e8c395ff255c}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{1cb3e15e-917c-4f72-a5ca-f5c4dd49c517}">
 		<relationship name="masterBus">
@@ -92,11 +95,17 @@
 		<property name="timelockedOffset">
 			<value>0.17499145470996277</value>
 		</property>
+		<property name="pitch">
+			<value>2.4000001</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{3feed0e3-dd47-44ae-bb87-b11092cf80eb}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1c9807cb-9eaf-4d1a-ba1b-8370f08daec5}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -114,6 +123,7 @@
 		<relationship name="effects">
 			<destination>{ac709e84-76c7-4ef1-acc2-d60029f65750}</destination>
 			<destination>{c8691a72-ce62-4e17-808f-463574e7f6b5}</destination>
+			<destination>{8e1deb62-72a2-4cb5-a367-7a1eb84e4eb5}</destination>
 			<destination>{f64bab92-3a46-4f30-a0bb-be91264c77a4}</destination>
 			<destination>{5c3faeed-c4da-4b7b-867c-7b9dc3a991c7}</destination>
 		</relationship>
@@ -123,11 +133,17 @@
 	<object class="MixerBusEffectChain" id="{b29ce963-84d3-45f1-876c-b69e60ea5ca3}">
 		<relationship name="effects">
 			<destination>{56ccea35-db9f-4423-8d77-aa6d7b5220cf}</destination>
+			<destination>{3dd3edcb-e578-4143-92b3-714cfa9f2698}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{75c1f1fb-c326-4f92-a499-cf9f4333280d}" />
 	<object class="MixerBusFader" id="{ac709e84-76c7-4ef1-acc2-d60029f65750}" />
 	<object class="SpatialiserEffect" id="{c8691a72-ce62-4e17-808f-463574e7f6b5}" />
+	<object class="SFXReverbEffect" id="{8e1deb62-72a2-4cb5-a367-7a1eb84e4eb5}">
+		<property name="decayTime">
+			<value>3300</value>
+		</property>
+	</object>
 	<object class="ThreeEQEffect" id="{f64bab92-3a46-4f30-a0bb-be91264c77a4}">
 		<property name="lowGain">
 			<value>3.5</value>
@@ -148,4 +164,15 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{56ccea35-db9f-4423-8d77-aa6d7b5220cf}" />
+	<object class="DelayEffect" id="{3dd3edcb-e578-4143-92b3-714cfa9f2698}">
+		<property name="delay">
+			<value>14</value>
+		</property>
+		<property name="feedback">
+			<value>68</value>
+		</property>
+		<property name="level">
+			<value>-2</value>
+		</property>
+	</object>
 </objects>

@@ -92,6 +92,51 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &5056798469429129543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2628038163624191959}
+  - component: {fileID: 5546349665715489468}
+  m_Layer: 0
+  m_Name: SoundBumper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2628038163624191959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056798469429129543}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.97, z: 0}
+  m_LocalScale: {x: 0.29491022, y: 6.409652, z: 0.29491022}
+  m_Children: []
+  m_Father: {fileID: 6780146674499361241}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5546349665715489468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5056798469429129543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a4dde3c9a2d0147ad6f0a2e0b86b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 537538321436062327, guid: b963cb5ecac69c840ae6e83614817642,
+    type: 3}
 --- !u!1 &6780146674499361218
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +171,7 @@ Transform:
   m_LocalScale: {x: 3.3908625, y: 0.15601471, z: 3.3908625}
   m_Children:
   - {fileID: 5327701013788477634}
+  - {fileID: 2628038163624191959}
   - {fileID: 6583396115713499395}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1203,15 +1249,9 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_IsSelectable: 1
-  m_SelectedFaces: 1c000000
-  m_SelectedEdges:
-  - a: 75
-    b: 76
-  - a: 76
-    b: 77
-  - a: 77
-    b: 75
-  m_SelectedVertices: 4b0000004c0000004d000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!54 &6780146674499361243
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1255,6 +1295,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePush: 35
+  TriggerBumper:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5546349665715489468}
+        m_MethodName: SpawnPrefabs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7636841251764313340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1340,7 @@ Transform:
   m_LocalScale: {x: 0.04732719, y: 1.028621, z: 0.04732719}
   m_Children: []
   m_Father: {fileID: 6780146674499361241}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4148110957397243586
 MeshFilter:

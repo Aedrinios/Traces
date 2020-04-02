@@ -73,10 +73,11 @@ Transform:
   m_GameObject: {fileID: 1833581546778262063}
   m_LocalRotation: {x: -0.000012380169, y: -0.7071068, z: -0.7071068, w: 0.000012380169}
   m_LocalPosition: {x: 0.02, y: 8.58, z: 49.5}
-  m_LocalScale: {x: 2, y: 0.15601006, z: 2}
+  m_LocalScale: {x: 2, y: 0.15601012, z: 2}
   m_Children:
   - {fileID: 2202904708841927313}
   - {fileID: 1047667531950631727}
+  - {fileID: 6531837359455430269}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -179.998}
@@ -109,6 +110,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePush: 20
+  TriggerBumper:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1087946898008652977}
+        m_MethodName: SpawnPrefabs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &3865943662379444038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6531837359455430269}
+  - component: {fileID: 1087946898008652977}
+  m_Layer: 0
+  m_Name: SoundRing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6531837359455430269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3865943662379444038}
+  m_LocalRotation: {x: 0.000012380169, y: 0.7071068, z: 0.7071068, w: 0.000012380169}
+  m_LocalPosition: {x: 0.0000128183465, y: 6.4788218, z: -0.000000059604645}
+  m_LocalScale: {x: 0.50000024, y: 0.5000001, z: 6.409845}
+  m_Children: []
+  m_Father: {fileID: 1833581546778262068}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087946898008652977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3865943662379444038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a4dde3c9a2d0147ad6f0a2e0b86b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 537538321436062327, guid: a2a75a4c5476bbe44b408affb6bc67dd,
+    type: 3}
 --- !u!1 &5144759808679695838
 GameObject:
   m_ObjectHideFlags: 0
