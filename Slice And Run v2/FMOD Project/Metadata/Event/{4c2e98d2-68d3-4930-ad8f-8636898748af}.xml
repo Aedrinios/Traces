@@ -87,13 +87,13 @@
 	<object class="MixerBusPanner" id="{8847a93c-7633-4512-aefd-c600b80db18f}" />
 	<object class="SingleSound" id="{bddbe8c4-c7ae-40fd-b023-5c7a58b12a1e}">
 		<property name="length">
-			<value>1.1000000000000001</value>
+			<value>1.1823440065681448</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>0.1211934953168459</value>
+			<value>0.11728430441877416</value>
 		</property>
 		<property name="pitch">
-			<value>-10.5</value>
+			<value>-18.5</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{03f7a1c4-8020-4201-8ce5-04a9131fc1e6}</destination>
@@ -103,6 +103,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2516e94c-2fda-4fe5-ac01-973f0faf432d}">
+		<property name="volume">
+			<value>-5.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -138,6 +141,7 @@
 		<relationship name="effects">
 			<destination>{5956213e-463d-472f-a41d-1530f7829fd5}</destination>
 			<destination>{80122608-e4a2-4672-b0b3-96b9105805a9}</destination>
+			<destination>{be7a6ca6-9125-4a50-9255-d0ff9794c639}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{da5f57fc-fdd8-4fe6-9c4a-bdbb4db972bb}" />
@@ -158,6 +162,9 @@
 		</property>
 	</object>
 	<object class="FlangerEffect" id="{b0804bbf-0400-4be9-a07c-ade33d2c4c83}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="rate">
 			<value>0.0440000035</value>
 		</property>
@@ -167,7 +174,7 @@
 	</object>
 	<object class="AutomationPoint" id="{0e62db8f-5b44-4c63-852b-99296036eb75}">
 		<property name="position">
-			<value>0.21000000000000019</value>
+			<value>0.29234400656814491</value>
 		</property>
 		<property name="value">
 			<value>1</value>
@@ -178,7 +185,7 @@
 	</object>
 	<object class="AutomationPoint" id="{fd39429f-0f56-40b1-b60d-ea24ba65b771}">
 		<property name="position">
-			<value>1.1000000000000001</value>
+			<value>1.1823440065681448</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -190,10 +197,27 @@
 			<value>3</value>
 		</property>
 		<property name="midGain">
-			<value>-10</value>
+			<value>6</value>
 		</property>
 		<property name="highGain">
-			<value>-47</value>
+			<value>-50</value>
+		</property>
+	</object>
+	<object class="DelayEffect" id="{be7a6ca6-9125-4a50-9255-d0ff9794c639}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="delay">
+			<value>16</value>
+		</property>
+		<property name="feedback">
+			<value>66.5</value>
+		</property>
+		<property name="level">
+			<value>2.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-19</value>
 		</property>
 	</object>
 </objects>
