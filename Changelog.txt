@@ -81,4 +81,5 @@ Semaine du 23/03/2020
 - Ajout du ring
 
 Semaine du 30/03/2020
-- Ajout des son de bumper et anneaux
+- Ajout des sons de bumper et anneaux
+- Ajout du son wallJump

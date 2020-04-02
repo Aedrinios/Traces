@@ -10,7 +10,7 @@ public class WallJump : MonoBehaviour
     public float offSet_Y = -0.25f; 
 	public int maxWallJump = 3;
     public float wallFriction = 20;
-    bool canWallJump = false; 
+    public bool canWallJump = false; 
 
 	int countJump = 0;
     bool wallNear;
@@ -40,7 +40,11 @@ public class WallJump : MonoBehaviour
                 fps.canJump = false;
                 canWallJump = false;
             }
-        }      
+        }
+        else
+        {
+            canWallJump = false;
+        }
 
         //reset du compte de WallJump
         if (fps.onGround && countJump != 0)
