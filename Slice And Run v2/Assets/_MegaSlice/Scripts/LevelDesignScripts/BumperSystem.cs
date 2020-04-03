@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class BumperSystem : MonoBehaviour
 {
     public float forcePush = 100;
+    //public float minForcePush = 10; 
     public UnityEvent TriggerBumper; 
     FPS_Controller playerController;
 
@@ -41,6 +42,10 @@ public class BumperSystem : MonoBehaviour
 
     void PushBumper()
     {
+        if (!playerController.isPushed)
+        {
+            //playerController.velocity = Vector3.zero; 
+        }
         playerController.PushPlayer(transform.up * forcePush);
         TriggerBumper.Invoke(); 
         isOn = false;

@@ -19,7 +19,7 @@ public class TriggerSlice : MonoBehaviour
         hit.GetComponent<SliceableObject>().Slice(cutPlane);
     }
 
-    public virtual void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Sliceable"))
         {

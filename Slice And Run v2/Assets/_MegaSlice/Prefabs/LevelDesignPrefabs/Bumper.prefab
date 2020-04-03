@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2111953307064768061}
   - component: {fileID: 7982691738691435796}
   - component: {fileID: 8761581549352281278}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: ZoneBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2628038163624191959}
   - component: {fileID: 5546349665715489468}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: SoundBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 6780146674499361243}
   - component: {fileID: 6780146674499361221}
   - component: {fileID: 6780146674499361240}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Bumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 4148110957397243586}
   - component: {fileID: 1490273388591151727}
   - component: {fileID: 8716164255741790095}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

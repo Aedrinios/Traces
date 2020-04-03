@@ -13,19 +13,20 @@ public class BlowerSystem : MonoBehaviour
     FPS_Controller fps;
 
     //float size;
-    float power; 
+    float power;
+    bool isOn = true; 
 
     private void Start()
     {
         fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
+        isOn = true;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && isOn)
         {
             EquilibreForce(); 
-
             fps.PushPlayer(Vector3.up * power * Time.deltaTime);
         }
     }
@@ -40,5 +41,10 @@ public class BlowerSystem : MonoBehaviour
         {
             power = powerMax * ratio; 
         }       
+    }
+
+    void ResetOn()
+    {
+        isOn = true;
     }
 }

@@ -6,6 +6,7 @@ using EzySlice;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject prefabSlice;
+    public Transform canon; 
     public Transform cutPlane;
     public float DelaySpamShot = 0.1f;
 
@@ -35,9 +36,8 @@ public class PlayerAttack : MonoBehaviour
 
     public void LaunchProjectile()
     {
-        Vector3 positionInstance = transform.position;
-        positionInstance -= transform.forward;
-        positionInstance.y = transform.position.y + 0.8f;
+        Vector3 positionInstance = canon.position;
+
         Instantiate(prefabSlice, positionInstance, cutPlane.rotation);
     }
 
