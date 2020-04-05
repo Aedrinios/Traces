@@ -10827,7 +10827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 41.05005}
+  m_AnchoredPosition: {x: 0, y: 41.049805}
   m_SizeDelta: {x: 457.47, y: 82.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317549125
@@ -11502,6 +11502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyUnlock: 117
+  menuLevel: {fileID: 2129694644}
 --- !u!1 &500184154
 GameObject:
   m_ObjectHideFlags: 0
@@ -20190,6 +20191,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 500184156}
         m_MethodName: SpawnPrefabs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 463631527}
+        m_MethodName: CheckIfLevelAreUnlockable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

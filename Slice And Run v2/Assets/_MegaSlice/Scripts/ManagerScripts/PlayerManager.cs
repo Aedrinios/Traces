@@ -19,10 +19,10 @@ public class PlayerManager : MonoBehaviour
         {
             FindInputField();
         }
+
         SaveSystem.Init();
         PlayerData data = SaveSystem.LoadGame();
         scoreList = new float[SceneManager.sceneCountInBuildSettings - 1];
-
         if (data != null)
         {
             name = data.name;
@@ -44,17 +44,9 @@ public class PlayerManager : MonoBehaviour
         name = inputName.text;
         if(inputName.text.Length > 0)
         {
-            if (SaveSystem.CreateFile(this))
-            {
-                inputName.gameObject.SetActive(false);
-                changeNameButton.SetActive(true);
-            }
-            else
-            {
-                inputName.text = "";
-                inputName.placeholder.GetComponent<TextMeshProUGUI>().text = "Nom déjà pris";
-            }
-
+            SaveSystem.CreateFile(this);
+            inputName.gameObject.SetActive(false);
+            changeNameButton.SetActive(true);
         }
     }
 
@@ -69,6 +61,21 @@ public class PlayerManager : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+
+    public void CheckIfLevelAreUnlockable()
+    {
+        for (int i = 0; i < scoreList.Length; i++)
+        {
+            if (scoreList[i] > 0)
+            {
+                FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 1);
+                if(scoreList[i+1] <= 0)
+                {
+                    FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 2);
+                }
+            }
         }
     }
 }

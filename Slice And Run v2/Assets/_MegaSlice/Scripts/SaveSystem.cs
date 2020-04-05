@@ -17,21 +17,23 @@ public static class SaveSystem
         }
     }
 
-    public static bool CreateFile(PlayerManager player)
+    public static void CreateFile(PlayerManager player)
     {
+        PlayerData data;
         if(!File.Exists(SAVE_FOLDER + "/Save_" + player.name + ".txt"))
         {
             float[] initScoreList = new float[player.scoreList.Length];
             player.scoreList = initScoreList;
-            PlayerData data = new PlayerData(player.name, initScoreList);
+            data = new PlayerData(player.name, initScoreList);
             string jsonData = JsonUtility.ToJson(data);
             File.WriteAllText(SAVE_FOLDER + "/Save_" + player.name + ".txt", jsonData);
-            return true;
         }
         else
         {
+            data = LoadPlayer(player.name);
+            player.name = data.name;
+            player.scoreList = data.scoreList;
             Debug.LogError("File /Save_" + player.name + ".txt already exist");
-            return false;
         }
     }
 
