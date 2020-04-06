@@ -66,6 +66,7 @@ public class SliceableObject : MonoBehaviour
 		so.numberCutting = this.numberCutting++;  
         so.crossMaterial = crossMaterial;
 		so.lessPower = lessPower;
+		so.gameObject.layer = gameObject.layer;
 
 		RepulsionAfterCut(rb); 
 	}
