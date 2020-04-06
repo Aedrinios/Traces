@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 1833581546778262063}
   m_LocalRotation: {x: -0.000012380169, y: -0.7071068, z: -0.7071068, w: 0.000012380169}
   m_LocalPosition: {x: 0.02, y: 8.58, z: 49.5}
-  m_LocalScale: {x: 2, y: 0.15601012, z: 2}
+  m_LocalScale: {x: 1.9889141, y: 0.15514532, z: 1.9889141}
   m_Children:
   - {fileID: 2202904708841927313}
   - {fileID: 1047667531950631727}
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePush: 20
+  reloadTime: 3
   TriggerBumper:
     m_PersistentCalls:
       m_Calls:

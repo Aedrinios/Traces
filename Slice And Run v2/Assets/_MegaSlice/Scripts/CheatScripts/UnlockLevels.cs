@@ -21,6 +21,27 @@ public class UnlockLevels : MonoBehaviour
         }
     }
 
+    void UnlockAllLevels()
+    {
+        //int lengthScenes = SceneManager.sceneCountInBuildSettings;
+        int lengthScenes = ProgressionManager.numberOfLevel;
+
+        for (int i = 1; i < lengthScenes; i++)
+        {
+            ProgressionManager.UnlockLevel(i);
+        }
+
+        LevelButton[] allLevelButton = FindObjectsOfType<LevelButton>();
+
+        for (int i = 0; i < allLevelButton.Length; i++)
+        {
+            if (allLevelButton[i].id <= ProgressionManager.numberOfLevel-1)
+            {
+                allLevelButton[i].UnlockLevel();
+            }            
+        }
+    }
+
     public void UnlockOneLevel(int levelNumber)
     {
         ProgressionManager.UnlockLevel(levelNumber);
@@ -37,22 +58,5 @@ public class UnlockLevels : MonoBehaviour
                 allLevel[i].UnlockLevel();
             }
         }*/
-    }
-
-    void UnlockAllLevels()
-    {
-        int lengthScenes = SceneManager.sceneCountInBuildSettings;
-
-        for (int i = 1; i < lengthScenes; i++)
-        {
-            ProgressionManager.UnlockLevel(i);
-        }
-
-        LevelButton[] allLevel = FindObjectsOfType<LevelButton>();
-
-        for (int i = 0; i < allLevel.Length; i++)
-        {
-            allLevel[i].UnlockLevel(); 
-        }
     }
 }

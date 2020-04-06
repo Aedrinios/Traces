@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class BumperSystem : MonoBehaviour
 {
     public float forcePush = 100;
+    public float reloadTime = 0.07f; 
     //public float minForcePush = 10; 
     public UnityEvent TriggerBumper; 
     FPS_Controller playerController;
@@ -41,14 +42,21 @@ public class BumperSystem : MonoBehaviour
     }
 
     void PushBumper()
-    { 
-        //Vector3 velocityCor = transform.up * playerController.velocity.magnitude;
-        //playerController.velocity = velocityCor; 
+    {
+        //Debug.Log(playerController.velocity.magnitude); 
+
+        // si la vitesse du joueur est trop faible alors le bumper redirige la velocité du joueur. 
+        if (playerController.velocity.magnitude <= 8)
+        {
+            Vector3 velocityCor = transform.up * playerController.velocity.magnitude;
+            playerController.velocity = velocityCor;
+        }
+
 
         playerController.PushPlayer(transform.up * forcePush);
         TriggerBumper.Invoke(); 
         isOn = false;
-        Invoke("ReloadBumper", 0.07f);
+        Invoke("ReloadBumper", reloadTime);
     }
 
     void ReloadBumper()

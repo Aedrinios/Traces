@@ -19,6 +19,12 @@ public class LevelButton : MonoBehaviour
         button = GetComponent<Button>();
         currentButtonImage = GetComponent<Image>();
         onLevelUnlocked += UnlockLevel;
+
+        if (id > ProgressionManager.numberOfLevel - 1)
+        {
+            gameObject.SetActive(false); 
+        }
+
     }
 
     private void OnDisable()

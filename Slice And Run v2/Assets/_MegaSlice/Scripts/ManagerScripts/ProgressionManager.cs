@@ -49,5 +49,6 @@ public class ProgressionManager : MonoBehaviour
     void CalculateNumberLevel()
     {
         numberOfLevel = SceneManager.sceneCountInBuildSettings - 1;
+        Debug.Log("Il y a " + numberOfLevel + " niveaux jouables"); 
     }
 }
