@@ -2516,6 +2516,7 @@ MonoBehaviour:
     type: 3}
   soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
     type: 3}
+  scaleDistance: 0.55
 --- !u!114 &232809499080137406
 MonoBehaviour:
   m_ObjectHideFlags: 0

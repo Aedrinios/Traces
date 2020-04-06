@@ -8,8 +8,8 @@ public class HeartScript : MonoBehaviour
     public GameObject endGamePrefab;
     public GameObject particleEndPrefab;
     public GameObject soundSliceEnd;
+    public float scaleDistance = 1; 
     private Transform parent;
-
 
     SliceableObject sliceScript; 
     private float originalTimeScale;
@@ -35,11 +35,20 @@ public class HeartScript : MonoBehaviour
 
     void EndGame(Transform projectile)
     {
-        Instantiate(particleEndPrefab, parent.position, projectile.rotation);
+        GameObject newEffect = Instantiate(particleEndPrefab, parent.position, projectile.rotation) as GameObject;
+        float distance = Vector3.Distance(transform.position, FPS_Controller.playerPos);
+
+
+        Transform[] childs = newEffect.transform.GetComponentsInChildren<Transform>(); 
+        for (int i = 0; i < childs.Length; i++)
+        {
+            childs[i].localScale *= Mathf.Sqrt((distance + 1)) * scaleDistance;
+        }        
 
         GameObject go = Instantiate(endGamePrefab, transform.position, transform.rotation);        
         go.GetComponent<EndGameManager>().slowed = true;
 
         GameObject newSound = Instantiate(soundSliceEnd, transform.position, transform.rotation);
+        
     }
 }
