@@ -84,3 +84,4 @@ Semaine du 30/03/2020
 - Ajout des sons de bumper et anneaux
 - Ajout du son wallJump
 - physique polish
+- ajout modé bumper et anneau

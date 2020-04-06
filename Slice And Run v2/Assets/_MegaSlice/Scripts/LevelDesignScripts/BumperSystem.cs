@@ -41,11 +41,10 @@ public class BumperSystem : MonoBehaviour
     }
 
     void PushBumper()
-    {
-        if (!playerController.isPushed)
-        {
-            //playerController.velocity = Vector3.zero; 
-        }
+    { 
+        //Vector3 velocityCor = transform.up * playerController.velocity.magnitude;
+        //playerController.velocity = velocityCor; 
+
         playerController.PushPlayer(transform.up * forcePush);
         TriggerBumper.Invoke(); 
         isOn = false;
