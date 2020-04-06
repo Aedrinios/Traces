@@ -85,3 +85,6 @@ Semaine du 30/03/2020
 - Ajout du son wallJump
 - physique polish
 - ajout modé bumper et anneau
+
+Semaine du 06/04/2020
+- modif sur les particules de fin
