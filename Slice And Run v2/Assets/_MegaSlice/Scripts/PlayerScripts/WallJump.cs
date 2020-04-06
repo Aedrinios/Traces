@@ -30,7 +30,7 @@ public class WallJump : MonoBehaviour
             DetectIfWallNear();
 
             // condition du wallJump
-            if (wallNear && countJump <= maxWallJump)
+            if (wallNear && countJump < maxWallJump)
             {
                 fps.canJump = true;
                 canWallJump = true; 
