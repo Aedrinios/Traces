@@ -43,15 +43,12 @@ public class BumperSystem : MonoBehaviour
 
     void PushBumper()
     {
-        //Debug.Log(playerController.velocity.magnitude); 
-
         // si la vitesse du joueur est trop faible alors le bumper redirige la velocité du joueur. 
         if (playerController.velocity.magnitude <= 8)
         {
             Vector3 velocityCor = transform.up * playerController.velocity.magnitude;
             playerController.velocity = velocityCor;
         }
-
 
         playerController.PushPlayer(transform.up * forcePush);
         TriggerBumper.Invoke(); 
