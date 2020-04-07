@@ -10,7 +10,7 @@ public class ScoreBar : MonoBehaviour
 	float ratioFill;
 	Color originalColor;
 
-	float lerpRatio = 0.01f; 
+	float lerpRatio = 0.005f; 
 
 	private void Start()
 	{
