@@ -8,7 +8,9 @@ public class ScoreBar : MonoBehaviour
 	ChronoSystem chronoSystem; 
 	Image img;
 	float ratioFill;
-	Color originalColor; 
+	Color originalColor;
+
+	float lerpRatio = 0.01f; 
 
 	private void Start()
 	{
@@ -26,13 +28,13 @@ public class ScoreBar : MonoBehaviour
 
 	void ColorChange()
 	{
-		if (img.fillAmount < 0.2)
+		if (img.fillAmount < 0.25)
 		{
-			img.color = Color.Lerp(img.color, Color.red, 0.05f);
+			img.color = Color.Lerp(img.color, Color.red, lerpRatio);
 		}
 		else
 		{
-			img.color = Color.Lerp(img.color, originalColor, 0.05f);
+			img.color = Color.Lerp(img.color, originalColor, lerpRatio);
 		}
 	}
 }

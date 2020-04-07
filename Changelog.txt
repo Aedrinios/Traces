@@ -89,3 +89,4 @@ Semaine du 30/03/2020
 Semaine du 06/04/2020
 - modif sur les particules de fin
 - modif de la barre timer (pas encore l'anim de fin)
+- Ajout de l'anim de la barre timer 
