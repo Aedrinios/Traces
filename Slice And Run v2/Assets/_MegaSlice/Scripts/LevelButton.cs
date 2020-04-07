@@ -39,6 +39,5 @@ public class LevelButton : MonoBehaviour
         button.interactable = true;
         button.spriteState = unlockedState;
         currentButtonImage.sprite = unlockedSprite;
-
     }
 }

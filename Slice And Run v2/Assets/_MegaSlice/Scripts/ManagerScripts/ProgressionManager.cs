@@ -20,6 +20,7 @@ public class ProgressionManager : MonoBehaviour
         if (listLevel == null)
         {
             listLevel = new bool[numberOfLevel];
+           
             UnlockLevel(0);
 
             for (int i = 1; i < listLevel.Length; i++)

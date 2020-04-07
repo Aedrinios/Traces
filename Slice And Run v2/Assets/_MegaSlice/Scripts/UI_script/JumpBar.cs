@@ -7,9 +7,10 @@ public class JumpBar : MonoBehaviour
 {
     public Sprite emptyBar;
     Sprite originalSprite; 
-    public int id = 0; 
+    public int id = 0;
+    public float alphaEmpty = 0.3f; 
 
-
+    Color originalColor; 
     WallJump wallJumpScript;
     FPS_Controller fps;
     Image img; 
@@ -20,7 +21,8 @@ public class JumpBar : MonoBehaviour
         wallJumpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<WallJump>();
         fps = GameObject.FindGameObjectWithTag("Player").GetComponent<FPS_Controller>();
         img = GetComponent<Image>();
-        originalSprite = img.sprite; 
+        originalSprite = img.sprite;
+        originalColor = img.color; 
     }
 
     // Update is called once per frame
@@ -41,11 +43,13 @@ public class JumpBar : MonoBehaviour
     {
         if (wallJumpScript.countJump < id)
         {
-            img.sprite = originalSprite; 
+            img.sprite = originalSprite;
+            img.color = originalColor; 
         }
         else
         {
             img.sprite = emptyBar;
+            img.color = originalColor - new Color(0, 0, 0, alphaEmpty); 
         }
     }
 }
