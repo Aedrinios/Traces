@@ -12,7 +12,7 @@ public class WallJump : MonoBehaviour
     public float wallFriction = 20;
     public bool canWallJump = false; 
 
-	int countJump = 0;
+	[HideInInspector] public int countJump = 0;
     bool wallNear;
     bool sliceObjectNear;
 
