@@ -19,7 +19,7 @@ public class FPS_Controller : MonoBehaviour
     public float maxFallSpeed = 60;
     public float groundFriction = 20;
     public float raycastSize = 1;
-    [HideInInspector] public bool onGround;
+    public bool onGround;
     [HideInInspector] public bool canJump = true;
 
     public UnityEvent Jump;
@@ -58,6 +58,8 @@ public class FPS_Controller : MonoBehaviour
         DefineMoveDirection();
         characterController.Move(moveDir * Time.deltaTime);
         playerPos = transform.position;
+
+        //Debug.Log(velocity.magnitude); 
     }
 
     void DefineMoveDirection()
@@ -129,11 +131,12 @@ public class FPS_Controller : MonoBehaviour
 
     void CheckOnGround()
     {
+        RaycastHit hit; 
         if (characterController.isGrounded)
         {
             onGround = true; 
         }
-        else if (Physics.Raycast(transform.position, -Vector3.up, raycastSize, gameObject.layer))
+        else if (Physics.Raycast(transform.position, -Vector3.up, out hit, raycastSize, gameObject.layer))
         {
             onGround = true;
         }
@@ -179,7 +182,7 @@ public class FPS_Controller : MonoBehaviour
     {
         velocity += pushDir;
         isPushed = true;
-        Invoke("StopPush", 0.5f); 
+        Invoke("StopPush", 1f); 
     }
 
     void StopPush()

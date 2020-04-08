@@ -1373,6 +1373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forcePush: 35
+  reloadTime: 0.05
   TriggerBumper:
     m_PersistentCalls:
       m_Calls:
