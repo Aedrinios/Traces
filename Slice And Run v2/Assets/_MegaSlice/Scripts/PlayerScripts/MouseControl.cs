@@ -16,8 +16,6 @@ public class MouseControl : MonoBehaviour
 
     void CalculateAxeMouse()
     {
-
-
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 

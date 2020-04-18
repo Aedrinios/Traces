@@ -83,13 +83,13 @@ public class FPS_Controller : MonoBehaviour
     }
 
     void RotateWithMouse()
-    {
+    {   
         float rotX = Input.GetAxis("Mouse X") * 10;
         float rotY = Input.GetAxis("Mouse Y") * 10;
 
-        transform.Rotate(Vector3.up, rotX * sensivityX * Time.deltaTime);
+        transform.Rotate(Vector3.up, rotX * sensivityX * Time.deltaTime * MenuSettings.mouseSensitivity);
 
-        cameraRotationX += -rotY * sensivityY * Time.deltaTime;
+        cameraRotationX += -rotY * sensivityY * Time.deltaTime * MenuSettings.mouseSensitivity;
         cameraRotationX = Mathf.Clamp(cameraRotationX, -89, 89);
         cameraHolder.transform.localEulerAngles = new Vector3(cameraRotationX, 0, 0);
     }
