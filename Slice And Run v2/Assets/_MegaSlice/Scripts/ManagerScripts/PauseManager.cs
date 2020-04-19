@@ -50,7 +50,7 @@ public class PauseManager : MonoBehaviour
             playerAttack.canShot = true;
         }
         isPaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
         ChronoSystem.playing = true;
         if (LevelManager.isLevelEnding)

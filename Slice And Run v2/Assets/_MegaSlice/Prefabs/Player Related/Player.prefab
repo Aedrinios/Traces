@@ -217,7 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fab61e41b67fb448b10a47c3dafe78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 0.2
+  maxPoints: 30
+  minDistance: 10
+  smooth: 0
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +240,7 @@ MonoBehaviour:
   maxWallJump: 3
   wallFriction: 32
   canWallJump: 0
+  countJump: 0
 --- !u!114 &6229600815486438845
 MonoBehaviour:
   m_ObjectHideFlags: 0

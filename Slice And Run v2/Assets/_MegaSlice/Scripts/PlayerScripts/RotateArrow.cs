@@ -13,8 +13,8 @@ public class RotateArrow : MonoBehaviour
     private void Update()
     {
         if (canRotate)
-        {
-            rotationZ = MouseControl.angle;
+        { 
+            rotationZ = MouseControl.currentAngle;
             transform.localEulerAngles = new Vector3(0, 0, rotationZ + decalAngle);
         }
     }
