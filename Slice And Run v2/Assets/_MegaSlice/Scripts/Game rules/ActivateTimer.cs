@@ -16,7 +16,7 @@ public class ActivateTimer : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.gameObject.GetComponent<FPS_Controller>().enabled)
         {
-            EventHandler.BeginTimer?.Invoke();
+            //EventHandler.BeginTimer?.Invoke();
         }
     }
 }

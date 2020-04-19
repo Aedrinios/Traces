@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DisplaySpeedParticule : MonoBehaviour
-{
-    
+{    
     public float speedTrigger = 10f;
     FPS_Controller fps;
     Renderer psRenderer;
 
     Color originalColor;
     Color invisibleColor;
+    
     private void Start()
     {
-        fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>(); 
+        GameObject player = GameObject.FindWithTag("Player"); 
+        if (player != null) fps = player.GetComponent<FPS_Controller>();
+
         psRenderer = GetComponent<Renderer>();
         originalColor = psRenderer.material.color;
         invisibleColor = originalColor;
@@ -22,17 +24,19 @@ public class DisplaySpeedParticule : MonoBehaviour
 
     void Update()
     {
-        transform.position = fps.gameObject.transform.position; 
-        if (fps.moveDir.magnitude >= speedTrigger)
+        if (fps != null)
         {
-            psRenderer.material.color = originalColor; 
+            transform.position = fps.gameObject.transform.position;
+            if (fps.moveDir.magnitude >= speedTrigger)
+            {
+                psRenderer.material.color = originalColor;
+            }
+            else
+            {
+                psRenderer.material.color = invisibleColor;
+            }
+            ChangeRotation();
         }
-        else
-        {
-            psRenderer.material.color = invisibleColor;
-        }
-
-        ChangeRotation(); 
     }
 
     void ChangeRotation()
