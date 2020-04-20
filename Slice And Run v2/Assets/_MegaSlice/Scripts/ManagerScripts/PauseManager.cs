@@ -42,8 +42,8 @@ public class PauseManager : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
-        pauseScreen.SetActive(false);
-        playerInterface.SetActive(true);
+        if (pauseScreen != null) pauseScreen.SetActive(false);
+        if (playerInterface != null) playerInterface.SetActive(true);
         if(fps != null)
         {
             fps.canPlay = true;
@@ -69,8 +69,8 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         ChronoSystem.playing = false;
-        playerInterface.SetActive(false);
-        pauseScreen.SetActive(true);
+        if (playerInterface != null) playerInterface.SetActive(false);
+        if (pauseScreen != null) pauseScreen.SetActive(true);
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;

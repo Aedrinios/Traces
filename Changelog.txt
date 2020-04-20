@@ -93,5 +93,6 @@ Semaine du 06/04/2020
 - Ajout Jumpbar
 - Polish Bumper
 
-Semaine du 13/04/2020
+Semaine du 20/04/2020
 - ajout du menu options
+- ajout Reset Button 

@@ -11,8 +11,8 @@ public class MenuSettings : MonoBehaviour
     [Range(0, 10)] public float mouseSensitivity = 1f;
 
     FMOD.Studio.Bus Global;
-    public PostProcessVolume volume;
-    public ColorGrading colorGradingLayer;
+    PostProcessVolume volume;
+    ColorGrading colorGradingLayer;
     FPS_Controller fps; 
 
     // Start is called before the first frame update

@@ -32,6 +32,23 @@ public class SettingSlider : MonoBehaviour
         }
     }
 
+    public void ResetValue()
+    {
+        if (id == 1)
+        {
+            menuSettings.globalVolume = 1;
+        }
+        else if (id == 2)
+        {
+            menuSettings.luminosity = 1;
+        }
+        else if (id == 3)
+        {
+            menuSettings.mouseSensitivity = 1;
+        }
+        SetValueSlider(); 
+    }
+
     public void ChangeVolume(float newVolume)
     {
         menuSettings.globalVolume = newVolume;
