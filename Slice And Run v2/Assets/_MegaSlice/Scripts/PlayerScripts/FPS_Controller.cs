@@ -21,6 +21,7 @@ public class FPS_Controller : MonoBehaviour
     public float raycastSize = 1;
     public bool onGround;
     [HideInInspector] public bool canJump = true;
+    [HideInInspector] public float multiplierSensitivity = 1; 
 
     public UnityEvent Jump;
 
@@ -87,9 +88,9 @@ public class FPS_Controller : MonoBehaviour
         float rotX = Input.GetAxis("Mouse X") * 10;
         float rotY = Input.GetAxis("Mouse Y") * 10;
 
-        transform.Rotate(Vector3.up, rotX * sensivityX * Time.deltaTime * MenuSettings.mouseSensitivity);
+        transform.Rotate(Vector3.up, rotX * sensivityX * Time.deltaTime * multiplierSensitivity);
 
-        cameraRotationX += -rotY * sensivityY * Time.deltaTime * MenuSettings.mouseSensitivity;
+        cameraRotationX += -rotY * sensivityY * Time.deltaTime * multiplierSensitivity;
         cameraRotationX = Mathf.Clamp(cameraRotationX, -89, 89);
         cameraHolder.transform.localEulerAngles = new Vector3(cameraRotationX, 0, 0);
     }

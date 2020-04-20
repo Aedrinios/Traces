@@ -9,6 +9,7 @@ TagManager:
   - HeartCube
   - GameManager
   - DataManager
+  - SettingValues
   layers:
   - Default
   - TransparentFX

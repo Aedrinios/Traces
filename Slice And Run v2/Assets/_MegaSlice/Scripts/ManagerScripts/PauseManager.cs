@@ -15,6 +15,7 @@ public class PauseManager : MonoBehaviour
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0)
         {
             pauseScreen = GameObject.Find("Canvas").transform.Find("PauseScreen").gameObject;
+
             fps = GameObject.FindWithTag("Player").GetComponent<FPS_Controller>();
             playerAttack = GameObject.FindWithTag("Player").GetComponent<PlayerAttack>();
         }
@@ -50,8 +51,9 @@ public class PauseManager : MonoBehaviour
             playerAttack.canShot = true;
         }
         isPaused = false;
-        Cursor.lockState = CursorLockMode.Confined;
+
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
         ChronoSystem.playing = true;
         if (LevelManager.isLevelEnding)
         {
@@ -78,8 +80,5 @@ public class PauseManager : MonoBehaviour
             fps.canMoveCamera = false;
             playerAttack.canShot = false;
         }
-
-
     }
-
 }

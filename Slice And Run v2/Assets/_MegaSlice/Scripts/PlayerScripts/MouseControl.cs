@@ -61,7 +61,7 @@ public class MouseControl : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Input mouse : " + Input.mousePosition);
+        //Debug.Log("Input mouse : " + Input.mousePosition);
         oldMousePositions.Add(Input.mousePosition);
         if (oldMousePositions.Count > maxPoints)
             oldMousePositions.RemoveAt(0);
