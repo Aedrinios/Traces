@@ -58,7 +58,7 @@ public class PauseManager : MonoBehaviour
         if (LevelManager.isLevelEnding)
         {
             playerInterface.SetActive(false);
-            fps.canMoveCamera = false;
+            fps.StopPlayer(); 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             ChronoSystem.playing = false;

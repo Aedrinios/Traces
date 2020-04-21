@@ -144,6 +144,7 @@ MonoBehaviour:
   raycastSize: 1.125
   onGround: 0
   canJump: 1
+  multiplierSensitivity: 1
   Jump:
     m_PersistentCalls:
       m_Calls:
@@ -238,6 +239,7 @@ MonoBehaviour:
   radius: 1
   offSet_Y: -0.1
   maxWallJump: 3
+  countdownWallJump: 0.2
   wallFriction: 32
   canWallJump: 0
   countJump: 0
