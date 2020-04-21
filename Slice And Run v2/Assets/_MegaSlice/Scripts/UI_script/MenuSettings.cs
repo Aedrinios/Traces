@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuSettings : MonoBehaviour
 {
-    [Range(0,10)] public float globalVolume = 1f;
-    [Range(0.1f, 10)] public float luminosity = 1f;
-    [Range(0, 10)] public float mouseSensitivity = 1f;
+    [Range(0,2)] public float globalVolume = 1f;
+    [Range(0.1f, 2)] public float luminosity = 1f;
+    [Range(0, 2)] public float mouseSensitivity = 1f;
 
     FMOD.Studio.Bus Global;
     PostProcessVolume volume;
