@@ -97,3 +97,4 @@ Semaine du 20/04/2020
 - ajout du menu options
 - ajout Reset Button 
 - Debug ne peut plus bouger en ouvrant le menu à la fin des niveaux
+- Saturation des sons de découpe supprimé 
