@@ -218,9 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fab61e41b67fb448b10a47c3dafe78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSensivity: 5
+  minSensivity: 0.2
+  frameRefesh: 4
+  oldMousePositions: []
   maxPoints: 30
   minDistance: 10
   smooth: 0
+  collotRotation: 0
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
