@@ -44,7 +44,12 @@ public class FPS_Controller : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         cameraRotationX = 0;
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        if (FindObjectOfType<MouseControl>().collotRotation)
+            Cursor.lockState = CursorLockMode.Confined;
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         canMoveCamera = false;
         StopPlayer();
         Invoke("StartPlayer", 0.4f);
