@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSensivity: 5
-  minSensivity: 0.2
-  frameRefesh: 4
+  minSensivity: 0.05
+  frameRefesh: 8
   oldMousePositions: []
   maxPoints: 30
   minDistance: 10
