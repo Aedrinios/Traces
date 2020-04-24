@@ -98,3 +98,4 @@ Semaine du 20/04/2020
 - ajout Reset Button 
 - Debug ne peut plus bouger en ouvrant le menu à la fin des niveaux
 - Saturation des sons de découpe supprimé 
+- Ajout d'une variable pour "écarter" les objets lors des découpes

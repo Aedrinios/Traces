@@ -11,14 +11,18 @@ public class PlayerAttack : MonoBehaviour
     public float DelaySpamShot = 0.1f;
 
     public float forcePushCut = 80;
-    public static float forcePushCutStc; 
+    public static float forcePushCutStc;
+
+    public float ratioPush = 0.4f;
+    public static float ratioPushStc;
 
     [HideInInspector] public bool canShot;
     private bool startGame;
 
     private void Awake()
     {
-        forcePushCutStc = forcePushCut; 
+        forcePushCutStc = forcePushCut;
+        ratioPushStc = ratioPush; 
         canShot = false;
         startGame = true; 
     }

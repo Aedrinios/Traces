@@ -24,8 +24,8 @@ public class TriggerSlice : MonoBehaviour
         if (other.CompareTag("Sliceable"))
         {
             Instantiate(hitParticle, transform.position, transform.rotation);
-            Vector3 forwardPorjectille = transform.forward; 
-            other.gameObject.GetComponent<SliceableObject>().dirPush = forwardPorjectille; 
+
+            other.gameObject.GetComponent<SliceableObject>().tranformProjectille = transform; 
             Slice(other.gameObject);
             projectile.LoseLife(loseLife); 
         }

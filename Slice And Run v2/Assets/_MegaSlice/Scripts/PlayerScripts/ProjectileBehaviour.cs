@@ -21,8 +21,6 @@ public class ProjectileBehaviour : MonoBehaviour
         }
     }
 
-
-
     public void LoseLife(float lose)
     {
         lifeTime -= lose; 

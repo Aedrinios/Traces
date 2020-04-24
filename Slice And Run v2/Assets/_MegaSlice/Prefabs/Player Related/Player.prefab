@@ -204,7 +204,8 @@ MonoBehaviour:
   canon: {fileID: 1525234891265268798}
   cutPlane: {fileID: 2546504388377453058}
   DelaySpamShot: 0.12
-  forcePushCut: 140
+  forcePushCut: 120
+  ratioPush: 0.4
   canShot: 0
 --- !u!114 &2546504387214751591
 MonoBehaviour:

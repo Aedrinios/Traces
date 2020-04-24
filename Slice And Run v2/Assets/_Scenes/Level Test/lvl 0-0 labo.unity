@@ -2614,7 +2614,7 @@ MonoBehaviour:
   lessPower: 0
   numberCutting: 0
   canSlice: 1
-  dirPush: {x: 0, y: 0, z: 0}
+  tranformProjectille: {fileID: 0}
 --- !u!64 &319041885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5561,7 +5561,7 @@ MonoBehaviour:
   lessPower: 0
   numberCutting: 0
   canSlice: 1
-  dirPush: {x: 0, y: 0, z: 0}
+  tranformProjectille: {fileID: 0}
 --- !u!65 &655981344
 BoxCollider:
   m_ObjectHideFlags: 0

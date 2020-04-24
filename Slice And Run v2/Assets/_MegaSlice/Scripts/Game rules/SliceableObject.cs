@@ -17,8 +17,9 @@ public class SliceableObject : MonoBehaviour
 
 	[HideInInspector] public float numberCutting = 0;
 	[HideInInspector] public bool canSlice = true;
-	[HideInInspector] public Vector3 dirPush = Vector3.zero;
-	float forcePush; 
+	[HideInInspector] public Transform tranformProjectille;
+	float forcePush;
+	float ratioPush;
 
 	public delegate void HitHappen();
 	public static HitHappen hitHappen;
@@ -27,7 +28,8 @@ public class SliceableObject : MonoBehaviour
 
 	public void Start()
     {
-		forcePush = PlayerAttack.forcePushCutStc; 
+		forcePush = PlayerAttack.forcePushCutStc;
+		ratioPush = PlayerAttack.ratioPushStc; 
 		InitSliceableObject();
 	}
 
@@ -42,8 +44,8 @@ public class SliceableObject : MonoBehaviour
             {
 				GameObject bottom = hull.CreateLowerHull(this.gameObject, crossMaterial);
                 GameObject top = hull.CreateUpperHull(this.gameObject, crossMaterial);
-                AddHullComponents(bottom);
-                AddHullComponents(top);
+                AddHullComponents(bottom, "bottom");
+                AddHullComponents(top, "top");
 				Destroy(this.gameObject);
 
 				gameObjectSliced = gameObject; 
@@ -53,7 +55,7 @@ public class SliceableObject : MonoBehaviour
         }
     }
 
-    public void AddHullComponents(GameObject go)
+    public void AddHullComponents(GameObject go, string side)
     {
         Rigidbody rb = go.AddComponent<Rigidbody>();
         MeshCollider collider = go.AddComponent<MeshCollider>();
@@ -68,7 +70,7 @@ public class SliceableObject : MonoBehaviour
 		so.lessPower = lessPower;
 		so.gameObject.layer = gameObject.layer;
 
-		RepulsionAfterCut(rb); 
+		RepulsionAfterCut(rb, side); 
 	}
 
     public SlicedHull SliceObject(Transform slicePlane, GameObject obj, Material crossSectionMaterial = null)
@@ -108,9 +110,23 @@ public class SliceableObject : MonoBehaviour
 		}
 	}
 
-	public void RepulsionAfterCut(Rigidbody rb)
+	public void RepulsionAfterCut(Rigidbody rb, string side)
 	{
-		Vector3 posPlayer = FPS_Controller.playerPos;		
+		Vector3 dirPush = Vector3.zero;
+		
+		if (side == "bottom")
+		{
+			Vector3 left = Vector3.Cross(tranformProjectille.forward, -tranformProjectille.right);
+			dirPush = left.normalized * ratioPush + tranformProjectille.forward;
+			dirPush = dirPush.normalized; 
+		}
+		else
+		{
+			Vector3 right = Vector3.Cross(tranformProjectille.forward, tranformProjectille.right);
+			dirPush = right.normalized * ratioPush + tranformProjectille.forward;
+			dirPush = dirPush.normalized;
+		}
+
 		rb.AddForce(dirPush.normalized * 10 * (forcePush - lessPower)); 
 	}
 }
