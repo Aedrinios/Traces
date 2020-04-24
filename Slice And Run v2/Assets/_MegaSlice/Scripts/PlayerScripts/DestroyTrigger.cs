@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyTrigger : MonoBehaviour
 {
     public GameObject destroyObject;
-    float delay = 0.05f; 
+    float delay = 0.01f; 
     bool canDestroy = false; 
 
     private void Start()

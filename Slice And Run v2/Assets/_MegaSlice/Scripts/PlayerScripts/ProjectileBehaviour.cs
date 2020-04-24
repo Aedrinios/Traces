@@ -7,16 +7,21 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField] private float lifeTime;
     [SerializeField] private float speed;
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.position += transform.forward * Time.deltaTime * speed;
+    }
 
+    private void Update()
+    {
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
             Destroy(this.gameObject);
         }
     }
+
+
 
     public void LoseLife(float lose)
     {
