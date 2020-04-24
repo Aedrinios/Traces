@@ -144,6 +144,7 @@ MonoBehaviour:
   raycastSize: 1.125
   onGround: 0
   canJump: 1
+  multiplierSensitivity: 1
   Jump:
     m_PersistentCalls:
       m_Calls:
@@ -217,9 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fab61e41b67fb448b10a47c3dafe78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSensivity: 5
+  minSensivity: 0.2
+  frameRefesh: 4
+  oldMousePositions: []
   maxPoints: 30
   minDistance: 10
   smooth: 0
+  collotRotation: 0
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +244,7 @@ MonoBehaviour:
   radius: 1
   offSet_Y: -0.1
   maxWallJump: 3
+  countdownWallJump: 0.2
   wallFriction: 32
   canWallJump: 0
   countJump: 0

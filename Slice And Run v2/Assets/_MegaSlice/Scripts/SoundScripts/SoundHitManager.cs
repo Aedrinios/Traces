@@ -8,7 +8,7 @@ public class SoundHitManager : MonoBehaviour
 	public float ratioVolume = 1;
 	public float minTime = 0.01f; 
 	private float volume = 1; 
-	AudioManager audioManager;
+
 	Vector3 posSpawn;
 
 	float chrono = 0; 
@@ -27,22 +27,12 @@ public class SoundHitManager : MonoBehaviour
 	{
 		posSpawn = SliceableObject.positionSlice; 
 		GameObject newSound = Instantiate(hitSound, posSpawn, transform.rotation) as GameObject;
-		AudioSource audioSrc = newSound.GetComponent<AudioSource>();
+
 		
 		float inverseChrono = 1 / Mathf.Exp(chrono);
 		volume = 1 - (inverseChrono * ratioVolume); 
 		volume = Mathf.Clamp(volume, 0, 1); 
-		audioSrc.volume = volume;
 
-		if (chrono <= minTime)
-		{
-			audioSrc.volume = 0;
-		}
-
-		if (SliceableObject.gameObjectSliced.tag == "HeartCube")
-		{
-			audioSrc.volume = 0;
-		}
 
 		chrono = 0; 
 	}

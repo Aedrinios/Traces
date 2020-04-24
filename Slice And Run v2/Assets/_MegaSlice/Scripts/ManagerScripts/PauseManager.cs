@@ -53,12 +53,17 @@ public class PauseManager : MonoBehaviour
         isPaused = false;
 
         Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        if (FindObjectOfType<MouseControl>().collotRotation)
+            Cursor.lockState = CursorLockMode.Confined;
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         ChronoSystem.playing = true;
         if (LevelManager.isLevelEnding)
         {
             playerInterface.SetActive(false);
-            fps.canMoveCamera = false;
+            fps.StopPlayer(); 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             ChronoSystem.playing = false;

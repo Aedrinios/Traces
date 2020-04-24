@@ -115,7 +115,12 @@ public class GameManager : MonoBehaviour
         else
         {
             Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Confined;
+            if(FindObjectOfType<MouseControl>().collotRotation)
+                Cursor.lockState = CursorLockMode.Confined;
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 

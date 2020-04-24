@@ -9,6 +9,7 @@ public class WallJump : MonoBehaviour
 	public float radius = 1;
     public float offSet_Y = -0.25f; 
 	public int maxWallJump = 3;
+    public float countdownWallJump = 0.2f; 
     public float wallFriction = 20;
     public bool canWallJump = false; 
 
@@ -17,6 +18,7 @@ public class WallJump : MonoBehaviour
     bool sliceObjectNear;
 
     FPS_Controller fps;
+    float chrono = 0; 
 
     private void Start()
     {
@@ -25,8 +27,10 @@ public class WallJump : MonoBehaviour
 
     private void Update()
     {
-        if (!fps.onGround)
+        chrono += Time.deltaTime; 
+        if (!fps.onGround && chrono >= countdownWallJump)
         {
+            
             DetectIfWallNear();
 
             // condition du wallJump
@@ -95,6 +99,7 @@ public class WallJump : MonoBehaviour
             //remet velocity à 0
             fps.velocity.y = 0;
             countJump++;
+            chrono = 0; 
         }
     }
 }
