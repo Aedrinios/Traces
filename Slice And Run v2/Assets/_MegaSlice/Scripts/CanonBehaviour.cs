@@ -6,8 +6,8 @@ using UnityEngine.Events;
 public class CanonBehaviour : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
-    private Transform muzzle;
-    private Transform turret;
+    public Transform muzzle;
+    public Transform turret;
 
     private Transform target;
 
@@ -18,9 +18,6 @@ public class CanonBehaviour : MonoBehaviour
 
     private void Start()
     {
-        turret = transform.Find("Turret");
-        muzzle = turret.Find("Muzzle");
-
         target = GameObject.FindWithTag("Player").transform;
     }
 

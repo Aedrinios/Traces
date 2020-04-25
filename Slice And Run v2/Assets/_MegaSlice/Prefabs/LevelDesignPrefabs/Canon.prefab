@@ -2563,7 +2563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4427547981714786002, guid: 3bbe4a1addf348b43b401108da44c683,
     type: 3}
-  reloadTimer: 0.5
+  muzzle: {fileID: 403150487432243820}
+  turret: {fileID: 403150486936967523}
+  reloadTimer: 2
   followPlayer: 1
 --- !u!1 &403150486306370723
 GameObject:
@@ -4866,7 +4868,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdfc139c6705d1d4badb8e615d66ba55, type: 2}
+  - {fileID: 2100000, guid: 2ca5aef3e1e3d6e49b3f3d3aa9602f65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5490,7 +5492,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdfc139c6705d1d4badb8e615d66ba55, type: 2}
+  - {fileID: 2100000, guid: 2ca5aef3e1e3d6e49b3f3d3aa9602f65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6452,7 +6454,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdfc139c6705d1d4badb8e615d66ba55, type: 2}
+  - {fileID: 2100000, guid: 2ca5aef3e1e3d6e49b3f3d3aa9602f65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6768,7 +6770,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bdfc139c6705d1d4badb8e615d66ba55, type: 2}
+  - {fileID: 2100000, guid: 2ca5aef3e1e3d6e49b3f3d3aa9602f65, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
