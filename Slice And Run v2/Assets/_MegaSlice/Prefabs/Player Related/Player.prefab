@@ -206,6 +206,7 @@ MonoBehaviour:
   DelaySpamShot: 0.12
   forcePushCut: 120
   ratioPush: 0.4
+  portalShot: 0
   canShot: 0
 --- !u!114 &2546504387214751591
 MonoBehaviour:
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fab61e41b67fb448b10a47c3dafe78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oldRotation: 1
   maxSensivity: 5
   minSensivity: 0.1
   frameRefesh: 2
