@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MouseControl : MonoBehaviour
 {
+    public static float currentAngle;
+
+    [Header("Parameter rotation mouse")]
+    public bool oldRotation = false; 
     public float maxSensivity = 2.5f;
     public float minSensivity = 0.1f;
     public float frameRefesh = 1;
-    //public float minAngleChange = 5; 
-
     Vector3 inputMouse;
     float chrono = 0; 
 
@@ -17,10 +19,7 @@ public class MouseControl : MonoBehaviour
     [SerializeField] int maxPoints = 30;
     [SerializeField] float minDistance = 0.1f;
     Vector2 oldMouseDelta;
-
-    [Header("Smooth")]
     [SerializeField, Range(0, 1)] float smooth = 0.1f;
-    public static float currentAngle;
     float refAngle;
     public bool collotRotation;
     Vector2 MousePosition { get { return Input.mousePosition; } }
@@ -31,7 +30,7 @@ public class MouseControl : MonoBehaviour
         {
             CollotCalculateRotation(); 
         }
-        else
+        else if (oldRotation)
         {
             CalculateAxeMouse();
         }
@@ -54,7 +53,6 @@ public class MouseControl : MonoBehaviour
             currentAngle = newAngle;
         }
     } 
-
 
     float InverseAngle(float angle)
     {

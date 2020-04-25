@@ -16,6 +16,8 @@ public class PlayerAttack : MonoBehaviour
     public float ratioPush = 0.4f;
     public static float ratioPushStc;
 
+    public bool portalShot = true;  
+
     [HideInInspector] public bool canShot;
     private bool startGame;
 
@@ -29,20 +31,41 @@ public class PlayerAttack : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown("Projectile") && canShot)
+        if (portalShot)
         {
-            LaunchProjectile();
-			canShot = false;
-			Invoke("ResetCanShot", DelaySpamShot); 
-		}
+            PortalShot(); 
+        }
+        else
+        {
+            if (Input.GetButtonDown("Projectile1") && canShot)
+            {
+                LaunchProjectile();
+            }
+        }
+
         DelockShooter();
+    }
+
+    public void PortalShot()
+    {
+        if (Input.GetButtonDown("Projectile1") && canShot)
+        {
+            MouseControl.currentAngle = 0;
+            LaunchProjectile();
+        }
+        if (Input.GetButtonDown("Projectile2") && canShot)
+        {
+            MouseControl.currentAngle = 90;
+            LaunchProjectile();
+        }
     }
 
     public void LaunchProjectile()
     {
         Vector3 positionInstance = canon.position;
-
         Instantiate(prefabSlice, positionInstance, cutPlane.rotation);
+        canShot = false;
+        Invoke("ResetCanShot", DelaySpamShot);
     }
 
 	void ResetCanShot()
