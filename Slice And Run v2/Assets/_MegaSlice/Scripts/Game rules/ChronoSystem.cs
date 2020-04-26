@@ -6,6 +6,7 @@ public class ChronoSystem : MonoBehaviour
 {
 	public float limitTimer = 30;
 
+	public static float limitTimerStc; 
 	public static float timerStc; 
 	public static float chronoStc;
 	public static bool playing = false;
@@ -17,6 +18,7 @@ public class ChronoSystem : MonoBehaviour
 	{
 		playing = false;
 		gameIsStart = false;
+		limitTimerStc = limitTimer;
 		chrono = 0; 
 	}
 
@@ -28,6 +30,7 @@ public class ChronoSystem : MonoBehaviour
 		{
             LevelManager.hasBeatTimer = false;
 		}
+
 
 		chronoStc = chrono;
 		timerStc = limitTimer - chrono;

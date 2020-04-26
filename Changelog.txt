@@ -100,3 +100,4 @@ Semaine du 20/04/2020
 - Saturation des sons de découpe supprimé 
 - Ajout d'une variable pour "écarter" les objets lors des découpes
 - Canon et projetiles terminés 
+- Ajout des rangs temporaires

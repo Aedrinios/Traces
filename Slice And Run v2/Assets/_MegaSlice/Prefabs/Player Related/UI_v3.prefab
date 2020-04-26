@@ -1115,6 +1115,7 @@ GameObject:
   - component: {fileID: 3310686123935708409}
   - component: {fileID: 2660909333956633913}
   - component: {fileID: 5478929694894572419}
+  - component: {fileID: 260063083511751185}
   m_Layer: 5
   m_Name: AScore
   m_TagString: Untagged
@@ -1260,6 +1261,18 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &260063083511751185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725183648232111521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334fd3ba915041d43afe732c9e1ca7dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900709944049044396
 GameObject:
   m_ObjectHideFlags: 0

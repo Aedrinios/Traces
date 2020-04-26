@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
 
-
 public class TranslateText : MonoBehaviour
 {
     [TextArea] public string frenchText;
     public float modifSize = 0f;
-
 
     private void Start()
     {
