@@ -14,12 +14,13 @@ public class CanonBehaviour : MonoBehaviour
     private bool isReloading = true;
     [SerializeField] private float reloadTimer;
     [SerializeField] private bool followPlayer;
+    public float offSetYTarget = 0.2f; 
     private float timer = 0f;
 
     private void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
-        turret.LookAt(target.transform);
+        turret.LookAt(target.transform.position + Vector3.up * offSetYTarget);
     }
 
     void Update()
@@ -28,7 +29,7 @@ public class CanonBehaviour : MonoBehaviour
         {
             if (followPlayer)
             {
-                turret.LookAt(target.transform);
+                turret.LookAt(target.transform.position + Vector3.up * offSetYTarget);
             }
 
             if (isReloading)
