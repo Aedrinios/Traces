@@ -51,7 +51,6 @@ public class CanonBehaviour : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, muzzle.position, Quaternion.LookRotation(turret.forward));
         BulletBehaviour bulletBehaviour = bullet.GetComponent<BulletBehaviour>();
-        bulletBehaviour.player = target;
         bulletBehaviour.direction = muzzle.forward;
         isReloading = true;
     }

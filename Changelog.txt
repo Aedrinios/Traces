@@ -99,3 +99,4 @@ Semaine du 20/04/2020
 - Debug ne peut plus bouger en ouvrant le menu à la fin des niveaux
 - Saturation des sons de découpe supprimé 
 - Ajout d'une variable pour "écarter" les objets lors des découpes
+- Canon et projetiles terminés 
