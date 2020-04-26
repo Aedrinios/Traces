@@ -11,7 +11,7 @@ public class CanonBehaviour : MonoBehaviour
 
     private Transform target;
 
-    private bool isReloading;
+    private bool isReloading = true;
     [SerializeField] private float reloadTimer;
     [SerializeField] private bool followPlayer;
     private float timer = 0f;
@@ -19,25 +19,31 @@ public class CanonBehaviour : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
+        turret.LookAt(target.transform);
     }
 
     void Update()
     {
-        if(followPlayer)
-            turret.LookAt(target.transform);
-
-        if (isReloading)
+        if (ChronoSystem.playing)
         {
-            timer += Time.deltaTime;
-            if (timer >= reloadTimer)
+            if (followPlayer)
             {
-                timer = 0;
-                isReloading = false;
+                turret.LookAt(target.transform);
             }
-        }
-        else
-        {
-            Shoot();
+
+            if (isReloading)
+            {
+                timer += Time.deltaTime;
+                if (timer >= reloadTimer)
+                {
+                    timer = 0;
+                    isReloading = false;
+                }
+            }
+            else
+            {
+                Shoot();
+            }
         }
     }
 

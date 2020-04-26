@@ -48,7 +48,6 @@ public class TimerStart : MonoBehaviour
 
 	void BeginGame()
 	{
-		//EventHandler.BeginTimer?.Invoke();
 		startTimerText.enabled = false;
 		player.GetComponent<FPS_Controller>().enabled = true;
 		player.GetComponent<PlayerAttack>().enabled = true;

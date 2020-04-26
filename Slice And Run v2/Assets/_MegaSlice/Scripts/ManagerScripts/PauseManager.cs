@@ -10,8 +10,11 @@ public class PauseManager : MonoBehaviour
     private FPS_Controller fps;
     private PlayerAttack playerAttack;
 
+    public static bool gameIsStart = false; 
+
     private void Start()
     {
+        gameIsStart = false; 
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 0)
         {
             pauseScreen = GameObject.Find("Canvas").transform.Find("PauseScreen").gameObject;
