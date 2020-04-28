@@ -101,3 +101,6 @@ Semaine du 20/04/2020
 - Ajout d'une variable pour "écarter" les objets lors des découpes
 - Canon et projetiles terminés 
 - Ajout des rangs temporaires
+
+Semaine du 27/04/2020
+- ajout d'une musique

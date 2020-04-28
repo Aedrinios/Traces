@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{67f75c6c-3aec-43ed-8a97-bea83f8d7bdd}">
+		<property name="name">
+			<value>VolumeLoop</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9fc170bd-c0cb-4f66-9e3b-4416cd8ae9ea}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e7585064-c7e4-47a6-9067-7d4b3a917c10}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e7585064-c7e4-47a6-9067-7d4b3a917c10}">
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>
