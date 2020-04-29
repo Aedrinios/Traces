@@ -2647,7 +2647,7 @@ MonoBehaviour:
     type: 3}
   muzzle: {fileID: 403150487432243820}
   turret: {fileID: 403150486936967523}
-  reloadTimer: 2
+  reloadTimer: 1.5
   followPlayer: 1
   offSetYTarget: -0.35
 --- !u!1 &403150486306370723
