@@ -66,12 +66,12 @@ public class PlayerManager : MonoBehaviour
 
     public void CheckIfLevelAreUnlockable()
     {
-        for (int i = 0; i < scoreList.Length; i++)
+        for (int i = 0; i < scoreList.Length - 1; i++)
         {
             if (scoreList[i] > 0)
             {
                 FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 1);
-                if(scoreList[i+1] <= 0)
+                if (i + 1 < scoreList.Length)
                 {
                     FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 2);
                 }

@@ -22,9 +22,9 @@ public class ProgressionManager : MonoBehaviour
             listLevel = new bool[numberOfLevel];
            
             UnlockLevel(0);
-
-            for (int i = 1; i < listLevel.Length; i++)
+            for (int i = 1; i < listLevel.Length - 1; i++)
             {
+
                 listLevel[i] = false;
             }
         }
@@ -32,7 +32,8 @@ public class ProgressionManager : MonoBehaviour
 
     public static void UnlockLevel(int i)
     {
-       listLevel[i] = true;
+        Debug.Log("unlock level " + i);
+        listLevel[i] = true;
     }
 
     void IsLoaded()
