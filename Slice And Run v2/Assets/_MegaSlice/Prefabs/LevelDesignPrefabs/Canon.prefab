@@ -2643,12 +2643,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1f3179bc2f0104481404b2694f96a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1179643288839960929, guid: 4207b0527685eac4083532fc33bef8fe,
+  bulletPrefab: {fileID: 5760820536174909770, guid: ccf82c102bfa5e948afc1e36acfa23f9,
     type: 3}
   muzzle: {fileID: 403150487432243820}
   turret: {fileID: 403150486936967523}
   reloadTimer: 1
   followPlayer: 1
+  canShoot: 0
   offSetYTarget: -0.35
 --- !u!1 &403150486306370723
 GameObject:
