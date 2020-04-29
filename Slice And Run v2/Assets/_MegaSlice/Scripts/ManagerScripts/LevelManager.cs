@@ -26,7 +26,6 @@ public class LevelManager : MonoBehaviour
     public static bool isLevelEnding = false;
     public static bool hasBeatTimer = true;
 
-
     private int sceneIndex;
 
     private void OnEnable()

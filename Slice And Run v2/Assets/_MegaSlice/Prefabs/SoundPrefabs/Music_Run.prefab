@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 281123650536610775}
   - component: {fileID: 8684662894780909153}
-  - component: {fileID: 4588242244762197990}
+  - component: {fileID: 114092728124046612}
   m_Layer: 0
   m_Name: Music_Run
   m_TagString: MusicRun
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a18e1d2a4b49846b71feedb6abf19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4588242244762197990
+--- !u!114 &114092728124046612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,17 +53,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 281123650536610774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 09eb5de55edc431459cddcf91effc32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/Musics/Musique_Run
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  fmodEvent: event:/Musics/Musique_Run
+  transitionStartSpeed: 25
+  transitionEndSpeed: 1
