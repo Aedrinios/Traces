@@ -59,3 +59,6 @@ MonoBehaviour:
   fmodEvent: event:/Musics/Musique_Run
   transitionStartSpeed: 25
   transitionEndSpeed: 1
+  delayClamTheme: 15
+  valueState: 0
+  isRun: 1
