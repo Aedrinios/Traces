@@ -145,7 +145,7 @@
 	<object class="SpatialiserEffect" id="{7c96daa4-c048-43ad-8f3f-1ab9e110eaf5}" />
 	<object class="SFXReverbEffect" id="{2a838e4b-6f1e-4e89-9839-7b890ad18485}">
 		<property name="decayTime">
-			<value>2900</value>
+			<value>1600</value>
 		</property>
 		<property name="lateDelay">
 			<value>48</value>
