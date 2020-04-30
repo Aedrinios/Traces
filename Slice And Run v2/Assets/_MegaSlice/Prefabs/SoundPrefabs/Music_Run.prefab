@@ -57,8 +57,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/Musics/Musique_Run
-  transitionStartSpeed: 25
-  transitionEndSpeed: 1
+  transitionStartSpeed: 8
+  transitionEndSpeed: 0.25
   delayClamTheme: 15
   valueState: 0
-  isRun: 1
+  sceneIndex: 0

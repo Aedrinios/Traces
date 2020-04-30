@@ -18,7 +18,7 @@ public class ChangeMusicParameter : MonoBehaviour
 
     Vector3 oldPostionPlayer;
     float chrono = 0;
-    public int sceneIndex; 
+    int sceneIndex; 
 
     void OnEnable()
     {
@@ -35,11 +35,11 @@ public class ChangeMusicParameter : MonoBehaviour
 
         if (isRun && valueState > 0)
         {
-            valueState -= transitionStartSpeed * Time.deltaTime; 
+            valueState -= transitionStartSpeed * Time.fixedDeltaTime; 
         }
         else if (!isRun && valueState < 1)
         {
-            valueState += transitionEndSpeed * Time.deltaTime;
+            valueState += transitionEndSpeed * Time.fixedDeltaTime;
         }
         valueState = Mathf.Clamp(valueState, 0f, 1f); 
         DetectActionPlayer(); 
@@ -60,7 +60,7 @@ public class ChangeMusicParameter : MonoBehaviour
 
         if (Vector3.Distance(oldPostionPlayer, FPS_Controller.playerPos) <= 0.1f)
         {
-            chrono += Time.deltaTime; 
+            chrono += Time.fixedDeltaTime; 
         }
         else
         {
