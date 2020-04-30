@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0374738667ad8764fb53b94882358faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forcePushCanon: 50
+  forcePushCanon: 100
   forcePushPlayer: 4
   direction: {x: 0, y: 0, z: 0}
 --- !u!114 &6993454340996503175
