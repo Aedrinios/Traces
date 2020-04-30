@@ -10,31 +10,36 @@ public class CanonBehaviour : MonoBehaviour
     public Transform turret;
 
     private Transform target;
+    private CharacterController cc;
     private int layerMask = 1 << 15;
-
 
     private bool isReloading = true;
     [SerializeField] private float reloadTimer;
     [SerializeField] private bool followPlayer;
     public bool canShoot;
-    public float offSetYTarget = 0.2f; 
+
+     [Header("Target Control")]
+
+    public float offSetYTarget = 0.2f;
+    public float targetVelocityAdjustement;
     private float timer = 0f;
 
     private void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
+        cc = target.gameObject.GetComponent<CharacterController>();
         layerMask = ~layerMask;
-        turret.LookAt(target.transform.position + Vector3.up * offSetYTarget);
+        turret.LookAt(target.position + Vector3.up * offSetYTarget);
     }
 
     void Update()
     {
-        Debug.DrawRay(muzzle.position, muzzle.forward + Vector3.up * -0.01f, Color.red);
+        Debug.DrawLine(target.position, turret.position, Color.red);
         if (ChronoSystem.playing)
         {
             RaycastHit hit;
-            Vector3 rayDirection = target.position - muzzle.position;
-            if (Physics.Raycast(muzzle.position, rayDirection, out hit, Mathf.Infinity, layerMask))
+            Vector3 rayDirection = target.position - turret.position;
+            if (Physics.Raycast(turret.position, rayDirection, out hit, Mathf.Infinity, layerMask))
             {
                 if (hit.collider.tag == "Player")
                 {
@@ -47,7 +52,10 @@ public class CanonBehaviour : MonoBehaviour
             }
             if (followPlayer)
             {
-                turret.LookAt(target.transform.position + Vector3.up * offSetYTarget);
+                Vector3 trueTarget = new Vector3(target.position.x + cc.velocity.x / targetVelocityAdjustement, target.position.y + cc.velocity.y / targetVelocityAdjustement, target.position.z + cc.velocity.z / targetVelocityAdjustement);
+                Debug.DrawLine(turret.position, trueTarget, Color.red);
+
+                turret.LookAt(trueTarget + Vector3.up * offSetYTarget);
             }
 
             if (isReloading)
