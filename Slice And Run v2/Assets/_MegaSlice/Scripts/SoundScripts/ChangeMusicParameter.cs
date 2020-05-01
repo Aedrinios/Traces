@@ -11,7 +11,8 @@ public class ChangeMusicParameter : MonoBehaviour
     public string fmodEvent;
     public float transitionStartSpeed = 0.1f;
     public float transitionEndSpeed = 0.1f;
-    public float delayClamTheme = 12f; 
+    public float delayClamTheme = 12f;
+    public int limitScene = 5; 
 
     float valueState = 0;
     bool isRun = true;
@@ -74,7 +75,7 @@ public class ChangeMusicParameter : MonoBehaviour
     {
         sceneIndex = scene.buildIndex;
 
-        if (sceneIndex == 0)
+        if (sceneIndex <= limitScene)
         {
             Destroy(gameObject); 
         }

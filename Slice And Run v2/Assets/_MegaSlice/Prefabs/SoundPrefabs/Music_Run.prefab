@@ -60,5 +60,4 @@ MonoBehaviour:
   transitionStartSpeed: 8
   transitionEndSpeed: 0.25
   delayClamTheme: 15
-  valueState: 0
-  sceneIndex: 0
+  limitScene: 4
