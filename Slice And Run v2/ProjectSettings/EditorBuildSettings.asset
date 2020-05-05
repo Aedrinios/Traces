@@ -35,7 +35,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_Scenes/Level Test/lvl 0-0 spin me round round.unity
     guid: 6e89ede9196fe2b4180ff1a97368bdc5
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_Scenes/Level/Level 1-1/lvl 1-4 BOOOM.unity
-    guid: a9a7a3ae0d4f051419815b94d01c6bb4
+    path: Assets/_Scenes/Level/Level 1-1/C'est jolie.unity
+    guid: 648be7d1468bbde4da426527a44b03ad
   m_configObjects: {}
