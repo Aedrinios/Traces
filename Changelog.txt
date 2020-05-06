@@ -105,3 +105,4 @@ Semaine du 20/04/2020
 Semaine du 27/04/2020
 - ajout d'une musique
 - musique adaptative
+- Ajout des blocs Wipeout

@@ -32,7 +32,8 @@ public class FPS_Controller : MonoBehaviour
     CharacterController characterController;
     float cameraRotationX = 0;
 
-    [HideInInspector] public bool isPushed = false; 
+    [HideInInspector] public bool isPushed = false;
+
     [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
@@ -124,7 +125,7 @@ public class FPS_Controller : MonoBehaviour
     {
         if (onGround) canJump = true;
 
-        if (Input.GetButtonDown("Jump") && canJump)
+        if (Input.GetButtonDown("Jump") && canJump && canPlay)
         {
             BlockJump();
             Jump.Invoke();
@@ -199,13 +200,14 @@ public class FPS_Controller : MonoBehaviour
     public void StopPlayer()
     {
         canPlay = false;
-        canMoveCamera = false; 
+        canMoveCamera = false;
+
     }
 
     public void StartPlayer()
     {
         isPushed = false;
         canPlay = true;
-        canMoveCamera = true; 
+        canMoveCamera = true;
     }
 }

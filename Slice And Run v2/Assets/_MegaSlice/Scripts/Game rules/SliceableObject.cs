@@ -102,7 +102,15 @@ public class SliceableObject : MonoBehaviour
 
 	void DetachObjectChild()
 	{
-		transform.parent = null; 
+		transform.parent = null;
+
+		Rigidbody[] rbChild = GetComponentsInChildren<Rigidbody>();
+		for (int i = 1; i < rbChild.Length; i++)
+		{
+			rbChild[i].isKinematic = false;
+			rbChild[i].useGravity = true;
+			RepulsionAfterCut(rbChild[i], "child");
+		}
 		Transform[] children = GetComponentsInChildren<Transform>();
 		for (int i = 1; i < children.Length; i++)
 		{
@@ -120,10 +128,15 @@ public class SliceableObject : MonoBehaviour
 			dirPush = left.normalized * ratioPush + tranformProjectille.forward;
 			dirPush = dirPush.normalized; 
 		}
-		else
+		else if (side == "top")
 		{
 			Vector3 right = Vector3.Cross(tranformProjectille.forward, tranformProjectille.right);
 			dirPush = right.normalized * ratioPush + tranformProjectille.forward;
+			dirPush = dirPush.normalized;
+		}
+		else
+		{
+			dirPush = tranformProjectille.forward;
 			dirPush = dirPush.normalized;
 		}
 

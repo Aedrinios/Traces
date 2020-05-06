@@ -16,7 +16,7 @@ public class WipeoutSystem : MonoBehaviour
         endPosition = transform.position + transform.TransformDirection(moveDir);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (trigger)
         {
