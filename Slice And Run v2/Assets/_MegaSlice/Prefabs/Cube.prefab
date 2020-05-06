@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 4824275176708188243}
   - component: {fileID: 6454553301384661170}
   - component: {fileID: 8130615720860790290}
-  - component: {fileID: 6286684094366762413}
-  - component: {fileID: 9089263347340165299}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -34,7 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7855882822613839720}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 29.576002, y: -65.704, z: -33.428}
 --- !u!33 &3971056286264298643
 MeshFilter:
@@ -2472,38 +2470,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
---- !u!114 &6286684094366762413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085680410131621808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d555728fb2a93841b45deaa22ad7a2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossMaterial: {fileID: 2100000, guid: 17f9fc988ec20f54da30a95c6584c04c, type: 2}
-  hitSound: {fileID: 2823855847976801408, guid: b403a501960d64f49875a4276ed57923,
-    type: 3}
-  numberCutting: 0
-  forcePush: 80
-  canSlice: 1
---- !u!114 &9089263347340165299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7085680410131621808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 443f44ffae3dd4f46997a78326631179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endGamePrefab: {fileID: 4166079048446866006, guid: 91e1aabda2d9cd346949defc8411f42d,
-    type: 3}
 --- !u!1 &7855882822613839719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2499,6 @@ Transform:
   m_LocalPosition: {x: 4.8, y: 2.81, z: -46.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1143600363913029902}
   - {fileID: 6602446537406963341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2585,33 +2550,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7949840931381396119
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1143600363913029902}
-  m_Layer: 0
-  m_Name: HeartCube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1143600363913029902
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7949840931381396119}
-  m_LocalRotation: {x: -0.35620582, y: 0.44067824, z: 0.10098699, w: 0.81775415}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7855882822613839720}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
