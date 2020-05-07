@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: b0f5d97467b632942922fab10a9c776d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pleiadien
+  fontNames:
+  - Pleiadien
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 092642d26f274e44eafbf5ade09864e8, type: 3}
+  - {fileID: 12800000, guid: 823c39f41452ab94685fc80bdd14e0f9, type: 3}
+  - {fileID: 12800000, guid: 64b017bb05a823141b65cef88a1309eb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
