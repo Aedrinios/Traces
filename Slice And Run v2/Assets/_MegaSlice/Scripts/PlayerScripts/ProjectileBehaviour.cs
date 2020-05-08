@@ -7,6 +7,14 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField] private float lifeTime;
     [SerializeField] private float speed;
 
+    public float projectileAngle; 
+
+    private void Start()
+    {
+        projectileAngle = transform.localEulerAngles.z;
+        Debug.Log(projectileAngle); 
+    }
+
     private void FixedUpdate()
     {
         transform.position += transform.forward * Time.deltaTime * speed;
