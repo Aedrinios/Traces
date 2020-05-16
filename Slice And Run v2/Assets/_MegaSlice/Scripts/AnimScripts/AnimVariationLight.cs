@@ -5,15 +5,13 @@ using UnityEngine;
 public class AnimVariationLight : MonoBehaviour
 {
     public Renderer myRenderer;
-    public AnimationCurve curve;
-
     public float speed = 8;
     public float amount = 1.5f;
     public float gap = 0; 
     public float basicIntensity = 0.1f;
-    public int numberMat = 0; 
+    public int numberMat = 0;
 
-    float ratioCurve;
+    float valueSin; 
     Color myColor;
 
     private void Start()
@@ -25,9 +23,9 @@ public class AnimVariationLight : MonoBehaviour
     {
         if (myRenderer != null)
         {
-            ratioCurve = curve.Evaluate((Time.time / 10) * speed + gap);
-            ratioCurve += basicIntensity;
-            myRenderer.materials[numberMat].SetColor("_EmissionColor", myColor * ratioCurve * amount);
+            valueSin = Mathf.Sin(Time.time / 2 * speed + gap);
+            valueSin += basicIntensity; 
+            myRenderer.materials[numberMat].SetColor("_EmissionColor", myColor * valueSin * amount);
         }
     }
 }
