@@ -31,7 +31,6 @@ public class ChronoSystem : MonoBehaviour
             LevelManager.hasBeatTimer = false;
 		}
 
-
 		chronoStc = chrono;
 		timerStc = limitTimer - chrono;
         timerStc = Mathf.Clamp(timerStc, 0, limitTimer);

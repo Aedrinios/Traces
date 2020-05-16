@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3717360954645367096}
   - component: {fileID: 8932843804386399906}
+  - component: {fileID: 3225537887286162417}
   m_Layer: 0
   m_Name: ChronoSystem
   m_TagString: Untagged
@@ -44,6 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   limitTimer: 15
+--- !u!114 &3225537887286162417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244527257254689806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d14a30604705f4aa078f2a227c11e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRank_A: 1
+  timeRank_B: 7
+  timeRank_C: 15
 --- !u!1 &1994703056175835418
 GameObject:
   m_ObjectHideFlags: 0

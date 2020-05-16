@@ -2494,10 +2494,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossMaterial: {fileID: 2100000, guid: 5c383619d2aef4446aceb21f7f00e329, type: 2}
-  lessPower: 100
+  lessPower: 70
   numberCutting: 0
   canSlice: 1
-  dirPush: {x: 0, y: 0, z: 0}
+  tranformProjectille: {fileID: 0}
 --- !u!114 &6851404180439084312
 MonoBehaviour:
   m_ObjectHideFlags: 0

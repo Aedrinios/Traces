@@ -12,7 +12,6 @@ public class ProjectileBehaviour : MonoBehaviour
     private void Start()
     {
         projectileAngle = transform.localEulerAngles.z;
-        Debug.Log(projectileAngle); 
     }
 
     private void FixedUpdate()

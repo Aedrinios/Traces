@@ -107,3 +107,6 @@ Semaine du 27/04/2020
 - musique adaptative
 - Ajout des blocs Wipeout
 - Ajout porte
+
+Semaine du 11/05/2020
+- Ajout des rangs
