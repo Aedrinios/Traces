@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5900596209204052921}
   - component: {fileID: 8505143514614900742}
   - component: {fileID: 6851404180439084312}
-  - component: {fileID: 232809499080137406}
+  - component: {fileID: 1794229545}
   m_Layer: 12
   m_Name: HeartCubeBody
   m_TagString: HeartCube
@@ -2517,7 +2517,7 @@ MonoBehaviour:
   soundSliceEnd: {fileID: 8781750719267335124, guid: 17fa98740a63ba24182b97f23d51de4b,
     type: 3}
   scaleDistance: 0.55
---- !u!114 &232809499080137406
+--- !u!114 &1794229545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2526,20 +2526,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4856001747129469467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 07515b128eba4564096f49fc97f54d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: event:/InGame/Ambient/HeartPulsion 2
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 70
+  fmodEvent: event:/InGame/Ambient/HeartPulsion 2
+  nameParameter: Speed
+  valueParameter: -0.1
 --- !u!1 &5490781679833507319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,7 +2609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRenderer: {fileID: 7189393861715674616}
   speed: 4
-  amount: 0.8
+  amount: 0.7
   gap: 0
   basicIntensity: 1.1
   numberMat: 0
@@ -2635,7 +2627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRenderer: {fileID: 7189393861715674616}
   speed: 4
-  amount: 0.8
+  amount: 0.7
   gap: 2
   basicIntensity: 1.1
   numberMat: 1
