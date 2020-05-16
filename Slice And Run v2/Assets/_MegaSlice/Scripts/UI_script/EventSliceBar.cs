@@ -8,7 +8,12 @@ public class EventSliceBar : MonoBehaviour
 
     public GameObject barUnsliced;
     public GameObject barSliced;
-    public float delayStopAnim = 1; 
+    public float delayStopAnim = 1;
+
+    [Header("Animation bar")]
+
+    public float amplitudeShake;
+    public float duration;
 
     bool isHappen = false; 
 
@@ -24,9 +29,10 @@ public class EventSliceBar : MonoBehaviour
     {
         if (ChronoSystem.timerStc <= 0 && ChronoSystem.playing && !isHappen)
         {
-            SliceTimeBar();
             isHappen = true;
-            Invoke("StopSliceAnim", delayStopAnim); 
+            StartCoroutine(ShakeUI());
+            Invoke("SliceTimeBar", delayStopAnim);
+            //Invoke("StopSliceAnim", delayStopAnim); 
         }
     }
 
@@ -39,5 +45,23 @@ public class EventSliceBar : MonoBehaviour
     void StopSliceAnim()
     {
         barSliced.GetComponent<Animator>().enabled = false;
+    }
+
+    IEnumerator ShakeUI()
+    {
+        Debug.Log("SHAAAAKE");
+        Vector3 originalPosition = barUnsliced.transform.localPosition;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * amplitudeShake;
+            float y = Random.Range(-1f, 1f) * amplitudeShake;
+
+            barUnsliced.transform.localPosition = new Vector3(x, y, originalPosition.z);
+
+            yield return null;
+        }
+
     }
 }
