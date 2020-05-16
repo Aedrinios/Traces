@@ -110,3 +110,4 @@ Semaine du 27/04/2020
 
 Semaine du 11/05/2020
 - Ajout des rangs
+- anim de la découpe de la barre
