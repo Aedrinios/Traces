@@ -3933,13 +3933,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4646181273619367996}
-  m_LocalRotation: {x: -0, y: -0, z: 0.80745196, w: -0.5899334}
+  m_LocalRotation: {x: -0, y: -0, z: 0.8494456, w: -0.52767617}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.0225883, y: 1.223297, z: 4.762166}
+  m_LocalScale: {x: 2.2621183, y: 0.6879259, z: 2.6780226}
   m_Children: []
   m_Father: {fileID: 900709944049044397}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 252.305}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 243.69699}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 8.999989, y: 203.99997}
@@ -8166,8 +8166,8 @@ MonoBehaviour:
   barUnsliced: {fileID: 900709944189843761}
   barSliced: {fileID: 900709944049044396}
   delayStopAnim: 1
-  amplitudeShake: 1
-  duration: 0.2
+  amplitudeShake: 1.5
+  duration: 0.12
 --- !u!1 &8510617294706418838
 GameObject:
   m_ObjectHideFlags: 0

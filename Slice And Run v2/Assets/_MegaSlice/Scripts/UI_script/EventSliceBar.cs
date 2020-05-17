@@ -27,7 +27,7 @@ public class EventSliceBar : MonoBehaviour
 
     private void Update()
     {
-        if (ChronoSystem.timerStc <= 0 && ChronoSystem.playing && !isHappen)
+        if (ChronoSystem.timerStc <= delayStopAnim && ChronoSystem.playing && !isHappen)
         {
             isHappen = true;
             StartCoroutine(ShakeUI());
@@ -49,7 +49,6 @@ public class EventSliceBar : MonoBehaviour
 
     IEnumerator ShakeUI()
     {
-        Debug.Log("SHAAAAKE");
         Vector3 originalPosition = barUnsliced.transform.localPosition;
         float elapsed = 0.0f;
 
