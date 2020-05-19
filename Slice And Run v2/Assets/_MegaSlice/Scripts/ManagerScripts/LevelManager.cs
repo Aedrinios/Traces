@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     private GameObject newRecord;
     private FPS_Controller fpsController;
     private PlayerAttack attackController;
-
+    public RankDisplay rankDisplay;
     private HighscoreTable leaderboard;
 
     public static bool isLevelEnding = false;
@@ -100,11 +100,12 @@ public class LevelManager : MonoBehaviour
 
     private void SaveScore()
     {
+        Debug.Log("I AM HERE");
         TimeSpan timeSpan = TimeSpan.FromSeconds(ChronoSystem.chronoStc);
         scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
-
-        if (playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc)) {
+        Debug.Log("rankDisplay.currentRank : " + rankDisplay.currentRank);
+        if (playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc, rankDisplay.currentRank)) {
             newRecord.SetActive(true);
         };
     }
@@ -123,6 +124,7 @@ public class LevelManager : MonoBehaviour
         {
             playerInterface = GameObject.Find("PlayerInterface");
             scoreScreen = GameObject.Find("Canvas").transform.Find("ScoreScreen").gameObject;
+            rankDisplay = GameObject.Find("Canvas").transform.Find("ScoreScreen").transform.Find("AScore").gameObject.GetComponent<RankDisplay>(); ;
             leaderboard = scoreScreen.GetComponent<HighscoreTable>();
             newRecord = scoreScreen.transform.Find("NewRecord").gameObject;
             failedScreen = GameObject.Find("Canvas").transform.Find("FailedScreen").gameObject;

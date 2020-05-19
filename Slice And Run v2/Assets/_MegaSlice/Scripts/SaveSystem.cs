@@ -23,8 +23,10 @@ public static class SaveSystem
         if(!File.Exists(SAVE_FOLDER + "/Save_" + player.name + ".txt"))
         {
             float[] initScoreList = new float[player.scoreList.Length];
+            string[] initRankList = new string[player.scoreList.Length];
             player.scoreList = initScoreList;
-            data = new PlayerData(player.name, initScoreList);
+            player.rankList = initRankList;
+            data = new PlayerData(player.name, initScoreList, initRankList);
             string jsonData = JsonUtility.ToJson(data);
             File.WriteAllText(SAVE_FOLDER + "/Save_" + player.name + ".txt", jsonData);
         }
@@ -41,7 +43,7 @@ public static class SaveSystem
     {
         /* BinaryFormatter formatter = new BinaryFormatter();
          FileStream stream = new FileStream(path, FileMode.Create);*/
-        PlayerData data = new PlayerData(player.name, player.scoreList);
+        PlayerData data = new PlayerData(player.name, player.scoreList, player.rankList);
         string jsonData = JsonUtility.ToJson(data);
 
         File.WriteAllText(SAVE_FOLDER + "/Save_" + player.name + ".txt", jsonData);

@@ -9,9 +9,12 @@ public class PlayerManager : MonoBehaviour
 {
     public string name;
     public float[] scoreList;
+    public string[] rankList;
 
     public TMP_InputField inputName;
     public GameObject changeNameButton;
+
+    public RankDisplay rankDisplay;
 
     public void Awake()
     {
@@ -27,6 +30,7 @@ public class PlayerManager : MonoBehaviour
         {
             name = data.name;
             scoreList = data.scoreList;
+            rankList = data.rankList;
             inputName.gameObject.SetActive(false);
             changeNameButton.SetActive(true);
         }
@@ -50,11 +54,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public bool SaveScore(int levelIndex, float score)
+    public bool SaveScore(int levelIndex, float score, string rank)
     {
         if (scoreList[levelIndex] > score || scoreList[levelIndex] == 0)
         {
             scoreList[levelIndex] = score;
+            rankList[levelIndex] = rank;
             SaveSystem.SavePlayer(this);
             return true;
         }
