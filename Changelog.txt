@@ -113,3 +113,4 @@ Semaine du 11/05/2020
 - anim de la découpe de la barre
 - Clean Fmod + son slice bar
 - ajout son speed
+- ajout d'un fadeout sur les jumpbar

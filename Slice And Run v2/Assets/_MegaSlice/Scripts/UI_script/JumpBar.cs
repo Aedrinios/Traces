@@ -8,48 +8,71 @@ public class JumpBar : MonoBehaviour
     public Sprite emptyBar;
     Sprite originalSprite; 
     public int id = 0;
-    public float alphaEmpty = 0.3f; 
+    public float speedFadeOut = 15f; 
 
     Color originalColor; 
     WallJump wallJumpScript;
     FPS_Controller fps;
-    Image img; 
+    Image img;
 
-    // Start is called before the first frame update
+    bool increase = false;
+    float value = 0;
+    bool isOn = false; 
+
     void Start()
     {
         wallJumpScript = GameObject.FindGameObjectWithTag("Player").GetComponent<WallJump>();
         fps = GameObject.FindGameObjectWithTag("Player").GetComponent<FPS_Controller>();
         img = GetComponent<Image>();
         originalSprite = img.sprite;
-        originalColor = img.color; 
+        originalColor = img.color;
+        img.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0);
+        isOn = false;
+        Invoke("PutOn", 0.5f); 
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        if (fps.onGround)
+        if (isOn)
         {
-            img.enabled = false;
+            if (fps.onGround) increase = false;
+            else increase = true;
+
+            ChangeColor();
+            ChangeSprite();
+        } 
+    }
+
+    void ChangeColor()
+    {
+        Color colorActual = originalColor; 
+        if (increase)
+        {
+            value = Mathf.MoveTowards(value, 1, speedFadeOut * Time.deltaTime); 
         }
         else
         {
-            img.enabled = true;
+            value = Mathf.MoveTowards(value, 0, speedFadeOut * Time.deltaTime);
         }
-        ChangeSprite(); 
+        value = Mathf.Clamp(value, 0, 1);
+        colorActual.a = value; 
+        img.color = colorActual; 
     }
 
     void ChangeSprite()
     {
         if (wallJumpScript.countJump < id)
         {
-            img.sprite = originalSprite;
-            img.color = originalColor; 
+            img.sprite = originalSprite;            
         }
         else
         {
-            img.sprite = emptyBar;
-            img.color = originalColor - new Color(0, 0, 0, alphaEmpty); 
+            img.sprite = emptyBar;            
         }
+    }
+
+    void PutOn()
+    {
+        isOn = true; 
     }
 }
