@@ -5,22 +5,18 @@ using TMPro;
 
 public class RankDisplay : MonoBehaviour
 {
-    string[] rank = { " ",  "C", "B", "A" };
-    public string currentRank;
-    public static int valueRank = 0; 
-    TextMeshProUGUI textMeshPro; 
+    TextMeshProUGUI textMeshPro;
+    private RankSystem rankSystem;
 
     private void Start()
     {
         textMeshPro = GetComponent<TextMeshProUGUI>();
-        textMeshPro.text = rank[valueRank]; 
+        rankSystem = FindObjectOfType<RankSystem>();
     }
 
-    private void Update()
+    public void Update()
     {
-        Debug.Log("IN RANK DISPLAY : " + currentRank);
-        currentRank = rank[valueRank];
-        textMeshPro.text = currentRank;
+        textMeshPro.text = rankSystem.rank;
         //SetAutomaticRank(); 
     }
 

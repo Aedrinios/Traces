@@ -8,32 +8,32 @@ public class RankSystem : MonoBehaviour
     public float timeRank_B;
     public float timeRank_C;
 
-    int valueRank = 0;
+    [HideInInspector] public string rank;
 
-    private void Update()
+    public void RankPlayer()
     {
         //Debug.Log(ChronoSystem.chronoStc); 
-
+        Debug.Log("Ranking in progress");
         if (!ChronoSystem.playing)
         {
 
             if (ChronoSystem.chronoStc <= timeRank_A)
             {
-                valueRank = 3; 
+                rank = "A"; 
             }
             if (ChronoSystem.chronoStc > timeRank_A && ChronoSystem.chronoStc <= timeRank_B)
             {
-                valueRank = 2;
+                rank = "B";
             }
             if (ChronoSystem.chronoStc > timeRank_B && ChronoSystem.chronoStc <= timeRank_C)
             {
-                valueRank = 1;
+                rank = "C";
             }
             if (ChronoSystem.chronoStc > timeRank_C)
             {
-                valueRank = 0;
+                rank = "";
             }
-            RankDisplay.valueRank = valueRank; 
+            Debug.Log("rank : "  + rank);
         }
     }
 
