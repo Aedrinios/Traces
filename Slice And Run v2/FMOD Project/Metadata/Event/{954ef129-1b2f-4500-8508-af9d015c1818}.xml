@@ -119,7 +119,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{ba47d6a9-0c47-408a-8f66-fedeecac7181}">
 		<property name="volume">
-			<value>-20.5</value>
+			<value>-18.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{6520cae4-b8a2-4469-8b46-2a80453e5792}</destination>
@@ -144,10 +144,10 @@
 	</object>
 	<object class="SingleSound" id="{91ad94f3-2408-420c-bc4a-349e3c69f42a}">
 		<property name="length">
-			<value>21.890164926943338</value>
+			<value>14.890164926943338</value>
 		</property>
 		<property name="timelockedOffset">
-			<value>1.2098350730566647</value>
+			<value>8.2098350730566647</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{0c2f8b4a-b4b5-4907-9a73-8a25fc674283}</destination>
@@ -180,7 +180,7 @@
 	</object>
 	<object class="SingleSound" id="{03548cbe-936d-45d2-bc5c-d0207a80eb24}">
 		<property name="start">
-			<value>21.890164926943338</value>
+			<value>14.890164926943342</value>
 		</property>
 		<property name="length">
 			<value>79.739478458049874</value>
@@ -213,7 +213,7 @@
 	</object>
 	<object class="SingleSound" id="{b11ae8bc-c608-4f95-8cbe-7b38e561e8f6}">
 		<property name="start">
-			<value>21.890164926943338</value>
+			<value>14.890164926943342</value>
 		</property>
 		<property name="length">
 			<value>79.739478458049888</value>
@@ -241,7 +241,7 @@
 	</object>
 	<object class="LoopRegion" id="{6e62eb5d-303b-4f24-95bf-2d8040803aac}">
 		<property name="position">
-			<value>21.890164926943338</value>
+			<value>14.890164926943342</value>
 		</property>
 		<property name="length">
 			<value>79.739478458049874</value>
@@ -258,7 +258,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>21.890164926943338</value>
+			<value>14.890164926943342</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{fb17841a-cd66-42f3-baa6-c7c9d08d08ab}</destination>
@@ -275,7 +275,7 @@
 	</object>
 	<object class="NamedMarker" id="{f60c68a6-85fd-4a4a-9f21-0fc53c34e8f0}">
 		<property name="position">
-			<value>21.890164926943338</value>
+			<value>14.890164926943342</value>
 		</property>
 		<property name="name">
 			<value>Marker A</value>
@@ -364,12 +364,12 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.2547189</value>
+			<value>0.462176412</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{90beaaf4-0be8-4765-814f-92ee2b2f1d22}">
 		<property name="position">
-			<value>3</value>
+			<value>4</value>
 		</property>
 		<property name="value">
 			<value>1</value>

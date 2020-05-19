@@ -101,13 +101,16 @@
 		<property name="timelockedOffset">
 			<value>0.080000000000000002</value>
 		</property>
+		<property name="pitch">
+			<value>-1</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{322322aa-a44c-415f-b485-3b01dcecab8e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{29f80067-6c0d-4b9e-a2dd-9e29c4dde941}">
 		<property name="volume">
-			<value>-22.5</value>
+			<value>-19.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -156,7 +159,7 @@
 			<value>14</value>
 		</property>
 		<property name="feedback">
-			<value>40.5</value>
+			<value>50.5</value>
 		</property>
 		<property name="level">
 			<value>-2</value>
@@ -166,11 +169,8 @@
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{7844909d-532b-45a2-9fb9-a24bed813062}">
-		<property name="bypass">
-			<value>true</value>
-		</property>
 		<property name="decayTime">
-			<value>150</value>
+			<value>200</value>
 		</property>
 		<property name="diffusion">
 			<value>20.5</value>
