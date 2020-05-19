@@ -112,3 +112,4 @@ Semaine du 11/05/2020
 - Ajout des rangs
 - anim de la découpe de la barre
 - Clean Fmod + son slice bar
+- ajout son speed

@@ -5,12 +5,18 @@ using UnityEngine;
 public class DisplaySpeedParticule : MonoBehaviour
 {    
     public float speedTrigger = 10f;
+    public float speedImprove = 10f;
+    public float speedDecrease = 10f;
+
     FPS_Controller fps;
     Renderer psRenderer;
 
     Color originalColor;
     Color invisibleColor;
-    
+
+    bool decrease = false;
+    float value = 0;
+
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player"); 
@@ -19,7 +25,8 @@ public class DisplaySpeedParticule : MonoBehaviour
         psRenderer = GetComponent<Renderer>();
         originalColor = psRenderer.material.color;
         invisibleColor = originalColor;
-        invisibleColor.a = 0; 
+        invisibleColor.a = 0;
+        psRenderer.material.color = invisibleColor;
     }
 
     void Update()
@@ -27,14 +34,23 @@ public class DisplaySpeedParticule : MonoBehaviour
         if (fps != null)
         {
             transform.position = fps.gameObject.transform.position;
-            if (fps.moveDir.magnitude >= speedTrigger)
+
+            if (fps.moveDir.magnitude >= speedTrigger) decrease = false;
+            else decrease = true;
+
+            if (decrease)
             {
-                psRenderer.material.color = originalColor;
+                value = Mathf.MoveTowards(value, 0, speedDecrease * Time.deltaTime);
             }
             else
             {
-                psRenderer.material.color = invisibleColor;
+                value = Mathf.MoveTowards(value, 1, speedImprove * Time.deltaTime);
             }
+
+            value = Mathf.Clamp(value, 0, 1);
+            invisibleColor.a = value;
+            psRenderer.material.color = invisibleColor; 
+
             ChangeRotation();
         }
     }
@@ -52,7 +68,6 @@ public class DisplaySpeedParticule : MonoBehaviour
         angleX += -90; 
 
         Vector3 rotationParticule = new Vector3(angleX, angleY, 0);
-        transform.rotation = Quaternion.Euler(rotationParticule);
-        
+        transform.rotation = Quaternion.Euler(rotationParticule);        
     }
 }

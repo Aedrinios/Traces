@@ -9,8 +9,7 @@ public class FmodParameter : MonoBehaviour
     [FMODUnity.EventRef]
     public string fmodEvent;
     public string nameParameter;
-    public float valueParameter;
- 
+    public float valueParameter; 
 
     private void OnEnable()
     {

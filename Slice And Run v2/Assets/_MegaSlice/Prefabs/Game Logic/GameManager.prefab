@@ -72,6 +72,8 @@ GameObject:
   - component: {fileID: 707538408366977462}
   - component: {fileID: 2506150002574917982}
   - component: {fileID: 3888000442127602116}
+  - component: {fileID: 7731940136134539456}
+  - component: {fileID: 4442330789907134541}
   m_Layer: 0
   m_Name: SpeedParticle
   m_TagString: Untagged
@@ -4771,7 +4773,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0dc1b5b4b3e13468754128fa9f134b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTrigger: 38
+  speedTrigger: 32
+  speedImprove: 10
+  speedDecrease: 3
+--- !u!114 &7731940136134539456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994703056175835418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07515b128eba4564096f49fc97f54d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/InGame/Actions/PlayerCharacter/SpeedEffect
+  nameParameter: SpeedWind
+  valueParameter: 0
+--- !u!114 &4442330789907134541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994703056175835418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b0df1ccb6f2ad46ae3c8099fe61fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedTrigger: 32
+  speedMax: 56
+  speedImprove: 10
+  speedDecrease: 0.1
 --- !u!1 &2144786900052532790
 GameObject:
   m_ObjectHideFlags: 0
