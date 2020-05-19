@@ -33,7 +33,6 @@ public class RankSystem : MonoBehaviour
             {
                 valueRank = 0;
             }
-
             RankDisplay.valueRank = valueRank; 
         }
     }

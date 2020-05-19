@@ -6,6 +6,7 @@ using TMPro;
 public class RankDisplay : MonoBehaviour
 {
     string[] rank = { " ",  "C", "B", "A" };
+    public string currentRank;
     public static int valueRank = 0; 
     TextMeshProUGUI textMeshPro; 
 
@@ -17,11 +18,13 @@ public class RankDisplay : MonoBehaviour
 
     private void Update()
     {
-        textMeshPro.text = rank[valueRank];
+        Debug.Log("IN RANK DISPLAY : " + currentRank);
+        currentRank = rank[valueRank];
+        textMeshPro.text = currentRank;
         //SetAutomaticRank(); 
     }
 
-    void SetAutomaticRank()
+  /*  void SetAutomaticRank()
     {
         if (ChronoSystem.timerStc != 0 && !ChronoSystem.playing)
         {
@@ -44,5 +47,5 @@ public class RankDisplay : MonoBehaviour
                 textMeshPro.text = rank[rank.Length - 1];
             }
         }
-    }
+    }*/
 }
