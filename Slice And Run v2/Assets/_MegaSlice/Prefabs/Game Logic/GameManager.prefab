@@ -60,6 +60,7 @@ MonoBehaviour:
   timeRank_A: 1
   timeRank_B: 7
   timeRank_C: 15
+  rank: 
 --- !u!1 &1994703056175835418
 GameObject:
   m_ObjectHideFlags: 0
@@ -4773,7 +4774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0dc1b5b4b3e13468754128fa9f134b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTrigger: 32
+  speedTrigger: 36
   speedImprove: 10
   speedDecrease: 3
 --- !u!114 &7731940136134539456
@@ -4803,7 +4804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b0df1ccb6f2ad46ae3c8099fe61fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTrigger: 32
+  speedTrigger: 36
   speedMax: 56
   speedImprove: 10
   speedDecrease: 0.1

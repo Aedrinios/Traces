@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
-    [SerializeField] private float lifeTime;
-    [SerializeField] private float speed;
 
-    public float projectileAngle; 
+    [SerializeField] private float lifeTime;
+    [SerializeField] private float speed; 
+
+    [HideInInspector] public float projectileAngle; 
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class ProjectileBehaviour : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            Destroy(this.gameObject);
+            DestroyFadeout(); 
         }
     }
 
@@ -32,5 +33,16 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         lifeTime -= lose; 
     }
+
+    public void DestroyFadeout()
+    {
+        GetComponent<Animator>().enabled = true;
+        Invoke("DestroyObject", 0.05f); 
+    }
+    void DestroyObject()
+    {
+        Destroy(gameObject); 
+    }
+
 }
 

@@ -19,7 +19,7 @@ public class DestroyTrigger : MonoBehaviour
         {
             if (other.gameObject.tag != "Sliceable")
             {
-                Destroy(destroyObject);
+                destroyObject.GetComponent<ProjectileBehaviour>().DestroyFadeout(); 
             }
         }
     }

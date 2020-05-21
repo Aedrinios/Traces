@@ -5007,6 +5007,7 @@ GameObject:
   - component: {fileID: 114503920325459236}
   - component: {fileID: 54239493773302262}
   - component: {fileID: 5509957460945364289}
+  - component: {fileID: 2777371572444114297}
   m_Layer: 10
   m_Name: Projectile
   m_TagString: Projectile
@@ -5046,6 +5047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 1
   speed: 125
+  projectileAngle: 0
 --- !u!54 &54239493773302262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5085,3 +5087,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 80
   OverrideMaxDistance: 7500
+--- !u!95 &2777371572444114297
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146719789378699888}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f5c9983c2fe8c164fa1445d24e545e22, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
