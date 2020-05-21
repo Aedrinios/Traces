@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelButton : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class LevelButton : MonoBehaviour
         PlayerManager playerManager = FindObjectOfType<PlayerManager>();
         if(playerManager.scoreList[id] > 0.0f)
         {
+            GameObject rankObject = transform.Find("Rank").gameObject;
+            rankObject.SetActive(true);
+            rankObject.GetComponentInChildren<TextMeshProUGUI>().text = playerManager.rankList[id];
 
         }
 
