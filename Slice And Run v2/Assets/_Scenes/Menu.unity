@@ -12319,8 +12319,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   scoreList: []
+  rankList: []
   inputName: {fileID: 0}
   changeNameButton: {fileID: 1488846451}
+  rankDisplay: {fileID: 0}
 --- !u!114 &463631528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29240,6 +29242,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888000442127602116, guid: 4cea64b485dd8b242aa20adab6998b8e,
+        type: 3}
+      propertyPath: speedTrigger
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442330789907134541, guid: 4cea64b485dd8b242aa20adab6998b8e,
+        type: 3}
+      propertyPath: speedTrigger
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442330789907134541, guid: 4cea64b485dd8b242aa20adab6998b8e,
+        type: 3}
+      propertyPath: speedDecrease
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cea64b485dd8b242aa20adab6998b8e, type: 3}
