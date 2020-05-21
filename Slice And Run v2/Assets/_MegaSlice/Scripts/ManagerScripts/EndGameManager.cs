@@ -25,6 +25,7 @@ public class EndGameManager : MonoBehaviour
         if (slowed)
         {
             Time.timeScale = Mathf.Lerp(Time.timeScale, slowPower, Time.unscaledDeltaTime * smooth); ;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
             timePast += Time.unscaledDeltaTime;
             ChronoSystem.playing = false;
             if (timePast > slowDuration)
