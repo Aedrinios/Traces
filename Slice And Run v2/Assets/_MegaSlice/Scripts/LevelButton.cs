@@ -25,6 +25,12 @@ public class LevelButton : MonoBehaviour
             gameObject.SetActive(false); 
         }
 
+        PlayerManager playerManager = FindObjectOfType<PlayerManager>();
+        if(playerManager.scoreList[id] > 0.0f)
+        {
+
+        }
+
     }
 
     private void OnDisable()
