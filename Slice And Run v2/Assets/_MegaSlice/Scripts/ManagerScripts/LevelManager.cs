@@ -99,13 +99,11 @@ public class LevelManager : MonoBehaviour
 
     private void SaveScore()
     {
-        Debug.Log("I AM HERE");
         TimeSpan timeSpan = TimeSpan.FromSeconds(ChronoSystem.chronoStc);
         scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text += string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText += string.Format(" {0:D2}:{1:D2}:{2:D2}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
         RankSystem rankSystem = FindObjectOfType<RankSystem>();
         rankSystem.RankPlayer();
-        Debug.Log("Rank in level : " + rankSystem.rank);
         if (playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc, rankSystem.rank)) {
             newRecord.SetActive(true);
         };

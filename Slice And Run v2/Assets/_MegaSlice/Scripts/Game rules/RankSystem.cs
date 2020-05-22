@@ -12,8 +12,6 @@ public class RankSystem : MonoBehaviour
 
     public void RankPlayer()
     {
-        //Debug.Log(ChronoSystem.chronoStc); 
-        Debug.Log("Ranking in progress");
         if (!ChronoSystem.playing)
         {
 
@@ -33,7 +31,6 @@ public class RankSystem : MonoBehaviour
             {
                 rank = "";
             }
-            Debug.Log("rank : "  + rank);
         }
     }
 

@@ -44,7 +44,6 @@ public class UnlockLevels : MonoBehaviour
 
     public void UnlockOneLevel(int levelNumber)
     {
-        Debug.Log("hello fdp " + levelNumber);
         ProgressionManager.UnlockLevel(levelNumber - 1);
         menuLevel.Find("Level" + levelNumber).gameObject.GetComponent<LevelButton>().onLevelUnlocked?.Invoke();
         /*LevelButton[] allLevel = FindObjectsOfType<LevelButton>();

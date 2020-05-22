@@ -32,7 +32,6 @@ public class ProgressionManager : MonoBehaviour
 
     public static void UnlockLevel(int i)
     {
-        Debug.Log("unlock level " + i);
         listLevel[i] = true;
     }
 
