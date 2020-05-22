@@ -14,6 +14,7 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private Sprite unlockedSpriteHighlight;
     private Button button;
     private Image currentButtonImage;
+    public Color aColor;
 
     private void OnEnable()
     {
@@ -32,6 +33,12 @@ public class LevelButton : MonoBehaviour
             GameObject rankObject = transform.Find("Rank").gameObject;
             rankObject.SetActive(true);
             rankObject.GetComponentInChildren<TextMeshProUGUI>().text = playerManager.rankList[id];
+            if (playerManager.rankList[id] == "A")
+            {
+                Debug.Log("hello score A");
+                aColor = new Color(1, 0.1607843f, 0.3215686f, 1);
+                rankObject.GetComponent<Image>().color = aColor;
+            }
 
         }
 

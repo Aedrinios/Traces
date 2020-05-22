@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Slice And Run v2/ProjectSettings/Packages/com.unity.probuilder/Settings.json
+Slice And Run v2/fmod_editor.log

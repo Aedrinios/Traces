@@ -39,6 +39,7 @@ public class EndGameManager : MonoBehaviour
         else
         {
             Time.timeScale = originalTimeScale;
+            Time.fixedDeltaTime = Time.timeScale * 0.02f;
         }
     }
 
