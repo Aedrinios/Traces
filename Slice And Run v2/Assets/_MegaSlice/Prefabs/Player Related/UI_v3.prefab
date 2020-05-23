@@ -1273,7 +1273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 334fd3ba915041d43afe732c9e1ca7dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRank: 
 --- !u!1 &900709944049044396
 GameObject:
   m_ObjectHideFlags: 0
@@ -4054,7 +4053,7 @@ RectTransform:
   - {fileID: 7569390091028988271}
   - {fileID: 7937843805253260370}
   m_Father: {fileID: 8510617294706418837}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5239,7 +5238,7 @@ RectTransform:
   - {fileID: 9043126157752188616}
   - {fileID: 1069138629664845882}
   m_Father: {fileID: 8510617294706418837}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5277,7 +5276,7 @@ RectTransform:
   - {fileID: 1072432361854124286}
   - {fileID: 2269384080905661340}
   m_Father: {fileID: 8510617294706418837}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8117,7 +8116,7 @@ RectTransform:
   - {fileID: 1116330569991056760}
   - {fileID: 2090764752}
   m_Father: {fileID: 8510617294706418837}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8148,6 +8147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1626531227699467707}
   - component: {fileID: 8217816229982197569}
+  - component: {fileID: 1020710544653113589}
   m_Layer: 5
   m_Name: BarTimer
   m_TagString: Untagged
@@ -8192,7 +8192,48 @@ MonoBehaviour:
   barSliced: {fileID: 900709944049044396}
   delayStopAnim: 1
   amplitudeShake: 1.5
-  duration: 0.12
+  duration: 1.1
+  startShake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1020710544653113589}
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  endShake:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1020710544653113589}
+        m_MethodName: StopSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1020710544653113589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217816229982197568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1cb150c8f41b2459b0830609fede64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodEvent: event:/Menus/Game Over/BeforeSliceBar
 --- !u!1 &8510617294706418838
 GameObject:
   m_ObjectHideFlags: 0
@@ -8223,11 +8264,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1399847898967777074}
   - {fileID: 809855750217309981}
   - {fileID: 401359232615894071}
   - {fileID: 7113785915783950332}
   - {fileID: 2831157035999733165}
-  - {fileID: 1399847898967777074}
   m_Father: {fileID: 8510617295500926484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8897,7 +8938,7 @@ RectTransform:
   - {fileID: 2785579378022040918}
   - {fileID: 2223611925590479908}
   m_Father: {fileID: 8510617294706418837}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8991,7 +9032,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyBar: {fileID: 21300000, guid: 2881348a9bb4588439af6c6e162ae540, type: 3}
   id: 3
-  alphaEmpty: 0.75
   speedFadeOut: 14
 --- !u!1 &9043126157280013651
 GameObject:
@@ -9080,7 +9120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyBar: {fileID: 21300000, guid: 2881348a9bb4588439af6c6e162ae540, type: 3}
   id: 2
-  alphaEmpty: 0.75
   speedFadeOut: 14
 --- !u!1 &9043126157340715006
 GameObject:
@@ -9169,7 +9208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyBar: {fileID: 21300000, guid: 2881348a9bb4588439af6c6e162ae540, type: 3}
   id: 1
-  alphaEmpty: 0.75
   speedFadeOut: 14
 --- !u!1 &9043126157752188617
 GameObject:

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class PauseManager : MonoBehaviour
 {
@@ -46,8 +47,18 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         if (pauseScreen != null) pauseScreen.SetActive(false);
-        if (playerInterface != null) playerInterface.SetActive(true);
-        if(fps != null)
+        //if (playerInterface != null) playerInterface.SetActive(true);
+        if (playerInterface != null)
+        {
+            Image[] playerInterfaceImages = playerInterface.GetComponentsInChildren<Image>();
+            for (int i = 0; i < playerInterfaceImages.Length; i++)
+            {
+                playerInterfaceImages[i].enabled = true;
+            }
+            //playerInterface.SetActive(false);
+        }
+
+        if (fps != null)
         {
             fps.canPlay = true;
             fps.canMoveCamera = true;
@@ -77,7 +88,16 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         ChronoSystem.playing = false;
-        if (playerInterface != null) playerInterface.SetActive(false);
+        if (playerInterface != null)
+        {
+            Image[] playerInterfaceImages = playerInterface.GetComponentsInChildren<Image>();
+            for (int i = 0; i < playerInterfaceImages.Length; i++)
+            {
+                playerInterfaceImages[i].enabled = false; 
+            }
+            //playerInterface.SetActive(false);
+        }
+            
         if (pauseScreen != null) pauseScreen.SetActive(true);
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
