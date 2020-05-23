@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
         if(Time.timeScale < 1)
         {
             Time.timeScale = 1;
+            Time.fixedDeltaTime = Time.timeScale * .02f;
         }
         if (scene.buildIndex == 0)
         {
