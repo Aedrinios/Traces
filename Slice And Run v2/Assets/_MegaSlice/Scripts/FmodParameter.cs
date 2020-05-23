@@ -26,7 +26,7 @@ public class FmodParameter : MonoBehaviour
 
     private void OnDisable()
     {
-        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); 
+        StopSound(); 
     }
 
     public void PlaySound()
@@ -35,5 +35,10 @@ public class FmodParameter : MonoBehaviour
         instance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));       
 
         instance.start();
+    }
+
+    public void StopSound()
+    {
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }
