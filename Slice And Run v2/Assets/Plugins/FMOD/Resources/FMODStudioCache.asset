@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114883989904737960}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   EditorEvents:
   - {fileID: 114447686793238704}
   - {fileID: 114946201821806180}
@@ -43,10 +43,10 @@ MonoBehaviour:
   - {fileID: 114825577494591344}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   StringsBanks:
   - {fileID: 114883989904737960}
-  stringsBankWriteTime: 637258479395157142
+  stringsBankWriteTime: 637258724548159301
   cacheVersion: 3
 --- !u!114 &114001501978352074
 MonoBehaviour:
@@ -84,6 +84,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114004324100638174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114005613755038302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +615,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114056179294141808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258723796165300
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114056260234021236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,7 +1070,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1225,6 +1260,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114115395440368724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258724288355439
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114115646668073950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,6 +1314,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114119915669767936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258723410512506
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114121718755160656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,7 +1486,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1889,6 +1960,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114186054954109546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114187150944813512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2053,6 +2141,23 @@ MonoBehaviour:
   lastModified: 637237795407387902
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &114209463224289504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &114210425405691310
 MonoBehaviour:
@@ -3037,6 +3142,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114300591581404898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114303092932578632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3148,7 +3270,7 @@ MonoBehaviour:
   guid: ef7c0eecbfea564b96893368eaed0d23
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3172,14 +3294,14 @@ MonoBehaviour:
   guid: 46510ab8001655488bd3b007de0dd533
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1160
+  Length: 980
 --- !u!114 &114328245906632244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,7 +3435,7 @@ MonoBehaviour:
   Path: event:/Musics/Transition_End
   guid: 3ba11c8e1afa754190ad84e8e0620652
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -3408,7 +3530,7 @@ MonoBehaviour:
   guid: d3cbb2982bb25e428cb9d255645f8830
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3876,6 +3998,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114386402352973736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114387066426194738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3893,6 +4032,23 @@ MonoBehaviour:
   lastModified: 637197374497910027
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &114387294898117192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &114401761282401342
 MonoBehaviour:
@@ -4113,6 +4269,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114425707394850830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114426529356395310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4239,6 +4412,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114444678079093024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114446871246804762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4275,7 +4465,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -4487,6 +4677,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114461272924980342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258718218799391
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114461429024973680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4539,7 +4747,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4563,7 +4771,7 @@ MonoBehaviour:
   guid: 53e04a7d9f93944ab09d0581c15018fc
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4855,7 +5063,7 @@ MonoBehaviour:
   Path: event:/Musics/Transition_Start
   guid: 0b3d456fd7d37e4bad76fe9818ad20eb
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5047,7 +5255,7 @@ MonoBehaviour:
   Path: event:/Menus/Game Over/Slicebar
   guid: 6e39f41779b5e64d9d6fc823f89cc57f
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5072,6 +5280,23 @@ MonoBehaviour:
   lastModified: 637181596804585874
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &114507547678195478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &114509445994797730
 MonoBehaviour:
@@ -5317,12 +5542,12 @@ MonoBehaviour:
   guid: ce947c0d7862184d813d4bad205256a6
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114584294273847940}
+  - {fileID: 114425707394850830}
   MinDistance: 1
   MaxDistance: 70
   Length: 7249
@@ -5507,6 +5732,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114548073758040428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258724481754868
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &114549491066287764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5628,6 +5871,23 @@ MonoBehaviour:
   lastModified: 637197109914152846
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &114566796968786634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &114569859399244532
 MonoBehaviour:
@@ -5904,6 +6164,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114605043489617056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114605441217605182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6146,7 +6423,7 @@ MonoBehaviour:
   guid: 74cd88464a624243a01c6bb919d89b1e
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -6208,6 +6485,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114633991483383242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114636404606273446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6284,6 +6578,23 @@ MonoBehaviour:
   lastModified: 637258447678975682
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &114638559083963498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 0
 --- !u!114 &114640325155737660
 MonoBehaviour:
@@ -6414,6 +6725,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114662676964425258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &114667506482403784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7034,6 +7362,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114717793531636328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114717822394995308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7090,6 +7435,24 @@ MonoBehaviour:
   Path: FMOD Project/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637236808699185500
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &114721297441115342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258719795649596
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -7238,7 +7601,7 @@ MonoBehaviour:
   guid: 69488ede869974489bbb1a61274e0e6d
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7304,6 +7667,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &114743456038052210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114744382908811150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7547,7 +7927,7 @@ MonoBehaviour:
   guid: 7b3658d4cb5fbd4a838b90a2f8b19ab8
   Banks:
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7835,6 +8215,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 687
+--- !u!114 &114796871658077920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114796995935087398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7978,6 +8375,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114810067374914324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/HeartPulsion 2/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  Min: -1
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114811742315247586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8032,6 +8446,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &114825539597371894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637258724548089471
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &114825577494591344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8047,7 +8479,7 @@ MonoBehaviour:
   Path: event:/Menus/Game Over/BeforeSliceBar
   guid: 63f6b02fe8aa81409e15987e79f8dcdf
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -8682,6 +9114,40 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &114870851262446858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114871233503304694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SpeedEffect/SpeedWind
+  m_EditorClassIdentifier: 
+  Name: SpeedWind
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114873020868916306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8813,7 +9279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: FMOD Project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637258479395157142
+  lastModified: 637258724548159301
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -9035,6 +9501,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1875
+--- !u!114 &114908392126059820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Musique_Run/State
+  m_EditorClassIdentifier: 
+  Name: State
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114911144791680948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9326,7 +9809,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -9383,12 +9866,12 @@ MonoBehaviour:
   Path: event:/InGame/Actions/PlayerCharacter/SpeedEffect
   guid: 2c208c60d6dd814ab179566fd4eb762f
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114111659762654016}
+  - {fileID: 114004324100638174}
   MinDistance: 0
   MaxDistance: 0
   Length: 5584
@@ -9480,7 +9963,7 @@ MonoBehaviour:
   - {fileID: 114043638913872758}
   - {fileID: 114750448579450774}
   - {fileID: 114792821243583806}
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9804,12 +10287,12 @@ MonoBehaviour:
   Path: event:/Musics/Musique_Run
   guid: 29f14e952f1b00458508af9d015c1818
   Banks:
-  - {fileID: 114724073568645806}
+  - {fileID: 114825539597371894}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114457053999686748}
+  - {fileID: 114444678079093024}
   MinDistance: 0
   MaxDistance: 0
   Length: 94629

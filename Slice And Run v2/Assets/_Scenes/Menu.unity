@@ -17405,6 +17405,7 @@ RectTransform:
   - {fileID: 1390577562}
   - {fileID: 500184155}
   - {fileID: 1488846452}
+  - {fileID: 1817052811}
   m_Father: {fileID: 1330264150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21582,7 +21583,6 @@ RectTransform:
   - {fileID: 1227673591}
   - {fileID: 335167873}
   - {fileID: 1589087489}
-  - {fileID: 1817052811}
   m_Father: {fileID: 188138297}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26134,12 +26134,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817052810}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1330264150}
-  m_RootOrder: 4
+  m_Father: {fileID: 801686800}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -26177,9 +26177,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beta v.1.3
+  m_Text: 'Beta v.1.4
 
-    Published on 16/05/2020'
+    Published on 23/05/2020'
 --- !u!222 &1817052813
 CanvasRenderer:
   m_ObjectHideFlags: 0

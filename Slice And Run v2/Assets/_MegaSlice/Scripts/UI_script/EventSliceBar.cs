@@ -41,8 +41,12 @@ public class EventSliceBar : MonoBehaviour
 
     public void SliceTimeBar()
     {
-        barUnsliced.SetActive(false);
-        barSliced.SetActive(true);        
+        if (!LevelManager.isLevelEnding)
+        {
+            barUnsliced.SetActive(false);
+            barSliced.SetActive(true);
+        }
+      
     }
 
     void StopSliceAnim()
@@ -66,6 +70,5 @@ public class EventSliceBar : MonoBehaviour
             yield return null;
         }
         endShake.Invoke();
-
     }
 }

@@ -13,6 +13,8 @@ public class SoundSpeed : MonoBehaviour
     bool decrease = false;
     float value; 
 
+
+
     FPS_Controller fps;
     FmodParameter fmodParameter; 
 
@@ -42,6 +44,11 @@ public class SoundSpeed : MonoBehaviour
 
             value = Mathf.Clamp(value, 0, 1);
             fmodParameter.valueParameter = value; 
+        }
+        
+        if (PauseManager.isPaused)
+        {
+            fmodParameter.valueParameter = 0; 
         }
         
     }
