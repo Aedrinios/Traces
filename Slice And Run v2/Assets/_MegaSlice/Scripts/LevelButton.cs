@@ -39,9 +39,7 @@ public class LevelButton : MonoBehaviour
                 aColor = new Color(1, 0.1607843f, 0.3215686f, 1);
                 rankObject.GetComponent<Image>().color = aColor;
             }
-
         }
-
     }
 
     private void OnDisable()

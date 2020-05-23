@@ -24,7 +24,6 @@ public class ProgressionManager : MonoBehaviour
             UnlockLevel(0);
             for (int i = 1; i < listLevel.Length - 1; i++)
             {
-
                 listLevel[i] = false;
             }
         }
@@ -32,7 +31,10 @@ public class ProgressionManager : MonoBehaviour
 
     public static void UnlockLevel(int i)
     {
-        listLevel[i] = true;
+        if (i < listLevel.Length - 1)
+        {
+            listLevel[i] = true;
+        }
     }
 
     void IsLoaded()

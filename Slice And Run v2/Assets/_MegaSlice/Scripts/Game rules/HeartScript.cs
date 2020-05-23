@@ -35,9 +35,10 @@ public class HeartScript : MonoBehaviour
 
     void EndGame(Transform projectile)
     {
+        LevelManager.isLevelEnding = true; 
+
         GameObject newEffect = Instantiate(particleEndPrefab, parent.position, projectile.rotation) as GameObject;
         float distance = Vector3.Distance(transform.position, FPS_Controller.playerPos);
-
 
         Transform[] childs = newEffect.transform.GetComponentsInChildren<Transform>(); 
         for (int i = 0; i < childs.Length; i++)
