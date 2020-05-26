@@ -72,9 +72,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{cb3f7350-9b68-4e73-859e-6ccd0f4b108a}">
-		<property name="pitch">
-			<value>4.5</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{96916753-1ff3-41c1-9fda-b3a02016b616}</destination>
 		</relationship>
@@ -96,7 +93,7 @@
 			<value>0.97999999999999998</value>
 		</property>
 		<property name="pitch">
-			<value>8.5</value>
+			<value>2</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{c3e3ba6c-6223-456e-a379-fed9968a7ff8}</destination>
@@ -110,7 +107,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{10814703-dc0d-4950-9763-c99e41df0b32}">
 		<property name="volume">
-			<value>6.5</value>
+			<value>2.5</value>
 		</property>
 		<property name="name">
 			<value>Audio 2</value>
@@ -127,8 +124,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{96916753-1ff3-41c1-9fda-b3a02016b616}">
 		<relationship name="effects">
-			<destination>{8255205f-5960-4999-b47f-04e1c178b509}</destination>
 			<destination>{6ba82abe-4dcb-4b25-87d0-10016dffe2d7}</destination>
+			<destination>{8255205f-5960-4999-b47f-04e1c178b509}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2954b9cf-1c30-4831-8afb-c3324f27b19e}" />
@@ -156,9 +153,10 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{f56d5299-2a06-4836-9e23-dc8804d694a2}" />
+	<object class="MixerBusFader" id="{6ba82abe-4dcb-4b25-87d0-10016dffe2d7}" />
 	<object class="SFXReverbEffect" id="{8255205f-5960-4999-b47f-04e1c178b509}">
 		<property name="decayTime">
-			<value>600</value>
+			<value>650</value>
 		</property>
 		<property name="lowShelfGain">
 			<value>-11.5</value>
@@ -170,7 +168,6 @@
 			<value>-2</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{6ba82abe-4dcb-4b25-87d0-10016dffe2d7}" />
 	<object class="AutomationPoint" id="{a6ee2346-85b1-449f-8eaf-e98e13ea69e8}">
 		<property name="position">
 			<value>0</value>
@@ -198,7 +195,7 @@
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.347673178</value>
+			<value>-0.170847386</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1013e2c0-e334-4d9b-aee4-57b3385a68df}">
