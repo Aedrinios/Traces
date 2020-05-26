@@ -9,7 +9,7 @@
 [LOG] DownMix::init                            : done.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000043F70378 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000148A60A88 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,107 +17,6 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 5784768
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 39840
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 00000000C5ADF5FC
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFABBC37F20
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFABBC37EF0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFABBC37FF0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFABBC380B0
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000000749F0738
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='BoomValidation', format=2, channels=2, frequency=48000, lengthbytes=18848, lengthpcm=136013, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.326167.
-[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000007CE9F408 : node = 0000000068D4F270
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000050A22AA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000007CE9F408
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5784768
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 39840
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000068D4F380
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3700
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='earthquake-rumble-sound-effect', format=2, channels=2, frequency=48000, lengthbytes=1426912, lengthpcm=8661888, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000007CE9F408
-[LOG] SoundI::getSubSound                      : sound 000000007CE9F408.  Subsound index 0 / 1
-[LOG] SoundI::release                          : earthquake-rumble-sound-effect (000000007CE9F768)
-[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (00000000495B82A8)
-[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000007AAAE1E8)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] SystemI::createSound                     : filename = FMOD Project\Build\Desktop/Master.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000007CE9FC78 : node = 0000000068D4F770
-[LOG] SystemI::createSound                     : add node to async list : head = 0000000050A22AA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000007CE9FC78
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD Project\Build\Desktop/Master.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5784768
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 39840
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000068D4F880
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='AmbiantMenu_loop', format=2, channels=2, frequency=48000, lengthbytes=403040, lengthpcm=2519845, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.583907.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000007CE9FC78
-[LOG] SoundI::getSubSound                      : sound 000000007CE9FC78.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Obsidienne_theme_2 (00000000B1747C18)
-[LOG] SoundI::release                          :     Obsidienne_theme_2 (0000000050A200B8)
-[LOG] SoundI::release                          :     Obsidienne_theme_2 (000000005E2E92D8)
-[LOG] SoundI::release                          : earthquake-rumble-sound-effect (000000007CE9F408)
-[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000003E912E78)
-[LOG] SoundI::release                          :     earthquake-rumble-sound-effect (000000007AAAE8A8)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] SoundI::release                          : AmbiantMenu_loop (000000007CE9FC78)
-[LOG] SoundI::release                          :     AmbiantMenu_loop (000000003E913358)
-[LOG] SoundI::release                          :     AmbiantMenu_loop (000000007AAAEA58)
-[LOG] SoundI::release                          :  (0000000014BEEE28)
-[LOG] SoundI::release                          :     LoopAmbient (0000000050A1FD78)
-[LOG] SoundI::release                          :  (0000000014BEEF98)
-[LOG] SoundI::release                          :     heartPulsion (0000000050A1FA38)
-[LOG] SoundI::release                          :  (00000000511D7CD8)
-[LOG] SoundI::release                          :     BoomValidation (000000003E913838)
-[LOG] SoundI::release                          :  (0000000014BEE418)
-[LOG] SoundI::release                          :     wind_loop2 (0000000050A1F898)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] Manager::readBank                        : fileversion = 123, compatVersion = 119 (oldest = 44, newest = 123)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 3
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
-[LOG] SystemI::close                           : Closed.
