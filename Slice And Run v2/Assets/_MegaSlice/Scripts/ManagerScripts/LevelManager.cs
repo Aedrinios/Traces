@@ -68,9 +68,10 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Then here ");
+            Debug.Log("is level unlock ? : " + ProgressionManager.listLevel[sceneIndex]);
+            if(!ProgressionManager.listLevel[sceneIndex])
+                scoreScreen.transform.Find("Buttons").Find("NextButton").gameObject.SetActive(false);
 
-            scoreScreen.transform.Find("Buttons").Find("NextButton").gameObject.SetActive(false);
             scoreScreen.transform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = "Too slow...";
             scoreScreen.transform.Find("ScoreText").GetComponent<TranslateText>().frenchText = "Trop lent...";
         }
