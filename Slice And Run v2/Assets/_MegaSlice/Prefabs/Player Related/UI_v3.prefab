@@ -973,7 +973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7849941409963569958}
+      - m_Target: {fileID: 1844928046}
         m_MethodName: SpawnPrefabs
         m_Mode: 1
         m_Arguments:
