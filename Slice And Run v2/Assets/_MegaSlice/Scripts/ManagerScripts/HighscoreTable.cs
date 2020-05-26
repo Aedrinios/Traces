@@ -30,7 +30,6 @@ public class HighscoreTable : MonoBehaviour
     public void SortPlayerList(int levelIndex)
     {
         allPlayersData = SaveSystem.LoadAllPlayersFromLevel(levelIndex);
-        Debug.Log("COUNT : " + allPlayersData.Count);
         for (int i = 0; i < allPlayersData.Count; i++)
         {
             for (int j = i + 1; j < allPlayersData.Count; j++)
@@ -44,7 +43,6 @@ public class HighscoreTable : MonoBehaviour
                 }
             }
         }
-        Debug.Log("allPlayersData : " + allPlayersData);
         for (int i = 0; i < allPlayersData.Count; i++)
         {
             if (allPlayersData[i].name == playerManager.name)
@@ -53,8 +51,7 @@ public class HighscoreTable : MonoBehaviour
             }
         }
 
-        int numberOfHighscore = allPlayersData.Count < numberOfPlayersDisplayed ? allPlayersData.Count : numberOfPlayersDisplayed;
-        Debug.Log("Number of Display : " + numberOfHighscore);
+        int numberOfHighscore = allPlayersData.Count < numberOfPlayersDisplayed ? allPlayersData.Count : numberOfPlayersDisplayed;  
         int rank = 1;
         for (int i = 0; i < numberOfHighscore; i++)
         {

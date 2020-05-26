@@ -37,6 +37,16 @@ public class ProgressionManager : MonoBehaviour
         }
     }
 
+    public static void LockLevel(int i)
+    {
+        Debug.Log("index lock ! " + i);
+        if (i <= listLevel.Length - 1)
+        {
+            Debug.Log("length : " + listLevel.Length);
+            listLevel[i] = false;
+        }
+    }
+
     void IsLoaded()
     {
         if(instance == null)

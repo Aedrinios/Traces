@@ -44,19 +44,24 @@ public class UnlockLevels : MonoBehaviour
 
     public void UnlockOneLevel(int levelNumber)
     {
-        ProgressionManager.UnlockLevel(levelNumber - 1);
-        menuLevel.Find("Level" + levelNumber).gameObject.GetComponent<LevelButton>().onLevelUnlocked?.Invoke();
-        /*LevelButton[] allLevel = FindObjectsOfType<LevelButton>();
-        
-        for (int i = 0; i < allLevel.Length; i++)
+        if(levelNumber == 0)
         {
-            Debug.Log("button id" + allLevel[i].id);
-            Debug.Log("level id" + levelNumber);
-            if (allLevel[i].id == levelNumber - 1)
-            {
-                Debug.Log("about to unlock");
-                allLevel[i].UnlockLevel();
-            }
-        }*/
+            ProgressionManager.UnlockLevel(levelNumber);
+            menuLevel.Find("Level" + (levelNumber+1)).gameObject.GetComponent<LevelButton>().onLevelUnlocked?.Invoke();
+        }
+        else
+        {
+            ProgressionManager.UnlockLevel(levelNumber - 1);
+            menuLevel.Find("Level" + levelNumber).gameObject.GetComponent<LevelButton>().onLevelUnlocked?.Invoke();
+        }
+    }
+
+
+    public void LockOneLevel(int levelNumber)
+    {
+        Debug.Log("level number " + levelNumber);
+        ProgressionManager.LockLevel(levelNumber);
+        Debug.Log(menuLevel.Find("Level" + (levelNumber + 1)).gameObject.GetComponent<LevelButton>());
+        menuLevel.Find("Level" + (levelNumber + 1)).gameObject.GetComponent<LevelButton>().onLevelLocked?.Invoke();
     }
 }

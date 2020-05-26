@@ -52,10 +52,8 @@ public class PlayerManager : MonoBehaviour
         name = inputName.text;
         if(inputName.text.Length > 0)
         {
-            Debug.Log("OUI OUI OUI");
             SaveSystem.CreateFile(this);
             inputName.gameObject.SetActive(false);
-            Debug.Log("Display Name : " + displayName);
             displayName.SetActive(true);
             changeNameButton.SetActive(true);
         }
@@ -78,16 +76,25 @@ public class PlayerManager : MonoBehaviour
 
     public void CheckIfLevelAreUnlockable()
     {
-        for (int i = 0; i < scoreList.Length - 1; i++)
+        UnlockLevels unlockLevels = FindObjectOfType<UnlockLevels>();
+        int lastUnlock = -1;
+        for (int i = 0; i < scoreList.Length; i++)
         {
-            if (scoreList[i] > 0)
+            if (!(rankList[i] == "A" || rankList[i] == "B" || rankList[i] == "C"))
             {
-                FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 1);
-                if (i + 1 < scoreList.Length)
-                {
-                    FindObjectOfType<UnlockLevels>().UnlockOneLevel(i + 2);
-                }
+                unlockLevels.LockOneLevel(i);
             }
+            else
+            {
+                unlockLevels.UnlockOneLevel(i + 1);
+                lastUnlock = i;
+            }
+        }
+        unlockLevels.UnlockOneLevel(0);
+        Debug.Log("last unlokc : " + lastUnlock);
+        if(lastUnlock < scoreList.Length - 1 && lastUnlock > -1)
+        {
+            unlockLevels.UnlockOneLevel(lastUnlock + 2);
         }
     }
 }

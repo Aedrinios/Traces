@@ -683,7 +683,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &32232455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3600,7 +3600,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &112034502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26714,7 +26714,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &783268895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40994,7 +40994,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &1214468361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50212,7 +50212,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &1552495327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51504,7 +51504,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &1588440506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59174,7 +59174,7 @@ MonoBehaviour:
   unlockedSprite: {fileID: 21300000, guid: 070693dcef5c0524d98b6074b791a54b, type: 3}
   unlockedSpriteHighlight: {fileID: 21300000, guid: 4b018e2b55dddcf4c8e45b1977ce00fa,
     type: 3}
-  aColor: {r: 0, g: 0, b: 0, a: 0}
+  lockedSprite: {fileID: 21300000, guid: 7748c53f20eb4d34d80203545169347d, type: 3}
 --- !u!114 &1796688914
 MonoBehaviour:
   m_ObjectHideFlags: 0

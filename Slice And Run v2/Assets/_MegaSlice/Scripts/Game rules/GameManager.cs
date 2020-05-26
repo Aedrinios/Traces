@@ -137,6 +137,11 @@ public class GameManager : MonoBehaviour
                 {
                     button.onLevelUnlocked?.Invoke();
                 }
+                else if(!ProgressionManager.listLevel[button.id])
+                {
+                    Debug.Log("peut être ici ?");
+                    button.onLevelLocked?.Invoke();
+                }
             }
         }
     }

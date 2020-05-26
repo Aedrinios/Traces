@@ -35,6 +35,7 @@ public static class SaveSystem
             data = LoadPlayer(player.name);
             player.name = data.name;
             player.scoreList = data.scoreList;
+            player.rankList = data.rankList;
             Debug.LogError("File /Save_" + player.name + ".txt already exist");
         }
     }
