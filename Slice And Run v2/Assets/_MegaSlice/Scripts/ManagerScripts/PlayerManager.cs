@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public string[] rankList;
 
     public TMP_InputField inputName;
+    public GameObject displayName;
     public GameObject changeNameButton;
 
     public RankDisplay rankDisplay;
@@ -32,14 +33,17 @@ public class PlayerManager : MonoBehaviour
             scoreList = data.scoreList;
             rankList = data.rankList;
             inputName.gameObject.SetActive(false);
+            displayName.SetActive(true);
             changeNameButton.SetActive(true);
         }
     }
 
     public void FindInputField()
     {
-        inputName = GameObject.Find("MenuScreen").transform.Find("Name").gameObject.GetComponent<TMP_InputField>();
-        changeNameButton = GameObject.Find("MenuScreen").transform.Find("ChangeName").gameObject;
+        GameObject menuScreen = GameObject.Find("MenuScreen");
+        inputName = menuScreen.transform.Find("Name").gameObject.GetComponent<TMP_InputField>();
+        displayName = menuScreen.transform.Find("CurrentName").gameObject;
+        changeNameButton = GameObject.Find("MenuScreen").transform.Find("LogOut").gameObject;
         inputName.onEndEdit.AddListener(delegate { SaveName(); });
     }
 
@@ -48,8 +52,11 @@ public class PlayerManager : MonoBehaviour
         name = inputName.text;
         if(inputName.text.Length > 0)
         {
+            Debug.Log("OUI OUI OUI");
             SaveSystem.CreateFile(this);
             inputName.gameObject.SetActive(false);
+            Debug.Log("Display Name : " + displayName);
+            displayName.SetActive(true);
             changeNameButton.SetActive(true);
         }
     }
