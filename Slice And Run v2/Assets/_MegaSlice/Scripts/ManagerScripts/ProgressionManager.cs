@@ -31,7 +31,7 @@ public class ProgressionManager : MonoBehaviour
 
     public static void UnlockLevel(int i)
     {
-        if (i < listLevel.Length - 1)
+        if (i <= listLevel.Length - 1)
         {
             listLevel[i] = true;
         }

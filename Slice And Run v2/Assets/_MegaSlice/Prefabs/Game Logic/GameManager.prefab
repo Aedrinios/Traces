@@ -4774,8 +4774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0dc1b5b4b3e13468754128fa9f134b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTrigger: 40
-  speedImprove: 8
+  speedTrigger: 42
+  speedImprove: 7
   speedDecrease: 3
 --- !u!114 &7731940136134539456
 MonoBehaviour:
@@ -4804,9 +4804,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b0df1ccb6f2ad46ae3c8099fe61fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTrigger: 40
+  speedTrigger: 42
   speedMax: 65
-  speedImprove: 10
+  speedImprove: 7
   speedDecrease: 0.2
 --- !u!1 &2144786900052532790
 GameObject:
