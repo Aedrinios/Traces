@@ -114,3 +114,6 @@ Semaine du 11/05/2020
 - Clean Fmod + son slice bar
 - ajout son speed
 - ajout d'un fadeout sur les jumpbar
+
+Semaines du 18/05/2020 et 25/05/2020
+- phase de debug intensif
