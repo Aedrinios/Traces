@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class DetectLanguageSystem : MonoBehaviour
 {
-    public static bool inFrench = false; 
+    public static bool inFrench = false;
+    public bool isOn = true; 
 
     void Awake()
+    {
+        if (isOn) detectLanguage(); 
+    }
+
+    void detectLanguage()
     {
         //This checks if your computer's operating system is in the French language
         if (Application.systemLanguage == SystemLanguage.French)
         {
             //Outputs into console that the system is French
-            inFrench = true; 
+            inFrench = true;
             Debug.Log("This system is in French. ");
-            
+
         }
         //Otherwise, if the system is English, output the message in the console
-        else 
+        else
         {
+            inFrench = false; 
             Debug.Log("This system is in English. ");
         }
     }
