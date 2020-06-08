@@ -4823,6 +4823,7 @@ GameObject:
   - component: {fileID: 1785322910}
   - component: {fileID: 301248041}
   - component: {fileID: 2144786898336336439}
+  - component: {fileID: 9113726620781647957}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -4922,3 +4923,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingValue: {fileID: 8016326449176057200, guid: 03ec0c3690096ec4d87b56c7aa1a949e,
     type: 3}
+--- !u!114 &9113726620781647957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144786900052532790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03a8a769c5f8e74ebb899a5404147df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
