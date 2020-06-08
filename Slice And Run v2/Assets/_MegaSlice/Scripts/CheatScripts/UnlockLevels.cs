@@ -17,7 +17,7 @@ public class UnlockLevels : MonoBehaviour
     {
         if (Input.GetKeyDown(keyUnlock))
         {
-            UnlockAllLevels(); 
+            //UnlockAllLevels(); 
         }
     }
 

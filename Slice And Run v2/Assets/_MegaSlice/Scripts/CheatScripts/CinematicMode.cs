@@ -15,13 +15,11 @@ public class CinematicMode : MonoBehaviour
 	}
 
 	private void Update()
-	{
-		
+	{		
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				CinematicModeStart(); 
-			}
-		
+				//CinematicModeStart(); 
+			}		
 	}
 
 	void CinematicModeStart()

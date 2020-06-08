@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class DetectLanguageSystem : MonoBehaviour
 {
-    public static bool inFrench = false;
-    public bool isOn = true; 
+    public static bool inFrench = false;    
 
     void Awake()
     {
-        if (isOn) detectLanguage(); 
+        detectLanguage(); 
     }
 
     void detectLanguage()

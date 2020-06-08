@@ -21,8 +21,8 @@ public class CameraController : MonoBehaviour
     {
         if (!Input.GetKey(KeyCode.Mouse0))
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = Input.GetAxis("HorizontalFr");
+            float v = Input.GetAxis("VerticalFr");
             if (!Input.GetKey(KeyCode.Mouse1))
             {
                 dirMove = new Vector3(h, 0, v);
