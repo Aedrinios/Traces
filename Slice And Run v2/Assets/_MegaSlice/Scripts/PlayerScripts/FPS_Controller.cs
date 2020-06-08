@@ -31,14 +31,15 @@ public class FPS_Controller : MonoBehaviour
     [HideInInspector] public Vector3 velocity = Vector3.zero;
     CharacterController characterController;
     float cameraRotationX = 0;
-
     [HideInInspector] public bool isPushed = false;
-
     [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
 
     public static Vector3 playerPos;
+    //nom des axes pour le changement de clavier
+    string hor = "Horizontal";
+    string ver = "Vertical"; 
 
     private void Start()
     {
@@ -54,6 +55,18 @@ public class FPS_Controller : MonoBehaviour
         canMoveCamera = false;
         StopPlayer();
         Invoke("StartPlayer", 0.4f);
+
+        // detecte le clavier 
+        if (DetectLanguageSystem.inFrench)
+        {
+            hor = "HorizontalFr";
+            ver = "VerticalFr";
+        }
+        else
+        {
+            hor = "Horizontal";
+            ver = "Vertical";
+        }
     }
 
     private void Update()
@@ -73,8 +86,8 @@ public class FPS_Controller : MonoBehaviour
     {
         if (canPlay)
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = Input.GetAxis(hor);
+            float v = Input.GetAxis(ver);
             Vector3 inputs = new Vector3(h, 0, v);
             if (inputs.magnitude >= 1) inputs = inputs.normalized;
             moveDir = inputs * speed;

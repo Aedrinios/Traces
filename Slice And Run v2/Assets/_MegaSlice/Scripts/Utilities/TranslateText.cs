@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 using TMPro; 
 
 public class TranslateText : MonoBehaviour
@@ -10,7 +11,10 @@ public class TranslateText : MonoBehaviour
 
     private void Start()
     {
-        TranslateTextPro(); 
+        if (DetectLanguageSystem.inFrench)
+        {
+            TranslateTextPro();
+        }
     }
 
     void TranslateTextPro()
@@ -26,6 +30,12 @@ public class TranslateText : MonoBehaviour
             TextMeshPro textMesh = GetComponent<TextMeshPro>();
             textMesh.text = frenchText;
             textMesh.fontSize += modifSize;
+        }
+        if (GetComponent<Text>())
+        {
+            Text textMesh = GetComponent<Text>();
+            textMesh.text = frenchText;
+            //textMesh.fontSize += modifSize;
         }
     }
 }
