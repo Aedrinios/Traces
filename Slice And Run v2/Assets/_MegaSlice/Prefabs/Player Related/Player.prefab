@@ -222,15 +222,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fab61e41b67fb448b10a47c3dafe78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oldRotation: 1
+  oldRotation: 0
   maxSensivity: 5
   minSensivity: 0.1
   frameRefesh: 2
-  oldMousePositions: []
+  oldMouseMovement: []
   maxPoints: 30
   minDistance: 10
   smooth: 0
   collotRotation: 0
+  averageRotation: 1
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +247,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
-  radius: 1
+  radius: 2
   offSet_Y: -0.1
   maxWallJump: 3
   countdownWallJump: 0.2
@@ -269,7 +270,7 @@ MonoBehaviour:
   forcePropulsion: 3
   speedRotation: 45
   maxRotation: 8
-  radius: 0.73
+  radius: 2
   onGround: 1
 --- !u!114 &1400862735458761585
 MonoBehaviour:

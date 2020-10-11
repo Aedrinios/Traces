@@ -15,14 +15,17 @@ public class MouseControl : MonoBehaviour
     float chrono = 0; 
 
     [Header("Parameter rotation collot")]
-    public List<Vector2> oldMousePositions = new List<Vector2>();
-    [SerializeField] int maxPoints = 30;
+    public List<Vector2> oldMouseMovement = new List<Vector2>();
+    [SerializeField] int maxPoints = 3;
     [SerializeField] float minDistance = 0.1f;
     Vector2 oldMouseDelta;
     [SerializeField, Range(0, 1)] float smooth = 0.1f;
     float refAngle;
     public bool collotRotation;
-    Vector2 MousePosition { get { return Input.mousePosition; } }
+    public bool averageRotation;
+    Vector2 MouseMovement { get { return new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); } }
+
+    Vector2 averageMouseMovement;
 
     void Update()
     {
@@ -33,6 +36,10 @@ public class MouseControl : MonoBehaviour
         else if (oldRotation)
         {
             CalculateAxeMouse();
+        }
+        else if (averageRotation)
+        {
+            AverageAxeMouse();
         }
     }
 
@@ -63,13 +70,13 @@ public class MouseControl : MonoBehaviour
 
     void CollotCalculateRotation()
     {
-        oldMousePositions.Add(MousePosition);
-        if (oldMousePositions.Count > maxPoints)
-            oldMousePositions.RemoveAt(0);
+        oldMouseMovement.Add(MouseMovement);
+        if (oldMouseMovement.Count > maxPoints)
+            oldMouseMovement.RemoveAt(0);
 
         Vector2 mouseDelta;
-        int referencePointId = oldMousePositions.Count - 1;
-        while (Vector2.Distance(MousePosition, oldMousePositions[referencePointId]) < minDistance)
+        int referencePointId = oldMouseMovement.Count - 1;
+        while (Vector2.Distance(MouseMovement, oldMouseMovement[referencePointId]) < minDistance)
         {
             referencePointId--;
             if (referencePointId < 0)
@@ -82,7 +89,7 @@ public class MouseControl : MonoBehaviour
         }
         else
         {
-            mouseDelta = MousePosition - oldMousePositions[referencePointId];
+            mouseDelta = MouseMovement - oldMouseMovement[referencePointId];
             oldMouseDelta = mouseDelta;
         }
 
@@ -90,5 +97,26 @@ public class MouseControl : MonoBehaviour
         targetAngle = Mathf.SmoothDamp(currentAngle, targetAngle, ref refAngle, smooth);
         //  transform.localEulerAngles = new Vector3(0, 0, targetAngle);
         currentAngle = targetAngle;
+    }
+
+    void AverageAxeMouse()
+    {
+        averageMouseMovement = Vector2.zero;
+        if(MouseMovement != Vector2.zero)
+            oldMouseMovement.Add(MouseMovement);
+
+        if (oldMouseMovement.Count > maxPoints)
+            oldMouseMovement.RemoveAt(0);
+
+        for(int i = 0; i < oldMouseMovement.Count; i++)
+        {
+            averageMouseMovement += oldMouseMovement[i];
+        }
+
+        //if (averageMouseMovement.magnitude >= minSensivity && averageMouseMovement.magnitude < maxSensivity)
+        //{
+            float newAngle = -Vector2.SignedAngle(averageMouseMovement, Vector2.right);
+            currentAngle = newAngle;
+        //}
     }
 }

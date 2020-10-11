@@ -8,16 +8,18 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField] private float lifeTime;
     [SerializeField] private float speed; 
 
-    [HideInInspector] public float projectileAngle; 
+    [HideInInspector] public float projectileAngle;
+    private Rigidbody rb;
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         projectileAngle = transform.localEulerAngles.z;
     }
 
     private void FixedUpdate()
     {
-        transform.position += transform.forward * Time.deltaTime * speed;
+        rb.velocity = transform.forward * speed * Time.deltaTime;
     }
 
     private void Update()

@@ -47,7 +47,7 @@ public class FPS_Controller : MonoBehaviour
         cameraRotationX = 0;
         Cursor.visible = false;
         if (FindObjectOfType<MouseControl>().collotRotation)
-            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.lockState = CursorLockMode.Locked;
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
