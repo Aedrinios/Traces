@@ -22,9 +22,11 @@ public class MouseControl : MonoBehaviour
     [SerializeField, Range(0, 1)] float smooth = 0.1f;
     float refAngle;
     public bool collotRotation;
-    public bool averageRotation;
-    Vector2 MouseMovement { get { return new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); } }
 
+    [Header("Parameter rotation average")]
+    public bool averageRotation;
+    [SerializeField] int maxAveragePoints = 3;
+    Vector2 MouseMovement { get { return new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")); } }
     Vector2 averageMouseMovement;
 
     void Update()
@@ -105,13 +107,15 @@ public class MouseControl : MonoBehaviour
         if(MouseMovement != Vector2.zero)
             oldMouseMovement.Add(MouseMovement);
 
-        if (oldMouseMovement.Count > maxPoints)
+        if (oldMouseMovement.Count > maxAveragePoints)
             oldMouseMovement.RemoveAt(0);
 
         for(int i = 0; i < oldMouseMovement.Count; i++)
         {
             averageMouseMovement += oldMouseMovement[i];
         }
+
+        Debug.Log(averageMouseMovement); 
 
         //if (averageMouseMovement.magnitude >= minSensivity && averageMouseMovement.magnitude < maxSensivity)
         //{

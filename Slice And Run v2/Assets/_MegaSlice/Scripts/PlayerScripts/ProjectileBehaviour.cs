@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
-
     [SerializeField] private float lifeTime;
     [SerializeField] private float speed; 
 
@@ -19,7 +18,8 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.forward * speed * Time.deltaTime;
+        rb.velocity = transform.forward * speed * 66.6667f * Time.deltaTime;
+        //Debug.Log(rb.velocity.magnitude);
     }
 
     private void Update()
@@ -41,6 +41,7 @@ public class ProjectileBehaviour : MonoBehaviour
         GetComponent<Animator>().enabled = true;
         Invoke("DestroyObject", 0.05f); 
     }
+
     void DestroyObject()
     {
         Destroy(gameObject); 

@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1
-  speed: 10000
+  speed: 125
   projectileAngle: 0
 --- !u!54 &54239493773302262
 Rigidbody:

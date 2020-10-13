@@ -77,7 +77,6 @@ GameObject:
   - component: {fileID: 6229600815486438845}
   - component: {fileID: 1400862735458761585}
   - component: {fileID: 4429569699078343997}
-  - component: {fileID: 1085695713}
   - component: {fileID: 7995984061478774618}
   - component: {fileID: 6543734611983608644}
   m_Layer: 13
@@ -232,6 +231,7 @@ MonoBehaviour:
   smooth: 0
   collotRotation: 0
   averageRotation: 1
+  maxAveragePoints: 4
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,18 +299,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landingSd: {fileID: 7885645183104195367, guid: 6533e0b250a9e1341be4ece19f115b5f,
     type: 3}
---- !u!114 &1085695713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2546504387214751592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b1b2627ed789a46839345828e0d375, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &7995984061478774618
 Rigidbody:
   m_ObjectHideFlags: 0
