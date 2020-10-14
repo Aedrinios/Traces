@@ -115,7 +115,7 @@ public class MouseControl : MonoBehaviour
             averageMouseMovement += oldMouseMovement[i];
         }
 
-        Debug.Log(averageMouseMovement); 
+        //Debug.Log(averageMouseMovement); 
 
         //if (averageMouseMovement.magnitude >= minSensivity && averageMouseMovement.magnitude < maxSensivity)
         //{

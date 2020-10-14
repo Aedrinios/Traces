@@ -231,7 +231,7 @@ MonoBehaviour:
   smooth: 0
   collotRotation: 0
   averageRotation: 1
-  maxAveragePoints: 4
+  maxAveragePoints: 3
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
