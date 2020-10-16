@@ -106,7 +106,7 @@ public class LevelManager : MonoBehaviour
         RankSystem rankSystem = FindObjectOfType<RankSystem>();
         rankSystem.RankPlayer();
         if (playerManager.SaveScore(sceneIndex - 1, ChronoSystem.chronoStc, rankSystem.rank)) {
-            newRecord.SetActive(true);
+           newRecord.SetActive(true);
         };
     }
 

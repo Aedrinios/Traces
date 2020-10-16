@@ -34,6 +34,7 @@ public class FPS_Controller : MonoBehaviour
     [HideInInspector] public bool isPushed = false;
     [HideInInspector] public bool canMoveCamera = true;
     [HideInInspector] public bool canPlay = true;
+    [HideInInspector] public bool blockPosition = false;
     [HideInInspector] public Vector3 jumpDirection = new Vector3(0, 1, 0);
 
     public static Vector3 playerPos;
@@ -76,10 +77,9 @@ public class FPS_Controller : MonoBehaviour
         DoJump();
         if (canMoveCamera) RotateWithMouse();
         DefineMoveDirection();
+        if (blockPosition) moveDir = Vector3.zero; 
         characterController.Move(moveDir * Time.deltaTime);
         playerPos = transform.position;
-
-        //Debug.Log(velocity.magnitude); 
     }
 
     void DefineMoveDirection()
@@ -214,7 +214,6 @@ public class FPS_Controller : MonoBehaviour
     {
         canPlay = false;
         canMoveCamera = false;
-
     }
 
     public void StartPlayer()

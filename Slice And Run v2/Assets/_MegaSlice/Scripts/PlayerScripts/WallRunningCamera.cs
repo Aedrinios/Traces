@@ -33,13 +33,19 @@ public class WallRunningCamera : MonoBehaviour
 		{
 			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.right), out hit, radius))
 			{
-				angleZ += speedRotation * Time.deltaTime;
-				nearWall = true; 
+				if (hit.collider.tag != "Sliceable")
+				{
+					angleZ += speedRotation * Time.deltaTime;
+					nearWall = true;
+				}
 			}
 			else if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.left), out hit, radius))
 			{
-				angleZ -= speedRotation * Time.deltaTime;
-				nearWall = true; 
+				if (hit.collider.tag != "Sliceable")
+				{
+					angleZ -= speedRotation * Time.deltaTime;
+					nearWall = true;
+				}
 			}
 			else
 			{
