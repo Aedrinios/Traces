@@ -20,21 +20,23 @@ public class DisplayLogoEnd : MonoBehaviour
         myAnimator.enabled = false; 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (LevelManager.isLevelEnding && !happened)
-        {
-            Invoke("StartAnim", delay); 
-            happened = true; 
-        }
-    }
 
     public void StartAnim()
     {
         myAnimator.enabled = true;
         Invoke("BlockPlayer", timeBlockPlayer);
         Invoke("RestartPlayer", timeRestartPlayer);
+    }
+
+    void ShowThanksScreen()
+    {
+        Invoke("StartAnim", delay);
+        happened = true;
+    }
+
+    public void OnEnable()
+    {
+        LevelManager.onLevelComplete += ShowThanksScreen;
     }
 
     public void BlockPlayer()
@@ -45,5 +47,10 @@ public class DisplayLogoEnd : MonoBehaviour
     public void RestartPlayer()
     {
         fspScript.blockPosition = false;
+    }
+
+    public void BackToMenu()
+    {
+        GameManager.Instance.LaunchLevel(0);
     }
 }
