@@ -39,6 +39,11 @@ public class DisplayLogoEnd : MonoBehaviour
         LevelManager.onLevelComplete += ShowThanksScreen;
     }
 
+    public void OnDisable()
+    {
+        LevelManager.onLevelComplete -= ShowThanksScreen;
+    }
+
     public void BlockPlayer()
     {
         fspScript.blockPosition = true;
