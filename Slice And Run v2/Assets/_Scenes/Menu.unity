@@ -60977,9 +60977,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Gold v.1.1
+  m_Text: 'Demo v.1.1
 
-    Published on 13/10/2020'
+    Published on 18/10/2020'
 --- !u!222 &1817052813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61000,7 +61000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ae1006fe2f4a854a8c84b52edd289f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frenchText: "Gold v.1.1\nPubli\xE9e le 13/10/2020"
+  frenchText: "D\xE9mo v.1.1\nPubli\xE9e le 18/10/2020"
   modifSize: 0
 --- !u!1 &1822122642
 GameObject:
