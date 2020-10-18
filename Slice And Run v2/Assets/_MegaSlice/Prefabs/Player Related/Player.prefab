@@ -187,6 +187,7 @@ MonoBehaviour:
   isPushed: 0
   canMoveCamera: 0
   canPlay: 1
+  blockPosition: 0
   jumpDirection: {x: 0, y: 1, z: 0}
 --- !u!114 &2546504387214751595
 MonoBehaviour:
@@ -231,7 +232,7 @@ MonoBehaviour:
   smooth: 0
   collotRotation: 0
   averageRotation: 1
-  maxAveragePoints: 3
+  maxAveragePoints: 10
 --- !u!114 &6145279408424924372
 MonoBehaviour:
   m_ObjectHideFlags: 0
