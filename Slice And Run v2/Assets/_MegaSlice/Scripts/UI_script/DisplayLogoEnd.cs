@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class DisplayLogoEnd : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class DisplayLogoEnd : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myAnimator.enabled = false; 
     }
-
 
     public void StartAnim()
     {
@@ -56,6 +56,9 @@ public class DisplayLogoEnd : MonoBehaviour
 
     public void BackToMenu()
     {
-        GameManager.Instance.LaunchLevel(0);
+        //GameManager.Instance.LaunchLevel(0);
+        //FindObjectOfType<GameManager>().LaunchLevel(0);
+        SceneManager.LoadScene(0); 
+
     }
 }
