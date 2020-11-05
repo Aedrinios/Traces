@@ -43,8 +43,8 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            float h = Input.GetAxis("Horizontal");
-            float v = Input.GetAxis("Vertical");
+            float h = Input.GetAxis("HorizontalFr");
+            float v = Input.GetAxis("VerticalFr");
             rotateVector = new Vector3(-v, h, 0);
             transform.eulerAngles += rotateVector * speedRotation * Time.deltaTime;
         }

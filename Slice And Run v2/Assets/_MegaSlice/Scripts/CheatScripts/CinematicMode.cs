@@ -18,13 +18,13 @@ public class CinematicMode : MonoBehaviour
 	{		
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				//CinematicModeStart(); 
+				CinematicModeStart(); 
 			}		
 	}
 
 	void CinematicModeStart()
 	{
-		///CamCinematic = GetComponentInChildren<Camera>().gameObject;
+		//CamCinematic = GetComponentInChildren<Camera>().gameObject;
 		CamCinematic.SetActive(true);
 
 		GameObject player = GameObject.FindWithTag("Player");
@@ -45,7 +45,10 @@ public class CinematicMode : MonoBehaviour
 		}
 
 		FPS_Controller fps = FindObjectOfType<FPS_Controller>();
-		fps.canPlay = false; 
+		fps.canPlay = false;
+
+		PlayerAttack attack = FindObjectOfType<PlayerAttack>();
+		attack.enabled = false; 
 	}
 
 
