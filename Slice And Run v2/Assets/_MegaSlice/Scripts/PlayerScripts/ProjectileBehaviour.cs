@@ -18,7 +18,7 @@ public class ProjectileBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = transform.forward * speed * 66.6667f * Time.deltaTime;
+        rb.velocity = transform.forward * speed * 66.6667f * Time.fixedDeltaTime;
         //Debug.Log(rb.velocity.magnitude);
     }
 

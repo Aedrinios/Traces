@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
 
     [HideInInspector] public bool canShot;
     private bool startGame;
+    float chrono; 
 
     private void Awake()
     {
@@ -75,10 +76,14 @@ public class PlayerAttack : MonoBehaviour
 
     void DelockShooter()
     {
-        if (Input.anyKeyDown && startGame)
+        if (Input.anyKeyDown && startGame && chrono >= 0.2f)
         {
             startGame = false;
             canShot = true; 
+        }
+        else
+        {
+            chrono += Time.deltaTime; 
         }
     }
 }

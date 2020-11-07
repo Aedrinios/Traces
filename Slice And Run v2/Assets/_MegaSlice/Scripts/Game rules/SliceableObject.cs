@@ -26,7 +26,7 @@ public class SliceableObject : MonoBehaviour
 	public static GameObject gameObjectSliced;
 	public static Vector3 positionSlice; 
 
-	public void Start()
+	public void Awake()
     {
 		forcePush = PlayerAttack.forcePushCutStc;
 		ratioPush = PlayerAttack.ratioPushStc; 
