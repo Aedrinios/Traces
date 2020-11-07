@@ -18,7 +18,7 @@ public class CinematicMode : MonoBehaviour
 	{		
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				CinematicModeStart(); 
+				//CinematicModeStart(); 
 			}		
 	}
 
